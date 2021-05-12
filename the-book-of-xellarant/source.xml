@@ -1,0 +1,24 @@
+<?xml version="1.01" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="source.xml" url="https://raw.githubusercontent.com/xellarant/the-book-of-xellarant/master/the-book-of-xellarant/source.xml" />
+		</update>
+	</info>
+	
+	<element name="The Book of Xellarant" type="Source" source="Homebrew" id="ID_HBRW_TBOX_SOURCE_THE_BOOK_OF_XELLARANT">
+		<description>
+			<p>This book is a non-existent publication. Just ideas for customizations and homebrews present by Xellarant.</p>
+			<p>The book of Xellarant, similar to the darkhold, is known to corrupt its wielder... potentially to the point of driving them mad.</p>
+		</description>
+		<setters>
+			<set name="abbreviation">TBOX</set>
+			<set name="url">https://xellarant.great-site.net/2021/05/07/the-book-of-xellarant/</set>
+			<set name="image">https://xellarant.great-site.net/wp-content/uploads/2021/05/Xav3.jpg</set>
+			<set name="author" abbreviation="XELL" url="https://www.xellarant.com/">Xellarant</set>
+			<set name="third-party">true</set>
+			<set name="release">20210506</set>
+		</setters>
+	</element>
+	
+</elements>
