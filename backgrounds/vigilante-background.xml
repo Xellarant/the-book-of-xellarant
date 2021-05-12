@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Vigilante Background (Customizable)</name>
+		<description>Basic background of Vigilantes, dark enforcers of justice.</description>
+		<author url="https://github.com/xellarant">Xellarant</author>
+		<update version="0.0.1">
+			<file name="vigilante-background.xml" url="https://raw.githubusercontent.com/Xellarant/elements-1/master/supplements/book-of-xellarant/backgrounds/vigilante-background.xml" />
+		</update>
+	</info>
+
+	<element name="Vigilante" type="Background" source="The Book of Xellarant" id="ID_NV_TBOX_BACKGROUND_VIGILANTE">
+		<description>
+			<p>Life can be unfair. Think of the starving peasants forced to toil for the local baron or the common laborers tasked with building the king's newest palace for a mere handful of copper pieces each week. There are those who see these injustices and do nothing. There are those who are willing to reap the rewards obtained through the suffering of others.</p>
+			<br /><p>Then there are those who see inequality and find themselves driven to take action, outside the law if necessary. These vigilantes operate in plain sight, hiding behind respectable personas by day, but donning alternate guises by night to right the wrongs they see all around them.</p>
+			<br /><p>Not all vigilantes are out to make the world a better place. Some criminals hide behind the pretense of being ordinary folk, only to become terrors in the shadows, stealing and killing to fulfill some dark agenda. In either case, the vigilante is a character of two natures—the face that everyone knows and the mask that inspires fear.</p>
+			<ul>
+				<li><strong>Skill Proficiencies:</strong> You can select any two skills to be proficient with</li>
+				<li><strong>Language/Tool Proficiencies:</strong> Any two of your choice</li>
+				<li><strong>Equipment:</strong> Your inheritance, a set of traveler's clothes, the tool you choose for this background’s tool proficiency, and a pouch containing 15 gp</li>
+			</ul>
+			<div element="ID_BACKGROUND_FEATURE_POSITIONOFPRIVILEGE" />
+			<h5>SUGGESTED CHARACTERISTICS</h5>
+			<p>Most vigilantes started off as regular people (perhaps even nobles) who couldn't stand to turn a blind eye to the unjustices of the world. As a vigilante, you may simply be out for yourself, or you may just have a different sense than many others of what the word "justice" means. Either way, your vigilante persona's alignment is likely chaotic, but the side you show to the world at large may appear to be entirely different.</p>
+		</description>
+		<setters>
+			<set name="short">2 of Any Skill, 2 from any Language or Tool, Variable Background Feature</set>
+		</setters>
+		<rules>
+			<select type="Proficiency" name="Skill Proficiency (Vigilante)" supports="Skill" number="2" />
+			<select type="Language||Proficiency" name="Language/Tool Proficiency (Vigilante)" supports="Tool||Standard||Exotic" number="2"/>
+			<grant type="Background Feature" id="ID_BACKGROUND_FEATURE_POSITIONOFPRIVILEGE" />
+			<select type="Background Feature" name="Variant Feature" optional="true" />
+			<select type="List" name="Personality Trait" number="2">
+				<item id="1">Why tell the truth when I can get by only telling half of it?</item>
+				<item id="2">I know more than people think, and I can’t resist hinting at it.</item>
+				<item id="3">Insults and intrigue are my specialty. Words can do just as much, if not more, damage than a knife.</item>
+				<item id="4">I enjoy basking in shadows and darkness; The closer to our Mistress I am, the better.</item>
+				<item id="5">I’m quick to start a fight, and quicker to end one.</item>
+				<item id="6">I am, what you might call, “a control freak.” I become nervous and irritated when things are out of my power.</item>
+				<item id="7">I always look for anything to get me ahead or leverage over my enemies.</item>
+				<item id="8">Fast-talk and doublespeak are my preferred styles of communication. If you can’t keep up, that’s not my problem.</item>
+			</select>
+			<select type="List" name="Ideal">
+				<item id="1">Influence. By manipulating the world through the shadows, I can reshape it to my liking. (Evil)</item>
+				<item id="2">Anarchy. There are few rules we actually need, and if the rest of the world were to see that, we would be truly free. (Chaotic)</item>
+				<item id="3">Greed. The organization is a means to an end, and that end sees me with all the gold. (Neutral)</item>
+				<item id="4">Devotion. The will of the shadows bring many blessings. By walking through shadow, I will be blessed. (Any)</item>
+				<item id="5">Control. Through our schemes, we can control the narrative and enact the ideals that truly matter. (Lawful)</item>
+				<item id="6">Punishment. Those that stand against us will be consumed by the darkness. (Evil)</item>
+			</select>
+			<select type="List" name="Bond">
+				<item id="1">As a greater shadow, I am constantly a point of intrigue to our lower members, and I would do anything to impress them.</item>
+				<item id="2">Our leader has chosen me specifically, and I fear nothing more than losing their favor.</item>
+				<item id="3">My family knows nothing of my role in the shadows, and I would prefer to keep it that way.</item>
+				<item id="4">I spared someone I shouldn't have during a mission once. If the guild were to find out, it would be the end of me.</item>
+				<item id="5">I am in love with someone whose affections could end everything I've worked toward.</item>
+				<item id="6">I will stop at nothing to climb the ranks of the shadows.</item>
+			</select>
+			<select type="List" name="Flaw">
+				<item id="1">I am quick to betray if it means my own gain.</item>
+				<item id="2">I don’t have allies, only pawns and tools.</item>
+				<item id="3">Everywhere I go, I seem to make only enemies.</item>
+				<item id="4">I don’t trust anyone that says they want what is “good for everybody.”</item>
+				<item id="5">The first one to run is the last one to die, and I don’t plan on dying.</item>
+				<item id="6">My sharp tongue regularly creates trouble for me and my allies.</item>
+			</select>
+		</rules>
+	</element>
+	<element name="Feature: Position of Privilege" type="Background Feature" source="Player’s Handbook" id="ID_BACKGROUND_FEATURE_POSITIONOFPRIVILEGE">
+		<supports>Background Feature, Noble</supports>
+		<description>
+			<p>Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are. The common folk make every effort to accommodate you and avoid your displeasure, and other people of high birth treat you as a member of the same social sphere. You can secure an audience with a local noble if you need to.</p>
+		</description>
+		<sheet alt="Position of Privilege" />
+	</element>
+</elements>
