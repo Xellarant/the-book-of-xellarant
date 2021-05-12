@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Custom Background</name>
+		<description>Basic template for a custom background.</description>
+		<author url="https://github.com/xellarant">Xellarant</author>
+		<update version="0.0.1">
+			<file name="custom-background.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/backgrounds/custom-background.xml" />
+		</update>
+	</info>
+
+	<element name="Custom" type="Background" source="The Book of Xellarant" id="ID_NV_TBOX_BACKGROUND_CUSTOM">
+		<description>
+			<p>Life, depending on your point of view, is a series of random events. Any number of things have led you to where you've gotten thusfar, and it's up to you to tell the story.</p>
+			<ul>
+				<li><strong>Skill Proficiencies:</strong> You can select any two skills to be proficient with</li>
+				<li><strong>Language/Tool Proficiencies:</strong> Any two of your choice</li>
+				<li><strong>Equipment:</strong> Some sort of trinket, a set of clothes, the tool you choose for this background’s tool proficiency, and a pouch containing 15 gp</li>
+			</ul>
+			<h5>SUGGESTED CHARACTERISTICS</h5>
+			<p>I could tell you, by your background, how you may think and behave today, but, truthfully, every human being is different and very little about people is ever truly that straightforward.</p>
+		</description>
+		<setters>
+			<set name="short">2 of Any Skill, 2 from any Language or Tool, Variable Background Feature</set>
+		</setters>
+		<rules>
+			<select type="Proficiency" name="Skill Proficiency (Custom)" supports="Skill" number="2" />
+			<select type="Language||Proficiency" name="Language/Tool Proficiency (Custom)" supports="Tool||Standard||Exotic" number="2"/>
+			<!-- <grant type="Background Feature" id="ID_BACKGROUND_FEATURE_POSITIONOFPRIVILEGE" /> -->
+			<select type="Background Feature" name="Variant Feature" optional="false" />
+			<select type="List" name="Personality Trait" number="2">
+				<item id="1">I'm often more guarded (even covert) than I need to be.</item>
+				<item id="2">I'm way more open than most.</item>
+				<item id="3">I compulsively plan everything or it just doesn't feel right.</item>
+				<item id="4">I try and be agreeable, and I help when I see those in need.</item>
+				<item id="5">I get pissed off really easily.</item>
+				<item id="6">Honestly? Nothing bothers me. I'm a "go with the flow" kinda guy.</item>
+				<item id="7">I'm in it for the thrill. Anything for an adrenaline rush.</item>
+				<item id="8">If I don't succeed the first time, I'll be back to try again.</item>
+			</select>
+			<select type="List" name="Ideal">
+				<item id="1">I just want to sleep the final sleep knowing I was at least somewhat righteous. (Good)</item>
+				<item id="2">The law is dumb. Beliefs are fine, but know that I might disagree. (Chaotic)</item>
+				<item id="3">I usually agree or disagree with things depending on if it benefits me. (Neutral)</item>
+				<item id="4">Capricious. That's the word many people use to describe me. Whether or not I agree depends on my mood. (Any)</item>
+				<item id="5">I strongly believe in a thing, and I'll likely follow and/or fight for it. (Lawful)</item>
+				<item id="6">I want things, but society always deems those things to be bad. (Evil)</item>
+			</select>
+			<select type="List" name="Bond">
+				<item id="1">There's a particular person or group of people who holds great influence over me/my actions.</item>
+				<item id="2">I bond with people easily and care for nearly everyone I meet.</item>
+				<item id="3">There are certain people I care about, but I'd much rather see others burn in a fire.</item>
+				<item id="4">I care about a decent amount of people, but I wouldn't risk my neck for them.</item>
+				<item id="5">I am absolutely in love with someone. That fact shapes me.</item>
+				<item id="6">I detest someone or a group of people and often work toward their demise.</item>
+			</select>
+			<select type="List" name="Flaw">
+				<item id="1">I am quick to betray if it means my own gain.</item>
+				<item id="2">I don’t have allies, only pawns and tools.</item>
+				<item id="3">I'm way too attached to hedonistic desires.</item>
+				<item id="4">Capricious. That's the word many people use to describe me. I'm told it's not usually good.</item>
+				<item id="5">I'd honestly risk/do too much for my ideals or my bonds.</item>
+				<item id="6">Try as I might, I just can't seem to hide my social quirk.</item>
+			</select>
+		</rules>
+	</element>
+	<!-- <element name="Feature: Position of Privilege" type="Background Feature" source="Player’s Handbook" id="ID_BACKGROUND_FEATURE_POSITIONOFPRIVILEGE">
+		<supports>Background Feature, Noble</supports>
+		<description>
+			<p>Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are. The common folk make every effort to accommodate you and avoid your displeasure, and other people of high birth treat you as a member of the same social sphere. You can secure an audience with a local noble if you need to.</p>
+		</description>
+		<sheet alt="Position of Privilege" />
+	</element> -->
+</elements>
