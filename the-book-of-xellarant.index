@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+  <info>
+    <update version="1.0">
+      <file name="the-book-of-xellarant.index" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/supplements/book-of-xellarant/the-book-of-xellarant.index" />
+    </update>
+  </info>
+  <files>
+    <file name="source.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/supplements/book-of-xellarant/source.xml" />
+    <file name="shadow-agent-background.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/supplements/book-of-xellarant/backgrounds/shadow-agent-background.xml" />
+    <file name="vigilante-background.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/supplements/book-of-xellarant/backgrounds/vigilante-background.xml" />
+  </files>
+</index>
