@@ -9,7 +9,7 @@
 		</update>
 	</info>
 
-	<element name="Shadow Agent" type="Background" source="The Book of Xellarant" id="ID_NV_TBOX_BACKGROUND_SHADOW_AGENT">
+	<element name="Shadow Agent (Customizable)" type="Background" source="The Book of Xellarant" id="ID_NV_TBOX_BACKGROUND_SHADOW_AGENT">
 		<description>
 			<p>You are but one part of a larger whole. A surviving member of a legacy. Yours and your organization's works may not ever be seen to the world at large for what they really are, but their effects will never be forgotten.</p>
 			<ul>

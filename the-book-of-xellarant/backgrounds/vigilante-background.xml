@@ -9,7 +9,7 @@
 		</update>
 	</info>
 
-	<element name="Vigilante" type="Background" source="The Book of Xellarant" id="ID_NV_TBOX_BACKGROUND_VIGILANTE">
+	<element name="Vigilante (Customizable)" type="Background" source="The Book of Xellarant" id="ID_NV_TBOX_BACKGROUND_VIGILANTE">
 		<description>
 			<p>Life can be unfair. Think of the starving peasants forced to toil for the local baron or the common laborers tasked with building the king's newest palace for a mere handful of copper pieces each week. There are those who see these injustices and do nothing. There are those who are willing to reap the rewards obtained through the suffering of others.</p>
 			<br /><p>Then there are those who see inequality and find themselves driven to take action, outside the law if necessary. These vigilantes operate in plain sight, hiding behind respectable personas by day, but donning alternate guises by night to right the wrongs they see all around them.</p>
