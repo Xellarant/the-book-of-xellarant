@@ -30,24 +30,11 @@
 			<select type="Proficiency" name="Skill Proficiency (Vigilante)" supports="Skill" number="2" />			
 			<grant type="Background Feature" id="ID_BACKGROUND_FEATURE_POSITIONOFPRIVILEGE" />
 			<select type="Background Feature" name="Variant Feature" optional="true" />
-			<select type="List" name="Skillset" number="1">
-				<item id="ID_XELL_TBOX_SUBBACKGROUND_LINGUISTIC">Linguistic. Your background gives you two language proficiencies.</item>
-				<item id="ID_XELL_TBOX_SUBBACKGROUND_HANDY">Handy. Your background gives you two tool proficiencies.</item>
-				<item id="ID_XELL_TBOX_SUBBACKGROUND_VERSATILE">Versatile. Your background gives you one language proficiency and one tool proficiency.</item>
-			</select>
-			<!-- <select type="Language||Proficiency" name="Language/Tool Proficiency (Vigilante)" supports="Tool||Standard||Exotic" number="2"/> -->
-			<select type="Language" name="Languages, Vigilante" supports="Standard||Exotic" number="2">
-				<requirements>ID_XELL_TBOX_SUBBACKGROUND_LINGUISTIC</requirements>
-			</select>
-			<select type="Proficiency" name="Tool Proficiencies, Vigilante" supports="Tool" number="2">
-				<requirements>ID_XELL_TBOX_SUBBACKGROUND_HANDY</requirements>
-			</select>
-			<select type="Language" name="Languages, Vigilante" supports="Standard||Exotic" number="1">
-				<requirements>ID_XELL_TBOX_SUBBACKGROUND_VERSATILE</requirements>
-			</select>
-			<select type="Proficiency" name="Tool Proficiencies, Vigilante" supports="Tool" number="1">
-				<requirements>ID_XELL_TBOX_SUBBACKGROUND_VERSATILE</requirements>
-			</select>
+			<select type="Background Feature" name="Skillset" supports="Sub-Feature"/>
+			<select type="Language" name="Language, Vigilante" supports="Standard||Exotic" number="2" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_LINGUISTIC" />
+			<select type="Proficiency" name="Tool Proficiency, Vigilante" supports="Tool" number="2" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_HANDY" />
+			<select type="Language" name="Language, Vigilante" supports="Standard||Exotic" number="1" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_VERSATILE" />
+			<select type="Proficiency" name="Tool Proficiency, Vigilante" supports="Tool" number="1" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_VERSATILE" />
 			<select type="List" name="Personality Trait" number="2">
 				<item id="1">Why tell the truth when I can get by only telling half of it?</item>
 				<item id="2">I know more than people think, and I can’t resist hinting at it.</item>
@@ -90,5 +77,26 @@
 			<p>Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are. The common folk make every effort to accommodate you and avoid your displeasure, and other people of high birth treat you as a member of the same social sphere. You can secure an audience with a local noble if you need to.</p>
 		</description>
 		<sheet alt="Position of Privilege" />
+	</element>
+	<element name="Sub-Feature: Linguistic" type="Background Feature" source="The Book of Xellarant" id="ID_XELL_TBOX_BACKGROUND_FEATURE_LINGUISTIC">
+		<supports>Sub-Feature</supports>
+		<description>
+			<p>Linguistic. Your background gives you two language proficiencies.</p>
+		</description>
+		<sheet display="false" />
+	</element>
+	<element name="Sub-Feature: Handy" type="Background Feature" source="The Book of Xellarant" id="ID_XELL_TBOX_BACKGROUND_FEATURE_HANDY">
+		<supports>Sub-Feature</supports>
+		<description>
+			<p>Handy. Your background gives you two tool proficiencies.</p>
+		</description>
+		<sheet display="false" />
+	</element>
+	<element name="Sub-Feature: Versatile" type="Background Feature" source="The Book of Xellarant" id="ID_XELL_TBOX_BACKGROUND_FEATURE_VERSATILE">
+		<supports>Sub-Feature</supports>
+		<description>
+			<p>Versatile. Your background gives you one language proficiency and one tool proficiency.</p>
+		</description>
+		<sheet display="false" />
 	</element>
 </elements>
