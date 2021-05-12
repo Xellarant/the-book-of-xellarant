@@ -1,0 +1,75 @@
+<?xml version="1.1" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Shadow Agent Background</name>
+		<description>Basic background of Shadow Agents, unseen conspirators and schemers.</description>
+		<author url="https://github.com/xellarant">Xellarant</author>
+		<update version="0.0.1">
+			<file name="shadow-agent-background.xml" url="https://raw.githubusercontent.com/Xellarant/elements-1/master/supplements/book-of-xellarant/backgrounds/shadow-agent-background.xml" />
+		</update>
+	</info>
+
+	<element name="Shadow Agent" type="Background" source="The Book of Xellarant" id="ID_NV_TBOX_BACKGROUND_SHADOW_AGENT">
+		<description>
+			<p>You are but one part of a larger whole. A surviving member of a legacy. Yours and your organization's works may not ever be seen to the world at large for what they really are, but their effects will never be forgotten.</p>
+			<ul>
+				<li><strong>Skill Proficiencies:</strong> You can select any two skills to be proficient with</li>
+				<li><strong>Tool Proficiencies:</strong> Any one of your choice</li>
+				<li><strong>Languages:</strong> Choose any language</li>
+				<li><strong>Equipment:</strong> Your inheritance, a set of traveler's clothes, the tool you choose for this background’s tool proficiency, and a pouch containing 15 gp</li>
+			</ul>
+			<div element="ID_SCAG_BACKGROUND_FACTION_AGENT_SAFE_HAVEN" />
+		</description>
+		<setters>
+			<set name="short">2 Any Skills, 1 Tool, 1 Language, Variable Background Feature</set>
+		</setters>
+		<rules>
+			<select type="Proficiency" name="Skill Proficiency (Shadow Agent)" supports="Skill" number="2" />
+			<select type="Proficiency" name="Tool Proficiency (Shadow Agent)" supports="Tool"/>
+			<select type="Language" name="Language (Shadow Agent)" supports="Standard||Exotic" />
+			<grant type="Background Feature" id="ID_SCAG_BACKGROUND_FACTION_AGENT_SAFE_HAVEN" />
+			<select type="Background Feature" name="Variant Feature" optional="true" />
+			<select type="List" name="Personality Trait" number="2">
+				<item id="1">Why tell the truth when I can get by only telling half of it?</item>
+				<item id="2">I know more than people think, and I can’t resist hinting at it.</item>
+				<item id="3">Insults and intrigue are my specialty. Words can do just as much, if not more, damage than a knife.</item>
+				<item id="4">I enjoy basking in shadows and darkness; The closer to our Mistress I am, the better.</item>
+				<item id="5">I’m quick to start a fight, and quicker to end one.</item>
+				<item id="6">I am, what you might call, “a control freak.” I become nervous and irritated when things are out of my power.</item>
+				<item id="7">I always look for anything to get me ahead or leverage over my enemies.</item>
+				<item id="8">Fast-talk and doublespeak are my preferred styles of communication. If you can’t keep up, that’s not my problem.</item>
+			</select>
+			<select type="List" name="Ideal">
+				<item id="1">Influence. By manipulating the world through the shadows, I can reshape it to my liking. (Evil)</item>
+				<item id="2">Anarchy. There are few rules we actually need, and if the rest of the world were to see that, we would be truly free. (Chaotic)</item>
+				<item id="3">Greed. The organization is a means to an end, and that end sees me with all the gold. (Neutral)</item>
+				<item id="4">Devotion. The will of the shadows bring many blessings. By walking through shadow, I will be blessed. (Any)</item>
+				<item id="5">Control. Through our schemes, we can control the narrative and enact the ideals that truly matter. (Lawful)</item>
+				<item id="6">Punishment. Those that stand against us will be consumed by the darkness. (Evil)</item>
+			</select>
+			<select type="List" name="Bond">
+				<item id="1">As a greater shadow, I am constantly a point of intrigue to our lower members, and I would do anything to impress them.</item>
+				<item id="2">Our leader has chosen me specifically, and I fear nothing more than losing their favor.</item>
+				<item id="3">My family knows nothing of my role in the shadows, and I would prefer to keep it that way.</item>
+				<item id="4">I spared someone I shouldn't have during a mission once. If the guild were to find out, it would be the end of me.</item>
+				<item id="5">I am in love with someone whose affections could end everything I've worked toward.</item>
+				<item id="6">I will stop at nothing to climb the ranks of the shadows.</item>
+			</select>
+			<select type="List" name="Flaw">
+				<item id="1">I am quick to betray if it means my own gain.</item>
+				<item id="2">I don’t have allies, only pawns and tools.</item>
+				<item id="3">Everywhere I go, I seem to make only enemies.</item>
+				<item id="4">I don’t trust anyone that says they want what is “good for everybody.”</item>
+				<item id="5">The first one to run is the last one to die, and I don’t plan on dying.</item>
+				<item id="6">My sharp tongue regularly creates trouble for me and my allies.</item>
+			</select>
+		</rules>
+	</element>
+	<element name="Feature: Safe Haven" type="Background Feature" source="Sword Coast Adventurer’s Guide" id="ID_SCAG_BACKGROUND_FACTION_AGENT_SAFE_HAVEN">
+		<supports>Background Feature</supports>
+		<description>
+			<p>As a faction agent, you have access to a secret network of supporters and operatives who can provide assistance on your adventures. You know a set of secret signs and passwords you can use to identify such operatives, who can provide you with access to a hidden safe house, free room and board, or assistance in finding information. These agents never risk their lives for you or risk revealing their true identities.</p>
+		</description>
+		<sheet name="Safe Haven" />
+	</element>
+</elements>
