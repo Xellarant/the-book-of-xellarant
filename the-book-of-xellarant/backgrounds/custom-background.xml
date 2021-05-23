@@ -4,7 +4,7 @@
 		<name>Custom Background</name>
 		<description>Basic template for a custom background.</description>
 		<author url="https://github.com/xellarant">Xellarant</author>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="custom-background.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/backgrounds/custom-background.xml" />
 		</update>
 	</info>
@@ -29,10 +29,10 @@
 			<!-- <grant type="Background Feature" id="ID_BACKGROUND_FEATURE_POSITIONOFPRIVILEGE" /> -->
 			<select type="Background Feature" name="Background Feature" optional="false" />
 			<select type="Background Feature" name="Skillset" supports="Sub-Feature"/>
-			<select type="Language" name="Language, Vigilante" supports="Standard||Exotic" number="2" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_LINGUISTIC" />
-			<select type="Proficiency" name="Tool Proficiency, Vigilante" supports="Tool" number="2" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_HANDY" />
-			<select type="Language" name="Language, Vigilante" supports="Standard||Exotic" number="1" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_VERSATILE" />
-			<select type="Proficiency" name="Tool Proficiency, Vigilante" supports="Tool" number="1" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_VERSATILE" />
+			<select type="Language" name="Language, Custom Background" supports="Standard||Exotic" number="2" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_LINGUISTIC" />
+			<select type="Proficiency" name="Tool Proficiency, Custom Background" supports="Tool" number="2" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_HANDY" />
+			<select type="Language" name="Language, Custom Background" supports="Standard||Exotic" number="1" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_VERSATILE" />
+			<select type="Proficiency" name="Tool Proficiency, Custom Background" supports="Tool" number="1" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_VERSATILE" />
 			<select type="List" name="Personality Trait" number="2">
 				<item id="1">I'm often more guarded (even covert) than I need to be.</item>
 				<item id="2">I'm way more open than most.</item>
