@@ -4,12 +4,12 @@
 		<name>Shadow Agent Background</name>
 		<description>Basic background of Shadow Agents, unseen conspirators and schemers.</description>
 		<author url="https://github.com/xellarant">Xellarant</author>
-		<update version="0.0.2">
+		<update version="0.0.3">
 			<file name="shadow-agent-background.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/backgrounds/shadow-agent-background.xml" />
 		</update>
 	</info>
 
-	<element name="Shadow Agent (Customizable)" type="Background" source="The Book of Xellarant" id="ID_NV_TBOX_BACKGROUND_SHADOW_AGENT">
+	<element name="Shadow Agent (Customizable)" type="Background" source="The Book of Xellarant" id="ID_TBOX_BACKGROUND_SHADOW_AGENT">
 		<description>
 			<p>You are but one part of a larger whole. A surviving member of a legacy. Yours and your organization's works may not ever be seen to the world at large for what they really are, but their effects will never be forgotten.</p>
 			<ul>

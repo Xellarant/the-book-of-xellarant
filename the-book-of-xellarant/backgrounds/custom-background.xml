@@ -4,12 +4,12 @@
 		<name>Custom Background</name>
 		<description>Basic template for a custom background.</description>
 		<author url="https://github.com/xellarant">Xellarant</author>
-		<update version="0.0.2">
+		<update version="0.0.3">
 			<file name="custom-background.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/backgrounds/custom-background.xml" />
 		</update>
 	</info>
 
-	<element name="Custom" type="Background" source="The Book of Xellarant" id="ID_NV_TBOX_BACKGROUND_CUSTOM">
+	<element name="Custom" type="Background" source="The Book of Xellarant" id="ID_TBOX_BACKGROUND_CUSTOM">
 		<description>
 			<p>Life, depending on your point of view, is a series of random events. Any number of things have led you to where you've gotten thusfar, and it's up to you to tell the story.</p>
 			<ul>

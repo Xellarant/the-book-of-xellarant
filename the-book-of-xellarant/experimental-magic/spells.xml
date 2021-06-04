@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Experimental Spells</name>
+		<description>Experimental spells from The Book of Xellarant.</description>
+		<author url="https://github.com/xellarant">Xellarant</author>
+		<update version="0.0.1">
+			<file name="spells.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/experimental-magic/spells.xml" />
+		</update>
+	</info>
+
+	<element name="Steeling" type="Spell" source="The Book of Xellarant" id="ID_TBOX_SPELL_STEELING">
+		<supports>Sorcerer,Druid,Wizard,Artificer</supports>
+		<description>
+			<p>A melee weapon you are holding (or the flesh of a chosen creature) is suffused with an iron alloy and briefly transformed into magical steel. For the duration, the weapon (or the creature's flesh) emits a dull glow as its chemical structure is temporarily altered. The weapon (or the creature's unarmed strike) becomes magical and deals an additional 1d4 damage of its type on a successful hit. The spell ends if you cast it again or if you let go of the weapon. A creature under the effects of this spell may choose not to apply the additional damage for unarmed strikes.</p>
+			<p class="indent">The spell’s damage increases by 1d4 when you reach 5th level (2d4), 11th level (3d4), and 17th level (4d4).</p>
+		</description>
+		<setters>
+			<set name="keywords">experimental magic</set>
+			<set name="level">0</set>
+			<set name="school" addition="Experimental">Transmutation</set>
+			<set name="time">1 bonus action</set>
+			<set name="range">Touch</set>
+			<set name="duration">1 minute</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent"></set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+</elements>
