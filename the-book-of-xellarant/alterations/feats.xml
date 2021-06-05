@@ -3,7 +3,7 @@
 		<name>Alterations</name>
 		<description>Feats born of experimental magics and techniques from The Book of Xellarant.</description>
 		<author url="https://github.com/xellarant">Xellarant</author>
-		<update version="0.0.a">
+		<update version="0.0.1">
 			<file name="feats.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/alterations/feats.xml" />
 		</update>
 	</info>
