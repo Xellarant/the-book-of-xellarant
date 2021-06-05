@@ -3,11 +3,11 @@
 		<name>Alterations</name>
 		<description>Feats born of experimental magics and techniques from The Book of Xellarant.</description>
 		<author url="https://github.com/xellarant">Xellarant</author>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="feats.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/alterations/feats.xml" />
 		</update>
 	</info>
-    <element name="Aberrant Dragonmark β" type="Feat" source="The Book of Xellarant" id="ID_TBOX_FEAT_ABERRANT_DRAGONMARK_B">
+    <element name="Aberrant Dragonmark β" type="Feat" source="The Book of Xellarant" id="ID_TBOX_FEAT_ABERRANT_DRAGONMARK_BETA">
 		<requirements>!ID_INTERNAL_GRANTS_DRAGONMARK,!ID_WOTC_WGTE_GRANTS_DARKMARKED</requirements>
 		<prerequisite>No other dragonmark</prerequisite>
 		<description>
@@ -25,8 +25,8 @@
 		</sheet>
 		<rules>
 			<stat name="dexterity" value="1" />
-			<select type="Spell" name="Cantrip, Aberrant Dragonmark" supports="0,Sorcerer" />
-			<select type="Spell" name="1st-level Spell, Aberrant Dragonmark" supports="1,Sorcerer" />
+			<select type="Spell" name="Cantrip, Aberrant Dragonmark β" supports="0,Sorcerer" />
+			<select type="Spell" name="1st-level Spell, Aberrant Dragonmark β" supports="1,Sorcerer" />
 		</rules>
 	</element>
 </elements>
