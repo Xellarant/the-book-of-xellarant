@@ -25,7 +25,6 @@
 		</setters>
 		<rules>
 			<select type="Proficiency" name="Skill Proficiency (Custom)" supports="Skill" number="2" />
-			<select type="Language||Proficiency" name="Language/Tool Proficiency (Custom)" supports="Tool||Standard||Exotic" number="2"/>
 			<!-- <grant type="Background Feature" id="ID_BACKGROUND_FEATURE_POSITIONOFPRIVILEGE" /> -->
 			<select type="Background Feature" name="Background Feature" optional="false" />
 			<select type="Background Feature" name="Skillset" supports="Sub-Feature"/>

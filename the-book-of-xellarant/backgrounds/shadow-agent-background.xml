@@ -14,8 +14,7 @@
 			<p>You are but one part of a larger whole. A surviving member of a legacy. Yours and your organization's works may not ever be seen to the world at large for what they really are, but their effects will never be forgotten.</p>
 			<ul>
 				<li><strong>Skill Proficiencies:</strong> You can select any two skills to be proficient with</li>
-				<li><strong>Tool Proficiencies:</strong> Any one of your choice</li>
-				<li><strong>Languages:</strong> Choose any language</li>
+				<li><strong>Language/Tool Proficiencies:</strong> Any two of your choice</li>
 				<li><strong>Equipment:</strong> Your inheritance, a set of traveler's clothes, the tool you choose for this background’s tool proficiency, and a pouch containing 15 gp</li>
 			</ul>
 			<div element="ID_SCAG_BACKGROUND_FACTION_AGENT_SAFE_HAVEN" />
@@ -25,8 +24,6 @@
 		</setters>
 		<rules>
 			<select type="Proficiency" name="Skill Proficiency (Shadow Agent)" supports="Skill" number="2" />
-			<select type="Proficiency" name="Tool Proficiency (Shadow Agent)" supports="Tool"/>
-			<select type="Language" name="Language (Shadow Agent)" supports="Standard||Exotic" />
 			<grant type="Background Feature" id="ID_SCAG_BACKGROUND_FACTION_AGENT_SAFE_HAVEN" />
 			<select type="Background Feature" name="Variant Feature" optional="true" />
 			<select type="Background Feature" name="Skillset" supports="Sub-Feature"/>
