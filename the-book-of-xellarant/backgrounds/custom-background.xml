@@ -4,7 +4,7 @@
 		<name>Custom Background</name>
 		<description>Basic template for a custom background.</description>
 		<author url="https://github.com/xellarant">Xellarant</author>
-		<update version="0.0.3">
+		<update version="0.0.4">
 			<file name="custom-background.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/backgrounds/custom-background.xml" />
 		</update>
 	</info>

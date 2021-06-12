@@ -4,7 +4,7 @@
 		<name>Shadow Agent Background</name>
 		<description>Basic background of Shadow Agents, unseen conspirators and schemers.</description>
 		<author url="https://github.com/xellarant">Xellarant</author>
-		<update version="0.0.3">
+		<update version="0.0.4">
 			<file name="shadow-agent-background.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/backgrounds/shadow-agent-background.xml" />
 		</update>
 	</info>
