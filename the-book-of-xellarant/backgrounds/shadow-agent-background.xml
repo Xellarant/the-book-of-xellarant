@@ -4,7 +4,7 @@
 		<name>Shadow Agent Background</name>
 		<description>Basic background of Shadow Agents, unseen conspirators and schemers.</description>
 		<author url="https://github.com/xellarant">Xellarant</author>
-		<update version="0.0.4">
+		<update version="0.0.5">
 			<file name="shadow-agent-background.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/backgrounds/shadow-agent-background.xml" />
 		</update>
 	</info>
@@ -27,10 +27,10 @@
 			<grant type="Background Feature" id="ID_SCAG_BACKGROUND_FACTION_AGENT_SAFE_HAVEN" />
 			<select type="Background Feature" name="Variant Feature" optional="true" />
 			<select type="Background Feature" name="Skillset" supports="Sub-Feature"/>
-			<select type="Language" name="Language, Vigilante" supports="Standard||Exotic" number="2" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_LINGUISTIC" />
-			<select type="Proficiency" name="Tool Proficiency, Vigilante" supports="Tool" number="2" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_HANDY" />
-			<select type="Language" name="Language, Vigilante" supports="Standard||Exotic" number="1" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_VERSATILE" />
-			<select type="Proficiency" name="Tool Proficiency, Vigilante" supports="Tool" number="1" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_VERSATILE" />
+			<select type="Language" name="Language, Shadow Agent" supports="Standard||Exotic" number="2" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_LINGUISTIC" />
+			<select type="Proficiency" name="Tool Proficiency, Shadow Agent" supports="Tool" number="2" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_HANDY" />
+			<select type="Language" name="Language, Shadow Agent" supports="Standard||Exotic" number="1" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_VERSATILE" />
+			<select type="Proficiency" name="Tool Proficiency, Shadow Agent" supports="Tool" number="1" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_VERSATILE" />
 			<select type="List" name="Personality Trait" number="2">
 				<item id="1">Why tell the truth when I can get by only telling half of it?</item>
 				<item id="2">I know more than people think, and I can’t resist hinting at it.</item>
