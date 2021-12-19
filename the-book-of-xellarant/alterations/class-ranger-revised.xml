@@ -82,6 +82,7 @@
 			<div element="ID_TBOX_CLASSFEATURE_RANGER_REVISED_FAVORED_ENEMY" />
 			<div element="ID_TBOX_CLASSFEATURE_RANGER_REVISED_NATURAL_EXPLORER" />
 			<div element="ID_WOTC_CLASSFEATURE_RANGER_FIGHTING_STYLE" />
+			<div element="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_SPELLCASTING_FOCUS" />
 			<div element="ID_WOTC_CLASSFEATURE_RANGER_SPELLCASTING" />
 			<div element="ID_WOTC_CLASSFEATURE_RANGER_RANGER_ARCHETYPE" />
 			<div element="ID_TBOX_CLASSFEATURE_RANGER_REVISED_PRIMEVAL_AWARENESS" />
@@ -89,8 +90,8 @@
 			<div element="ID_WOTC_CLASSFEATURE_RANGER_EXTRA_ATTACK" />
 			<div element="ID_TBOX_CLASSFEATURE_RANGER_REVISED_GREATER_FAVORED_ENEMY" />
 			<div element="ID_TBOX_CLASSFEATURE_RANGER_REVISED_FLEET_OF_FOOT" />
-			<div element="ID_WOTC_CLASSFEATURE_RANGER_HIDE_IN_PLAIN_SIGHT" />
-			<div element="ID_WOTC_CLASSFEATURE_RANGER_VANISH" />
+			<div element="ID_TBOX_CLASSFEATURE_RANGER_REVISED_HIDE_IN_PLAIN_SIGHT" />
+			<div element="ID_TBOX_CLASSFEATURE_RANGER_REVISED_VANISH" />
 			<div element="ID_WOTC_CLASSFEATURE_RANGER_FERAL_SENSES" />
 			<div element="ID_WOTC_CLASSFEATURE_RANGER_FOE_SLAYER" />
 		</description>
@@ -102,26 +103,30 @@
 			<set name="hd">d10</set>
 		</setters>
 		<rules>
-			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" requirements="!ID_TBOX_MULTICLASS_RANGER_REVISED,!!ID_WOTC_PHB_MULTICLASS_RANGER" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" requirements="!ID_TBOX_MULTICLASS_RANGER_REVISED,!ID_WOTC_PHB_MULTICLASS_RANGER" />
 			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" requirements="!ID_TBOX_MULTICLASS_RANGER_REVISED,!ID_WOTC_PHB_MULTICLASS_RANGER" />
-			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS" requirements="!ID_TBOX_MULTICLASS_RANGER_REVISED,!!ID_WOTC_PHB_MULTICLASS_RANGER" />
-			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SIMPLE_WEAPONS" requirements="!ID_TBOX_MULTICLASS_RANGER_REVISED,!!ID_WOTC_PHB_MULTICLASS_RANGER" />
-			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" requirements="!ID_TBOX_MULTICLASS_RANGER_REVISED,!!ID_WOTC_PHB_MULTICLASS_RANGER" />
-			<grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_STRENGTH" requirements="!ID_TBOX_MULTICLASS_RANGER_REVISED,!!ID_WOTC_PHB_MULTICLASS_RANGER" />
-			<grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_DEXTERITY" requirements="!ID_TBOX_MULTICLASS_RANGER_REVISED,!!ID_WOTC_PHB_MULTICLASS_RANGER" />
-			<select type="Proficiency" name="Skill Proficiency (Ranger)" supports="Skill,Ranger" number="3" requirements="!ID_TBOX_MULTICLASS_RANGER_REVISED,!!ID_WOTC_PHB_MULTICLASS_RANGER" />
-			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_FAVORED_ENEMY" level="1"/>
-			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_NATURAL_EXPLORER" level="1"/>
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS" requirements="!ID_TBOX_MULTICLASS_RANGER_REVISED,!ID_WOTC_PHB_MULTICLASS_RANGER" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SIMPLE_WEAPONS" requirements="!ID_TBOX_MULTICLASS_RANGER_REVISED,!ID_WOTC_PHB_MULTICLASS_RANGER" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" requirements="!ID_TBOX_MULTICLASS_RANGER_REVISED,!ID_WOTC_PHB_MULTICLASS_RANGER" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_STRENGTH" requirements="!ID_TBOX_MULTICLASS_RANGER_REVISED,!ID_WOTC_PHB_MULTICLASS_RANGER" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_DEXTERITY" requirements="!ID_TBOX_MULTICLASS_RANGER_REVISED,!ID_WOTC_PHB_MULTICLASS_RANGER" />
+			<select type="Proficiency" name="Skill Proficiency (Ranger)" supports="Skill,Ranger" number="3" requirements="!ID_TBOX_MULTICLASS_RANGER_REVISED,!ID_WOTC_PHB_MULTICLASS_RANGER" />
+			<!-- <grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_NATURAL_EXPLORER" level="1"/> -->
+			<select type="Class Feature" name="Class Feature Choice (Ranger-Revised)" supports="Ranger-Option-1.1" number="1" level="1" />
+			<select type="Class Feature" name="Class Feature Choice (Ranger-Revised)" supports="Ranger-Option-1.2" number="1" level="1" />
 			<grant type="Class Feature" id="ID_WOTC_CLASSFEATURE_RANGER_FIGHTING_STYLE" level="2"/>
 			<grant type="Class Feature" id="ID_WOTC_CLASSFEATURE_RANGER_SPELLCASTING" level="2"/>
+			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_SPELLCASTING_FOCUS" level="2"/>
 			<grant type="Class Feature" id="ID_WOTC_CLASSFEATURE_RANGER_RANGER_ARCHETYPE" level="3"/>
-			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_PRIMEVAL_AWARENESS" level="3"/>
+			<!-- <grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_PRIMEVAL_AWARENESS" level="3"/> -->
+			<select type="Class Feature" name="Class Feature Choice (Ranger-Revised)" supports="Ranger-Option-3" number="1" level="3" />
 			<grant type="Class Feature" id="ID_WOTC_CLASSFEATURE_RANGER_ASI" level="4"/>
 			<grant type="Class Feature" id="ID_WOTC_CLASSFEATURE_RANGER_EXTRA_ATTACK" level="5"/>
 			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_GREATER_FAVORED_ENEMY" level="6"/>
 			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_FLEET_OF_FOOT" level="8"/>
-			<grant type="Class Feature" id="ID_WOTC_CLASSFEATURE_RANGER_HIDE_IN_PLAIN_SIGHT" level="10"/>
-			<grant type="Class Feature" id="ID_WOTC_CLASSFEATURE_RANGER_VANISH" level="14"/>
+			<!-- <grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_HIDE_IN_PLAIN_SIGHT" level="10"/> -->
+			<select type="Class Feature" name="Class Feature Choice (Ranger-Revised)" supports="Ranger-Option-10" number="1" level="10" />
+			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_VANISH" level="14"/>
 			<grant type="Class Feature" id="ID_WOTC_CLASSFEATURE_RANGER_FERAL_SENSES" level="18"/>
 			<grant type="Class Feature" id="ID_WOTC_CLASSFEATURE_RANGER_FOE_SLAYER" level="20"/>
 		</rules>
@@ -143,6 +148,7 @@
 		</multiclass>
 	</element>
 	<element name="Favored Enemy" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_FAVORED_ENEMY">
+		<supports>Ranger-Option-1.1</supports>
 		<description>
 			<p>Beginning at 1st level, you have significant experience studying, tracking, hunting, and even talking to a certain type of enemy commonly encountered in the wilds.</p>
 			<p class="indent">Choose a type	of favored enemy: beasts, fey, humanoids, monstrosities, or undead. You gain a +2 bonus to damage rolls with weapon attacks against creatures of the chosen type (+4 at level 6).</p>
@@ -158,7 +164,21 @@
 			<select type="Language" name="Language (Favored Enemy)" level="1" />
 		</rules>
 	</element>
+	<!-- <element name="Favored Foe" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_FAVORED_FOE">
+		<supports>Ranger-Option-1.1</supports>
+		<description>
+			<p>1st-level ranger optional feature, which replaces the Favored Enemy feature and works with the Foe Slayer feature</p>
+			<p>When you hit a creature with an attack roll, you can call on your mystical bond with nature to mark the target as your favored enemy for 1 minute or until you lose your concentration (as if you were concentrating on a spell).</p>
+			<p>The first time on each of your turns that you hit the favored enemy and deal damage to it, including when you mark it, you can increase that damage by 1d4.</p>
+			<p>You can use this feature to mark a favored enemy a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+			<p>This feature's extra damage increases when you reach certain levels in this class: to 1d6 at 6th level and to 1d8 at 14th level.</p>
+		</description>
+		<sheet>
+			<description>When you hit a creature with an attack roll, you can mark the target as your favored enemy for 1 minute or until you lose your concentration. The first time on each of your turns that you hit the favored enemy and deal damage to it, including when you mark it, you can increase that damage by 1d4. You can use this feature to mark a favored enemy a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest. This feature's extra damage increases when you reach certain levels in this class: to 1d6 at 6th level and to 1d8 at 14th level.</description>
+		</sheet>
+	</element> -->
 	<element name="Natural Explorer" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_NATURAL_EXPLORER">
+		<supports>Ranger-Option-1.2</supports>
 		<description>
 			<p class="indent">You are a master of navigating the natural world, and you react with swift and decisive action when attacked. This grants you the following benefits:</p>
 			<ul>
@@ -208,6 +228,7 @@
 			<h5>SPELL SLOTS</h5>
 			<p>The Ranger table shows how many spell slots you have to cast your ranger spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell’s level or higher. You regain all expended spell slots when you finish a long rest.</p>
 			<p class="indent">For example, if you know the 1st-level spell animal friendship and have a 1st-level and a 2nd-level spell slot available, you can cast animal friendship using either slot.</p>
+			<p>You can use a druidic focus as a spellcasting focus for your ranger spells. A druidic focus might be a sprig of mistletoe or holly, a wand or rod made of yew or another special wood, a staff drawn whole from a living tree, or an object incorporating feathers, fur, bones, and teeth from sacred animals.</p>
 			<h5>SPELLS KNOWN OF 1ST LEVEL AND HIGHER</h5>
 			<p>You know two 1st-level spells of your choice from the ranger spell list.</p>
 			<p class="indent">The Spells Known column of the Ranger table shows when you learn more ranger spells of your choice. Each of these spells must be of a level for which you have spell slots. For instance, when you reach 5th level in this class, you can learn one new spell of 1st or 2nd level.</p>
@@ -260,7 +281,8 @@
 			<select type="Archetype" name="Ranger Archetype" supports="Ranger Archetype" />
 		</rules>
 	</element>
-	<element name="Primeval Awareness" type="Class Feature" source="Player’s Handbook" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_PRIMEVAL_AWARENESS">
+	<element name="Primeval Awareness" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_PRIMEVAL_AWARENESS">
+		<supports>Ranger-Option-3</supports>
 		<description>
 			<p>Beginning at 3rd level, your mastery of ranger lore allows you to establish a powerful link to beasts and to the land around you.</p>
 			<p>You have an innate ability to communicate with beasts, and they recognize you as a kindred spirit. Through sounds and gestures, you can communicate simple ideas to a beast as an action, and can read its basic mood and intent. You learn its emotional state, whether it is affected by magic of any sort, its short-term needs (such as food or safety), and actions you can take (if any) to persuade it to not attack.</p>
@@ -300,27 +322,34 @@
 			<stat name="extra attack:count" value="2" level="5" bonus="extra attack" />
 		</rules>
 	</element>
-	<element name="Fleet of Foot" type="Class Feature" source="Player’s Handbook" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_FLEET_OF_FOOT">
+	<element name="Fleet of Foot" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_FLEET_OF_FOOT">
 		<description>
-			<p>Starting at 8th level, moving through nonmagical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard.</p>
-			<p class="indent">In addition, you have advantage on saving throws against plants that are magically created or manipulated to impede movement, such those created by the entangle spell.</p>
+			<p>Beginning at 8th level, you can use the Dash action as a bonus action on your turn.</p>
 		</description>
 		<sheet>
-			<description>Moving through nonmagical difficult terrain costs you no extra movement. You can also pass through nonmagical plants without being slowed by them and without taking damage from them if they have thorns, spines, or a similar hazard.
-			You have advantage on saving throws against plants that are magically created or manipulated to impede movement, such those created by the entangle spell.</description>
+			<description>Beginning at 8th level, you can use the Dash action as a bonus action on your turn.</description>
 		</sheet>
 	</element>
-	<element name="Hide in Plain Sight" type="Class Feature" source="Player’s Handbook" id="ID_WOTC_CLASSFEATURE_RANGER_HIDE_IN_PLAIN_SIGHT">
+	<element name="Hide in Plain Sight" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_HIDE_IN_PLAIN_SIGHT">
+		<supports>Ranger-Option-10</supports>
 		<description>
-			<p>Starting at 10th level, you can spend 1 minute creating camouflage for yourself. You must have access to fresh mud, dirt, plants, soot, and other naturally occurring materials with which to create your camouflage.</p>
-			<p class="indent">Once you are camouflaged in this way, you can try to hide by pressing yourself up against a solid surface, such as a tree or wall, that is at least as tall and wide as you are. You gain a +10 bonus to Dexterity (Stealth) checks as long as you remain there without moving or taking actions. Once you move or take an action or a reaction, you must camouflage yourself again to gain this benefit.</p>
+			<p>Starting at 10th level, you can remain perfectly still for long periods of time to set up ambushes. When you attempt to hide on your turn, you can opt to not move on that turn. If you avoid moving, creatures that attempt to detect you take a −10 penalty to their Wisdom (Perception) checks until the start of your next turn. You lose this benefit if you move or fall prone, either voluntarily or because of some external effect. You are still automatically detected if any effect or action causes you to no longer be hidden.
+			<p class="indent">If you are still hidden on your next turn, you can continue to remain motionless and gain this benefit until you are detected.</p>			
 		</description>
 		<sheet>
-			<description>You can spend 1 minute creating camouflage for yourself. You must have access to fresh mud, dirt, plants, soot, and other naturally occurring materials with which to create your camouflage.
-			Once you are camouflaged in this way, you can try to hide by pressing yourself up against a solid surface, such as a tree or wall, that is at least as tall and wide as you are. You gain a +10 bonus to Stealth checks as long as you remain there without moving or taking actions. Once you move or take an action or a reaction, you must camouflage yourself again to gain this benefit.</description>
+			<description>When you attempt to hide on your turn, you can opt to not move on that turn. If you avoid moving, creatures that attempt to detect you take a −10 penalty to their Wisdom (Perception) checks until the start of your next turn.</description>
 		</sheet>
 	</element>
-	<element name="Vanish" type="Class Feature" source="Player’s Handbook" id="ID_WOTC_CLASSFEATURE_RANGER_VANISH">
+	<element name="Nature's Veil (Optional)" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_NATURES_VEIL">
+		<supports>Ranger-Option-10</supports>
+		<description>
+			<p>10th-level ranger optional feature, which replaces the Hide in Plain Sight feature. You draw on the powers of nature to hide yourself from view briefly. As a bonus action, you can magically become invisible, along with any equipment you are wearing or carrying, until the start of your next turn. You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+		</description>
+		<sheet action="Bonus Action">
+			<description>As a bonus action, you can magically become invisible, along with any equipment you are wearing or carrying, until the start of your next turn.</description>
+		</sheet>
+	</element>
+	<element name="Vanish" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_VANISH">
 		<description>
 			<p>Starting at 14th level, you can use the Hide action as a bonus action on your turn. Also, you can’t be tracked by nonmagical means, unless you choose to leave a trail.</p>
 		</description>
@@ -654,130 +683,9 @@
         <description>
             <p>Purebloods form the lowest caste of yuan-ti society. They closely resemble humans, yet a pureblood can’t pass for human under close scrutiny because there’s always some hint of its true nature, such as scaly patches of skin, serpentine eyes, pointed teeth, or a forked tongue. Wearing cloaks and cowls, they masquerade as humans and infiltrate civilized lands to gather information, kidnap prisoners for interrogation and sacrifice, and trade with anyone who has something that can further their myriad plots.</p>
         </description>
-    </element>
+    </element>	
 
-	<element name="Arctic" type="Class Feature" source="Player’s Handbook" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_NATURAL_EXPLORER_FT_ARCTIC">
-		<supports>Favored Terrain</supports>
-		<description>
-			<p>You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you’re proficient in.</p>
-			<p class="indent">While traveling for an hour or more in your favored terrain, you gain the following benefits:</p>
-			<ul>
-				<li>Difficult terrain doesn’t slow your group’s travel.</li>
-				<li>Your group can’t become lost except by magical means.</li>
-				<li>Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.</li>
-				<li>If you are traveling alone, you can move stealthily at a normal pace.</li>
-				<li>When you forage, you find twice as much food as you normally would.</li>
-				<li>While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.</li>
-			</ul>
-		</description>		
-	</element>
-	<element name="Coast" type="Class Feature" source="Player’s Handbook" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_NATURAL_EXPLORER_FT_COAST">
-		<supports>Favored Terrain</supports>
-		<description>
-			<p>You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you’re proficient in.</p>
-			<p class="indent">While traveling for an hour or more in your favored terrain, you gain the following benefits:</p>
-			<ul>
-				<li>Difficult terrain doesn’t slow your group’s travel.</li>
-				<li>Your group can’t become lost except by magical means.</li>
-				<li>Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.</li>
-				<li>If you are traveling alone, you can move stealthily at a normal pace.</li>
-				<li>When you forage, you find twice as much food as you normally would.</li>
-				<li>While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.</li>
-			</ul>
-		</description>		
-	</element>
-	<element name="Desert" type="Class Feature" source="Player’s Handbook" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_NATURAL_EXPLORER_FT_DESERT">
-		<supports>Favored Terrain</supports>
-		<description>
-			<p>You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you’re proficient in.</p>
-			<p class="indent">While traveling for an hour or more in your favored terrain, you gain the following benefits:</p>
-			<ul>
-				<li>Difficult terrain doesn’t slow your group’s travel.</li>
-				<li>Your group can’t become lost except by magical means.</li>
-				<li>Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.</li>
-				<li>If you are traveling alone, you can move stealthily at a normal pace.</li>
-				<li>When you forage, you find twice as much food as you normally would.</li>
-				<li>While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.</li>
-			</ul>
-		</description>		
-	</element>
-	<element name="Forest" type="Class Feature" source="Player’s Handbook" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_NATURAL_EXPLORER_FT_FOREST">
-		<supports>Favored Terrain</supports>
-		<description>
-			<p>You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you’re proficient in.</p>
-			<p class="indent">While traveling for an hour or more in your favored terrain, you gain the following benefits:</p>
-			<ul>
-				<li>Difficult terrain doesn’t slow your group’s travel.</li>
-				<li>Your group can’t become lost except by magical means.</li>
-				<li>Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.</li>
-				<li>If you are traveling alone, you can move stealthily at a normal pace.</li>
-				<li>When you forage, you find twice as much food as you normally would.</li>
-				<li>While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.</li>
-			</ul>
-		</description>		
-	</element>
-	<element name="Grassland" type="Class Feature" source="Player’s Handbook" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_NATURAL_EXPLORER_FT_GRASSLAND">
-		<supports>Favored Terrain</supports>
-		<description>
-			<p>You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you’re proficient in.</p>
-			<p class="indent">While traveling for an hour or more in your favored terrain, you gain the following benefits:</p>
-			<ul>
-				<li>Difficult terrain doesn’t slow your group’s travel.</li>
-				<li>Your group can’t become lost except by magical means.</li>
-				<li>Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.</li>
-				<li>If you are traveling alone, you can move stealthily at a normal pace.</li>
-				<li>When you forage, you find twice as much food as you normally would.</li>
-				<li>While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.</li>
-			</ul>
-		</description>		
-	</element>
-	<element name="Mountain" type="Class Feature" source="Player’s Handbook" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_NATURAL_EXPLORER_FT_MOUNTAIN">
-		<supports>Favored Terrain</supports>
-		<description>
-			<p>You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you’re proficient in.</p>
-			<p class="indent">While traveling for an hour or more in your favored terrain, you gain the following benefits:</p>
-			<ul>
-				<li>Difficult terrain doesn’t slow your group’s travel.</li>
-				<li>Your group can’t become lost except by magical means.</li>
-				<li>Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.</li>
-				<li>If you are traveling alone, you can move stealthily at a normal pace.</li>
-				<li>When you forage, you find twice as much food as you normally would.</li>
-				<li>While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.</li>
-			</ul>
-		</description>		
-	</element>
-	<element name="Swamp" type="Class Feature" source="Player’s Handbook" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_NATURAL_EXPLORER_FT_SWAMP">
-		<supports>Favored Terrain</supports>
-		<description>
-			<p>You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you’re proficient in.</p>
-			<p class="indent">While traveling for an hour or more in your favored terrain, you gain the following benefits:</p>
-			<ul>
-				<li>Difficult terrain doesn’t slow your group’s travel.</li>
-				<li>Your group can’t become lost except by magical means.</li>
-				<li>Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.</li>
-				<li>If you are traveling alone, you can move stealthily at a normal pace.</li>
-				<li>When you forage, you find twice as much food as you normally would.</li>
-				<li>While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.</li>
-			</ul>
-		</description>		
-	</element>
-	<element name="Underdark" type="Class Feature" source="Player’s Handbook" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_NATURAL_EXPLORER_FT_UNDERDARK">
-		<supports>Favored Terrain</supports>
-		<description>
-			<p>You are particularly familiar with one type of natural environment and are adept at traveling and surviving in such regions. When you make an Intelligence or Wisdom check related to your favored terrain, your proficiency bonus is doubled if you are using a skill that you’re proficient in.</p>
-			<p class="indent">While traveling for an hour or more in your favored terrain, you gain the following benefits:</p>
-			<ul>
-				<li>Difficult terrain doesn’t slow your group’s travel.</li>
-				<li>Your group can’t become lost except by magical means.</li>
-				<li>Even when you are engaged in another activity while traveling (such as foraging, navigating, or tracking), you remain alert to danger.</li>
-				<li>If you are traveling alone, you can move stealthily at a normal pace.</li>
-				<li>When you forage, you find twice as much food as you normally would.</li>
-				<li>While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.</li>
-			</ul>
-		</description>		
-	</element>
-
-	<element name="Hunter" type="Archetype" source="Player’s Handbook" id="ID_WOTC_ARCHETYPE_RANGER_HUNTER">
+	<!-- <element name="Hunter" type="Archetype" source="Player’s Handbook" id="ID_WOTC_ARCHETYPE_RANGER_HUNTER">
 		<supports>Ranger Archetype</supports>
 		<description>
 			<p>Emulating the Hunter archetype means accepting your place as a bulwark between civilization and the terrors of the wilderness. As you walk the Hunter’s path, you learn specialized techniques for fighting the threats you face, from rampaging ogres and hordes of orcs to towering giants and terrifying dragons.</p>
@@ -945,9 +853,9 @@
 		<sheet action="Reaction">
 			<description>When an attacker that you can see hits you with an attack, you can halve the attack’s damage against you.</description>
 		</sheet>
-	</element>
+	</element> -->
 
-	<element name="Beast Master" type="Archetype" source="Player’s Handbook" id="ID_WOTC_ARCHETYPE_RANGER_BEAST_MASTER">
+	<!-- <element name="Beast Master" type="Archetype" source="Player’s Handbook" id="ID_WOTC_ARCHETYPE_RANGER_BEAST_MASTER">
 		<supports>Ranger Archetype</supports>
 		<description>
 			<p>The Beast Master archetype embodies a friendship between the civilized races and the beasts of the world. United in focus, beast and ranger work as one to fight the monstrous foes that threaten civilization and the wilderness alike. Emulating the Beast Master archetype means committing yourself to this ideal, working in partnership with an animal as its companion and friend.</p>
@@ -1016,5 +924,330 @@
 		<sheet>
 			<description>When you cast a spell targeting yourself, you can also affect your beast companion with the spell if the beast is within 30 feet of you.</description>
 		</sheet>
+	</element> -->
+
+	<!-- Optional Ranger Stuff -->
+	<!-- Deft Explorer -->
+	<element name="Deft Explorer" type="Class Feature" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER">
+		<supports>Ranger-Option-1.1</supports>
+		<description>
+			<p><i>1st-level ranger feature, which replaces the Natural Explorer feature</i></p>
+			<p>You are an unsurpassed explorer and survivor, both in the wilderness and in dealing with others on your travels. You gain the Canny benefit below, and you gain an additional benefit below when you reach 6th level and 10th level in this class.</p>
+			<h4>CANNY (1ST LEVEL)</h4>
+			<p>Choose one of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses the chosen skill.</p>
+			<p class="indent">You can also speak, read, and write two additional languages of your choice.</p>
+			<h4>ROVING (6TH LEVEL)</h4>
+			<p>Your walking speed increases by 5, and you gain a climbing speed and a swimming speed equal to your walking speed.</p>
+			<h4>TIRELESS (10TH LEVEL)</h4>
+			<p>As an action, you can give yourself a number of temporary hit points equal to 1d8 + your Wisdom modifier (minimum of 1 temporary hit point). You can use this action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+			<p class="indent">In addition, whenever you finish a short rest, your exhaustion level, if any, is decreased by 1.</p>
+		</description>
+		<sheet display="false">
+			<description>You are an unsurpassed explorer and survivor, both in the wilderness and in dealing with others on your travels. You gain the Canny benefit below, and you gain an additional benefit below when you reach 6th level and 10th level in this class.</description>
+		</sheet>
+		<rules>
+			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER_CANNY"/>			
+			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER_ROVING" requirements="[level:ranger:6]"/>			
+			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER_TIRELESS" requirements="[level:ranger:10]"/>			
+		</rules>
 	</element>
+
+	<element name="Ranger, LV01: Deft Explorer" type="Item" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_ITEM_OCF_RANGER_DEFT_EXPLORER">
+		<compendium display="false" />
+		<description>
+			<p><i>You can equip this item to “enable” it. It remains hidden from the inventory on your character sheet.</i></p>
+			<div class="reference">
+				<div element="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Optional Class Features</set>
+			<set name="keywords">first level, 1st level, Canny, Roving, Tireless, Expertise, climbing, swimming, climb speed, swim speed, temporary hit points, Natural Explorer</set>
+			<set name="slot">misc</set>
+			<set name="inventory-hidden">true</set>
+		</setters>
+		<rules>
+			<grant type="Grants" id="ID_INTERNAL_FEATURE_REPLACEMENT_RANGER_NATURAL_EXPLORER" />
+			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER" requirements="[level:ranger:1]"/>
+		</rules>
+	</element>
+
+	<element name="Canny" type="Class Feature" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER_CANNY">
+		<description>
+			<p>Choose one of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses the chosen skill.</p>
+			<p class="indent">You can also speak, read, and write two additional languages of your choice.</p>
+		</description>
+		<sheet display="false">
+			<description>Choose one of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses the chosen skill. You can also speak, read, and write two additional languages of your choice.</description>
+		</sheet>
+		<rules>
+			<select type="Class Feature" name="Expertise (Canny)" supports="Expertise"/>
+			<select type="Language" name="Language (Canny)" number="2" />			
+		</rules>
+	</element>
+
+	<element name="Roving" type="Class Feature" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER_ROVING">
+		<description>
+			<p>Your walking speed increases by 5, and you gain a climbing speed and a swimming speed equal to your walking speed.</p>
+		</description>
+		<sheet display="false">
+			<description>Your walking speed increases by 5, and you gain a climbing speed and a swimming speed equal to your walking speed.</description>
+		</sheet>
+		<rules>
+			<stat name="speed" value="5" />
+			<stat name="speed:swim" value="speed" bonus="base" />
+			<stat name="speed:climb" value="speed" bonus="base" />
+		</rules>
+	</element>
+
+	<element name="Tireless" type="Class Feature" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER_TIRELESS">
+		<description>
+			<p>As an action, you can give yourself a number of temporary hit points equal to 1d8 + your Wisdom modifier (minimum of 1 temporary hit point). You can use this action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+			<p class="indent">In addition, whenever you finish a short rest, your exhaustion level, if any, is decreased by 1.</p>
+		</description>
+		<sheet action="Action" usage="{{proficiency}}/Long Rest">
+			<description>You can give yourself a number of temporary hit points equal to 1d8 + {{tireless:hp}}. In addition, whenever you finish a short rest, your exhaustion level, if any, is decreased by 1.</description>
+		</sheet>
+		<rules>
+			<stat name="tireless:hp" value="1" bonus="base" />
+			<stat name="tireless:hp" value="wisdom:modifier" bonus="base" />
+		</rules>
+	</element>
+	
+	<!-- Favored Foe -->
+	<element name="Favored Foe" type="Class Feature" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_FAVORED_FOE">
+		<supports>Ranger-Option-1.2</supports>
+		<description>
+			<p><i>1st-level ranger feature, which replaces the Favored Enemy feature and works with the Foe Slayer feature</i></p>
+			<p>When you hit a creature with an attack roll, you can call on your mystical bond with nature to mark the target as your favored enemy for 1 minute or until you lose your concentration (as if you were concentrating on a spell).</p>
+			<p class="indent">The first time on each of your turns that you hit the favored enemy and deal damage to it, including when you mark it, you can increase that damage by 1d4.</p>
+			<p class="indent">You can use this feature to mark a favored enemy a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+			<p class="indent">This feature's extra damage increases when you reach certain levels in this class: to 1d6 at 6th level and to 1d8 at 14th level.</p>
+		</description>
+		<sheet usage="{{proficiency}}/Long Rest">
+			<description>When you hit a creature with an attack roll, you can mark the target as your favored enemy for 1 minute or until you lose your concentration (as if you were concentrating on a spell). The first time on each of your turns that you hit the favored enemy and deal damage to it, including when you mark it, you can increase that damage by 1d4.</description>
+			<description level="6">When you hit a creature with an attack roll, you can mark the target as your favored enemy for 1 minute or until you lose your concentration (as if you were concentrating on a spell). The first time on each of your turns that you hit the favored enemy and deal damage to it, including when you mark it, you can increase that damage by 1d6.</description>
+			<description level="14">When you hit a creature with an attack roll, you can mark the target as your favored enemy for 1 minute or until you lose your concentration (as if you were concentrating on a spell). The first time on each of your turns that you hit the favored enemy and deal damage to it, including when you mark it, you can increase that damage by 1d8.</description>
+		</sheet>
+	</element>
+
+	<element name="Ranger, LV01: Favored Foe" type="Item" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_ITEM_OCF_RANGER_FAVORED_FOE">
+		<compendium display="false" />
+		<description>
+			<p><i>You can equip this item to “enable” it. It remains hidden from the inventory on your character sheet.</i></p>
+			<div class="reference">
+				<div element="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_FAVORED_FOE" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Optional Class Features</set>
+			<set name="keywords">first level, 1st level, mark, Favored Enemy</set>
+			<set name="slot">misc</set>
+			<set name="inventory-hidden">true</set>
+		</setters>
+		<rules>
+			<grant type="Grants" id="ID_INTERNAL_FEATURE_REPLACEMENT_RANGER_FAVORED_ENEMY" />
+			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_FAVORED_FOE" requirements="[level:ranger:1]"/>
+		</rules>
+	</element>
+
+	<!-- Additional Ranger Spells -->
+	<element name="Additional Ranger Spells" type="Class Feature" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_ADDITIONAL_RANGER_SPELLS">
+		<description>
+			<p><i>2nd-level ranger feature</i></p>
+			<p>The spells in the following list expand the ranger spell list in the <i>Player's Handbook</i>. The list is organized by spell level, not character level. If a spell can be cast as a ritual, the ritual tag appears after the spell's name. Each spell is in the <i>Player's Handbook</i>, unless it has an asterisk (a spell in chapter 3 of <i>Tasha’s Cauldron of Everything</i>). <i>Xanathar's Guide to Everything</i> also offers more spells.</p>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>1st</td><td><em>Entangle, Searing smite</em></td></tr>
+				<tr><td>2nd</td><td><em>Aid, Enhance ability, Gust of wind, Magic weapon, Summon beast*</em></td></tr>
+				<tr><td>3rd</td><td><em>Elemental weapon, Meld into stone, Revivify, Summon fey*</em></td></tr>
+				<tr><td>4th</td><td><em>Dominate beast, Summon elemental*</em></td></tr>
+				<tr><td>5th</td><td><em>Greater restoration</em></td></tr>
+			</table>
+		</description>
+		<sheet display="false">
+			<description>The spells in the following list expand the ranger spell list in the <i>Player's Handbook</i>. The list is organized by spell level, not character level. If a spell can be cast as a ritual, the ritual tag appears after the spell's name. Each spell is in the <i>Player's Handbook</i>, unless it has an asterisk (a spell in chapter 3 of <i>Tasha’s Cauldron of Everything</i>). <i>Xanathar's Guide to Everything</i> also offers more spells.</description>
+		</sheet>
+		<spellcasting name="Ranger" extend="true">
+			<extend>ID_PHB_SPELL_ENTANGLE</extend>
+			<extend>ID_PHB_SPELL_SEARING_SMITE</extend>
+			<extend>ID_PHB_SPELL_AID</extend>
+			<extend>ID_PHB_SPELL_ENHANCE_ABILITY</extend>
+			<extend>ID_PHB_SPELL_GUST_OF_WIND</extend>
+			<extend>ID_PHB_SPELL_MAGIC_WEAPON</extend>
+			<extend>ID_WOTC_TCOE_SPELL_SUMMON_BEAST</extend>
+			<extend>ID_PHB_SPELL_ELEMENTAL_WEAPON</extend>
+			<extend>ID_PHB_SPELL_MELD_INTO_STONE</extend>
+			<extend>ID_PHB_SPELL_REVIVIFY</extend>
+			<extend>ID_WOTC_TCOE_SPELL_SUMMON_FEY</extend>
+			<extend>ID_PHB_SPELL_DOMINATE_BEAST</extend>
+			<extend>ID_WOTC_TCOE_SPELL_SUMMON_ELEMENTAL</extend>
+			<extend>ID_PHB_SPELL_GREATER_RESTORATION</extend>
+		</spellcasting>
+	</element>
+
+	<element name="Ranger, LV02: Additional Ranger Spells" type="Item" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_ITEM_OCF_RANGER_ADDITIONAL_RANGER_SPELLS">
+		<compendium display="false" />
+		<description>
+			<p><i>You can equip this item to “enable” it. It remains hidden from the inventory on your character sheet.</i></p>
+			<div class="reference">
+				<div element="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_ADDITIONAL_RANGER_SPELLS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Optional Class Features</set>
+			<set name="keywords">second level, 2nd level, spellcasting</set>
+			<set name="slot">misc</set>
+			<set name="inventory-hidden">true</set>
+		</setters>
+		<rules>
+			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_ADDITIONAL_RANGER_SPELLS" requirements="[level:ranger:2]"/>
+		</rules>
+	</element>
+
+	<!-- Spellcasting Focus -->
+	<element name="Spellcasting Focus (Ranger)" type="Class Feature" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_SPELLCASTING_FOCUS">
+		<description>
+			<p><i>2nd-level ranger feature</i></p>
+			<p>You can use a druidic focus as a spellcasting focus for your ranger spells. A druidic focus might be a sprig of mistletoe or holly, a wand or rod made of yew or another special wood, a staff drawn whole from a living tree, or an object incorporating feathers, fur, bones, and teeth from sacred animals.</p>
+		</description>
+		<sheet alt="Spellcasting Focus">
+			<description>You can use a druidic focus as a spellcasting focus for your ranger spells.</description>
+		</sheet>
+	</element>
+
+	<element name="Ranger, LV02: Spellcasting Focus" type="Item" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_ITEM_OCF_RANGER_SPELLCASTING_FOCUS">
+		<compendium display="false" />
+		<description>
+			<p><i>You can equip this item to “enable” it. It remains hidden from the inventory on your character sheet.</i></p>
+			<div class="reference">
+				<div element="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_SPELLCASTING_FOCUS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Optional Class Features</set>
+			<set name="keywords">second level, 2nd level, spellcasting</set>
+			<set name="slot">misc</set>
+			<set name="inventory-hidden">true</set>
+		</setters>
+		<rules>
+			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_SPELLCASTING_FOCUS" requirements="[level:ranger:2]"/>
+		</rules>
+	</element>
+
+	<!-- Primal Awareness -->
+	<element name="Primal Awareness" type="Class Feature" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_PRIMAL_AWARENESS">
+		<supports>Ranger-Option-3</supports>
+		<description>
+			<p><i>3rd-level ranger feature, which replaces the Primeval Awareness feature</i></p>
+			<p>You can focus your awareness through the interconnections of nature: you learn additional spells when you reach certain levels in this class if you don't already know them, as shown in the Primal Awareness Spells table. These spells don't count against the number of ranger spells you know.</p>
+			<table>
+				<thead>
+					<tr><td>Spell Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>3rd</td><td><em>speak with animals</em></td></tr>
+				<tr><td>5th</td><td><em>beast sense</em></td></tr>
+				<tr><td>9th</td><td><em>speak with plants</em></td></tr>
+				<tr><td>13th</td><td><em>locate creature</em></td></tr>
+				<tr><td>17th</td><td><em>commune with nature</em></td></tr>
+			</table>
+			<p class="indent">You can cast each of these spells once without expending a spell slot. Once you cast a spell in this way, you can't do so again until you finish a long rest.</p>
+		</description>
+		<sheet display="false">
+			<description>You can focus your awareness through the interconnections of nature: you learn additional spells when you reach certain levels in this class if you don't already know them, as shown in the Primal Awareness Spells table. These spells don't count against the number of ranger spells you know.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_SPEAK_WITH_ANIMALS" spellcasting="Ranger" requirements="[level:ranger:3]" />
+			<grant type="Spell" id="ID_PHB_SPELL_BEAST_SENSE" spellcasting="Ranger" requirements="[level:ranger:5]" />
+			<grant type="Spell" id="ID_PHB_SPELL_SPEAK_WITH_PLANTS" spellcasting="Ranger" requirements="[level:ranger:9]" />
+			<grant type="Spell" id="ID_PHB_SPELL_LOCATE_CREATURE" spellcasting="Ranger" requirements="[level:ranger:13]" />
+			<grant type="Spell" id="ID_PHB_SPELL_COMMUNE_WITH_NATURE" spellcasting="Ranger" requirements="[level:ranger:17]" />
+		</rules>
+	</element>
+
+	<element name="Ranger, LV03: Primal Awareness" type="Item" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_ITEM_OCF_RANGER_PRIMAL_AWARENESS">
+		<compendium display="false" />
+		<description>
+			<p><i>You can equip this item to “enable” it. It remains hidden from the inventory on your character sheet.</i></p>
+			<div class="reference">
+				<div element="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_PRIMAL_AWARENESS" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Optional Class Features</set>
+			<set name="keywords">third level, 3rd level, spells, Primeval Awareness</set>
+			<set name="slot">misc</set>
+			<set name="inventory-hidden">true</set>
+		</setters>
+		<rules>
+			<grant type="Grants" id="ID_INTERNAL_FEATURE_REPLACEMENT_RANGER_PRIMEVAL_AWARENESS" />
+			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_PRIMAL_AWARENESS" requirements="[level:ranger:3]"/>
+		</rules>
+	</element>
+
+	<!-- Martial Versatility -->
+	<element name="Martial Versatility (Ranger)" type="Class Feature" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_MARTIAL_VERSATILITY">
+		<description>
+			<p><i>4th-level ranger feature</i></p>
+			<p>Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace a fighting style you know with another fighting style available to rangers. This replacement represents a shift of focus in your martial practice.</p>
+		</description>
+		<sheet alt="Martial Versatility">
+			<description>Whenever you reach a level in Ranger class that grants the Ability Score Improvement feature, you can replace a fighting style you know with another fighting style available to rangers.</description>
+		</sheet>
+	</element>
+
+	<element name="Ranger, LV04: Martial Versatility" type="Item" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_ITEM_OCF_RANGER_MARTIAL_VERSATILITY">
+		<compendium display="false" />
+		<description>
+			<p><i>You can equip this item to “enable” it. It remains hidden from the inventory on your character sheet.</i></p>
+			<div class="reference">
+				<div element="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_MARTIAL_VERSATILITY" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Optional Class Features</set>
+			<set name="keywords">fourth level, 4th level, fighting styles</set>
+			<set name="slot">misc</set>
+			<set name="inventory-hidden">true</set>
+		</setters>
+		<rules>
+			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_MARTIAL_VERSATILITY" requirements="[level:ranger:4]"/>
+		</rules>
+	</element>
+
+	<!-- Nature's Veil -->
+	<element name="Nature's Veil" type="Class Feature" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_NATURES_VEIL">
+		<supports>Ranger-Option-10</supports>
+		<description>
+			<p><i>10th-level ranger feature, which replaces the Hide in Plain Sight feature</i></p>
+			<p>You draw on the powers of nature to hide yourself from view briefly. As a bonus action, you can magically become invisible, along with any equipment you are wearing or carrying, until the start of your next turn.</p>
+			<p class="indent">You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+		</description>
+		<sheet action="Bonus Action" usage="{{proficiency}}/Long Rest">
+			<description>You can magically become invisible, along with any equipment you are wearing or carrying, until the start of your next turn.</description>
+		</sheet>
+	</element>
+
+	<element name="Ranger, LV10: Nature's Veil" type="Item" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_ITEM_OCF_RANGER_NATURES_VEIL">
+		<compendium display="false" />
+		<description>
+			<p><i>You can equip this item to “enable” it. It remains hidden from the inventory on your character sheet.</i></p>
+			<div class="reference">
+				<div element="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_NATURES_VEIL" />
+			</div>
+		</description>
+		<setters>
+			<set name="category">Optional Class Features</set>
+			<set name="keywords">tenth level, 10th level, invisibility, Hide in Plain Sight</set>
+			<set name="slot">misc</set>
+			<set name="inventory-hidden">true</set>
+		</setters>
+		<rules>
+			<grant type="Grants" id="ID_INTERNAL_FEATURE_REPLACEMENT_RANGER_HIDE_IN_PLAIN_SIGHT" />
+			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_NATURES_VEIL" requirements="[level:ranger:10]"/>
+		</rules>
+	</element>
+
 </elements>
