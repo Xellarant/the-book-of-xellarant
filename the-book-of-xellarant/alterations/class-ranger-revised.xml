@@ -329,9 +329,8 @@
 			<p class="indent">Additionally, you have advantage on saving throws against the spells and abilities used by a greater favored enemy.</p>
 		</description>
 		<sheet>
-			<description></description>
+			<description>You gain a greater favored enemy (aberrations, celestials, constructs, dragons, elementals, fiends, or giants) to add to your previous foes. Your bonus to damage rolls against all your favored enemies increases to +4. You have advantage on saving throws against the spells and abilities used by a greater favored enemy.</description>
 		</sheet>
-
 	</element>
 	<element name="Fleet of Foot" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_FLEET_OF_FOOT">
 		<description>
