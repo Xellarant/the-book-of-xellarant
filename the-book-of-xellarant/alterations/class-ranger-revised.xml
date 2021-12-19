@@ -4,7 +4,7 @@
 		<name>Ranger</name>
 		<description>The Revised Ranger class from 2016 Wizards UA.</description>
 		<author url="https://media.wizards.com/2016/dnd/downloads/UA_RevisedRanger.pdf">Wizards of the Coast</author>
-		<update version="0.3.4">
+		<update version="0.3.5">
 			<file name="class-ranger-revised.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/alterations/class-ranger-revised.xml" />
 		</update>
 	</info>
