@@ -4,7 +4,7 @@
 		<name>Ranger (Revised)</name>
 		<description>The Revised Ranger class from 2016 Wizards UA.</description>
 		<author url="https://media.wizards.com/2016/dnd/downloads/UA_RevisedRanger.pdf">Wizards of the Coast</author>
-		<update version="0.3.6">
+		<update version="0.3.7">
 			<file name="class-ranger-revised.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/alterations/class-ranger-revised.xml" />
 		</update>
 	</info>
@@ -331,6 +331,10 @@
 		<sheet>
 			<description>You gain a greater favored enemy (aberrations, celestials, constructs, dragons, elementals, fiends, or giants) to add to your previous foes. Your bonus to damage rolls against all your favored enemies increases to +4. You have advantage on saving throws against the spells and abilities used by a greater favored enemy.</description>
 		</sheet>
+		<rules>
+			<select type="Class Feature" name="Greater Favored Enemy" supports="Greater Favored Enemy" level="6" />
+            <select type="Language" name="Language (Greater Favored Enemy)" level="6" />
+		</rules>
 	</element>
 	<element name="Fleet of Foot" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_FLEET_OF_FOOT">
 		<description>
