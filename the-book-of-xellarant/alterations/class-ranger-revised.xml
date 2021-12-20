@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<name>Ranger</name>
+		<name>Ranger (Revised)</name>
 		<description>The Revised Ranger class from 2016 Wizards UA.</description>
 		<author url="https://media.wizards.com/2016/dnd/downloads/UA_RevisedRanger.pdf">Wizards of the Coast</author>
 		<update version="0.3.5">
@@ -53,7 +53,7 @@
 				<li> <i>(a)</i> a dungeoneer’s pack or <i>(b)</i> an explorer’s pack </li>
 				<li>A longbow and a quiver of 20 arrows</li>
 			</ul>
-			<h5 class="caption">THE RANGER</h5>
+			<h5 class="caption">THE RANGER (Revised)</h5>
 			<table class="class-features">
 				<thead>
 					<tr><td class="col-5">Level</td><td class="left">Features</td><td class="col-10">Spells Known</td><td>1st</td><td>2nd</td><td>3rd</td><td>4th</td><td>5th</td></tr>
@@ -122,7 +122,7 @@
 			<select type="Class Feature" name="Class Feature Choice (Ranger-Revised)" supports="Ranger-Option-3" level="3" />
 			<grant type="Class Feature" id="ID_WOTC_CLASSFEATURE_RANGER_ASI" level="4"/>
 			<grant type="Class Feature" id="ID_WOTC_CLASSFEATURE_RANGER_EXTRA_ATTACK" level="5"/>
-			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_GREATER_FAVORED_ENEMY" level="6"/>
+			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_GREATER_FAVORED_ENEMY" level="6" requirements="ID_TBOX_CLASSFEATURE_RANGER_REVISED_FAVORED_ENEMY"/>
 			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_FLEET_OF_FOOT" level="8"/>
 			<!-- <grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_HIDE_IN_PLAIN_SIGHT" level="10"/> -->
 			<select type="Class Feature" name="Class Feature Choice (Ranger-Revised)" supports="Ranger-Option-10" level="10" />
@@ -733,8 +733,8 @@
 		</sheet>
 		<rules>
 			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER_CANNY"/>			
-			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER_ROVING" requirements="[level:ranger:6]"/>			
-			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER_TIRELESS" requirements="[level:ranger:10]"/>			
+			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER_ROVING" requirements="[level:ranger:6],ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER_CANNY"/>			
+			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER_TIRELESS" requirements="[level:ranger:10],ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER_CANNY"/>			
 		</rules>
 	</element>
 
