@@ -4,7 +4,7 @@
 		<name>Ranger (Revised)</name>
 		<description>The Revised Ranger class from 2016 Wizards UA.</description>
 		<author url="https://media.wizards.com/2016/dnd/downloads/UA_RevisedRanger.pdf">Wizards of the Coast</author>
-		<update version="0.4.1">
+		<update version="0.4.2">
 			<file name="class-ranger-revised.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/alterations/class-ranger-revised.xml" />
 		</update>
 	</info>
@@ -111,7 +111,8 @@
 			<grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_STRENGTH" requirements="!ID_TBOX_MULTICLASS_RANGER_REVISED,!ID_WOTC_PHB_MULTICLASS_RANGER" />
 			<grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_DEXTERITY" requirements="!ID_TBOX_MULTICLASS_RANGER_REVISED,!ID_WOTC_PHB_MULTICLASS_RANGER" />
 			<select type="Proficiency" name="Skill Proficiency (Ranger)" supports="Skill,Ranger" number="3" requirements="!ID_TBOX_MULTICLASS_RANGER_REVISED,!ID_WOTC_PHB_MULTICLASS_RANGER" />
-			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_LVL1_CHOICE" level="1"/>
+			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_LVL1_CHOICE_1" level="1"/>
+			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_LVL1_CHOICE_2" level="1"/>
 			<!-- <select type="Class Feature" name="Class Feature Choice (Ranger-Revised)" supports="Ranger-Option-1.1" level="1" />
 			<select type="Class Feature" name="Class Feature Choice (Ranger-Revised)" supports="Ranger-Option-1.2" level="1" /> -->
 			<grant type="Class Feature" id="ID_WOTC_CLASSFEATURE_RANGER_FIGHTING_STYLE" level="2"/>
@@ -149,35 +150,45 @@
 			</rules>
 		</multiclass>
 	</element>
-	<element name="Ranger 1 Feature" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_LVL1_CHOICE">
+	<element name="Ranger 1 Feature" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_LVL1_CHOICE_1">
 		<description>
-			<p><em>Choose between the normal Ranger (Revised) options as presented in TBOX and the optional Tasha's features.</em></p>
+			<p><em>Choose between Favored Enemy or the optional Favored Foe.</em></p>
 		</description>
 		<sheet display="false">
-			<description>Choose between the normal Ranger (Revised) options as presented in TBOX and the optional Tasha's features.</description>
+			<description>Choose between Favored Enemy or the optional Favored Foe.</description>
 		</sheet>
 		<rules>
-			<select type="Class Feature" name="Class Feature Lv. 1 Choice (Ranger-Revised)" supports="Ranger-Option-1.1" />
-			<select type="Class Feature" name="Class Feature Lv. 1 Choice (Ranger-Revised)" supports="Ranger-Option-1.2" />
+			<select type="Class Feature" name="Class Feature Lv. 1 Choice (Ranger-Revised)" supports="Ranger-Option-1.1" level="1" />
+		</rules>
+	</element>
+	<element name="Ranger 1 Feature" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_LVL1_CHOICE_2">
+		<description>
+			<p><em>Choose between Natural Explorer or the optional Deft Explorer.</em></p>
+		</description>
+		<sheet display="false">
+			<description>Choose between Natural Explorer or the optional Deft Explorer.</description>
+		</sheet>
+		<rules>
+			<select type="Class Feature" name="Class Feature Lv. 1 Choice (Ranger-Revised)" supports="Ranger-Option-1.2" level="1" />
 		</rules>
 	</element>
 	<element name="Ranger 3 Feature" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_LVL3_CHOICE">
 		<description>
-			<p><em>Choose between the normal Ranger (Revised) options and the optional Tasha's features.</em></p>
+			<p><em>Choose between Primeval Awareness and the optional Primal Awareness.</em></p>
 		</description>
 		<sheet display="false">
-			<description>Choose between the normal Ranger (Revised) options as presented in TBOX and the optional Tasha's features.</description>
+			<description>Choose between Primeval Awareness and the optional Primal Awareness.</description>
 		</sheet>
 		<rules>
 			<select type="Class Feature" name="Class Feature Lv. 3 Choice (Ranger-Revised)" supports="Ranger-Option-3" level="3" />
 		</rules>
 	</element>
-	<element name="Ranger 3 Feature" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_LVL10_CHOICE">
+	<element name="Ranger 10 Feature" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_LVL10_CHOICE">
 		<description>
-			<p><em>Choose between the normal Ranger (Revised) options and the optional Tasha's features.</em></p>
+			<p><em>Choose between Hide in Plain Sight and the optional Nature's Veil.</em></p>
 		</description>
 		<sheet display="false">
-			<description>Choose between the normal Ranger (Revised) options as presented in TBOX and the optional Tasha's features.</description>
+			<description>Choose between Hide in Plain Sight and the optional Nature's Veil.</description>
 		</sheet>
 		<rules>
 			<select type="Class Feature" name="Class Feature Lv. 10 Choice (Ranger-Revised)" supports="Ranger-Option-10" level="10" />
