@@ -4,7 +4,7 @@
 		<name>Ranger (Revised)</name>
 		<description>The Revised Ranger class from 2016 Wizards UA.</description>
 		<author url="https://media.wizards.com/2016/dnd/downloads/UA_RevisedRanger.pdf">Wizards of the Coast</author>
-		<update version="0.3.7">
+		<update version="0.4.0">
 			<file name="class-ranger-revised.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/alterations/class-ranger-revised.xml" />
 		</update>
 	</info>
@@ -111,9 +111,9 @@
 			<grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_STRENGTH" requirements="!ID_TBOX_MULTICLASS_RANGER_REVISED,!ID_WOTC_PHB_MULTICLASS_RANGER" />
 			<grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_DEXTERITY" requirements="!ID_TBOX_MULTICLASS_RANGER_REVISED,!ID_WOTC_PHB_MULTICLASS_RANGER" />
 			<select type="Proficiency" name="Skill Proficiency (Ranger)" supports="Skill,Ranger" number="3" requirements="!ID_TBOX_MULTICLASS_RANGER_REVISED,!ID_WOTC_PHB_MULTICLASS_RANGER" />
-			<!-- <grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_NATURAL_EXPLORER" level="1"/> -->
-			<select type="Class Feature" name="Class Feature Choice (Ranger-Revised)" supports="Ranger-Option-1.1" level="1" />
-			<select type="Class Feature" name="Class Feature Choice (Ranger-Revised)" supports="Ranger-Option-1.2" level="1" />
+			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_LVL1_CHOICE" level="1"/>
+			<!-- <select type="Class Feature" name="Class Feature Choice (Ranger-Revised)" supports="Ranger-Option-1.1" level="1" />
+			<select type="Class Feature" name="Class Feature Choice (Ranger-Revised)" supports="Ranger-Option-1.2" level="1" /> -->
 			<grant type="Class Feature" id="ID_WOTC_CLASSFEATURE_RANGER_FIGHTING_STYLE" level="2"/>
 			<grant type="Class Feature" id="ID_WOTC_CLASSFEATURE_RANGER_SPELLCASTING" level="2"/>
 			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_SPELLCASTING_FOCUS" level="2"/>
@@ -146,6 +146,18 @@
 				<select type="Proficiency" name="Skill Proficiency (Ranger)" supports="Skill,Ranger" number="1"/>
 			</rules>
 		</multiclass>
+	</element>
+	<element name="Ranger 1 Feature" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_LVL1_CHOICE">
+		<description>
+			<p><em>Choose between the normal Ranger (Revised) options as presented in TBOX and the optional Tasha's features.</em></p>
+		</description>
+		<sheet display="false">
+			<description>Choose between the normal Ranger (Revised) options as presented in TBOX and the optional Tasha's features.</description>
+		</sheet>
+		<rules>
+			<select type="Class Feature" name="Class Feature Choice (Ranger-Revised)" supports="Ranger-Option-1.1" />
+			<select type="Class Feature" name="Class Feature Choice (Ranger-Revised)" supports="Ranger-Option-1.2" />
+		</rules>
 	</element>
 	<element name="Favored Enemy" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_FAVORED_ENEMY">
 		<supports>Ranger-Option-1.1</supports>
