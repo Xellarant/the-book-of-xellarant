@@ -4,7 +4,7 @@
 		<name>Ranger (Revised)</name>
 		<description>The Revised Ranger class from 2016 Wizards UA.</description>
 		<author url="https://media.wizards.com/2016/dnd/downloads/UA_RevisedRanger.pdf">Wizards of the Coast</author>
-		<update version="0.4.3">
+		<update version="0.4.4">
 			<file name="class-ranger-revised.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/alterations/class-ranger-revised.xml" />
 		</update>
 	</info>
@@ -135,7 +135,7 @@
 		</rules>
 		<multiclass id="ID_TBOX_MULTICLASS_RANGER_REVISED">
 			<prerequisite>Dexterity 13 and Wisdom 13</prerequisite>
-			<requirements>([dex:13],[wis:13])</requirements>
+			<requirements>([dex:13],[wis:13]),!ID_WOTC_PHB_CLASS_RANGER</requirements>
 			<setters>
 				<set name="multiclass proficiencies">Light armor, medium armor, shields, simple weapons, martial weapons, one skill from the class’s skill list</set>
 			</setters>
