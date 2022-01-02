@@ -4,7 +4,7 @@
 		<name>Ranger (Revised)</name>
 		<description>The Revised Ranger class from 2016 Wizards UA.</description>
 		<author url="https://media.wizards.com/2016/dnd/downloads/UA_RevisedRanger.pdf">Wizards of the Coast</author>
-		<update version="0.4.4">
+		<update version="0.4.5">
 			<file name="class-ranger-revised.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/alterations/class-ranger-revised.xml" />
 		</update>
 	</info>
@@ -401,7 +401,7 @@
 			<description>When you attempt to hide on your turn, you can opt to not move on that turn. If you avoid moving, creatures that attempt to detect you take a −10 penalty to their Wisdom (Perception) checks until the start of your next turn.</description>
 		</sheet>
 	</element>
-	<element name="Nature's Veil (Optional)" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_NATURES_VEIL">
+	<!-- <element name="Nature's Veil (Optional)" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_NATURES_VEIL">
 		<supports>Ranger-Option-10</supports>
 		<description>
 			<p>10th-level ranger optional feature, which replaces the Hide in Plain Sight feature. You draw on the powers of nature to hide yourself from view briefly. As a bonus action, you can magically become invisible, along with any equipment you are wearing or carrying, until the start of your next turn. You can use this feature a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
@@ -409,7 +409,7 @@
 		<sheet action="Bonus Action">
 			<description>As a bonus action, you can magically become invisible, along with any equipment you are wearing or carrying, until the start of your next turn.</description>
 		</sheet>
-	</element>
+	</element> -->
 	<element name="Vanish" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_VANISH">
 		<description>
 			<p>Starting at 14th level, you can use the Hide action as a bonus action on your turn. Also, you can’t be tracked by nonmagical means, unless you choose to leave a trail.</p>
@@ -766,7 +766,7 @@
 	<!-- Optional Ranger Stuff -->
 	<!-- Deft Explorer -->
 	<element name="Deft Explorer" type="Class Feature" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER">
-		<supports>Ranger-Option-1-1</supports>
+		<supports>Ranger-Option-1-2</supports>
 		<description>
 			<p><i>1st-level ranger feature, which replaces the Natural Explorer feature</i></p>
 			<p>You are an unsurpassed explorer and survivor, both in the wilderness and in dealing with others on your travels. You gain the Canny benefit below, and you gain an additional benefit below when you reach 6th level and 10th level in this class.</p>
@@ -853,7 +853,7 @@
 	
 	<!-- Favored Foe -->
 	<element name="Favored Foe" type="Class Feature" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_FAVORED_FOE">
-		<supports>Ranger-Option-1-2</supports>
+		<supports>Ranger-Option-1-1</supports>
 		<description>
 			<p><i>1st-level ranger feature, which replaces the Favored Enemy feature and works with the Foe Slayer feature</i></p>
 			<p>When you hit a creature with an attack roll, you can call on your mystical bond with nature to mark the target as your favored enemy for 1 minute or until you lose your concentration (as if you were concentrating on a spell).</p>
