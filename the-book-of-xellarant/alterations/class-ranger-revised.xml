@@ -907,7 +907,7 @@
         </sheet>
         <rules />
     </element>
-    <element name="Extra Attack" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_EXTRA_ATTACK">
+    <!-- <element name="Extra Attack" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_EXTRA_ATTACK">
         <description>
             <p>Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.</p>
         </description>
@@ -915,7 +915,7 @@
             <description>You can attack twice, instead of once, whenever you take the Attack action on your turn.</description>
         </sheet>
         <rules />
-    </element>
+    </element> -->
     <element name="Iron Mind" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_IRON_MIND">
         <description>
             <p>By 7th level, you have honed your ability to resist the mind—altering powers of your prey. You gain proficiency in Wisdom saving throws. If you already have this proficiency, you instead gain proficiency in Intelligence or Charisma saving throws (your choice).</p>
@@ -943,7 +943,9 @@
         </sheet>
         <rules />
     </element>
+	
   <!-- Hunter -->
+  <!--
     <element name="Hunter Conclave (beta)" type="Archetype" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_RANGER_REVISED_HUNTER">
         <supports>Ranger Conclave, Ranger Archetype</supports>
         <description>
@@ -984,7 +986,9 @@
             <select type="Archetype Feature" name="Hunter’s Prey" supports="Revised Hunters Pray" />
         </rules>
     </element>
+	-->
   <!-- Hunter’s Prey Options -->
+  <!-- 
     <element name="Colossus Slayer" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_HUNTERS_PREY_COLOSSUS_SLAYER">
         <supports>Revised Hunters Pray</supports>
         <description>
@@ -1043,7 +1047,9 @@
             <select type="Archetype Feature" name="Defensive Tactics" supports="Revised Defensive Tactics" />
         </rules>
     </element>
+	-->
   <!-- Defensive Tactics -->
+  <!-- 
     <element name="Escape the Horde" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_DEFENSIVE_TACTICS_ESCAPE_THE_HORDE">
         <supports>Revised Defensive Tactics</supports>
         <description>
@@ -1091,8 +1097,9 @@
             <select type="Archetype Feature" name="Multiattack" supports="Revised Multiattack" />
         </rules>
     </element>
+	-->
   <!-- Multiattack -->
-    <element name="Volley" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_MULTIATTACK_VOLLEY">
+    <!-- <element name="Volley" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_MULTIATTACK_VOLLEY">
         <supports>Revised Multiattack</supports>
         <description>
             <p>You can use your action to make a ranged attack against any number of creatures within 10 feet of a point you can see within your weapon’s range. You must have ammunition for each target, as normal, and you make a separate attack roll for each target.</p>
@@ -1130,9 +1137,9 @@
         <rules>
             <select type="Archetype Feature" name="Superior Hunter’s Defense" supports="Revised Superior Hunters Defense" />
         </rules>
-    </element>
+    </element> -->
   <!-- Superior Hunter’s Defense -->
-    <element name="Evasion" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_SUPERIOR_HUNTERS_DEFENSE_EVASION">
+    <!-- <element name="Evasion" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_SUPERIOR_HUNTERS_DEFENSE_EVASION">
         <supports>Revised Superior Hunters Defense</supports>
         <description>
             <p>You can nimbly dodge out of the way of certain area effects, such as a red dragon’s fiery breath or a lightning bolt spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.</p>
@@ -1161,7 +1168,8 @@
             <description>When an attacker that you can see hits you with an attack, you can use your reaction to halve the attack’s damage against you.</description>
         </sheet>
         <rules></rules>
-    </element>
+    </element> -->
+  
   <!-- Beast -->
     <element name="Beast Conclave (beta)" type="Archetype" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_RANGER_REVISED_BEAST">
         <supports>Ranger Conclave, Ranger Archetype</supports>
