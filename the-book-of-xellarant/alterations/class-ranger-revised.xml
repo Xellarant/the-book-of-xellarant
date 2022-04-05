@@ -4,12 +4,12 @@
 		<name>Ranger (Revised 2021)</name>
 		<description>The Re-Revised Ranger class from 2016 Wizards UA as it would fit as a Ranger Class replacement.</description>
 		<author url="https://media.wizards.com/2016/dnd/downloads/UA_RevisedRanger.pdf">Wizards of the Coast</author>
-		<update version="0.4.7">
+		<update version="0.4.8">
 			<file name="class-ranger-revised.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/alterations/class-ranger-revised.xml" />
 		</update>
 	</info>
 
-	<element name="Ranger (Revised 2021)" type="Class" source="The Book of Xellarant" id="ID_TBOX_CLASS_RANGER_REVISED">
+	<element name="Ranger Revised" type="Class" source="The Book of Xellarant" id="ID_TBOX_CLASS_RANGER_REVISED">
 		<description>
 			<p class="flavor">A warrior who uses martial prowess and nature magic to combat threats on the edges of civilization.</p>			
 			<p>Rough and wild looking, a human stalks alone through the shadows of trees, hunting the orcs he knows are planning a raid on a nearby farm. Clutching a shortsword in each hand, he becomes a whirlwind of steel, cutting down one enemy after another.</p>
@@ -287,7 +287,7 @@
 				<p><strong>Spell attack modifier</strong> = your proficiency bonus + your Wisdom modifier</p>
 			</center>
 		</description>
-		<sheet display="false">
+		<sheet display="true">
 			<description>You have learned to use the magical essence of nature to cast spells, much as a druid does.</description>
 		</sheet>
 		<spellcasting name="Ranger" ability="Wisdom" allowReplace="true">
@@ -323,7 +323,7 @@
 		<description>
 			<p>At 3rd level, you choose an archetype or conclave that you strive to emulate. Your choice grants you features at 3rd level and again at 7th, 11th, and 15th level.</p>
 		</description>
-		<sheet display="false" />
+		<sheet display="true" />
 		<rules>
 			<select type="Archetype" name="Ranger Archetype" supports="Ranger Archetype" />
 		</rules>
@@ -543,8 +543,8 @@
 		</sheet>
 		<rules>
 			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER_CANNY"/>			
-			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER_ROVING" requirements="[level:ranger:6],ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER_CANNY"/>			
-			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER_TIRELESS" requirements="[level:ranger:10],ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER_CANNY"/>			
+			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER_ROVING" requirements="[level:ranger revised:6]" level="6"/>			
+			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER_TIRELESS" requirements="[level:ranger revised:10]" level="10"/>			
 		</rules>
 	</element>
 
@@ -564,7 +564,7 @@
 		</setters>
 		<rules>
 			<grant type="Grants" id="ID_INTERNAL_FEATURE_REPLACEMENT_RANGER_NATURAL_EXPLORER" />
-			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER" requirements="[level:ranger:1]"/>
+			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER" requirements="[level:ranger revised:1]"/>
 		</rules>
 	</element>
 
@@ -573,7 +573,7 @@
 			<p>Choose one of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses the chosen skill.</p>
 			<p class="indent">You can also speak, read, and write two additional languages of your choice.</p>
 		</description>
-		<sheet display="false">
+		<sheet display="true">
 			<description>Choose one of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses the chosen skill. You can also speak, read, and write two additional languages of your choice.</description>
 		</sheet>
 		<rules>
@@ -586,7 +586,7 @@
 		<description>
 			<p>Your walking speed increases by 5, and you gain a climbing speed and a swimming speed equal to your walking speed.</p>
 		</description>
-		<sheet display="false">
+		<sheet display="true">
 			<description>Your walking speed increases by 5, and you gain a climbing speed and a swimming speed equal to your walking speed.</description>
 		</sheet>
 		<rules>
@@ -643,7 +643,7 @@
 		</setters>
 		<rules>
 			<grant type="Grants" id="ID_INTERNAL_FEATURE_REPLACEMENT_RANGER_FAVORED_ENEMY" />
-			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_FAVORED_FOE" requirements="[level:ranger:1]"/>
+			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_FAVORED_FOE" requirements="[level:ranger revised:1]"/>
 		</rules>
 	</element>
 
@@ -699,7 +699,7 @@
 			<set name="inventory-hidden">true</set>
 		</setters>
 		<rules>
-			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_ADDITIONAL_RANGER_SPELLS" requirements="[level:ranger:2]"/>
+			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_ADDITIONAL_RANGER_SPELLS" requirements="[level:ranger revised:2]"/>
 		</rules>
 	</element>
 
@@ -729,7 +729,7 @@
 			<set name="inventory-hidden">true</set>
 		</setters>
 		<rules>
-			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_SPELLCASTING_FOCUS" requirements="[level:ranger:2]"/>
+			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_SPELLCASTING_FOCUS" requirements="[level:ranger revised:2]"/>
 		</rules>
 	</element>
 
@@ -755,11 +755,11 @@
 			<description>You can focus your awareness through the interconnections of nature: you learn additional spells when you reach certain levels in this class if you don't already know them, as shown in the Primal Awareness Spells table. These spells don't count against the number of ranger spells you know.</description>
 		</sheet>
 		<rules>
-			<grant type="Spell" id="ID_PHB_SPELL_SPEAK_WITH_ANIMALS" spellcasting="Ranger" requirements="[level:ranger:3]" />
-			<grant type="Spell" id="ID_PHB_SPELL_BEAST_SENSE" spellcasting="Ranger" requirements="[level:ranger:5]" />
-			<grant type="Spell" id="ID_PHB_SPELL_SPEAK_WITH_PLANTS" spellcasting="Ranger" requirements="[level:ranger:9]" />
-			<grant type="Spell" id="ID_PHB_SPELL_LOCATE_CREATURE" spellcasting="Ranger" requirements="[level:ranger:13]" />
-			<grant type="Spell" id="ID_PHB_SPELL_COMMUNE_WITH_NATURE" spellcasting="Ranger" requirements="[level:ranger:17]" />
+			<grant type="Spell" id="ID_PHB_SPELL_SPEAK_WITH_ANIMALS" spellcasting="Ranger" requirements="[level:ranger revised:3]" />
+			<grant type="Spell" id="ID_PHB_SPELL_BEAST_SENSE" spellcasting="Ranger" requirements="[level:ranger revised:5]" />
+			<grant type="Spell" id="ID_PHB_SPELL_SPEAK_WITH_PLANTS" spellcasting="Ranger" requirements="[level:ranger revised:9]" />
+			<grant type="Spell" id="ID_PHB_SPELL_LOCATE_CREATURE" spellcasting="Ranger" requirements="[level:ranger revised:13]" />
+			<grant type="Spell" id="ID_PHB_SPELL_COMMUNE_WITH_NATURE" spellcasting="Ranger" requirements="[level:ranger revised:17]" />
 		</rules>
 	</element>
 
@@ -779,7 +779,7 @@
 		</setters>
 		<rules>
 			<grant type="Grants" id="ID_INTERNAL_FEATURE_REPLACEMENT_RANGER_PRIMEVAL_AWARENESS" />
-			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_PRIMAL_AWARENESS" requirements="[level:ranger:3]"/>
+			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_PRIMAL_AWARENESS" requirements="[level:ranger revised:3]"/>
 		</rules>
 	</element>
 
@@ -809,7 +809,7 @@
 			<set name="inventory-hidden">true</set>
 		</setters>
 		<rules>
-			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_MARTIAL_VERSATILITY" requirements="[level:ranger:4]"/>
+			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_MARTIAL_VERSATILITY" requirements="[level:ranger revised:4]"/>
 		</rules>
 	</element>
 
@@ -842,7 +842,7 @@
 		</setters>
 		<rules>
 			<grant type="Grants" id="ID_INTERNAL_FEATURE_REPLACEMENT_RANGER_HIDE_IN_PLAIN_SIGHT" />
-			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_NATURES_VEIL" requirements="[level:ranger:10]"/>
+			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_NATURES_VEIL" requirements="[level:ranger revised:10]"/>
 		</rules>
 	</element>
 
@@ -854,7 +854,7 @@
             <p>Most folk descend into the depths of the Underdark only under the most pressing conditions, undertaking some desperate quest or following the promise of vast riches. All too often, evel festers beneath the earth unnoticed, and rangers of Deep Stalker Conclave strive to uncover and defeat such threats before they can reach the surface.</p>
             <div element="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_UNDERDARK_SCOUT" />
             <div element="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_DEEP_STALKER_MAGIC" />
-            <div element="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_EXTRA_ATTACK" />
+            <!-- <div element="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_EXTRA_ATTACK" /> -->
             <div element="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_IRON_MIND" />
             <div element="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_STALKERS_FURY" />
             <div element="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_STALKERS_DODGE" />
@@ -865,7 +865,7 @@
         <rules>
             <grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_UNDERDARK_SCOUT" level="3" />
             <grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_DEEP_STALKER_MAGIC" level="3" />
-            <grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_EXTRA_ATTACK" level="5" />
+            <!-- <grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_EXTRA_ATTACK" level="5" /> -->
             <grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_IRON_MIND" level="7" />
             <grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_STALKERS_FURY" level="11" />
             <grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_STALKERS_DODGE" level="15" />
@@ -943,233 +943,7 @@
         </sheet>
         <rules />
     </element>
-	
-  <!-- Hunter -->
-  <!--
-    <element name="Hunter Conclave (beta)" type="Archetype" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_RANGER_REVISED_HUNTER">
-        <supports>Ranger Conclave, Ranger Archetype</supports>
-        <description>
-            <p>Some rangers seek to master weapons to better protect civilization from the terrors of the wielderness. Members of the Hunter Conclave learn specialized fighting techniques for use against the most dire threats, from rampaging ogres and hordes of orcs to towering giants and terrifying dragons.</p>
-            <div element="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_HUNTERS_PREY" />
-            <div element="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_EXTRA_ATTACK" />
-            <div element="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_DEFENSIVE_TACTICS" />
-            <div element="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_MULTIATTACK" />
-            <div element="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_SUPERIOR_HUNTERS_DEFENSE" />
-        </description>
-        <sheet>
-            <description>Becoming a member of the Hunter Conclave means accepting your place as a bulwark between civilization and the terrors of the wilderness.</description>
-        </sheet>
-        <rules>
-            <grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_HUNTERS_PREY" level="3" />
-            <grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_EXTRA_ATTACK" level="5" />
-            <grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_DEFENSIVE_TACTICS" level="7" />
-            <grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_MULTIATTACK" level="11" />
-            <grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_SUPERIOR_HUNTERS_DEFENSE" level="15" />
-        </rules>
-    </element>
-    <element name="Hunter’s Prey" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_HUNTERS_PREY">
-        <description>
-            <p>At 3rd level, you gain one of the following features of your choice.</p>
-            <p>
-                <span class="feature">Colossus Slayer.</span>Your tenacity can wear down the most potent foes. When you hit a creature with a weapon attack, the creature takes an extra 1d8 damage if it’s below its hit point maximum. You can deal this extra damage only once per turn.
-                <br/>
-                <span class="feature">Giant Killer.</span>When a Large or larger creature within 5 feet of you hits or misses you with an attack, you can use your reaction to attack that creature immediately after its attack, provided that you can see the creature.
-                <br/>
-                <span class="feature">Horde Breaker.</span>Once on each of your turns when you make a weapon attack, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target and within range of your weapon.
-                <br/>
-            </p>
-        </description>
-        <sheet>
-            <description></description>
-        </sheet>
-        <rules>
-            <select type="Archetype Feature" name="Hunter’s Prey" supports="Revised Hunters Pray" />
-        </rules>
-    </element>
-	-->
-  <!-- Hunter’s Prey Options -->
-  <!-- 
-    <element name="Colossus Slayer" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_HUNTERS_PREY_COLOSSUS_SLAYER">
-        <supports>Revised Hunters Pray</supports>
-        <description>
-            <p>Your tenacity can wear down the most potent foes. When you hit a creature with a weapon attack, the creature takes an extra 1d8 damage if it’s below its hit point maximum. You can deal this extra damage only once per turn.</p>
-        </description>
-        <sheet>
-            <description>Your tenacity can wear down the most potent foes. When you hit a creature with a weapon attack, the creature takes an extra 1d8 damage if it’s below its hit point maximum. You can deal this extra damage only once per turn.</description>
-        </sheet>
-            <rules></rules>
-    </element>
-    <element name="Giant Killer" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_HUNTERS_PREY_GIANT_KILLER">
-        <supports>Revised Hunters Pray</supports>
-        <description>
-            <p>When a Large or larger creature within 5 feet of you hits or misses you with an attack, you can use your reaction to attack that creature immediately after its attack, provided that you can see the creature.</p>
-        </description>
-        <sheet>
-            <description>When a Large or larger creature within 5 feet of you hits or misses you with an attack, you can use your reaction to attack that creature immediately after its attack, provided that you can see the creature.</description>
-        </sheet>
-        <rules></rules>
-    </element>
-    <element name="Horde Breaker" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_HUNTERS_PREY_HORDE_BREAKER">
-        <supports>Revised Hunters Pray</supports>
-        <description>
-            <p>Once on each of your turns when you make a weapon attack, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target and within range of your weapon.</p>
-        </description>
-        <sheet>
-            <description>Once on each of your turns when you make a weapon attack, you can make another attack with the same weapon against a different creature that is within 5 feet of the original target and within range of your weapon.</description>
-        </sheet>
-        <rules></rules>
-    </element>
-    <element name="Extra Attack" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_EXTRA_ATTACK">
-        <description>
-            <p>Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.</p>
-        </description>
-        <sheet>
-            <description>You can attack twice, instead of once, whenever you take the Attack action on your turn.</description>
-        </sheet>
-        <rules />
-    </element>
-    <element name="Defensive Tactics" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_DEFENSIVE_TACTICS">
-        <description>
-            <p>At 7th level, you gain one of the following features of your choice.</p>
-            <p>
-                <span class="feature">Escape the Horde.</span>Opportunity attacks against you are made with disadvantage.
-                <br/>
-                <span class="feature">Multiattack Defense.</span>When a creature hits you with an attack, you gain a +4 bonus to AC against all subsequent attacks made by that creature for the rest of the turn.
-                <br/>
-                <span class="feature">Steel Will.</span>You have advantage on saving throws against being frightened.
-                <br/>
-            </p>
-        </description>
-        <sheet>
-            <description></description>
-        </sheet>
-        <rules>
-            <select type="Archetype Feature" name="Defensive Tactics" supports="Revised Defensive Tactics" />
-        </rules>
-    </element>
-	-->
-  <!-- Defensive Tactics -->
-  <!-- 
-    <element name="Escape the Horde" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_DEFENSIVE_TACTICS_ESCAPE_THE_HORDE">
-        <supports>Revised Defensive Tactics</supports>
-        <description>
-            <p>Opportunity attacks against you are made with disadvantage.</p>
-        </description>
-        <sheet>
-            <description>Opportunity attacks against you are made with disadvantage.</description>
-        </sheet>
-        <rules></rules>
-    </element>
-    <element name="Multiattack Defense" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_DEFENSIVE_TACTICS_MULTIATTACK_DEFENSE">
-        <supports>Revised Defensive Tactics</supports>
-        <description>
-            <p>When a creature hits you with an attack, you gain a +4 bonus to AC against all subsequent attacks made by that creature for the rest of the turn.</p>
-        </description>
-        <sheet>
-            <description>When a creature hits you with an attack, you gain a +4 bonus to AC against all subsequent attacks made by that creature for the rest of the turn.</description>
-        </sheet>
-        <rules></rules>
-    </element>
-    <element name="Steel Will" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_DEFENSIVE_TACTICS_STEEL_WILL">
-        <supports>Revised Defensive Tactics</supports>
-        <description>
-            <p>You have advantage on saving throws against being frightened.</p>
-        </description>
-        <sheet>
-            <description>You have advantage on saving throws against being frightened.</description>
-        </sheet>
-        <rules></rules>
-    </element>
-    <element name="Multiattack" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_MULTIATTACK">
-        <description>
-            <p>At 11th level, you gain one of the following features of your choice.</p>
-            <p>
-                <span class="feature">Volley.</span>You can use your action to make a ranged attack against any number of creatures within 10 feet of a point you can see within your weapon’s range. You must have ammunition for each target, as normal, and you make a separate attack roll for each target.
-                <br/>
-                <span class="feature">Whirlwind Attack.</span>You can use your action to make a melee attack against any number of creatures within 5 feet of you, with a separate attack roll for each target.
-                <br/>
-            </p>
-        </description>
-        <sheet>
-            <description></description>
-        </sheet>
-        <rules>
-            <select type="Archetype Feature" name="Multiattack" supports="Revised Multiattack" />
-        </rules>
-    </element>
-	-->
-  <!-- Multiattack -->
-    <!-- <element name="Volley" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_MULTIATTACK_VOLLEY">
-        <supports>Revised Multiattack</supports>
-        <description>
-            <p>You can use your action to make a ranged attack against any number of creatures within 10 feet of a point you can see within your weapon’s range. You must have ammunition for each target, as normal, and you make a separate attack roll for each target.</p>
-        </description>
-        <sheet>
-            <description>You can use your action to make a ranged attack against any number of creatures within 10 feet of a point you can see within your weapon’s range. You must have ammunition for each target, as normal, and you make a separate attack roll for each target.</description>
-        </sheet>
-        <rules></rules>
-    </element>
-    <element name="Whirlwind Attack" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_MULTIATTACK_WHIRLWIND_ATTACK">
-        <supports>Revised Multiattack</supports>
-        <description>
-            <p>You can use your action to make a melee attack against any number of creatures within 5 feet of you, with a separate attack roll for each target.</p>
-        </description>
-        <sheet>
-            <description>You can use your action to make a melee attack against any number of creatures within 5 feet of you, with a separate attack roll for each target.</description>
-        </sheet>
-        <rules></rules>
-    </element>
-    <element name="Superior Hunter’s Defense" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_SUPERIOR_HUNTERS_DEFENSE">
-        <description>
-            <p>At 15th level, you gain one of the following features of your choice.</p>
-            <p>
-                <span class="feature">Evasion.</span>You can nimbly dodge out of the way of certain area effects, such as a red dragon’s fiery breath or a lightning bolt spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.
-                <br/>
-                <span class="feature">Stand Against the Tide.</span>When a hostile creature misses you with a melee attack, you can use your reaction to force that creature to repeat the same attack against another creature (other than itself) of your choice.
-                <br/>
-                <span class="feature">Uncanny Dodge.</span>When an attacker that you can see hits you with an attack, you can use your reaction to halve the attack’s damage against you.
-                <br/>
-            </p>
-        </description>
-        <sheet>
-            <description></description>
-        </sheet>
-        <rules>
-            <select type="Archetype Feature" name="Superior Hunter’s Defense" supports="Revised Superior Hunters Defense" />
-        </rules>
-    </element> -->
-  <!-- Superior Hunter’s Defense -->
-    <!-- <element name="Evasion" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_SUPERIOR_HUNTERS_DEFENSE_EVASION">
-        <supports>Revised Superior Hunters Defense</supports>
-        <description>
-            <p>You can nimbly dodge out of the way of certain area effects, such as a red dragon’s fiery breath or a lightning bolt spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.</p>
-        </description>
-        <sheet>
-            <description>You can nimbly dodge out of the way of certain area effects, such as a red dragon’s fiery breath or a lightning bolt spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.</description>
-        </sheet>
-        <rules></rules>
-    </element>
-    <element name="Stand Against the Tide" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_SUPERIOR_HUNTERS_DEFENSE_STAND_AGAINST_THE_TIDE">
-        <supports>Revised Superior Hunters Defense</supports>
-        <description>
-            <p>When a hostile creature misses you with a melee attack, you can use your reaction to force that creature to repeat the same attack against another creature (other than itself) of your choice.</p>
-        </description>
-        <sheet>
-            <description>When a hostile creature misses you with a melee attack, you can use your reaction to force that creature to repeat the same attack against another creature (other than itself) of your choice.</description>
-        </sheet>
-        <rules></rules>
-    </element>
-    <element name="Uncanny Dodge" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_HUNTER_SUPERIOR_HUNTERS_DEFENSE_UNCANNY_DODGE">
-        <supports>Revised Superior Hunters Defense</supports>
-        <description>
-            <p>When an attacker that you can see hits you with an attack, you can use your reaction to halve the attack’s damage against you.</p>
-        </description>
-        <sheet>
-            <description>When an attacker that you can see hits you with an attack, you can use your reaction to halve the attack’s damage against you.</description>
-        </sheet>
-        <rules></rules>
-    </element> -->
-  
+    	
   <!-- Beast -->
     <element name="Beast Conclave (beta)" type="Archetype" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_RANGER_REVISED_BEAST">
         <supports>Ranger Conclave, Ranger Archetype</supports>
@@ -1286,5 +1060,158 @@
         </sheet>
         <rules />
     </element>
+
+	<!-- Drake Companion Alterations -->
+	<element name="Drake Companion Revised" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_DRAKE_COMPANION">
+		<description>
+			<p><em>3rd-Level Drakewarden Feature</em></p>
+			<p>As an action, you can magically summon the drake that is bound to you. It appears in an unoccupied space of your choice within 30 feet of you.</p>
+			<p class="indent">The drake is friendly to you and your companions, and it obeys your commands. See its game statistics in the accompanying Drake Companion stat block, which uses your proficiency bonus (PB) in several places. Whenever you summon the drake, choose a damage type listed in its Draconic Essence trait. You can determine the cosmetic characteristics of the drake, such as its color, its scale texture, or any visible effect of its Draconic Essence; your choice has no effect on its game statistics.</p>
+			<p class="indent">In combat, the drake shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the Dodge action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are incapacitated, the drake can take any action of its choice, not just Dodge.</p>
+			<p class="indent">The drake remains until it is reduced to 0 hit points, until you use this feature to summon the drake again, or until you die. Anything the drake was wearing or carrying is left behind when the drake vanishes.</p>
+			<p class="indent">Once you summon the drake, you can’t do so again until you finish a long rest, unless you expend a spell slot of 1st level or higher to summon it.</p>
+			<div class="reference">
+				<div element="ID_WOTC_FTOD_INFORMATION_DRAKE_COMPANION" />
+			</div>
+		</description>
+		<sheet action="Action" usage="1/Long Rest">
+			<description>You can magically summon the drake. It appears in an unoccupied space of your choice within 30 feet of you. The drake is friendly to you and your companions, and it obeys your commands. &#13;
+			In combat, the drake shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the Dodge action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are incapacitated, the drake can take any action of its choice, not just Dodge. &#13;
+			The drake remains until it is reduced to 0 hit points, until you use this feature to summon the drake again, or until you die. Anything the drake was wearing or carrying is left behind when the drake vanishes. &#13;
+			You can also expend a spell slot of 1st level or higher to summon it.</description>
+		</sheet>
+		<rules>
+			<select type="Companion" name="Drake Companion" supports="Drake Companion" default="ID_TBOX_COMPANION_DRAKEWARDEN_DRAKE_COMPANION_SMALL" requirements="!ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_BOND_OF_FANG_AND_SCALE"/>
+			<select type="Companion" name="Drake Companion" supports="Drake Companion" default="ID_TBOX_COMPANION_DRAKEWARDEN_DRAKE_COMPANION_MEDIUM"  requirements="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_BOND_OF_FANG_AND_SCALE,!ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_PERFECTED_BOND"/>
+			<select type="Companion" name="Drake Companion" supports="Drake Companion" default="ID_TBOX_COMPANION_DRAKEWARDEN_DRAKE_COMPANION_LARGE"  requirements="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_PERFECTED_BOND"/>
+		</rules>
+	</element>
+	<element name="Drake Companion Revised" type="Companion" source="The Book of Xellarant" id="ID_TBOX_COMPANION_DRAKEWARDEN_DRAKE_COMPANION_SMALL">
+		<supports>Drake Companion</supports>
+		<requirements>!ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_BOND_OF_FANG_AND_SCALE</requirements>
+		<setters>
+			<set name="size">Small</set>
+			<set name="type">Dragon</set>
+			<set name="alignment">Unaligned</set>
+			<set name="ac">14 + PB (natural armor)</set>
+			<set name="hp">5 + five times your ranger level (the drake has a number of hit dice [d10s] equal to your ranger level)</set>
+			<set name="speed">40 ft.</set>
+			<set name="strength">16</set>
+			<set name="dexterity">12</set>
+			<set name="constitution">15</set>
+			<set name="intelligence">8</set>
+			<set name="wisdom">14</set>
+			<set name="charisma">8</set>
+			<set name="saves">Dex +1 plus PB, Wis +2 plus PB</set>
+			<set name="immunities">determined by the drake’s Draconic Essence trait</set>
+			<set name="senses">darkvision 60 ft., passive Perception 12</set>
+			<set name="languages">Draconic</set>
+			<set name="challenge">—</set>
+			<set name="proficiency">0</set>
+			<set name="traits">ID_WOTC_FTOD_COMPANION_TRAIT_DRAKEWARDEN_DRACONIC_ESSENCE</set>
+			<set name="actions">ID_WOTC_FTOD_COMPANION_ACTION_DRAKEWARDEN_BITE</set>
+			<set name="reactions">ID_WOTC_FTOD_COMPANION_REACTION_DRAKEWARDEN_INFUSED_STRIKES</set>
+		</setters>
+		<rules>
+			<stat name="companion:ac" value="14" bonus="base" />
+			<stat name="companion:ac" value="proficiency" bonus="proficiency" />
+			<stat name="companion:hp:max" value="5" />
+			<stat name="companion:hp:max" value="level:ranger revised" />
+			<stat name="companion:hp:max" value="level:ranger revised" />
+			<stat name="companion:hp:max" value="level:ranger revised" />
+			<stat name="companion:hp:max" value="level:ranger revised" />
+			<stat name="companion:hp:max" value="level:ranger revised" />
+			<stat name="companion:speed" value="40" bonus="base" />	
+			<stat name="companion:dexterity:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:constitution:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:proficiency" value="proficiency" bonus="proficiency"/>
+		</rules>
+	</element>
+	<element name="Drake Companion Revised" type="Companion" source="The Book of Xellarant" id="ID_TBOX_COMPANION_DRAKEWARDEN_DRAKE_COMPANION_MEDIUM">
+		<compendium display="false" />
+		<supports>Drake Companion</supports>
+		<requirements>ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_BOND_OF_FANG_AND_SCALE</requirements>
+		<setters>
+			<set name="size">Medium</set>
+			<set name="type">Dragon</set>
+			<set name="alignment">Unaligned</set>
+			<set name="ac">14 + PB (natural armor)</set>
+			<set name="hp">5 + five times your ranger level (the drake has a number of hit dice [d10s] equal to your ranger level)</set>
+			<set name="speed">40 ft.</set>
+			<set name="strength">16</set>
+			<set name="dexterity">12</set>
+			<set name="constitution">15</set>
+			<set name="intelligence">8</set>
+			<set name="wisdom">14</set>
+			<set name="charisma">8</set>
+			<set name="saves">Dex +1 plus PB, Wis +2 plus PB</set>
+			<set name="immunities">determined by the drake’s Draconic Essence trait</set>
+			<set name="senses">darkvision 60 ft., passive Perception 12</set>
+			<set name="languages">Draconic</set>
+			<set name="challenge">—</set>
+			<set name="proficiency">0</set>
+			<set name="traits">ID_WOTC_FTOD_COMPANION_TRAIT_DRAKEWARDEN_DRACONIC_ESSENCE</set>
+			<set name="actions">ID_WOTC_FTOD_COMPANION_ACTION_DRAKEWARDEN_MAGIC_FANG</set>
+			<set name="reactions">ID_WOTC_FTOD_COMPANION_REACTION_DRAKEWARDEN_INFUSED_STRIKES</set>
+		</setters>
+		<rules>
+			<stat name="companion:ac" value="14" bonus="base" />
+			<stat name="companion:ac" value="proficiency" bonus="proficiency" />
+			<stat name="companion:hp:max" value="5" />
+			<stat name="companion:hp:max" value="level:ranger revised" />
+			<stat name="companion:hp:max" value="level:ranger revised" />
+			<stat name="companion:hp:max" value="level:ranger revised" />
+			<stat name="companion:hp:max" value="level:ranger revised" />
+			<stat name="companion:hp:max" value="level:ranger revised" />
+			<stat name="companion:speed" value="40" bonus="base" />	
+			<stat name="companion:speed:fly" value="companion:speed" bonus="base" />	
+			<stat name="companion:dexterity:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:constitution:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:proficiency" value="proficiency" bonus="proficiency"/>
+		</rules>
+	</element>
+	<element name="Drake Companion Revised" type="Companion" source="The Book of Xellarant" id="ID_TBOX_COMPANION_DRAKEWARDEN_DRAKE_COMPANION_LARGE">
+		<compendium display="false" />
+		<supports>Drake Companion</supports>
+		<requirements>ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_PERFECTED_BOND</requirements>
+		<setters>
+			<set name="size">Large</set>
+			<set name="type">Dragon</set>
+			<set name="alignment">Unaligned</set>
+			<set name="ac">14 + PB (natural armor)</set>
+			<set name="hp">5 + five times your ranger level (the drake has a number of hit dice [d10s] equal to your ranger level)</set>
+			<set name="speed">40 ft.</set>
+			<set name="strength">16</set>
+			<set name="dexterity">12</set>
+			<set name="constitution">15</set>
+			<set name="intelligence">8</set>
+			<set name="wisdom">14</set>
+			<set name="charisma">8</set>
+			<set name="saves">Dex +1 plus PB, Wis +2 plus PB</set>
+			<set name="immunities">determined by the drake’s Draconic Essence trait</set>
+			<set name="senses">darkvision 60 ft., passive Perception 12</set>
+			<set name="languages">Draconic</set>
+			<set name="challenge">—</set>
+			<set name="proficiency">0</set>
+			<set name="traits">ID_WOTC_FTOD_COMPANION_TRAIT_DRAKEWARDEN_DRACONIC_ESSENCE</set>
+			<set name="actions">ID_WOTC_FTOD_COMPANION_ACTION_DRAKEWARDEN_EMPOWERED_BITE</set>
+			<set name="reactions">ID_WOTC_FTOD_COMPANION_REACTION_DRAKEWARDEN_INFUSED_STRIKES</set>
+		</setters>
+		<rules>
+			<stat name="companion:ac" value="14" bonus="base" />
+			<stat name="companion:ac" value="proficiency" bonus="proficiency" />
+			<stat name="companion:hp:max" value="5" />
+			<stat name="companion:hp:max" value="level:ranger revised" />
+			<stat name="companion:hp:max" value="level:ranger revised" />
+			<stat name="companion:hp:max" value="level:ranger revised" />
+			<stat name="companion:hp:max" value="level:ranger revised" />
+			<stat name="companion:hp:max" value="level:ranger revised" />
+			<stat name="companion:speed" value="40" bonus="base" />	
+			<stat name="companion:speed:fly" value="companion:speed" bonus="base" />	
+			<stat name="companion:dexterity:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:constitution:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+			<stat name="companion:proficiency" value="proficiency" bonus="proficiency"/>
+		</rules>
+	</element>
 
 </elements>

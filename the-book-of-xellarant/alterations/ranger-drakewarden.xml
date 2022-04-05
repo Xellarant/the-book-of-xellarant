@@ -4,7 +4,7 @@
 		<name>Drakewarden</name>
 		<description>The Drakewarden from Fizban's Treasury of Dragons</description>
 		<author url="https://dnd.wizards.com/products/treasury-dragons">Fizban's Treasury of Dragons</author>
-		<update version="0.0.1">
+		<update version="0.0.2">
 			<file name="ranger-drakewarden.xml" url="https://raw.githubusercontent.com/AuroraLegacy/elements/master/supplements/fizbans-treasury-of-dragons/archetypes/ranger-drakewarden.xml" />
 		</update>
 	</info>
@@ -37,7 +37,8 @@
 		<sheet display="false" />
 		<rules>
 			<grant type="Archetype Feature" id="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_DRACONIC_GIFT" level="3" />
-			<grant type="Archetype Feature" id="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_DRAKE_COMPANION" level="3" />
+			<grant type="Archetype Feature" id="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_DRAKE_COMPANION" level="3" requirements="!ID_TBOX_CLASS_RANGER_REVISED" />
+			<grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_DRAKE_COMPANION" level="3" requirements="ID_TBOX_CLASS_RANGER_REVISED" />
 			<grant type="Archetype Feature" id="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_BOND_OF_FANG_AND_SCALE" level="7" />
 			<grant type="Archetype Feature" id="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_DRAKES_BREATH" level="11" />
 			<grant type="Archetype Feature" id="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_PERFECTED_BOND" level="15" />
