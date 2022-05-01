@@ -4,7 +4,7 @@
 		<name>Experimental Spells</name>
 		<description>Experimental spells from The Book of Xellarant.</description>
 		<author url="https://github.com/xellarant">Xellarant</author>
-		<update version="0.0.3">
+		<update version="0.0.4">
 			<file name="spells.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/experimental-magic/spells.xml" />
 		</update>
 	</info>
