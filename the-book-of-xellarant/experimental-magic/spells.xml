@@ -30,4 +30,26 @@
 			<set name="isRitual">false</set>
 		</setters>
 	</element>
+
+	<element name="Fuck you, DM!" type="Spell" source="The Book of Xellarant" id="ID_TBOX_SPELL_FYDM">
+		<supports>Sorcerer,Druid,Wizard,Artificer,Bard,Ranger,Warlock,ID_WOTC_XGTE_ARCHETYPE_HEXBLADE,ID_DMSG_MMBH_ARCHETYPE_FEATURE_PROFANE_SOUL_OTHERWORLDLY_PATRON_HEXBLADE,ID_CRIT_ARCHETYPE_FEATURE_PROFANE_SOUL_OTHERWORLDLY_PATRON_HEXBLADE</supports>
+		<description>
+			<p>A floating ethereal hand forms a middle finger and jettisons toward the sky in a high-pitched whir.</p>
+			<p class="indent">The spell’s intensity increases by 1dfuck when you reach 5th level (2dfuck), 11th level (3dfuck), and 17th level (4dfuck).</p>
+		</description>
+		<setters>
+			<set name="keywords">experimental magic</set>
+			<set name="level">0</set>
+			<set name="school" addition="Experimental">Evocation</set>
+			<set name="time">Free Action</set>
+			<set name="range">Infinite</set>
+			<set name="duration">Instantaneous</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">A middle finger pointed at the sky as you cast the spell</set>
+			<set name="isConcentration">false</set>
+			<set name="isRitual">true</set>
+		</setters>
+	</element>
 </elements>
