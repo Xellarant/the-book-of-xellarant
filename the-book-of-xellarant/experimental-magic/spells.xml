@@ -4,7 +4,7 @@
 		<name>Experimental Spells</name>
 		<description>Experimental spells from The Book of Xellarant.</description>
 		<author url="https://github.com/xellarant">Xellarant</author>
-		<update version="0.0.4">
+		<update version="0.0.5">
 			<file name="spells.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/experimental-magic/spells.xml" />
 		</update>
 	</info>
@@ -12,7 +12,7 @@
 	<element name="Steeling" type="Spell" source="The Book of Xellarant" id="ID_TBOX_SPELL_STEELING">
 		<supports>Sorcerer,Druid,Wizard,Artificer,ID_WOTC_XGTE_ARCHETYPE_HEXBLADE,ID_DMSG_MMBH_ARCHETYPE_FEATURE_PROFANE_SOUL_OTHERWORLDLY_PATRON_HEXBLADE,ID_CRIT_ARCHETYPE_FEATURE_PROFANE_SOUL_OTHERWORLDLY_PATRON_HEXBLADE</supports>
 		<description>
-			<p>A melee weapon you are holding (or the flesh of a chosen creature) is suffused with an iron alloy and briefly transformed into magical steel. For the duration, the weapon (or the creature's flesh) emits a dull glow as its chemical structure is temporarily altered. The weapon (or the creature's unarmed strike) becomes magical and deals an additional 1d4 damage of its type on a successful hit. The spell ends after 1 minute, if you cast it again, or earlier if you make a successul attack with or let go of the weapon effected. A creature under the effects of this spell may choose not to apply the additional damage for unarmed strikes.</p>
+			<p>A melee weapon you are holding (or the flesh of a chosen creature) is suffused with an iron alloy and briefly transformed into magical steel. For the duration, the weapon (or the creature's flesh) emits a dull glow as its chemical structure is temporarily altered. The weapon (or the creature's unarmed strike) becomes magical and deals an additional 1d4 damage of its type on a successful hit. The spell ends after 1 minute, if you cast it again, or at the end of a turn in which the creature successully attacks with or lets go of the affected weapon. A creature under the effects of this spell may choose not to apply the additional damage for unarmed strikes.</p>
 			<p class="indent">The spell’s damage increases by 1d4 when you reach 5th level (2d4), 11th level (3d4), and 17th level (4d4).</p>
 		</description>
 		<setters>
