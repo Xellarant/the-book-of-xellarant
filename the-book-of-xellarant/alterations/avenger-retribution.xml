@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="avenger-retribution.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/alterations/avenger-retribution.xml" />
+		</update>
+	</info>
+
+	<element name="Grudge of Divine Retribution" type="Archetype" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_AVENGER_DIVINE_RETRIBUTION">
+		<supports>Avenger Archetype</supports>
+		<description>
+			<p>You have given yourself to the cause of a religious faith, and seek out the enemies of a god whom you worship. With each swing of your weapon, you reaffirm your devotion to the religious tenets by which you live.</p>
+			<div element="ID_TBOX_ARCHETYPE_FEATURE_GODR_ANGELIC_ALACRITY" />
+			<div element="ID_TBOX_ARCHETYPE_FEATURE_GODR_CHANNEL_DIVINITY" />
+            <div element="ID_TBOX_ARCHETYPE_FEATURE_GODR_GRUDGE_SPELLS" />
+			<div element="ID_TBOX_ARCHETYPE_FEATURE_GODR_JUDGEMENT_BRINGER" />
+            <div element="ID_TBOX_ARCHETYPE_FEATURE_GODR_DEVOTED_ARMAMENT" />
+			<div element="ID_TBOX_ARCHETYPE_FEATURE_GODR_SHROUD_OF_FAITH" />
+			<div element="ID_TBOX_ARCHETYPE_FEATURE_GODR_GODLY_STRIKE" />
+		</description>
+		<rules>
+			<grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_GODR_ANGELIC_ALACRITY" level="1" />
+            <grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_GODR_CHANNEL_DIVINITY" level="3" />
+            <grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_GODR_GRUDGE_SPELLS" level="3" />
+			<grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_GODR_JUDGEMENT_BRINGER" level="6" />
+			<grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_GODR_DEVOTED_ARMAMENT" level="10" />
+			<grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_GODR_SHROUD_OF_FAITH" level="14" />
+			<grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_GODR_GODLY_STRIKE" level="18" />
+		</rules>
+	</element>
+    <element name="Angelic Alacrity" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_GODR_ANGELIC_ALACRITY">
+        <description>
+            <p>At 1st level, the movement of your body is blessed as you approach the target of your god’s wrath. While you are moving towards the target of your Wrathful Censure, opportunity attacks made against you have disadvantage, and you move normally over difficult terrain.</p>
+        </description>
+        <sheet>
+            <p>While you are moving towards the target of your Wrathful Censure, opportunity attacks made against you have disadvantage, and you move normally over difficult terrain.</p>
+        </sheet>
+    </element>	
+	<element name="Channel Divinity" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_GODR_CHANNEL_DIVINITY">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_RETRIBUTION_CHANNEL_DIVINITY</requirements>
+		<description>
+			<p>At 3rd level, your grudge enables you to channel divine energy for fueling magical effects. Each Channel Divinity option provided by your grudge explains how to use it. When you use your Channel Divinity, you choose which option to use. You must then finish a short or long rest to use your Channel Divinity again.</p>
+			<p>As a part of your Vengeful Grudge, you have the following two Channel Divinity options.</p>
+			<p class="indent"><b><i>Abjure The Unholy.</i></b> As an action, you can use your Channel Divinity to renounce the very existence of a nearby fiend or undead. One fiend or undead you can see within 30 feet of you must make a Wisdom saving throw against your avenger spell save DC.</p>
+			<p class="indent">On a failed saving throw, the target takes 3d8 radiant damage and loses its resistances (if any) until it succeeds on a Charisma saving throw, rolled at the end of each of the target’s turns.</p>
+			<p class="indent">On a successful save, the target takes half damage and loses its resistances (if any) until the end of your next turn.</p>
+			<p class="indent"><b><i>Armor of Faith.</i></b>You can invoke a blessing of protection from your god when personal danger would threaten your mission.</p>
+			<p class="indent">As a reaction when you would be hit by an attack, you can use your Channel Divinity to gain a bonus to AC equal to your Charisma modifier (minimum +2) until the end of your next turn.</p>
+		</description>
+		<sheet display="false">
+			<description>You have the Abjure The Unholy and Armor of Faith Channel Divinity options.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_OOV_CHANNEL_DIVINITY_ABJURE_THE_UNHOLY" />
+			<grant type="Archetype Feature" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_OOV_CHANNEL_DIVINITY_ARMOR_OF_FAITH" />
+		</rules>
+	</element>
+    
+	<element name="Channel Divinity: Abjure The Unholy" type="Archetype Feature" source="The Book of Xellarant" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_OOV_CHANNEL_DIVINITY_ABJURE_THE_UNHOLY">
+		<description>
+			<p class="indent">As an action, you can use your Channel Divinity to renounce the very existence of a nearby fiend or undead. One fiend or undead you can see within 30 feet of you must make a Wisdom saving throw against your avenger spell save DC.</p>
+			<p class="indent">On a failed saving throw, the target takes 3d8 radiant damage and loses its resistances (if any) until it succeeds on a Charisma saving throw, rolled at the end of each of the target’s turns.</p>
+			<p class="indent">On a successful save, the target takes half damage and loses its resistances (if any) until the end of your next turn.</p>
+		</description>
+		<sheet alt="Abjure The Unholy" action="Action" usage="Channel Divinity">
+			<description>You renounce the very existence of a nearby fiend or undead. One fiend or undead you can see within 30 feet of you must make a Charisma saving throw against your avenger spell save DC. 
+			On a failed save, the target takes 3d8 radiant damage and loses its resistances (if any) until it succeeds on a Charisma saving throw, rolled at the end of each of the target’s turns.
+			On a successful save, the target takes half damage and loses its resistances (if any) until the end of your next turn.</description>
+		</sheet>
+	</element>
+	<element name="Channel Divinity: Armor of Faith" type="Archetype Feature" source="The Book of Xellarant" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_OOV_CHANNEL_DIVINITY_ARMOR_OF_FAITH">
+		<description>
+			<p>You can invoke a blessing of protection from your god when personal danger would threaten your mission. As a reaction when you would be hit by an attack, you can use your Channel Divinity to gain a bonus to AC equal to your Charisma modifier (minimum +2) until the end of your next turn.</p>
+		</description>
+		<sheet alt="Armor Of Faith" action="Reaction" usage="Channel Divinity">
+			<description>As a reaction when you would be hit by an attack, you can use your Channel Divinity to gain a bonus to AC equal to your Charisma modifier (minimum +2) until the end of your next turn.</description>
+		</sheet>
+	</element>
+    <element name="Grudge Spells" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_GODR_GRUDGE_SPELLS">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_RETRIBUTION_GRUDGE_SPELLS</requirements>
+		<description>
+			<p>You gain grudge spells at the avenger levels listed.</p>
+			<h5>GRUDGE OF RETRIBUTION SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Avenger Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>3rd</td><td><em>Detect Evil and Good, Divine Favor</em></td></tr>
+				<tr><td>5th</td><td><em>Branding Smite, Prayer of Healing</em></td></tr>
+				<tr><td>9th</td><td><em>Aura of Vitality, Crusader's Mantle</em></td></tr>
+				<tr><td>13th</td><td><em>Aura of Life, Divination</em></td></tr>
+				<tr><td>17th</td><td><em>Commune, Dispel Evil and Good</em></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_DETECT_EVIL_AND_GOOD" level="3" spellcasting="Avenger" prepared="true"/>
+			<grant type="Spell" id="ID_PHB_SPELL_DIVINE_FAVOR" level="3" spellcasting="Avenger" prepared="true"/>
+			<grant type="Spell" id="ID_PHB_SPELL_BRANDING_SMITE" level="5" spellcasting="Avenger" prepared="true"/>
+			<grant type="Spell" id="ID_PHB_SPELL_PRAYER_OF_HEALING" level="5" spellcasting="Avenger" prepared="true"/>
+			<grant type="Spell" id="ID_PHB_SPELL_AURA_OF_VITALITY" level="9" spellcasting="Avenger" prepared="true"/>
+			<grant type="Spell" id="ID_PHB_SPELL_CRUSADERS_MANTLE" level="9" spellcasting="Avenger" prepared="true"/>
+			<grant type="Spell" id="ID_PHB_SPELL_AURA_OF_LIFE" level="13" spellcasting="Avenger" prepared="true"/>
+			<grant type="Spell" id="ID_PHB_SPELL_DIVINATION" level="13" spellcasting="Avenger" prepared="true"/>
+			<grant type="Spell" id="ID_PHB_SPELL_COMMUNE" level="17" spellcasting="Avenger" prepared="true"/>
+			<grant type="Spell" id="ID_PHB_SPELL_DISPEL_EVIL_AND_GOOD" level="17" spellcasting="Avenger" prepared="true"/>
+		</rules>
+	</element>
+	<element name="Judgement Bringer" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_GODR_JUDGEMENT_BRINGER">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_RETRIBUTION_JUDGEMENT_BRINGER</requirements>
+		<description>
+			<p>At 6th level, your smites are enhanced to strike harder at your god’s enemies as well as the divine servants of enemy gods. When you use your Divine Smite feature against a target that is a fiend, celestial, or elemental, the weapon you use for the attack is treated as a magical weapon for the purpose of overcoming resistance, and the radiant damage from your Divine Smite ignores resistance.</p>
+		</description>
+		<sheet>
+			<description>When you use your Divine Smite feature against a target that is a fiend, celestial, or elemental, the weapon you use for the attack is treated as a magical weapon for the purpose of overcoming resistance, and the radiant damage from your Divine Smite ignores resistance.</description>
+		</sheet>
+	</element>
+	<element name="Devoted Armament" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_GODR_DEVOTED_ARMAMENT">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_RETRIBUTION_DEVOTED_ARMAMENT</requirements>
+		<description>
+			<p>At 10th level, you can imbue any weapon with the divine will of your god, so that it strikes true as a weapon regardless of its shape or form. You can add your proficiency bonus to any attack that you make with an improvised weapon.</p>
+			<p class="indent">In addition, your fanatic devotion protects you from being swayed as you deliver your god’s wrath. You can not be charmed while conscious.</p>
+		</description>
+		<sheet>
+			<description>You can add your proficiency bonus to attacks with improvised weapons, and you can not be charmed while conscious.</description>
+		</sheet>
+	</element>
+	<element name="Shroud of Faith" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_GODR_SHROUD_OF_FAITH">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_RETRIBUTION_SHROUD_OF_FAITH</requirements>
+		<description>
+			<p>At 14th level, your grudge has further evolved to adapt for battle against the divine servants of enemy gods. You are always under the effects of a protection from evil and good spell.</p>
+		</description>
+		<sheet>
+			<description>You are always under the effects of a protection from evil and good spell.</description>
+		</sheet>
+	</element>
+	<element name="Godly Strike" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_GODR_GODLY_STRIKE">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_RETRIBUTION_GODLY_STRIKE</requirements>
+		<description>
+			<p>At 18th level, the guiding will of your god enables you to strike with divinely aided accuracy. You have advantage on the first melee weapon attack that you make against the target of your Wrathful Censure feature after applying the censure.</p>
+			<p class="indent">In addition, you can reroll any natural die result of 10 or more whenever you miss on an attack against your Wrathful Censure target (the second result on the rerolled die is used even if you miss again).</p>
+			<p class="indent">You can reroll both dice if you miss with advantage and both dice have a natural result of 10 or more.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on the first melee weapon attack that you make against the target of your Wrathful Censure feature after applying the censure.
+			In addition, you can reroll any natural die result of 10 or more whenever you miss on an attack against your Wrathful Censure target (the second result on the rerolled die is used even if you miss again).
+			You can reroll both dice if you miss with advantage and both dice have a natural result of 10 or more.</description>
+		</sheet>
+	</element>
+
+	<!--Feature Replacement Grants-->
+	<element name="Grudge Spells Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_RETRIBUTION_GRUDGE_SPELLS" />
+	<element name="Retribution Channel Divinity Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_RETRIBUTION_CHANNEL_DIVINITY" />
+	<element name="Judgement Bringer Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_RETRIBUTION_JUDGEMENT_BRINGER" />
+	<element name="Devoted Armament Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_RETRIBUTION_DEVOTED_ARMAMENT" />
+	<element name="Shroud of Faith Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_RETRIBUTION_SHROUD_OF_FAITH" />
+	<element name="Godly Strike Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_RETRIBUTION_GODLY_STRIKE" />
+</elements>

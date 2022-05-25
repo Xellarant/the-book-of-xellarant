@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Avenger</name>
+		<description>The Avenger class re-worked for 5e as per DMSGuild.</description>
+		<author url="https://media.wizards.com/2016/dnd/downloads/UA_RevisedAvenger.pdf">Wizards of the Coast</author>
+		<update version="0.0.1">
+			<file name="class-avenger.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/alterations/class-avenger.xml" />
+		</update>
+	</info>
+
+	<element name="Avenger" type="Class" source="The Book of Xellarant" id="ID_TBOX_CLASS_AVENGER">
+		<description>
+			<p class="flavor">A passionate divine warrior who stokes the flames of loss to fuel to fire within.</p>
+			<p>The desert wind carries a sting of hot abrasion as finely powdered sands shift around the white-masked elf. As she stealthily makes her way around the dune in front of her, the elf silently unsheathes her daggers and listens for danger carefully with her pointed ears. After many days of tracking the footprints of her prey, the elf is weary, but she remembers the grinning expression on the gnoll’s face as he butchered the elf ’s lover; the memory grants the elven stalker strength for the encounter that she has awaited for a long time. Too long. The elf ’s bare sunburnt arms reveal themselves from under her tan cloak as she readies to pounce.</p>
+			<p class="indent">A cacophony of screams can be heard in the distance as the blackgarbed gnome quietly climbs towards the top floor of the fiendish cult’s temple. Suddenly, the sounds of steps begin to emanate nearby from above. The gnome utters a few words of power, and his body blends in perfectly with its surroundings. As the invisible climber peers over the edge of the balcony that he’s reached, he sees a crimson-robed dwarf walking down a corridor. Deciding to take this opportunity before it’s too late, the gnome glares intently at the approaching cultist and mentally prays to his god for good fortune in subduing the hapless target. The gnome wonders how good he’ll look in red.</p>
+			<p class="indent">After following the path of chopped and burnt trees in the forest, a fur-clothed half-orc has discovered the source of the destruction. A detachment of hobgoblins haphazardly collecting wood for their army. The half-orc feels the innate rage of her orcish blood rise to the surface, but tempers it with her human patience. Nearby fairies are signaled by the half-orc’s hand gestures to ready a surprise barrage of magic spells. The half-orc awakens the power of the forest within her and swiftly makes her way towards the leader of the hobgoblin band.</p>
+			<p class="indent">Avengers are harbingers of wrath that slay foes with martial tactics guided by fate and divine will. They hunt down enemies with zealous fervor to deliver vengeance.</p>
+			<h4>PIETY AND TRAGEDY</h4>
+			<p>There are many possible paths to becoming an avenger, but the stories of such warriors often reveal similar motivations. The most recurring theme in legends of avengers is that of one who seeks retribution for a great wrong committed by others. The seeker is personally victimized by the wrongdoing to such an extent that their very soul cries out to all of existence, and in that very moment of outcry, the winds of fate bless the victim with the power to set things right (as least from the perspective of the victim).</p>
+			<p class="indent">No mortal scholar seems to be sure of the true origin of such unpredictable awakenings, but rumors speak of ancient gods leaving behind invisible, wandering remnants of themselves in death. It is speculated that these divine remnants are attracted to the powerful emotions of mortal souls, and entangle such souls with divine sparks that enable the mortals to cultivate magical powers. Such speculation is partly fueled by the fact that avengers have also been known to be empowered by gods and primal spirits of nature; such warriors are often driven by duty and responsibility rather than personal afflictions in their pasts.</p>
+			<h4>WILL OF VENGEANCE</h4>
+			<p>One can not become an avenger simply through traditional methods of training. There is aways a powerful will and unlikely twist of fate behind the awakening of one who is chosen by destiny to carry the mantle of a vengeance seeker. To most laymen in society, avengers are not so different from paladins, who are also warriors chosen by fate to wield divine powers. Those who with greater knowledge however recognize that there is a stark difference: while paladins are empowered to protect and enforce, avengers are primarily bringers of death.</p>
+			<p class="indent">Most avengers do not operate in the open, at least not without a disguised identity to hide their true nature from intended prey. An avenger working for or with a larger organization is not unheard of, but few parties would ever admit to employing an avenger, to avoid alerting enemies of possible danger.</p>
+			<h4>CREATING AN AVENGER</h4>
+			<p>Every avenger has some powerful motivation that pushes them forward, a focus of intent that keeps them steady at critical times no matter what challenges they are faced with. Since such motivation typically requires the application of violence, avengers fit very well with adventurers, whose lifestyles typically revolve around fighting monsters and using violence to solve problems. An avenger will usually have a very clear, very strong objective that they are in pursuit of, so avengers tend to be a determined lot working diligently to overcome obstacles.</p>
+			<p class="indent">It is easy for an avenger to pass themselves off as a paladin or warrior priest, thanks to some overlapping aspects of their abilities, so a church’s hierarchy may include one or more avengers among their numbers, hiding their skills until their superiors or deities bestow a holy mission. There are also avengers that patrol the wilds to eliminate threats to places of nature, or to punish those who would upset the great balance. An avenger could also be encountered posing as law enforcement or a criminal to investigate leads towards a certain person or creature, from whom a toll of vengeance must be exacted.</p>
+			<h5>QUICK BUILD</h5>
+			<p>You can make an avenger quickly by following these suggestions. First, make Charisma your highest ability score, followed by Dexterity. Second, choose the acolyte background.</p>
+			<h3>CLASS FEATURES</h3>
+			<p>As an avenger, you gain the following class features.</p>
+            <h5>HIT POINTS</h5>
+            <ul class="unstyled">
+                <li><strong>Hit Dice:</strong> 1d8 per avenger level</li>
+                <li><strong>Hit Points at 1st Level:</strong> 8 + your Constitution modifier</li>
+                <li><strong>Hit Points at Higher Levels:</strong> 1d8 (or 5) + your Constitution modifier per avenger level after 1st</li>
+            </ul>
+            <h5>PROFICIENCIES</h5>
+            <ul class="unstyled mb">
+                <li><strong>Armor:</strong> Light armor, shields</li>
+                <li><strong>Weapons:</strong> Simple weapons, martial weapons</li>
+                <li><strong>Tools:</strong> None</li>
+            </ul>
+            <ul class="unstyled">
+                <li><strong>Saving Throws:</strong> Dexterity, Charisma</li>
+                <li><strong>Skills:</strong> Choose two from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Nature, Perception, Religion, Stealth, and Survival.</li>
+            </ul>
+			<h5>EQUIPMENT</h5>
+			<p>You start with the following equipment, in addition to the equipment granted by your background:</p>
+			<ul>
+				<li> <i>(a)</i> Any martial melee weapon and a shield, or <i>(b)</i> two martial melee weapons </li>
+				<li> <i>(a)</i> Two daggers or <i>(b)</i> any simple melee weapon </li>
+				<li> <i>(a)</i> A light crossbow and 20 crossbow bolts or <i>(b)</i> a shortbow and 20 arrows </li>
+				<li>An explorer's pack and a holy symbol</li>
+			</ul>
+			<h5>STARTING GOLD</h5>
+			<p>In lieu of equipment, an avenger starts with 4d4 x 10 gp.</p>
+			<h5 class="caption">THE AVENGER</h5>
+			<table class="class-features">
+				<thead>
+					<tr><td class="col-5">Level</td><td class="left">Features</td><td class="col-10">Spells Known</td><td>1st</td><td>2nd</td><td>3rd</td><td>4th</td><td>5th</td></tr>
+				</thead>
+				<tr><td> 1st</td><td class="left">Vengeful Grudge, Unarmored Defense, Wrathful Censure</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 2nd</td><td class="left">Fighting Style, Spellcasting, Divine Smite</td><td>2</td><td>2</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 3rd</td><td class="left">Vengeful Grudge Feature</td><td>3</td><td>3</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 4th</td><td class="left">Ability Score Improvement</td><td>3</td><td>3</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 5th</td><td class="left">Extra Attack</td><td>4</td><td>4</td><td>2</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 6th</td><td class="left">Vengeful Grudge Feature</td><td>4</td><td>4</td><td>2</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 7th</td><td class="left">Evasion</td><td>5</td><td>4</td><td>3</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 8th</td><td class="left">Ability Score Improvement</td><td>5</td><td>4</td><td>3</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 9th</td><td class="left">Stalker's Shroud</td><td>6</td><td>4</td><td>3</td><td>2</td><td>—</td><td>—</td></tr>
+				<tr><td>10th</td><td class="left">Vengeful Grudge Feature</td><td>6</td><td>4</td><td>3</td><td>2</td><td>—</td><td>—</td></tr>
+				<tr><td>11th</td><td class="left">Improved Divine Smite</td><td>7</td><td>4</td><td>3</td><td>3</td><td>—</td><td>—</td></tr>
+				<tr><td>12th</td><td class="left">Ability Score Improvement</td><td>7</td><td>4</td><td>3</td><td>3</td><td>—</td><td>—</td></tr>
+				<tr><td>13th</td><td class="left">—</td><td>8</td><td>4</td><td>3</td><td>3</td><td>1</td><td>—</td></tr>
+				<tr><td>14th</td><td class="left">Vengeful Grudge Feature</td><td>8</td><td>4</td><td>3</td><td>3</td><td>1</td><td>—</td></tr>
+				<tr><td>15th</td><td class="left">Relentless Pursuit</td><td>9</td><td>4</td><td>3</td><td>3</td><td>2</td><td>—</td></tr>
+				<tr><td>16th</td><td class="left">Ability Score Improvement</td><td>9</td><td>4</td><td>3</td><td>3</td><td>2</td><td>—</td></tr>
+				<tr><td>17th</td><td class="left">—</td><td>10</td><td>4</td><td>3</td><td>3</td><td>3</td><td>1</td></tr>
+				<tr><td>18th</td><td class="left">Vengeful Grudge Feature</td><td>10</td><td>4</td><td>3</td><td>3</td><td>3</td><td>1</td></tr>
+				<tr><td>19th</td><td class="left">Ability Score Improvement</td><td>11</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td></tr>
+				<tr><td>20th</td><td class="left">Unstoppable Vengeance</td><td>11</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td></tr>
+			</table>
+			<div element="ID_TBOX_CLASSFEATURE_AVENGER_VENGEFUL_GRUDGE" />
+            <div element="ID_TBOX_CLASSFEATURE_AVENGER_UNARMORED_DEFENSE" />
+            <div element="ID_TBOX_CLASSFEATURE_AVENGER_WRATHFUL_CENSURE" />
+			<div element="ID_TBOX_CLASSFEATURE_AVENGER_FIGHTING_STYLE" />
+			<div element="ID_TBOX_CLASSFEATURE_AVENGER_SPELLCASTING" />
+            <div element="ID_TBOX_CLASSFEATURE_AVENGER_DIVINE_SMITE" />
+            <div element="ID_TBOX_CLASSFEATURE_AVENGER_ASI" />
+            <div element="ID_TBOX_CLASSFEATURE_AVENGER_EXTRA_ATTACK" />
+			<div element="ID_TBOX_CLASSFEATURE_AVENGER_EVASION" />			
+			<div element="ID_TBOX_CLASSFEATURE_AVENGER_STALKERS_SHROUD" />
+			<div element="ID_TBOX_CLASSFEATURE_AVENGER_IMPROVED_DIVINE_SMITE" />
+			<div element="ID_TBOX_CLASSFEATURE_AVENGER_RELENTLESS_PURSUIT" />
+			<div element="ID_TBOX_CLASSFEATURE_AVENGER_UNSTOPPABLE_VENGEANCE" />
+		</description>
+		<sheet display="false">
+			<description>A passionate divine warrior who stokes the flames of loss to fuel to fire within.</description>
+		</sheet>
+		<setters>
+			<set name="short">A passionate divine warrior who stokes the flames of loss to fuel to fire within.</set>
+			<set name="hd">d8</set>
+		</setters>
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" requirements="!ID_TBOX_MULTICLASS_AVENGER" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS" requirements="!ID_TBOX_MULTICLASS_AVENGER" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SIMPLE_WEAPONS" requirements="!ID_TBOX_MULTICLASS_AVENGER" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" requirements="!ID_TBOX_MULTICLASS_AVENGER" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_DEXTERITY" requirements="!ID_TBOX_MULTICLASS_AVENGER" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_CHARISMA" requirements="!ID_TBOX_MULTICLASS_AVENGER" />
+			<select type="Proficiency" name="Skill Proficiency (Avenger)" supports="Skill,Avenger" number="2" requirements="!ID_TBOX_MULTICLASS_AVENGER" />
+			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_AVENGER_VENGEFUL_GRUDGE" level="1"/>
+			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_AVENGER_UNARMORED_DEFENSE" level="1"/>
+            <grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_AVENGER_WRATHFUL_CENSURE" level="1"/>
+			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_AVENGER_FIGHTING_STYLE" level="2"/>
+			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_AVENGER_SPELLCASTING" level="2"/>
+			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_AVENGER_DIVINE_SMITE" level="2"/>
+			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_AVENGER_ASI" level="4"/>
+            <grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_AVENGER_MARTIAL_VERSATILITY" level="4"/>
+			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_AVENGER_EXTRA_ATTACK" level="5"/>
+			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_AVENGER_EVASION" level="7" />
+			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_AVENGER_STALKERS_SHROUD" level="9"/>
+			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_AVENGER_IMPROVED_DIVINE_SMITE" level="11"/>
+			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_AVENGER_RELENTLESS_PURSUIT" level="15"/>
+			<grant type="Class Feature" id="ID_TBOX_CLASSFEATURE_AVENGER_UNSTOPPABLE_VENGEANCE" level="20"/>
+		</rules>
+		<multiclass id="ID_TBOX_MULTICLASS_AVENGER">
+			<prerequisite>Charisma 13</prerequisite>
+			<requirements>[cha:13]</requirements>
+			<setters>
+				<set name="multiclass proficiencies">Light armor, shields, simple weapons, martial weapons</set>
+			</setters>
+			<rules>
+				<grant type="Grants" id="ID_INTERNAL_GRANT_MULTICLASS" />
+				<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" />
+				<grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS" />
+				<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SIMPLE_WEAPONS" />
+				<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" />
+			</rules>
+		</multiclass>
+	</element>
+
+	<element name="Vengeful Grudge" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_AVENGER_VENGEFUL_GRUDGE">
+		<description>
+			<p>You draw strength from a grudge that you carry within your heart, a source of determination that has awoken miraculous power. You choose a Vengeful Grudge from which to gain features for your avenger class advancement. Your choice grants you features at 1st level and again at 3rd, 6th, 10th, 14th, and 18th level.</p>
+		</description>
+		<sheet>
+			<description>You draw strength from a grudge that you carry within your heart, a source of determination that has awoken miraculous power. You choose a Vengeful Grudge from which to gain features for your avenger class advancement. Your choice grants you features at 1st level and again at 3rd, 6th, 10th, 14th, and 18th level.</description>
+		</sheet>
+		<rules>
+			<select type="Archetype" name="Vengeful Grudge" supports="Avenger Archetype" level="1" />
+		</rules>
+	</element>
+
+	<element name="Unarmored Defense" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_AVENGER_UNARMORED_DEFENSE">
+		<description>
+			<p>The unrelenting ferocity of your grudge enables you to push beyond mortal limits and weather blows that would normally cause serious harm. While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Charisma modifier. You can use a shield and still gain this benefit.</p>
+		</description>
+		<sheet>
+			<description>While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Charisma modifier. You can use a shield and still gain this benefit.</description>
+		</sheet>
+		<rules>
+			<stat name="ac:unarmored defense avenger:base" value="10" />
+			<stat name="ac:unarmored defense avenger:dexterity" value="dexterity:modifier" />
+			<stat name="ac:unarmored defense avenger:charisma" value="charisma:modifier" />
+			<stat name="ac:unarmored defense avenger" value="ac:unarmored defense avenger:base" />
+			<stat name="ac:unarmored defense avenger" value="ac:unarmored defense avenger:dexterity" />
+			<stat name="ac:unarmored defense avenger" value="ac:unarmored defense avenger:charisma" />
+			<stat name="ac:calculation" value="ac:unarmored defense avenger" bonus="calculation" equipped="[armor:none]" alt="Unarmored Defense (Avenger)" />
+		</rules>
+	</element>
+
+	<element name="Wrathful Censure" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_AVENGER_WRATHFUL_CENSURE">
+		<description>
+			<p class="indent">By focusing the power of your grudge upon a single creature, you form a magical link of destiny that guides your body in violence against the targeted enemy. You can take a bonus action to apply a wrathful censure on one creature you can see within 100 feet. The censure lasts for up to one minute, and immediately ends if the target moves more than 100 feet away from you.</p>
+            <p class="indent">Applying a censure on another creature removes a currently active censure. You can purposely end a currently active censure with a single thought that does not require an action.</p>
+            <p class="indent">While your wrathful censure is active, the following effects are applied:</p>
+            <ul>
+                <li>Disadvantage can not be applied to your weapon attack rolls against the target.</li>
+                <li>You can use Charisma instead of Dexterity or Strength for weapon attack and damage rolls against the target.</li>
+            </ul>
+            <p class="indent">You can use this feature a number of times equal to your Charisma modifier (minimum one). You regain all uses of this feature when you finish a short rest or long rest.</p>
+		</description>
+		<sheet action="Bonus Action" usage="{{proficiency}}/Short Rest">
+			<description>You can take a bonus action to apply a wrathful censure on one creature you can see within 100 feet. The censure lasts for up to one minute, and immediately ends if the target moves more than 100 feet away from you. You may end a censure as a free action. You can not have disadvantage against with weapon attacks against your censure target, and you may use Charisma instead of Dex or Strength for those attack and damage rolls.</description>
+		</sheet>
+	</element>
+
+    <element name="Fighting Style" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_AVENGER_FIGHTING_STYLE">
+        <description>
+            <p class="indent">At 2nd level, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can’t take a Fighting Style option more than once, even if you later get to choose again.</p>
+            <ul>
+                <li><em>Dueling.</em> When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.</li>
+                <li><em>Great Weapon Fighting.</em> When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll, even if the new roll is a 1 or a 2. The weapon must have the two-handed or versatile property for you to gain this benefit.</li>
+                <li><em>Marauding.</em> When one or more opportunity attacks target you on your turn, you can use your reaction to move up to 10 feet, causing the attack(s) to automatically miss if you are out of its range at the end of the movement. The attack(s) otherwise has disadvantage on its attack roll. This movement does not provoke more opportunity attacks but does count against your speed for the turn. If you have already used all of your movement before using this feature, the attack(s) still has disadvantage on its attack roll.</li>
+                <li><em>Two-Weapon Fighting.</em> When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack.</li>
+            </ul>
+        </description>
+        <sheet>
+            <description>At 2nd level, you adopt a particular style of fighting as your specialty.</description>
+        </sheet>
+        <rules>
+			<select type="Class Feature" name="Fighting Style" supports="Fighting Style, Avenger" level="2"/>		
+        </rules>
+    </element>
+
+	<element name="Marauding" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_FIGHTINGSTYLE_Marauding">
+		<supports>Fighting Style, Avenger, Fighter, Paladin</supports>
+		<description>
+			<p>When one or more opportunity attacks target you on your turn, you can use your reaction to move up to 10 feet, causing the attack(s) to automatically miss if you are out of its range at the end of the movement. The attack(s) otherwise has disadvantage on its attack roll.</p>
+			<p class="indent">This movement does not provoke more opportunity attacks but does count against your speed for the turn. If you have already used all of your movement before using this feature, the attack(s) still has disadvantage on its attack roll.</p>
+		</description>
+		<sheet>
+			<description>When one or more opportunity attacks target you on your turn, you can use your reaction to move up to 10 feet, causing the attack(s) to automatically miss if you are out of its range at the end of the movement. The attack(s) otherwise has disadvantage on its attack roll.</description>
+		</sheet>
+	</element>
+
+	<element name="Blessed Warrior" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_FIGHTINGSTYLE_BLESSED_WARRIOR">
+		<supports>Fighting Style, Avenger, Paladin</supports>
+		<description>
+			<p>You learn two cantrips of your choice from the cleric spell list. They count as Avenger spells for you and Charisma is your spellcasting ability for them. Whenever you gain a level in this class, you can replace one of these cantrips with another cantrip from the cleric spell list.</p>
+		</description>
+		<sheet>
+			<description>You count cantrips of this fighting style as Avenger spells and Charisma is your spellcasting ability for them. Whenever you gain a level in this class, you can replace one of these cantrips with another cantrip from the cleric spell list.</description>
+		</sheet>
+		<rules>
+			<select type="Spell" name="Cantrip, Blessed Warrior" supports="0,Cleric" spellcasting="Avenger" number="2" />
+		</rules>
+	</element>
+
+    <element name="Spellcasting" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_AVENGER_SPELLCASTING">
+		<description>
+			<p>By 2nd level, you’ve learned to cast magic spells through communion with the divine will that guides your vengeful objectives. See chapter 10 of the Player’s Handbook for general rules of spellcasting. For a list of spells the avenger can prepare, see Avenger Spell List on page 12.</p>
+			<h5>SPELL SLOTS</h5>
+			<p>The Avenger table shows how many spell slots you have to cast your spells of 1st level or higher. To cast one of these spells, you must expend a slot of the spell’s level or higher. You regain all expended spell slots when you finish a long rest.</p>
+			<p class="indent">For example, if you know the 1st-level spell wrathful smite and have a 1st-level and a 2nd-level spell slot available, you can cast wrathful smite using either slot.</p>
+			<h5>PREPARING SPELLS</h5>
+			<p>You prepare the list of avenger spells that are available for you to cast, choosing from the avenger spell list. When you do so, choose a number of avenger spells equal to your Charisma modifier + half your avenger level, rounded down (minimum of one spell). The spells must be of a level for which you have spell slots. Casting one of your prepared spells does not remove it from your list of prepared spells.</p>
+			<p class="indent">For example, if you are a 7th-level avenger, you have four 1st-level and three 2nd-level spell slots. With a Charisma of 16, your list of prepared spells can include six spells of 1st or 2nd level, in any combination. After expending all of your 1st-level spell slots and two of your 2nd-level spell slots, you still have one 2nd level spell slot remaining, which you can expend to cast any of your 1st-level or 2nd-level prepared spells.</p>
+			<p class="indent">You can change your list of prepared spells when you finish a long rest. Preparing a new list of avenger spells requires time spent in brooding and meditation; at least 1 minute per spell level for each spell on your list.</p>
+			<h5>SPELLCASTING ABILITY</h5>
+			<p>Charisma is your spellcasting ability for your avenger spells. You use your Charisma whenever a spell refers to your spellcasting ability. in addition, you use your Charisma modifier when setting the saving throw DC for a avenger spell you cast and when making an attack roll with one.</p>
+			<center>
+				<p><strong>Spell save DC</strong> = 8 + your proficiency bonus + your Charisma modifier</p>
+				<p><strong>Spell attack modifier</strong> = your proficiency bonus + your Charisma modifier</p>
+			</center>
+            <h5 class="caption">SPELLCASTING FOCUS</h5>
+			<p>You can use a holy symbol as a spellcasting focus for your avenger spells.</p>
+		</description>
+		<sheet display="false">
+			<description>You’ve learned to cast magic spells through communion with the divine will that guides your vengeful objectives.</description>
+		</sheet>
+		<spellcasting name="Avenger" ability="Charisma" prepare="true">
+			<list known="true">Avenger</list>
+		</spellcasting>
+		<rules>
+			<grant type="Grants" id="ID_INTERNAL_GRANT_MULTICLASS_SPELLCASTING_SLOTS_HALF" requirements="ID_INTERNAL_GRANT_MULTICLASS"/>
+            <grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_SPELLFOCUS_GROUP_HOLY_SYMBOL" />
+			<stat name="avenger:spellcasting:slots:1" value="2" level="2" />
+			<stat name="avenger:spellcasting:slots:1" value="1" level="3" />
+			<stat name="avenger:spellcasting:slots:1" value="1" level="5" />
+			<stat name="avenger:spellcasting:slots:2" value="2" level="5" />
+			<stat name="avenger:spellcasting:slots:2" value="1" level="7" />
+			<stat name="avenger:spellcasting:slots:3" value="2" level="9" />
+			<stat name="avenger:spellcasting:slots:3" value="1" level="11" />
+			<stat name="avenger:spellcasting:slots:4" value="1" level="13" />
+			<stat name="avenger:spellcasting:slots:4" value="1" level="15" />
+			<stat name="avenger:spellcasting:slots:4" value="1" level="17" />
+			<stat name="avenger:spellcasting:slots:5" value="1" level="17" />
+			<stat name="avenger:spellcasting:slots:5" value="1" level="19" />
+			<select type="Spell" name="Spellcasting (Avenger)" supports="$(spellcasting:list),$(spellcasting:slots)" level="2" number="2" spellcasting="Avenger"/>
+			<select type="Spell" name="Spellcasting (Avenger)" supports="$(spellcasting:list),$(spellcasting:slots)" level="3" spellcasting="Avenger" />
+			<select type="Spell" name="Spellcasting (Avenger)" supports="$(spellcasting:list),$(spellcasting:slots)" level="5" spellcasting="Avenger" />
+			<select type="Spell" name="Spellcasting (Avenger)" supports="$(spellcasting:list),$(spellcasting:slots)" level="7" spellcasting="Avenger" />
+			<select type="Spell" name="Spellcasting (Avenger)" supports="$(spellcasting:list),$(spellcasting:slots)" level="9" spellcasting="Avenger" />
+			<select type="Spell" name="Spellcasting (Avenger)" supports="$(spellcasting:list),$(spellcasting:slots)" level="11" spellcasting="Avenger" />
+			<select type="Spell" name="Spellcasting (Avenger)" supports="$(spellcasting:list),$(spellcasting:slots)" level="13" spellcasting="Avenger" />
+			<select type="Spell" name="Spellcasting (Avenger)" supports="$(spellcasting:list),$(spellcasting:slots)" level="15" spellcasting="Avenger" />
+			<select type="Spell" name="Spellcasting (Avenger)" supports="$(spellcasting:list),$(spellcasting:slots)" level="17" spellcasting="Avenger" />
+			<select type="Spell" name="Spellcasting (Avenger)" supports="$(spellcasting:list),$(spellcasting:slots)" level="19" spellcasting="Avenger" />
+		</rules>
+	</element>
+
+    <element name="Divine Smite" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_AVENGER_DIVINE_SMITE">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_DIVINE_SMITE</requirements>
+		<description>
+			<p>At 2nd level, when you hit a creature with a melee weapon attack, you can expend one spell slot to deal radiant damage to the target, in addition to the weapon’s damage. The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each spell level higher than 1st, to a maximum of 5d8. The damage increases by 1d8 if the target is an undead or a fiend.</p>
+		</description>
+		<sheet>
+			<description>When you hit a creature with a melee weapon attack, you can expend one spell slot to deal radiant damage to the target, in addition to the weapon’s damage. The extra damage is 2d8 for a 1st-level spell slot, plus 1d8 for each spell level higher than 1st, to a maximum of 5d8. The damage increases by 1d8 if the target is an undead or a fiend, to a maximum of 6d8.</description>
+		</sheet>
+	</element>
+
+    <element name="Ability Score Improvement" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_AVENGER_ASI">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_ABILITY_SCORE_IMPROVEMENT</requirements>
+		<compendium display="false" />
+		<description>
+			<p>When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Class Feature" name="Improvement Option (Avenger 4)" supports="Improvement Option,Avenger,4" level="4" />
+			<select type="Class Feature" name="Improvement Option (Avenger 8)" supports="Improvement Option,Avenger,8" level="8" />
+			<select type="Class Feature" name="Improvement Option (Avenger 12)" supports="Improvement Option,Avenger,12" level="12" />
+			<select type="Class Feature" name="Improvement Option (Avenger 16)" supports="Improvement Option,Avenger,16" level="16" />
+			<select type="Class Feature" name="Improvement Option (Avenger 19)" supports="Improvement Option,Avenger,19" level="19" />
+		</rules>
+	</element>
+
+    <element name="Extra Attack" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_AVENGER_EXTRA_ATTACK">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_EXTRA_ATTACK</requirements>
+		<description>
+			<p>Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.</p>
+		</description>
+		<sheet>
+			<description>You can attack twice, instead of once, whenever you take the Attack action on your turn.</description>
+		</sheet>
+		<rules>
+			<stat name="extra attack:count" value="2" level="5" bonus="extra attack" />
+		</rules>
+	</element>
+
+	<element name="Evasion" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_AVENGER_EVASION">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_EVASION</requirements>
+		<description>
+			<p>Beginning at 7th level, you can nimbly dodge out of the way of certain area effects, such as a red dragon’s fiery breath or an ice storm spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.</p>
+		</description>
+		<sheet>
+			<description>When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.</description>
+		</sheet>
+	</element>
+
+	<element name="Stalker's Shroud" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_AVENGER_STALKERS_SHROUD">
+		<description>
+			<p>Beginning at 9th level, you can cast invisibility on yourself once without spending a spell slot, without having the spell prepared, and without having to use a material component. You regain the use of this feature when you finish a long rest.</p>
+		</description>
+		<sheet usage="1/Long Rest">
+			<description>You can cast invisibility on yourself once without spending a spell slot, without having the spell prepared, and without having to use a material component. You regain the use of this feature when you finish a long rest.</description>
+		</sheet>
+	</element>
+
+	<element name="Improved Divine Smite" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_AVENGER_IMPROVED_DIVINE_SMITE">
+		<description>
+			<p>At 11th level, all of your melee weapon attacks deliver the divine will of vengeance. Whenever you hit a creature with a melee weapon, the creature takes an extra 1d8 radiant damage. If you also use your Divine Smite with an attack, you add this damage to the extra damage of your Divine Smite.</p>
+		</description>
+		<sheet>
+			<description>All of your melee weapon attacks deliver the divine will of vengeance. Whenever you hit a creature with a melee weapon, the creature takes an extra 1d8 radiant damage. If you also use your Divine Smite with an attack, you add this damage to the extra damage of your Divine Smite.</description>
+		</sheet>
+	</element>
+
+	<element name="Relentless Pursuit" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_AVENGER_RELENTLESS_PURSUIT">
+		<description>
+			<p>At 15th level, the connection of fate between you and your chosen prey bends reality itself to prevent immediate escape. if the target of your Wrathful Censure willingly moves away from you, you can take a reaction at any time up to the end of the target’s movement to teleport to a space adjacent to the target.</p>
+		</description>
+		<sheet action="Reaction">If the target of your Wrathful Censure willingly moves away from you, you can take a reaction at any time up to the end of the target’s movement to teleport to a space adjacent to the target.</sheet>
+	</element>
+
+    <element name="Unstoppable Vengeance" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_AVENGER_UNSTOPPABLE_VENGEANCE">
+		<description>
+			<p>At 20th level, when you apply your Wrathful Censure feature, you can choose to become immune to all damage, become immune to the frightened, stunned, and paralyzed conditions, have advantage on all saving throws, and move normally over difficult terrain until the end of your next turn, or until you make your first melee weapon attack against the censure’s target, whichever happens first. Attacking any other target or willingly moving away from the censure target will immediately end the duration of this feature’s benefit. This feature can be used once after you finish a short rest or long rest.</p>
+		</description>
+		<sheet usage="1/Short Rest">
+            <p>When you apply your Wrathful Censure feature, you can choose to become immune to all damage, become immune to the frightened, stunned, and paralyzed conditions, have advantage on all saving throws, and move normally over difficult terrain until the end of your next turn, or until you make your first melee weapon attack against the censure’s target. Attacking any other target or willingly moving away from the censure target ends the feature early.</p>
+        </sheet>
+	</element>
+
+	<!-- Martial Versatility -->
+	<element name="Martial Versatility (Avenger)" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_AVENGER_MARTIAL_VERSATILITY">
+		<description>
+			<p><i>4th-level avenger feature</i></p>
+			<p>Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace a fighting style you know with another fighting style available to avengers. This replacement represents a shift of focus in your martial practice.</p>
+		</description>
+		<sheet alt="Martial Versatility">
+			<description>Whenever you reach a level in Avenger class that grants the Ability Score Improvement feature, you can replace a fighting style you know with another fighting style available to avengers.</description>
+		</sheet>
+	</element>
+
+	<!-- appends for existing stuff -->
+	<append id="ID_WOTC_TCOE_CLASS_FEATURE_FIGHTING_STYLE_UNARMED_FIGHTING">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_WOTC_TCOE_CLASS_FEATURE_FIGHTING_STYLE_BLIND_FIGHTING">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_WOTC_TCOE_CLASS_FEATURE_FIGHTING_STYLE_INTERCEPTION">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_WOTC_TCOE_CLASS_FEATURE_FIGHTING_STYLE_SUPERIOR_TECHNIQUE">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_WOTC_TCOE_CLASS_FEATURE_FIGHTING_STYLE_THROWN_WEAPON_FIGHTING">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_WOTC_PHB_CLASS_FEATURE_FIGHTINGSTYLE_ARCHERY">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_WOTC_PHB_CLASS_FEATURE_FIGHTINGSTYLE_DEFENSE">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_WOTC_PHB_CLASS_FEATURE_FIGHTINGSTYLE_DUELING">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_WOTC_PHB_CLASS_FEATURE_FIGHTINGSTYLE_GREAT_WEAPON_FIGHTING">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_WOTC_PHB_CLASS_FEATURE_FIGHTINGSTYLE_PROTECTION">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_WOTC_PHB_CLASS_FEATURE_FIGHTINGSTYLE_TWOWEAPON_FIGHTING">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_WOTC_UA_CLASS_FEATURE_FIGHTINGSTYLE_MARINER">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_RDDT_AA_CLASS_FEATURE_FIGHTINGSTYLE_AKIMBO_SHOOTING">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_RDDT_AA_CLASS_FEATURE_FIGHTINGSTYLE_BREACHER">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_RDDT_AA_CLASS_FEATURE_FIGHTINGSTYLE_DEADEYE">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_RDDT_AA_CLASS_FEATURE_FIGHTINGSTYLE_DUELING">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_RDDT_AA_CLASS_FEATURE_FIGHTINGSTYLE_SNIPER">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_RDDT_AA_CLASS_FEATURE_FIGHTINGSTYLE_PHALANX">
+		<supports>Avenger</supports>
+	</append>
+
+</elements>

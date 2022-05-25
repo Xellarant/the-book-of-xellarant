@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.1">
+			<file name="avenger-condemnation.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/alterations/avenger-condemnation.xml" />
+		</update>
+	</info>
+
+	<element name="Grudge of Primal Condemnation" type="Archetype" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_AVENGER_PRIMAL_CONDEMNATION">
+		<supports>Avenger Archetype</supports>
+		<description>
+			<p>You were blessed by a primal force such as a spirit of nature or ancient magical beast so that you could right a great wrong or eliminate a grave threat. The power of nature is your weapon to destroy those who would corrupt the great balance.</p>
+			<div element="ID_TBOX_ARCHETYPE_FEATURE_GOPC_NATURES_CHARGE" />
+			<div element="ID_TBOX_ARCHETYPE_FEATURE_GOPC_CHANNEL_DIVINITY" />
+            <div element="ID_TBOX_ARCHETYPE_FEATURE_GOPC_GRUDGE_SPELLS" />
+			<div element="ID_TBOX_ARCHETYPE_FEATURE_GOPC_ELEMENTAL_SMITE" />
+            <div element="ID_TBOX_ARCHETYPE_FEATURE_GOPC_NATURES_PANACEA" />
+			<div element="ID_TBOX_ARCHETYPE_FEATURE_GOPC_VENGEFUL_PREDATOR" />
+			<div element="ID_TBOX_ARCHETYPE_FEATURE_GOPC_PRIMAL_WRATH" />
+		</description>
+		<rules>
+			<grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_GOPC_NATURES_CHARGE" level="1" />
+            <grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_GOPC_CHANNEL_DIVINITY" level="3" />
+            <grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_GOPC_GRUDGE_SPELLS" level="3" />
+			<grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_GOPC_ELEMENTAL_SMITE" level="6" />
+			<grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_GOPC_NATURES_PANACEA" level="10" />
+			<grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_GOPC_VENGEFUL_PREDATOR" level="14" />
+			<grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_GOPC_PRIMAL_WRATH" level="18" />
+		</rules>
+	</element>
+    <element name="Nature's Charge" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_GOPC_NATURES_CHARGE">
+        <description>
+            <p>At 1st level, your bond with a primal force grants you insight needed to hunt down threats to nature. You add your proficiency bonus to Wisdom (Perception), Dexterity (Stealth), and Wisdom (Survival) checks made in natural environments. This is in addition to the bonuses you already have if trained in a skill.</p>
+        </description>
+        <sheet>
+            <p>You add your proficiency bonus to Wisdom (Perception), Dexterity (Stealth), and Wisdom (Survival) checks made in natural environments. This is in addition to the bonuses you already have if trained in a skill.</p>
+        </sheet>
+    </element>	
+	<element name="Channel Divinity" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_GOPC_CHANNEL_DIVINITY">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_CONDEMNATION_CHANNEL_DIVINITY</requirements>
+		<description>
+			<p>At 3rd level, your grudge enables you to channel divine energy for fueling magical effects. Each Channel Divinity option provided by your grudge explains how to use it. When you use your Channel Divinity, you choose which option to use. You must then finish a short or long rest to use your Channel Divinity again.</p>
+			<p>As a part of your Vengeful Grudge, you have the following two Channel Divinity options.</p>
+			<p class="indent"><b><i>Abjure the Unnatural.</i></b>As an action, you can use your Channel Divinity to renounce the very existence of a nearby aberration, construct, or undead. One aberration, construct, or undead you can see within 30 feet of you must make a Wisdom saving throw against your avenger spell save DC. On a failed saving throw, the target takes 3d8 radiant damage and loses its resistances (if any) until it succeeds on a Charisma saving throw, rolled at the end of each of the target’s turns. On a successful save, the target takes half damage and loses its resistances (if any) until the end of your next turn</p>
+            <p class="indent"><b><i>Elemental Ward.</i></b>As a reaction when you or any friends within 10 feet takes acid, cold, fire, lightning, or thunder damage, you can use your Channel Divinity to grant you and all friends within 10 feet resistance to acid, cold, fire, lightning, and thunder damage until the end of your next turn (the resistance is also applied to the damage that triggered the requirement for this feature).</p>
+		</description>
+		<sheet display="false">
+			<description>You have the Abjure the Unnatural and Elemental Ward Channel Divinity options.</description>
+		</sheet>
+		<rules>
+			<grant type="Archetype Feature" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_OOV_CHANNEL_DIVINITY_ABJURE_THE_UNNATURAL" />
+			<grant type="Archetype Feature" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_OOV_CHANNEL_DIVINITY_ELEMENTAL_WARD" />
+		</rules>
+	</element>
+    
+	<element name="Channel Divinity: Abjure the Unnatural" type="Archetype Feature" source="The Book of Xellarant" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_OOV_CHANNEL_DIVINITY_ABJURE_THE_UNNATURAL">
+		<description>
+			<p class="indent">As an action, you can use your Channel Divinity to renounce the very existence of a nearby aberration, construct, or undead. One aberration, construct, or undead you can see within 30 feet of you must make a Wisdom saving throw against your avenger spell save DC. On a failed saving throw, the target takes 3d8 radiant damage and loses its resistances (if any) until it succeeds on a Charisma saving throw, rolled at the end of each of the target’s turns. On a successful save, the target takes half damage and loses its resistances (if any) until the end of your next turn.</p>
+		</description>
+		<sheet alt="Abjure the Unnatural" action="Action" usage="Channel Divinity">
+			<description>One aberration, construct, or undead you can see within 30 feet of you must make a Wisdom saving throw against your avenger spell save DC. On a failed saving throw, the target takes 3d8 radiant damage and loses its resistances (if any) until it succeeds on a Charisma saving throw, rolled at the end of each of the target’s turns. On a successful save, the target takes half damage and loses its resistances (if any) until the end of your next turn.</description>
+		</sheet>
+	</element>
+	<element name="Channel Divinity: Elemental Ward" type="Archetype Feature" source="The Book of Xellarant" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_OOV_CHANNEL_DIVINITY_ELEMENTAL_WARD">
+		<description>
+			<p>As a reaction when you or any friends within 10 feet takes acid, cold, fire, lightning, or thunder damage, you can use your Channel Divinity to grant you and all friends within 10 feet resistance to acid, cold, fire, lightning, and thunder damage until the end of your next turn (the resistance is also applied to the damage that triggered the requirement for this feature).</p>
+		</description>
+		<sheet alt="Elemental Ward" action="Reaction" usage="Channel Divinity">
+			<description>As a reaction when you or any friends within 10 feet takes acid, cold, fire, lightning, or thunder damage, you can use your Channel Divinity to grant you and all friends within 10 feet resistance to acid, cold, fire, lightning, and thunder damage until the end of your next turn (the resistance is also applied to the damage that triggered the requirement for this feature).</description>
+		</sheet>
+	</element>
+    <element name="Grudge Spells" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_GOPC_GRUDGE_SPELLS">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_CONDEMNATION_GRUDGE_SPELLS</requirements>
+		<description>
+			<p>You gain grudge spells at the avenger levels listed.</p>
+			<h5>GRUDGE OF CONDEMNATION SPELLS</h5>
+			<table>
+				<thead>
+					<tr><td>Avenger Level</td><td>Spells</td></tr>
+				</thead>
+				<tr><td>3rd</td><td><em>Absorb Elements, Ensnaring Strike</em></td></tr>
+				<tr><td>5th</td><td><em>Protection from Poison, Spike Growth</em></td></tr>
+				<tr><td>9th</td><td><em>Elemental Weapon, Speak With Plants</em></td></tr>
+				<tr><td>13th</td><td><em>Elemental Bane, Grasping Vine</em></td></tr>
+				<tr><td>17th</td><td><em>Commune with Nature, Tree Stride</em></td></tr>
+			</table>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Spell" id="ID_XGTE_SPELL_ABSORB_ELEMENTS" level="3" spellcasting="Avenger" prepared="true"/>
+			<grant type="Spell" id="ID_PHB_SPELL_ENSNARING_STRIKE" level="3" spellcasting="Avenger" prepared="true"/>
+			<grant type="Spell" id="ID_PHB_SPELL_PROTECTION_FROM_POISON" level="5" spellcasting="Avenger" prepared="true"/>
+			<grant type="Spell" id="ID_PHB_SPELL_SPIKE_GROWTH" level="5" spellcasting="Avenger" prepared="true"/>
+			<grant type="Spell" id="ID_PHB_SPELL_ELEMENTAL_WEAPON" level="9" spellcasting="Avenger" prepared="true"/>
+			<grant type="Spell" id="ID_PHB_SPELL_SPEAK_WITH_PLANTS" level="9" spellcasting="Avenger" prepared="true"/>
+			<grant type="Spell" id="ID_XGTE_SPELL_ELEMENTAL_BANE" level="13" spellcasting="Avenger" prepared="true"/>
+			<grant type="Spell" id="ID_PHB_SPELL_GRASPING_VINE" level="13" spellcasting="Avenger" prepared="true"/>
+			<grant type="Spell" id="ID_PHB_SPELL_COMMUNE_WITH_NATURE" level="17" spellcasting="Avenger" prepared="true"/>
+			<grant type="Spell" id="ID_PHB_SPELL_TREE_STRIDE" level="17" spellcasting="Avenger" prepared="true"/>
+		</rules>
+	</element>
+	<element name="Elemental Smite" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_GOPC_ELEMENTAL_SMITE">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_CONDEMNATION_ELEMENTAL_SMITE</requirements>
+		<description>
+			<p>At 6th level, when you use your Divine Smite feature, instead of radiant, you can make the extra damage’s type acid, cold, fire, lightning, or thunder. In addition, your Divine Smite now deals an additional 1d8 extra damage to aberrations and constructs.</p>
+		</description>
+		<sheet>
+			<description>When you use your Divine Smite feature, instead of radiant, you can make the extra damage’s type acid, cold, fire, lightning, or thunder. In addition, your Divine Smite now deals an additional 1d8 extra damage to aberrations and constructs.</description>
+		</sheet>
+	</element>
+	<element name="Nature's Panacea" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_GOPC_NATURES_PANACEA">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_CONDEMNATION_NATURES_PANACEA</requirements>
+		<description>
+			<p>At 10th level, the primal energies that power your abilities have strengthened your blood against impurities. You are immune to the poisoned condition, have advantage on saving throws against poisons, and have resistance to poison damage.</p>
+		</description>
+		<sheet>
+			<description>You are immune to the poisoned condition, have advantage on saving throws against poisons, and have resistance to poison damage.</description>
+		</sheet>
+	</element>
+	<element name="Vengeful Predator" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_GOPC_VENGEFUL_PREDATOR">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_CONDEMNATION_VENGEFUL_PREDATOR</requirements>
+		<description>
+			<p>At 14th level, you’ve learned to attune your senses to match that of natural beasts. You can take a bonus action to use this feature once, and regain the use of this feature when you finish a short rest or long rest. Choose one of the following options when you use this feature.</p>
+            <p class="indent"><b><i>Eagle's Eye.</i></b></p> For 1 hour, by focusing your vision (no action required), you can see creatures and objects up to 1 mile away as if they were nearby, and you do not apply disadvantage for making ranged weapon attacks outside of close range.
+            <p class="indent"><b><i>Mole's Awareness.</i></b></p> For 1 hour, you gain tremorsense out to 60 feet, allowing you to discern the movements and locations of nonflying creatures within the range.
+            <p class="indent"><b><i>Wolf's Pursuit.</i></b></p> For 1 hour, you have advantage on Wisdom (Perception) checks made to track creatures, and gain a +5 bonus to Passive Perception.
+		</description>
+		<sheet action="Bonus Action">
+			<description>
+                <p>At 14th level, you’ve learned to attune your senses to match that of natural beasts. You can take a bonus action to use this feature once, and regain the use of this feature when you finish a short rest or long rest. Choose one of the following options when you use this feature.</p>
+                <p class="indent"><b><i>Eagle's Eye.</i></b></p> For 1 hour, by focusing your vision (no action required), you can see creatures and objects up to 1 mile away as if they were nearby, and you do not apply disadvantage for making ranged weapon attacks outside of close range.
+                <p class="indent"><b><i>Mole's Awareness.</i></b></p> For 1 hour, you gain tremorsense out to 60 feet, allowing you to discern the movements and locations of nonflying creatures within the range.
+                <p class="indent"><b><i>Wolf's Pursuit.</i></b></p> For 1 hour, you have advantage on Wisdom (Perception) checks made to track creatures, and gain a +5 bonus to Passive Perception.
+            </description>
+		</sheet>
+	</element>
+	<element name="Primal Wrath" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_GOPC_PRIMAL_WRATH">
+		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_CONDEMNATION_PRIMAL_WRATH</requirements>
+		<description>
+			<p>At 18th level, when you use your Elemental Smite feature to change the damage type of your Divine Smite’s extra damage, resistance does not reduce the extra damage from your Divine Smite, and you gain immunity to the changed damage type until the end of your next turn. If the target is immune to the extra damage’s type, then you instead gain immunity to the damage type for 1 minute.</p>
+		</description>
+		<sheet>
+			<description>When you use your Elemental Smite feature to change the damage type of your Divine Smite’s extra damage, resistance does not reduce the extra damage from your Divine Smite, and you gain immunity to the changed damage type until the end of your next turn. If the target is immune to the extra damage’s type, then you instead gain immunity to the damage type for 1 minute.</description>
+		</sheet>
+	</element>
+
+	<!--Feature Replacement Grants-->
+	<element name="Grudge Spells Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_CONDEMNATION_GRUDGE_SPELLS" />
+	<element name="Fury Channel Divinity Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_CONDEMNATION_CHANNEL_DIVINITY" />
+	<element name="Elemental Smite Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_CONDEMNATION_ELEMENTAL_SMITE" />
+	<element name="Nature's Panacea Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_CONDEMNATION_NATURES_PANACEA" />
+	<element name="Vengeful Predator Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_CONDEMNATION_VENGEFUL_PREDATOR" />
+	<element name="Primal Wrath Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_CONDEMNATION_PRIMAL_WRATH" />
+</elements>
