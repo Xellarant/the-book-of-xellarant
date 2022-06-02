@@ -4,7 +4,7 @@
 		<name>Shadow Agent Background</name>
 		<description>Basic background of Shadow Agents, unseen conspirators and schemers.</description>
 		<author url="https://github.com/xellarant">Xellarant</author>
-		<update version="0.0.5">
+		<update version="0.0.6">
 			<file name="shadow-agent-background.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/backgrounds/shadow-agent-background.xml" />
 		</update>
 	</info>
@@ -26,7 +26,7 @@
 			<select type="Proficiency" name="Skill Proficiency (Shadow Agent)" supports="Skill" number="2" />
 			<grant type="Background Feature" id="ID_SCAG_BACKGROUND_FACTION_AGENT_SAFE_HAVEN" />
 			<select type="Background Feature" name="Variant Feature" optional="true" />
-			<select type="Background Feature" name="Skillset" supports="Sub-Feature"/>
+			<select type="Background Sub-Feature" name="Skillset" supports="Sub-Feature"/>
 			<select type="Language" name="Language, Shadow Agent" supports="Standard||Exotic" number="2" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_LINGUISTIC" />
 			<select type="Proficiency" name="Tool Proficiency, Shadow Agent" supports="Tool" number="2" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_HANDY" />
 			<select type="Language" name="Language, Shadow Agent" supports="Standard||Exotic" number="1" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_VERSATILE" />
@@ -73,26 +73,5 @@
 			<p>As a faction agent, you have access to a secret network of supporters and operatives who can provide assistance on your adventures. You know a set of secret signs and passwords you can use to identify such operatives, who can provide you with access to a hidden safe house, free room and board, or assistance in finding information. These agents never risk their lives for you or risk revealing their true identities.</p>
 		</description>
 		<sheet name="Safe Haven" />
-	</element>
-	<element name="Sub-Feature: Linguistic" type="Background Feature" source="The Book of Xellarant" id="ID_XELL_TBOX_BACKGROUND_FEATURE_LINGUISTIC">
-		<supports>Sub-Feature</supports>
-		<description>
-			<p>Linguistic. Your background gives you two language proficiencies.</p>
-		</description>
-		<sheet display="false" />
-	</element>
-	<element name="Sub-Feature: Handy" type="Background Feature" source="The Book of Xellarant" id="ID_XELL_TBOX_BACKGROUND_FEATURE_HANDY">
-		<supports>Sub-Feature</supports>
-		<description>
-			<p>Handy. Your background gives you two tool proficiencies.</p>
-		</description>
-		<sheet display="false" />
-	</element>
-	<element name="Sub-Feature: Versatile" type="Background Feature" source="The Book of Xellarant" id="ID_XELL_TBOX_BACKGROUND_FEATURE_VERSATILE">
-		<supports>Sub-Feature</supports>
-		<description>
-			<p>Versatile. Your background gives you one language proficiency and one tool proficiency.</p>
-		</description>
-		<sheet display="false" />
 	</element>
 </elements>
