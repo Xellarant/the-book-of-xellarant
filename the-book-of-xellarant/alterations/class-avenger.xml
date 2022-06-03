@@ -4,7 +4,7 @@
 		<name>Avenger</name>
 		<description>The Avenger class re-worked for 5e as per DMSGuild.</description>
 		<author url="https://media.wizards.com/2016/dnd/downloads/UA_RevisedAvenger.pdf">Wizards of the Coast</author>
-		<update version="0.0.2">
+		<update version="0.0.3">
 			<file name="class-avenger.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/alterations/class-avenger.xml" />
 		</update>
 	</info>
