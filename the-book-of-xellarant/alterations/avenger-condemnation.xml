@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.4">
+		<update version="0.0.5">
 			<file name="avenger-condemnation.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/alterations/avenger-condemnation.xml" />
 		</update>
 	</info>
@@ -121,9 +121,9 @@
 		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_CONDEMNATION_VENGEFUL_PREDATOR</requirements>
 		<description>
 			<p>At 14th level, you’ve learned to attune your senses to match that of natural beasts. You can take a bonus action to use this feature once, and regain the use of this feature when you finish a short rest or long rest. Choose one of the following options when you use this feature.</p>
-            <p class="indent"><b><em>Eagle's Eye.</em></b></p> For 1 hour, by focusing your vision (no action required), you can see creatures and objects up to 1 mile away as if they were nearby, and you do not apply disadvantage for making ranged weapon attacks outside of close range.
-            <p class="indent"><b><em>Mole's Awareness.</em></b></p> For 1 hour, you gain tremorsense out to 60 feet, allowing you to discern the movements and locations of nonflying creatures within the range.
-            <p class="indent"><b><em>Wolf's Pursuit.</em></b></p> For 1 hour, you have advantage on Wisdom (Perception) checks made to track creatures, and gain a +5 bonus to Passive Perception.
+            <p class="indent"><b><em>Eagle's Eye. </em></b>For 1 hour, by focusing your vision (no action required), you can see creatures and objects up to 1 mile away as if they were nearby, and you do not apply disadvantage for making ranged weapon attacks outside of close range.</p>
+            <p class="indent"><b><em>Mole's Awareness.</em></b> For 1 hour, you gain tremorsense out to 60 feet, allowing you to discern the movements and locations of nonflying creatures within the range.</p>
+            <p class="indent"><b><em>Wolf's Pursuit.</em></b> For 1 hour, you have advantage on Wisdom (Perception) checks made to track creatures, and gain a +5 bonus to Passive Perception.</p>
 		</description>
 		<sheet action="Bonus Action">
 			<description>
