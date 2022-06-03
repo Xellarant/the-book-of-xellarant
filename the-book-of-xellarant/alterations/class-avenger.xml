@@ -374,6 +374,7 @@
 	<element name="Avenger's Scope" type="Spell" source="The Book of Xellarant" id="ID_TBOX_SPELL_AVENGERS_SCOPE" requirements="ID_TBOX_CLASSFEATURE_AVENGER_WRATHFUL_CENSURE">
 		<supports>Avenger</supports>
 		<description>
+			<p class="indent"><em><b>SPECIAL. </b></em>You must have the Wrathful Censure feature to cast this spell.</p>
 			<p>You can see your Wrathful Censure target normally even if you have the blinded condition, and even if the target is concealed or invisible. This spell ends when the Wrathful Censure ends.</p>
 		</description>
 		<setters>
@@ -383,6 +384,113 @@
 			<set name="time">1 bonus action</set>
 			<set name="duration">Special</set>
 			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+	<element name="Blessing of Vengeance" type="Spell" source="The Book of Xellarant" id="ID_TBOX_SPELL_BLESSING_OF_VENGEANCE" requirements="ID_TBOX_CLASSFEATURE_AVENGER_WRATHFUL_CENSURE">
+		<supports>Avenger</supports>
+		<description>
+			<p class="indent"><em><b>SPECIAL. </b></em>You must have the Wrathful Censure feature to cast this spell.</p>
+			<p>As the subject of your divine vengeance is vanquished, the forces of destiny bolster your continued fulfillment of divine will. When your Wrathful Censure’s target has its hit points reduced to 0, you gain temporary hit points equal to 5 + 1/2 the CR of the target.</p>
+			<p class="indent"><em><b>At higher levels. </b></em>When you cast this spell using a spell slot higher than 1st level, you gain an additional 5 temporary hit points for each level higher than 1st.</p>
+		</description>
+		<setters>
+			<set name="keywords">Avenger,Blessing,Vengeance,Wrath,Wrathful,Censure</set>
+			<set name="level">1</set>
+			<set name="school">Necromancy</set>
+			<set name="time">1 reaction (taken when your Wrathful Censure target’s hit points are reduced to 0)</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+	<element name="Illuminating Censure" type="Spell" source="The Book of Xellarant" id="ID_TBOX_SPELL_ILLUMINATING_CENSURE" requirements="ID_TBOX_CLASSFEATURE_AVENGER_WRATHFUL_CENSURE">
+		<supports>Avenger</supports>
+		<description>
+			<p class="indent"><em><b>SPECIAL. </b></em>You must have the Wrathful Censure feature to cast this spell.</p>
+			<p>Your current Wrathful Censure target must make a Wisdom saving throw. On a failed save, the target begins to glow, giving off bright light out to 60 feet, and dim light for another 60 feet. In addition, while the target is affected by this spell, the target can not gain the benefit of invisibility. This spell ends when the Wrathful Censure ends.</p>
+		</description>
+		<setters>
+			<set name="keywords">Avenger,Illuminating,Wrath,Wrathful,Censure</set>
+			<set name="level">2</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 bonus action</set>
+			<set name="duration">Special</set>
+			<set name="range">100 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+	<element name="Marking Censure" type="Spell" source="The Book of Xellarant" id="ID_TBOX_SPELL_MARKING_CENSURE" requirements="ID_TBOX_CLASSFEATURE_AVENGER_WRATHFUL_CENSURE">
+		<supports>Avenger</supports>
+		<description>
+			<p class="indent"><em><b>SPECIAL. </b></em>You must have the Wrathful Censure feature to cast this spell.</p>
+			<p>You can cast this spell on your currently active Wrathful Censure target. The target must make a Wisdom saving throw. On a failed save, your target has disadvantage on attacks that it makes against creatures other than you until it hits you with an attack. This spell ends when the Wrathful Censure ends.</p>
+		</description>
+		<setters>
+			<set name="keywords">Avenger,Marking,Wrath,Wrathful,Censure</set>
+			<set name="level">2</set>
+			<set name="school">Abjuration</set>
+			<set name="time">1 bonus action</set>
+			<set name="duration">Special</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+	<element name="Inescapable Censure" type="Spell" source="The Book of Xellarant" id="ID_TBOX_SPELL_INESCAPABLE_CENSURE" requirements="ID_TBOX_CLASSFEATURE_AVENGER_WRATHFUL_CENSURE">
+		<supports>Avenger</supports>
+		<description>
+			<p class="indent"><em><b>SPECIAL. </b></em>You must have the Wrathful Censure feature to cast this spell.</p>
+			<p>When you cast this spell, your current Wrathful Censure target must make a Wisdom saving throw. On a failed save, the target is teleported to a safe, unoccupied space of your choice within 5 feet of you and you can make an immediate melee weapon attack against the target.</p>
+		</description>
+		<setters>
+			<set name="keywords">Avenger,Inescapable,Wrath,Wrathful,Censure</set>
+			<set name="level">3</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">100 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+	<element name="Path to Vengeance" type="Spell" source="The Book of Xellarant" id="ID_TBOX_SPELL_PATH_TO_VENGEANCE" requirements="ID_TBOX_CLASSFEATURE_AVENGER_WRATHFUL_CENSURE">
+		<supports>Avenger</supports>
+		<description>
+			<p class="indent"><em><b>SPECIAL. </b></em>You must have the Wrathful Censure feature to cast this spell.</p>
+			<p>A wave of telekinetic force erupts between you and your prey. Every creature that is directly between you and your current Wrathful Censure target must make a Constitution saving throw. On a failed save, the creature takes 4d8 force damage and is pushed 10 feet into a space that is not directly between you and your current Wrathful Censure target. On a successful save, the creature takes half damage and is pushed 5 feet into a space that is not directly between you and your current Wrathful Censure target.</p>
+			<p class="indent"><em><b>At higher levels. </b></em>When you cast this spell using a spell slot higher than 3rd level, you deal an additional 1d8 force damage for each level higher than 3rd.</p>
+		</description>
+		<setters>
+			<set name="keywords">Avenger,Path,Vengeance,Wrath,Wrathful,Censure</set>
+			<set name="level">3</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">100 feet</set>
 			<set name="hasVerbalComponent">true</set>
 			<set name="hasSomaticComponent">false</set>
 			<set name="hasMaterialComponent">false</set>
@@ -485,6 +593,182 @@
 	</append>
 
 	<!-- spells -->
+	<!-- 1st-Level -->
+	<append id="ID_PHB_SPELL_COMPELLED_DUEL">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_COMPREHEND_LANGUAGES">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_CURE_WOUNDS">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_DETECT_EVIL_AND_GOOD">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_DETECT_MAGIC">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_DETECT_POISON_AND_DISEASE">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_DISGUISE_SELF">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_DIVINE_FAVOR">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_EXPEDITIOUS_RETREAT">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_HEROISM">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_HUNTERS_MARK">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_INFLICT_WOUNDS">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_JUMP">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_PROTECTION_FROM_EVIL_AND_GOOD">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_PURIFY_FOOD_AND_DRINK">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_SEARING_SMITE">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_THUNDEROUS_SMITE">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_WRATHFUL_SMITE">
+		<supports>Avenger</supports>
+	</append>
 
+	<!-- 2nd-level -->
+	<append id="ID_PHB_SPELL_ALTER_SELF">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_BLUR">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_BRANDING_SMITE">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_DARKVISION">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_DETECT_THOUGHTS">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_INVISIBILITY">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_LESSER_RESTORATION">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_LOCATE_ANIMALS_OR_PLANTS">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_LOCATE_OBJECT">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_MAGIC_WEAPON">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_MISTY_STEP">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_PROTECTION_FROM_POISON">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_SEE_INVISIBILITY">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_XGTE_SPELL_SHADOW_BLADE">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_ZONE_OF_TRUTH">
+		<supports>Avenger</supports>
+	</append>
+
+	<!-- 3rd-level -->
+	<append id="ID_PHB_SPELL_BESTOW_CURSE">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_BLINDING_SMITE">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_CREATE_FOOD_AND_WATER">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_DAYLIGHT">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_DISPEL_MAGIC">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_ELEMENTAL_WEAPON">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_MAGIC_CIRCLE">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_NONDETECTION">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_REMOVE_CURSE">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_SPEAK_WITH_DEAD">
+		<supports>Avenger</supports>
+	</append>
+
+	<!-- 4th-level -->
+	<append id="ID_PHB_SPELL_BANISHMENT">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_DEATH_WARD">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_FREEDOM_OF_MOVEMENT">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_GREATER_INVISIBILITY">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_LOCATE_CREATURE">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_STAGGERING_SMITE">
+		<supports>Avenger</supports>
+	</append>
+
+	<!-- 5th-level -->
+	<append id="ID_PHB_SPELL_BANISHING_SMITE">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_CIRCLE_OF_POWER">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_DESTRUCTIVE_WAVE">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_DISPEL_EVIL_AND_GOOD">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_GEAS">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_XGTE_SPELL_HOLY_WEAPON">
+		<supports>Avenger</supports>
+	</append>
+	<append id="ID_PHB_SPELL_RAISE_DEAD">
+		<supports>Avenger</supports>
+	</append>
 
 </elements>
