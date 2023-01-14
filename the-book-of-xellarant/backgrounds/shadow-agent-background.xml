@@ -25,7 +25,8 @@
 		<rules>
 			<select type="Proficiency" name="Skill Proficiency (Shadow Agent)" supports="Skill" number="2" />
 			<grant type="Background Feature" id="ID_SCAG_BACKGROUND_FACTION_AGENT_SAFE_HAVEN" />
-			<select type="Background Feature" name="Variant Feature" optional="true" />
+			<select type="Background Feature" name="Variant Feature" supports="Background Feature" optional="true" />
+			<select type="Background Feature" name="2nd Background Feature" supports="2nd Background Feature" optional="true" />
 			<select type="Background Sub-Feature" name="Skillset" supports="Sub-Feature"/>
 			<select type="Language" name="Language, Shadow Agent" supports="Standard||Exotic" number="2" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_LINGUISTIC" />
 			<select type="Proficiency" name="Tool Proficiency, Shadow Agent" supports="Tool" number="2" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_HANDY" />

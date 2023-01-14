@@ -26,7 +26,8 @@
 		<rules>
 			<select type="Proficiency" name="Skill Proficiency (Custom)" supports="Skill" number="2" />
 			<!-- <grant type="Background Feature" id="ID_BACKGROUND_FEATURE_POSITIONOFPRIVILEGE" /> -->
-			<select type="Background Feature" name="Background Feature" optional="false" />
+			<select type="Background Feature" name="Background Feature" supports="Background Feature" />
+			<select type="Background Feature" name="2nd Background Feature" supports="2nd Background Feature" optional="true" />
 			<select type="Background Sub-Feature" name="Skillset" supports="Sub-Feature"/>
 			<select type="Language" name="Language, Custom Background" supports="Standard||Exotic" number="2" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_LINGUISTIC" />
 			<select type="Proficiency" name="Tool Proficiency, Custom Background" supports="Tool" number="2" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_HANDY" />
