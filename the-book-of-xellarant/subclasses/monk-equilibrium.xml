@@ -3,11 +3,11 @@
 	<info>
 		<name>Way of the Equilibrium</name>
 		<description>The Way of the Equilibrium from Arcane Artillery</description>
-		<update version="0.0.2">
+		<update version="0.0.3">
 			<file name="monk-equilibrium.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/alterations/monk-equilibrium.xml" />
 		</update>
 	</info>
-	<element name="Way of the Equilibrium" type="Archetype" source="The Book Of Xellarant" id="ID_TBOX_ARCHETYPE_MONK_WAY_OF_EQUILIBRIUM">
+	<element name="Way of the Equilibrium" type="Archetype" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_MONK_WAY_OF_EQUILIBRIUM">
 		<supports>Monastic Tradition</supports>
 		<description>
 			<p>Monks who study the way of the equilibrium find their home in the chaos of battle, using light ranged weapons with a speed that turns them into a blur of pure speed and motion.</p>
@@ -25,7 +25,7 @@
 			<grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_WAY_OF_EQUILIBRIUM_BULLET_SOUL" level="17" />
 		</rules>
 	</element>
-	<element name="Path of the Kata" type="Archetype Feature" source="The Book Of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_WAY_OF_EQUILIBRIUM_PATH_OF_THE_KATA">
+	<element name="Path of the Kata" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_WAY_OF_EQUILIBRIUM_PATH_OF_THE_KATA">
 		<description>
 			<p><em>3rd-level Way of the Equilibrium feature</em></p>
 			<p>At 3rd level, you gain proficiency with hand crossbows and sidearms, which are your Kata weapons, and count as monk weapons for you. When wielding these weapons, you gain the following benefits:</p>
@@ -46,7 +46,7 @@
 			<grant type="Proficiency" id="ID_WOTC_PHB_WEAPON_CROSSBOW_HAND" />
 		</rules>
 	</element>
-	<element name="One with the Projectile" type="Archetype Feature" source="The Book Of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_WAY_OF_EQUILIBRIUM_ONE_WITH_THE_PROJECTILE">
+	<element name="One with the Projectile" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_WAY_OF_EQUILIBRIUM_ONE_WITH_THE_PROJECTILE">
 		<description>
 			<p><em>6th-level Way of the Equilibrium feature</em></p>
 			<p>When you reach 6th level, your Kata weapons count as magical for the purposes of overcoming resistance and immunity. You can apply stunning strike to your Kata weapons, as long as the attack is made within their normal range. Your Kata weapons also count as improvised melee weapons for you, and you use your martial arts die + your Dexterity or Strength bonus on a hit with them.</p>
@@ -56,7 +56,7 @@
 			<description>You can use a bonus action to make your Kata weapons deadlier. On a hit, these attacks deal extra damage equal to your martial arts die. You only gain this benefit once per turn.</description>
 		</sheet>
 	</element>
-	<element name="Kata Defense" type="Archetype Feature" source="The Book Of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_WAY_OF_EQUILIBRIUM_KATA_DEFENSE">
+	<element name="Kata Defense" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_WAY_OF_EQUILIBRIUM_KATA_DEFENSE">
 		<description>
 			<p><em>11th-level Way of the Equilibrium feature</em></p>
 			<p>At 11th level, you have perfected your form with your guns so that your flurry of shots makes you and your allies harder to hit. If you move 20 feet before you make a ranged weapon attack with your Kata weapons, the next attack made against you is done with disadvantage.</p>
@@ -66,7 +66,7 @@
 			<description>You can spend 3 ki points when a creature makes a ranged weapon attack against a creature that is friendly to you to use deflect missile as you shoot the projectile, throwing it off course or causing it to miss entirely. You must have the ammunition available to be able to use this move.</description>
 		</sheet>
 	</element>
-	<element name="Bullet Soul" type="Archetype Feature" source="The Book Of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_WAY_OF_EQUILIBRIUM_BULLET_SOUL">
+	<element name="Bullet Soul" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_WAY_OF_EQUILIBRIUM_BULLET_SOUL">
 		<description>
 			<p><em>17th-level Way of the Equilibrium feature</em></p>
 			<p>Once you reach 17th level, you are able to channel your innate ki powers to empower your furious flurry of strikes. When you make an attack with your Kata weapon, you can spend 4 ki points to cause that attack to deal additional damage equal to your Wisdom modifier.</p>
