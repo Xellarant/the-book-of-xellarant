@@ -173,7 +173,7 @@
 
 	<element name="Wrathful Censure" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_AVENGER_WRATHFUL_CENSURE">
 		<description>
-			<p class="indent">By focusing the power of your grudge upon a single creature, you form a magical link of destiny that guides your body in violence against the targeted enemy. You can take a bonus action to apply a wrathful censure on one creature you can see within 100 feet. The censure lasts for up to one minute, and immediately ends if the target moves more than 100 feet away from you.</p>
+			<p>By focusing the power of your grudge upon a single creature, you form a magical link of destiny that guides your body in violence against the targeted enemy. You can take a bonus action to apply a wrathful censure on one creature you can see within 100 feet. The censure lasts for up to one minute, and immediately ends if the target moves more than 100 feet away from you.</p>
             <p class="indent">Applying a censure on another creature removes a currently active censure. You can purposely end a currently active censure with a single thought that does not require an action.</p>
             <p class="indent">While your wrathful censure is active, the following effects are applied:</p>
             <ul>
@@ -189,7 +189,7 @@
 
     <element name="Fighting Style" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_AVENGER_FIGHTING_STYLE">
         <description>
-            <p class="indent">At 2nd level, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can’t take a Fighting Style option more than once, even if you later get to choose again.</p>
+            <p>At 2nd level, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can’t take a Fighting Style option more than once, even if you later get to choose again.</p>
             <ul>
                 <li><em>Dueling.</em> When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.</li>
                 <li><em>Great Weapon Fighting.</em> When you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll, even if the new roll is a 1 or a 2. The weapon must have the two-handed or versatile property for you to gain this benefit.</li>
