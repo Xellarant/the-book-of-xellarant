@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <index>
   <info>
-    <update version="1.8">
+    <update version="1.9">
       <file name="the-book-of-xellarant.index" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant.index" />
     </update>
   </info>
   <files>
-    <file name="creatures.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/creatures.xml" />
     <file name="source.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/source.xml" />
+    <!-- The Book of Beasts -->
+    <file name="creatures.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/creatures.xml" />
     <file name="shadow-agent-background.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/backgrounds/shadow-agent-background.xml" />
     <file name="vigilante-background.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/backgrounds/vigilante-background.xml" />
     <file name="custom-background.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/backgrounds/custom-background.xml" />

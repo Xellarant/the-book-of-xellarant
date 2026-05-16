@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+  <info>
+    <name>Aurora Sources</name>
+    <description>Aggregates the archived Aurora Builder source indexes, community Reddit and D&amp;D Wiki indexes, and Aurora Legacy indexes.</description>
+    <author url="https://github.com/Xellarant/the-book-of-xellarant">Xellarant</author>
+    <update version="1.0">
+      <file name="aurora-sources.index" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/aurora-sources.index" />
+    </update>
+  </info>
+  <files>
+    <!-- Archived Aurora Builder repository -->
+    <file name="aurorabuilder-core.index" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/core.index" />
+    <file name="aurorabuilder-supplements.index" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/supplements.index" />
+    <file name="aurorabuilder-unearthed-arcana.index" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/unearthed-arcana.index" />
+    <file name="aurorabuilder-third-party.index" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/third-party.index" />
+
+    <!-- Community driven content linked from aurabuilder.com -->
+    <file name="reddit.index" url="https://raw.githubusercontent.com/community-elements/elements-reddit/master/reddit.index" />
+    <file name="dndwiki.index" url="https://raw.githubusercontent.com/community-elements/elements-dndwiki/master/dndwiki.index" />
+
+    <!-- Aurora Legacy repository -->
+    <file name="AuroraLegacy.index" url="https://raw.githubusercontent.com/AuroraLegacy/elements/master/AuroraLegacy.index" />
+  </files>
+</index>
