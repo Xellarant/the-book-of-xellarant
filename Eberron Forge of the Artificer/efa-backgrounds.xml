@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+  <info>
+    <name>Eberron: Forge of the Artificer - Backgrounds</name>
+    <update version="0.1.0">
+      <file name="efa-backgrounds.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/Eberron%20Forge%20of%20the%20Artificer/efa-backgrounds.xml" />
+    </update>
+  </info>
+
+  <!--
+    ABILITY SCORES NOTE:
+    These backgrounds use the 2024 PHB format: choose +2 to one and +1 to another
+    of the three listed ability scores, OR +1 to all three. The rules below grant +1
+    to each listed score as the baseline; adjust to taste using the description as guide.
+
+    FEAT NOTE:
+    Dragonmark feats are defined in efa-species-feats.xml and referenced here by ID.
+    Non-dragonmark feats (Alert, Lucky, Skilled) reference standard Aurora PHB IDs.
+  -->
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- ABERRANT HEIR                                                -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="Aberrant Heir" type="Background" source="Eberron: Forge of the Artificer" id="ID_EFA_BACKGROUND_ABERRANT_HEIR">
+    <description>
+      <p>Your aberrant dragonmark has made life challenging since it manifested. You might have hidden it successfully for most of your life or managed to avoid notice. Alternatively, you might have encountered suspicion and fear, perhaps coupled with the outright antagonism of one or more dragonmarked houses. You might have formed an association with the House Tarkanan criminal organization. Or you might struggle to find your own way in the world, relying on your wits and the power of your mark.</p>
+      <p><b>Ability Scores:</b> Strength, Constitution, Charisma</p>
+      <p><b>Feat:</b> Aberrant Dragonmark (see Dragonmark Feats in Chapter 2)</p>
+      <p><b>Skill Proficiencies:</b> History and Intimidation</p>
+      <p><b>Tool Proficiency:</b> Disguise Kit</p>
+      <p><b>Equipment:</b> Choose A or B: (A) Dagger, Disguise Kit, Costume, Traveler's Clothes, 16 GP; or (B) 50 GP</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="strength" value="1" />
+      <stat name="constitution" value="1" />
+      <stat name="charisma" value="1" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_HISTORY" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INTIMIDATION" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_DISGUISE_KIT" />
+      <grant type="Feat" id="ID_EFA_FEAT_ABERRANT_DRAGONMARK" />
+    </rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- ARCHAEOLOGIST                                                -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="Archaeologist" type="Background" source="Eberron: Forge of the Artificer" id="ID_EFA_BACKGROUND_ARCHAEOLOGIST">
+    <description>
+      <p>You've made a lifelong study of the lost and fallen cultures of the past, visiting their ruins, deciphering their written records, and examining their surviving masterworks. Some archaeologists plunder the treasures of the past in search of wealth or power, but most consider it their calling to learn from the past. The archaeologists of Eberron combine the qualities of learned historians with the grit of treasure hunters.</p>
+      <p><b>Ability Scores:</b> Dexterity, Intelligence, Wisdom</p>
+      <p><b>Feat:</b> Skilled</p>
+      <p><b>Skill Proficiencies:</b> History and Survival</p>
+      <p><b>Tool Proficiency:</b> Cartographer's Tools</p>
+      <p><b>Equipment:</b> Choose A or B: (A) Cartographer's Tools, Bullseye Lantern, Map, Map or Scroll Case, Shovel, Tent, Traveler's Clothes, 17 GP; or (B) 50 GP</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="dexterity" value="1" />
+      <stat name="intelligence" value="1" />
+      <stat name="wisdom" value="1" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_HISTORY" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_CARTOGRAPHERS_TOOLS" />
+      <grant type="Feat" id="ID_PHB_FEAT_SKILLED" />
+    </rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- HOUSE AGENT                                                  -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="House Agent" type="Background" source="Eberron: Forge of the Artificer" id="ID_EFA_BACKGROUND_HOUSE_AGENT">
+    <description>
+      <p>You are connected to one of the dragonmarked houses, but you haven't (yet) manifested a dragonmark. You might be a member of the family by birth or an employee of the house with no familial connection. You've earned your living by doing the business of the house, serving as the hands, feet, and eyes of house leadership in the world. You might have many old friends, mentors, and rivals in the house you serve, plus allies or enemies in other houses.</p>
+      <p><b>Ability Scores:</b> Strength, Intelligence, Charisma</p>
+      <p><b>Feat:</b> Lucky</p>
+      <p><b>Skill Proficiencies:</b> Investigation and Persuasion</p>
+      <p><b>Tool Proficiency:</b> Choose one kind of Artisan's Tools</p>
+      <p><b>Equipment:</b> Choose A or B: (A) Artisan's Tools (same as above), Fine Clothes, 20 GP; or (B) 50 GP</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="strength" value="1" />
+      <stat name="intelligence" value="1" />
+      <stat name="charisma" value="1" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INVESTIGATION" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
+      <select type="Proficiency" name="Artisan's Tool (House Agent)" supports="Artisan tools" />
+      <grant type="Feat" id="ID_PHB_FEAT_LUCKY" />
+    </rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- HOUSE CANNITH HEIR                                           -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="House Cannith Heir" type="Background" source="Eberron: Forge of the Artificer" id="ID_EFA_BACKGROUND_HOUSE_CANNITH_HEIR">
+    <description>
+      <p>As a scion of House Cannith, you carry a proud legacy. Cannith creates wonders of the modern world, and you're expected to contribute to the ongoing success of the house through invention, scholarship, business, or diplomacy. The only thing that can stand in your way is the deep rift within your own house. The sooner the three barons sort out which of them is the true head of the house, the sooner House Cannith can claim its rightful position of leadership among all the dragonmarked houses.</p>
+      <p><b>Ability Scores:</b> Strength, Dexterity, Intelligence</p>
+      <p><b>Feat:</b> Mark of Making (see Dragonmark Feats)</p>
+      <p><b>Skill Proficiencies:</b> Investigation and Sleight of Hand</p>
+      <p><b>Tool Proficiency:</b> Choose one kind of Artisan's Tools</p>
+      <p><b>Equipment:</b> Choose A or B: (A) Artisan's Tools (same as above), Crowbar, Fine Clothes, 2 Pouches, 17 GP; or (B) 50 GP</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="strength" value="1" />
+      <stat name="dexterity" value="1" />
+      <stat name="intelligence" value="1" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INVESTIGATION" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SLEIGHTOFHAND" />
+      <select type="Proficiency" name="Artisan's Tool (House Cannith Heir)" supports="Artisan tools" />
+      <grant type="Feat" id="ID_EFA_FEAT_MARK_OF_MAKING" />
+    </rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- HOUSE DENEITH HEIR                                           -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="House Deneith Heir" type="Background" source="Eberron: Forge of the Artificer" id="ID_EFA_BACKGROUND_HOUSE_DENEITH_HEIR">
+    <description>
+      <p>As an heir of House Deneith, you've been trained for combat — not to seek it out, but not to shy from it either. You've learned the importance of duty, honor, and the laws used to govern society when duty and honor fail. As you established your name in the house, you might have worked as a bodyguard for some minor dignitary, as a mercenary, or as a marshal hunting fugitives. Now you're prepared to claim your rightful standing in the mightiest of the dragonmarked houses.</p>
+      <p><b>Ability Scores:</b> Strength, Constitution, Wisdom</p>
+      <p><b>Feat:</b> Mark of Sentinel (see Dragonmark Feats)</p>
+      <p><b>Skill Proficiencies:</b> Insight and Perception</p>
+      <p><b>Tool Proficiency:</b> Choose one kind of Gaming Set</p>
+      <p><b>Equipment:</b> Choose A or B: (A) Spear, Shortbow, 20 Arrows, Gaming Set (same as above), Fine Clothes, Healer's Kit, Quiver, 1 GP; or (B) 50 GP</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="strength" value="1" />
+      <stat name="constitution" value="1" />
+      <stat name="wisdom" value="1" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
+      <select type="Proficiency" name="Gaming Set (House Deneith Heir)" supports="Gaming Set" />
+      <grant type="Feat" id="ID_EFA_FEAT_MARK_OF_SENTINEL" />
+    </rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- HOUSE GHALLANDA HEIR                                         -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="House Ghallanda Heir" type="Background" source="Eberron: Forge of the Artificer" id="ID_EFA_BACKGROUND_HOUSE_GHALLANDA_HEIR">
+    <description>
+      <p>Thanks to your connections to House Ghallanda, you grew up accustomed to creature comforts, lively conversation, good drink, and delicious food. You might be a charming and witty scion of the house who loves nothing more than a pleasant evening beside a warm hearth. Or you could be a schemer who exploits bonds of trust and friendship to bend others to your will. You might pursue an adventuring career to master the cuisines of other cultures and ages, expand your network of useful contacts, or earn enough money to open your own inn.</p>
+      <p><b>Ability Scores:</b> Dexterity, Wisdom, Charisma</p>
+      <p><b>Feat:</b> Mark of Hospitality (see Dragonmark Feats)</p>
+      <p><b>Skill Proficiencies:</b> Insight and Persuasion</p>
+      <p><b>Tool Proficiency:</b> Cook's Utensils</p>
+      <p><b>Equipment:</b> Choose A or B: (A) Cook's Utensils, Fine Clothes, Iron Pot, Lamp, Oil (5 flasks), Perfume, 26 GP; or (B) 50 GP</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="dexterity" value="1" />
+      <stat name="wisdom" value="1" />
+      <stat name="charisma" value="1" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERSUASION" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_COOKS_UTENSILS" />
+      <grant type="Feat" id="ID_EFA_FEAT_MARK_OF_HOSPITALITY" />
+    </rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- HOUSE JORASCO HEIR                                           -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="House Jorasco Heir" type="Background" source="Eberron: Forge of the Artificer" id="ID_EFA_BACKGROUND_HOUSE_JORASCO_HEIR">
+    <description>
+      <p>House Jorasco teaches that illness and injury stalk the living like ghosts, robbing people of health and longevity. You've been taught ways to combat these scourges, both magically and medically. You're trained to use those skills in the service of others — and to ascertain that you are always appropriately compensated for this service, ensuring the health and longevity of House Jorasco. You might be a kindly healer with no stomach for combat or a dispassionate specialist who knows exactly how to incapacitate or kill an enemy with precise strikes.</p>
+      <p><b>Ability Scores:</b> Dexterity, Constitution, Wisdom</p>
+      <p><b>Feat:</b> Mark of Healing (see Dragonmark Feats)</p>
+      <p><b>Skill Proficiencies:</b> Medicine and Stealth</p>
+      <p><b>Tool Proficiency:</b> Herbalism Kit</p>
+      <p><b>Equipment:</b> Choose A or B: (A) Herbalism Kit, Fine Clothes, Healer's Kit, 25 GP; or (B) 50 GP</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="dexterity" value="1" />
+      <stat name="constitution" value="1" />
+      <stat name="wisdom" value="1" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_MEDICINE" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_STEALTH" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
+      <grant type="Feat" id="ID_EFA_FEAT_MARK_OF_HEALING" />
+    </rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- HOUSE KUNDARAK HEIR                                          -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="House Kundarak Heir" type="Background" source="Eberron: Forge of the Artificer" id="ID_EFA_BACKGROUND_HOUSE_KUNDARAK_HEIR">
+    <description>
+      <p>As an heir of House Kundarak, you take great pride in your family and its work of safeguarding the valuables of Khorvaire. Your house has always been a leader among the clans of the Mror Holds. Though it has never held the crown, it has a reputation for professionalism, honor, and order. You might strive to uphold that reputation; you might place your own sense of honor over your family's, or you could rebel against the house's expectations and flout the demands of honor.</p>
+      <p><b>Ability Scores:</b> Strength, Constitution, Intelligence</p>
+      <p><b>Feat:</b> Mark of Warding (see Dragonmark Feats)</p>
+      <p><b>Skill Proficiencies:</b> Arcana and Investigation</p>
+      <p><b>Tool Proficiency:</b> Thieves' Tools</p>
+      <p><b>Equipment:</b> Choose A or B: (A) Thieves' Tools, Fine Clothes, 10 GP; or (B) 50 GP</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="strength" value="1" />
+      <stat name="constitution" value="1" />
+      <stat name="intelligence" value="1" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INVESTIGATION" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_THIEVES_TOOLS" />
+      <grant type="Feat" id="ID_EFA_FEAT_MARK_OF_WARDING" />
+    </rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- HOUSE LYRANDAR HEIR                                          -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="House Lyrandar Heir" type="Background" source="Eberron: Forge of the Artificer" id="ID_EFA_BACKGROUND_HOUSE_LYRANDAR_HEIR">
+    <description>
+      <p>As an heir of House Lyrandar, the wind is your ally, the sea and sky your dominion. Despite the devastation of the Last War, your house is on the ascendancy, buoyed by its mastery of the new airship technology. You might have spent your early career on the sea as a sailor or navigator; as a shipwright; or as a member of the Raincallers' Guild, manipulating the weather and assisting with irrigation and similar public works. Or you might have been among the first in your house to take to the skies as part of an airship crew. Service to the house might call you to hunt pirates in the Lhazaar Sea, to explore ancient ruins in search of magical technology to bind elemental forces, or to salvage a wrecked airship in the Mournland.</p>
+      <p><b>Ability Scores:</b> Strength, Dexterity, Charisma</p>
+      <p><b>Feat:</b> Mark of Storm (see Dragonmark Feats)</p>
+      <p><b>Skill Proficiencies:</b> Acrobatics and Nature</p>
+      <p><b>Tool Proficiency:</b> Navigator's Tools</p>
+      <p><b>Equipment:</b> Choose A or B: (A) Navigator's Tools, Fine Clothes, 10 GP; or (B) 50 GP</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="strength" value="1" />
+      <stat name="dexterity" value="1" />
+      <stat name="charisma" value="1" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ACROBATICS" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_NATURE" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_NAVIGATORS_TOOLS" />
+      <grant type="Feat" id="ID_EFA_FEAT_MARK_OF_STORM" />
+    </rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- HOUSE MEDANI HEIR                                            -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="House Medani Heir" type="Background" source="Eberron: Forge of the Artificer" id="ID_EFA_BACKGROUND_HOUSE_MEDANI_HEIR">
+    <description>
+      <p>As a member of House Medani, your life revolves around subterfuge — not engaging in it, but preventing others from doing so. You see the world around you as an intricate web of schemes, plots, and counterplots. Assessing the range of possibilities, you use instinct to predict threats to your clients and defend against them well before those threats can turn into danger. Defending against an assassin's blade is a job any Deneith sellsword or Tharashk enforcer can do — making sure no one ever draws that blade is the Medani way.</p>
+      <p><b>Ability Scores:</b> Dexterity, Intelligence, Wisdom</p>
+      <p><b>Feat:</b> Mark of Detection (see Dragonmark Feats)</p>
+      <p><b>Skill Proficiencies:</b> Insight and Investigation</p>
+      <p><b>Tool Proficiency:</b> Disguise Kit</p>
+      <p><b>Equipment:</b> Choose A or B: (A) Disguise Kit, Fine Clothes, 10 GP; or (B) 50 GP</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="dexterity" value="1" />
+      <stat name="intelligence" value="1" />
+      <stat name="wisdom" value="1" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INVESTIGATION" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_DISGUISE_KIT" />
+      <grant type="Feat" id="ID_EFA_FEAT_MARK_OF_DETECTION" />
+    </rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- HOUSE ORIEN HEIR                                             -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="House Orien Heir" type="Background" source="Eberron: Forge of the Artificer" id="ID_EFA_BACKGROUND_HOUSE_ORIEN_HEIR">
+    <description>
+      <p>Before the Last War, Orien's influence covered Khorvaire, and its trade roads and lightning rails were the lifeblood of a vibrant kingdom. But the war cut those arteries, leaving Galifar dead and House Orien bloodied. While the house's couriers and shippers still keep goods moving on both sides of the continent, finding a way to reestablish routes across the Mournland remains the house's top priority. In the meantime, Orien adventurers can serve their house by investigating missing couriers, recovering goods stolen from caravans, and troubleshooting disruptions to the lightning rail.</p>
+      <p><b>Ability Scores:</b> Dexterity, Constitution, Intelligence</p>
+      <p><b>Feat:</b> Mark of Passage (see Dragonmark Feats)</p>
+      <p><b>Skill Proficiencies:</b> Acrobatics and Athletics</p>
+      <p><b>Tool Proficiency:</b> Cartographer's Tools</p>
+      <p><b>Equipment:</b> Choose A or B: (A) Cartographer's Tools, Fine Clothes, Map, Map or Scroll Case, 18 GP; or (B) 50 GP</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="dexterity" value="1" />
+      <stat name="constitution" value="1" />
+      <stat name="intelligence" value="1" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ACROBATICS" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ATHLETICS" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_CARTOGRAPHERS_TOOLS" />
+      <grant type="Feat" id="ID_EFA_FEAT_MARK_OF_PASSAGE" />
+    </rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- HOUSE PHIARLAN HEIR                                          -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="House Phiarlan Heir" type="Background" source="Eberron: Forge of the Artificer" id="ID_EFA_BACKGROUND_HOUSE_PHIARLAN_HEIR">
+    <description>
+      <p>Though you have seen wealth, fame, and beauty as a child of House Phiarlan, you consider knowledge (and the power it brings) the greatest treasure of all. You might pursue that power as an artist or performer, always alert for secrets even as you regale the world with story, song, acrobatics, or art. Or you might foster ties to the secretive espionage arm of your house: the Serpentine Table.</p>
+      <p><b>Ability Scores:</b> Dexterity, Wisdom, Charisma</p>
+      <p><b>Feat:</b> Mark of Shadow (see Dragonmark Feats)</p>
+      <p><b>Skill Proficiencies:</b> Deception and Stealth</p>
+      <p><b>Tool Proficiency:</b> Disguise Kit</p>
+      <p><b>Equipment:</b> Choose A or B: (A) Disguise Kit, Fine Clothes, 10 GP; or (B) 50 GP</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="dexterity" value="1" />
+      <stat name="wisdom" value="1" />
+      <stat name="charisma" value="1" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_DECEPTION" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_STEALTH" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_DISGUISE_KIT" />
+      <grant type="Feat" id="ID_EFA_FEAT_MARK_OF_SHADOW" />
+    </rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- HOUSE SIVIS HEIR                                             -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="House Sivis Heir" type="Background" source="Eberron: Forge of the Artificer" id="ID_EFA_BACKGROUND_HOUSE_SIVIS_HEIR">
+    <description>
+      <p>For nearly thirty centuries, your family has worked to maintain order. Communication is the cord that binds civilization together, and your ancestors settled the disputes of sovereigns and helped the dragonmarked houses find a place in the world. Few people realize the influence House Sivis has had on the shape of the modern age — just as few know how often a royal adviser holds more power than the actual ruler. While the other dragonmarked houses fight for fame and recognition, House Sivis plays a long game of subtle influence behind the scenes, keeping order amid the chaos of unending intrigue.</p>
+      <p><b>Ability Scores:</b> Intelligence, Wisdom, Charisma</p>
+      <p><b>Feat:</b> Mark of Scribing (see Dragonmark Feats)</p>
+      <p><b>Skill Proficiencies:</b> History and Perception</p>
+      <p><b>Tool Proficiency:</b> Calligrapher's Supplies</p>
+      <p><b>Equipment:</b> Choose A or B: (A) Calligrapher's Supplies, Fine Clothes, Ink, 5 Ink Pens, Paper (30 sheets), Parchment (9 sheets), 8 GP; or (B) 50 GP</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="intelligence" value="1" />
+      <stat name="wisdom" value="1" />
+      <stat name="charisma" value="1" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_HISTORY" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_CALLIGRAPHERS_SUPPLIES" />
+      <grant type="Feat" id="ID_EFA_FEAT_MARK_OF_SCRIBING" />
+    </rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- HOUSE THARASHK HEIR                                          -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="House Tharashk Heir" type="Background" source="Eberron: Forge of the Artificer" id="ID_EFA_BACKGROUND_HOUSE_THARASHK_HEIR">
+    <description>
+      <p>Heirs of other houses lead lives of luxury, but in House Tharashk you learned self-reliance from an early age. What your young house lacks in resources, it makes up for in spirit and determination. Tharashk has a destiny to fulfill, and you have a part in it. Whether in combat or in social interaction, you have learned to play the role of the hunter: study your enemies, exploit their weaknesses, and do whatever it takes to achieve victory.</p>
+      <p><b>Ability Scores:</b> Constitution, Intelligence, Wisdom</p>
+      <p><b>Feat:</b> Mark of Finding (see Dragonmark Feats)</p>
+      <p><b>Skill Proficiencies:</b> Perception and Survival</p>
+      <p><b>Tool Proficiency:</b> Choose one kind of Gaming Set</p>
+      <p><b>Equipment:</b> Choose A or B: (A) Gaming Set (same as above), Climber's Kit, Fine Clothes, Hunting Trap, Manacles, 2 GP; or (B) 50 GP</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="constitution" value="1" />
+      <stat name="intelligence" value="1" />
+      <stat name="wisdom" value="1" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
+      <select type="Proficiency" name="Gaming Set (House Tharashk Heir)" supports="Gaming Set" />
+      <grant type="Feat" id="ID_EFA_FEAT_MARK_OF_FINDING" />
+    </rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- HOUSE THURANNI HEIR                                          -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="House Thuranni Heir" type="Background" source="Eberron: Forge of the Artificer" id="ID_EFA_BACKGROUND_HOUSE_THURANNI_HEIR">
+    <description>
+      <p>Given House Thuranni's short history and focus on espionage, its leaders expect you to further the interests of the house at every opportunity. During the house's formative years as an independent entity, every move you make has been watched closely. This isn't to say that every Thuranni heir must actively spy at the behest of house elders. But even the house's most insular artists and artisans must keep up with current political events and pass on or collect information when asked.</p>
+      <p><b>Ability Scores:</b> Dexterity, Intelligence, Charisma</p>
+      <p><b>Feat:</b> Mark of Shadow (see Dragonmark Feats)</p>
+      <p><b>Skill Proficiencies:</b> Performance and Stealth</p>
+      <p><b>Tool Proficiency:</b> Choose one kind of Musical Instrument</p>
+      <p><b>Equipment:</b> Choose A or B: (A) Musical Instrument (same as above), Costume, Fine Clothes, 13 GP; or (B) 50 GP</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="dexterity" value="1" />
+      <stat name="intelligence" value="1" />
+      <stat name="charisma" value="1" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERFORMANCE" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_STEALTH" />
+      <select type="Proficiency" name="Musical Instrument (House Thuranni Heir)" supports="Musical Instrument" />
+      <grant type="Feat" id="ID_EFA_FEAT_MARK_OF_SHADOW" />
+    </rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- HOUSE VADALIS HEIR                                           -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="House Vadalis Heir" type="Background" source="Eberron: Forge of the Artificer" id="ID_EFA_BACKGROUND_HOUSE_VADALIS_HEIR">
+    <description>
+      <p>You have grown up with respect for both family and nature. You understand the culture of the Five Nations, but you don't get drawn into the games of ambition and status that others play. You know the beauty and power inherent in life, the mysteries of birth and death, and the miracles that happen in between. Your insights into the natural world allow you to see through the lies and deception of city folk — and never let on how much of their subterfuge you recognize.</p>
+      <p><b>Ability Scores:</b> Constitution, Wisdom, Charisma</p>
+      <p><b>Feat:</b> Mark of Handling (see Dragonmark Feats)</p>
+      <p><b>Skill Proficiencies:</b> Animal Handling and Nature</p>
+      <p><b>Tool Proficiency:</b> Herbalism Kit</p>
+      <p><b>Equipment:</b> Choose A or B: (A) Herbalism Kit, Fine Clothes, Net, 29 GP; or (B) 50 GP</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="constitution" value="1" />
+      <stat name="wisdom" value="1" />
+      <stat name="charisma" value="1" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ANIMALHANDLING" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_NATURE" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
+      <grant type="Feat" id="ID_EFA_FEAT_MARK_OF_HANDLING" />
+    </rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- INQUISITIVE                                                   -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="Inquisitive" type="Background" source="Eberron: Forge of the Artificer" id="ID_EFA_BACKGROUND_INQUISITIVE">
+    <description>
+      <p>You have honed your talents of investigation and deduction — fueled by a boundless curiosity — to explore mysteries, find missing people, recover stolen goods, unearth corruption and conspiracies, and solve crimes. As an inquisitive, you might have pursued freelance work, signed on with an inquisitive agency (perhaps one licensed by a dragonmarked house such as Medani or Tharashk), reported for a broadsheet, or worked for a police force.</p>
+      <p><b>Ability Scores:</b> Constitution, Intelligence, Charisma</p>
+      <p><b>Feat:</b> Alert</p>
+      <p><b>Skill Proficiencies:</b> Insight and Investigation</p>
+      <p><b>Tool Proficiency:</b> Thieves' Tools</p>
+      <p><b>Equipment:</b> Choose A or B: (A) Thieves' Tools, Bullseye Lantern, Crowbar, Oil (10 flasks), Traveler's Clothes, 10 GP; or (B) 50 GP</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <stat name="constitution" value="1" />
+      <stat name="intelligence" value="1" />
+      <stat name="charisma" value="1" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INVESTIGATION" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_THIEVES_TOOLS" />
+      <grant type="Feat" id="ID_PHB_FEAT_ALERT" />
+    </rules>
+  </element>
+
+</elements>

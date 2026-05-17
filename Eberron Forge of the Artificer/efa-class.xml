@@ -1,0 +1,969 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+  <info>
+    <name>Eberron: Forge of the Artificer - Class</name>
+    <update version="0.1.0">
+      <file name="efa-class.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/Eberron%20Forge%20of%20the%20Artificer/efa-class.xml" />
+    </update>
+  </info>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- SOURCE                                                       -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="Eberron: Forge of the Artificer" type="Source" source="Eberron: Forge of the Artificer" id="ID_EFA_SOURCE_EBERRON_FORGE_OF_THE_ARTIFICER">
+    <description><p>An extensive supplement to Eberron: Rising from the Last War, adding new character options, campaign models, and vehicle rules.</p></description>
+    <setters>
+      <set name="abbreviation">EFA</set>
+      <set name="url"></set>
+      <set name="author" abbreviation="EFA" url="">Wizards of the Coast</set>
+      <set name="homebrew">false</set>
+      <set name="release">20251125</set>
+    </setters>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- ARTIFICER CLASS                                              -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="Artificer" type="Class" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_ARTIFICER">
+    <description>
+      <p>Masters of invention, Artificers use ingenuity and magic to unlock extraordinary capabilities in objects. They see magic as a complex system waiting to be decoded and then harnessed in their spells and inventions.</p>
+      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_SPELLCASTING" />
+      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_TINKERS_MAGIC" />
+      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_REPLICATE_MAGIC_ITEM" />
+      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_SUBCLASS" />
+      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_ASI" />
+      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_MAGIC_ITEM_TINKER" />
+      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_FLASH_OF_GENIUS" />
+      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_MAGIC_ITEM_ADEPT" />
+      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_SPELL_STORING_ITEM" />
+      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_ADVANCED_ARTIFICE" />
+      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_MAGIC_ITEM_MASTER" />
+      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_EPIC_BOON" />
+      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_SOUL_OF_ARTIFICE" />
+    </description>
+    <sheet>
+      <description>A magical crafter and inventor of wonders who uses ingenuity and magic to unlock extraordinary capabilities in objects.</description>
+      <setters>
+        <set name="short">An inventor who harnesses magic through tools and crafted objects.</set>
+      </setters>
+    </sheet>
+    <setters>
+      <set name="hd">d8</set>
+      <set name="hp">8</set>
+      <set name="proficiencies">Simple weapons, Thieves' Tools, Tinker's Tools, one type of Artisan's Tools of your choice, Light armor, Medium armor, Shields</set>
+      <set name="equipment">Choose A or B: (A) Studded Leather Armor, Dagger, Thieves' Tools, Tinker's Tools, Dungeoneer's Pack, and 16 GP; or (B) 150 GP</set>
+    </setters>
+    <rules>
+      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_SIMPLE_WEAPONS" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_THIEVES_TOOLS" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_TINKERS_TOOLS" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_CONSTITUTION" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_SAVINGTHROW_INTELLIGENCE" />
+      <!-- One additional Artisan's Tool of choice -->
+      <select type="Proficiency" name="Artisan's Tool (Artificer)" supports="Artisan tools" />
+      <!-- Skill choices: 2 from Arcana, History, Investigation, Medicine, Nature, Perception, Sleight of Hand -->
+      <select type="Proficiency" name="Skill Proficiency (Artificer)" number="2" supports="Skill,(Arcana||History||Investigation||Medicine||Nature||Perception||Sleight of Hand)" />
+      <!-- Class features granted by level -->
+      <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_SPELLCASTING" level="1" />
+      <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_TINKERS_MAGIC" level="1" />
+      <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_REPLICATE_MAGIC_ITEM" level="2" />
+      <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_SUBCLASS" level="3" />
+      <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_ASI" level="4" />
+      <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_ASI" level="8" />
+      <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_ASI" level="12" />
+      <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_ASI" level="16" />
+      <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_MAGIC_ITEM_TINKER" level="6" />
+      <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_FLASH_OF_GENIUS" level="7" />
+      <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_MAGIC_ITEM_ADEPT" level="10" />
+      <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_SPELL_STORING_ITEM" level="11" />
+      <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_ADVANCED_ARTIFICE" level="14" />
+      <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_MAGIC_ITEM_MASTER" level="18" />
+      <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_EPIC_BOON" level="19" />
+      <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_SOUL_OF_ARTIFICE" level="20" />
+      <!-- Spellcasting setup -->
+      <stat name="artificer:spellcasting:slots:1" value="2" level="1" />
+      <stat name="artificer:spellcasting:slots:1" value="1" level="3" />
+      <stat name="artificer:spellcasting:slots:2" value="2" level="5" />
+      <stat name="artificer:spellcasting:slots:3" value="2" level="9" />
+      <stat name="artificer:spellcasting:slots:3" value="1" level="11" />
+      <stat name="artificer:spellcasting:slots:4" value="1" level="13" />
+      <stat name="artificer:spellcasting:slots:4" value="1" level="15" />
+      <stat name="artificer:spellcasting:slots:4" value="1" level="17" />
+      <stat name="artificer:spellcasting:slots:5" value="1" level="17" />
+      <stat name="artificer:spellcasting:slots:5" value="1" level="19" />
+      <!-- Archetype selection at level 3 -->
+      <select type="Archetype" name="Artificer Specialist" supports="EFA Artificer Specialist" level="3" />
+    </rules>
+    <multiclass>
+      <prerequisite>Intelligence 13</prerequisite>
+      <requirements>[int:13]</requirements>
+    </multiclass>
+  </element>
+
+  <element name="Artificer Multiclass" type="Class" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_ARTIFICER_MULTICLASS">
+    <supports>Multiclass</supports>
+    <description><p>Prerequisites and multiclassing rules for the Artificer. Gain proficiency with Tinker's Tools, one skill from the Artificer list, and training with Light and Medium armor and Shields.</p></description>
+    <sheet display="false" />
+    <rules>
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_TINKERS_TOOLS" requirements="!ID_PROFICIENCY_TOOL_PROFICIENCY_TINKERS_TOOLS" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" requirements="!ID_WOTC_PHB_GRANTS_LIGHT_ARMOR" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" requirements="!ID_WOTC_PHB_GRANTS_MEDIUM_ARMOR" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS" requirements="!ID_WOTC_PHB_GRANTS_SHIELD_PROFICIENCY" />
+      <select type="Proficiency" name="Skill Proficiency (Artificer Multiclass)" supports="Skill,(Arcana||History||Investigation||Medicine||Nature||Perception||Sleight of Hand)" />
+    </rules>
+    <multiclass>
+      <prerequisite>Intelligence 13</prerequisite>
+      <requirements>[int:13]</requirements>
+    </multiclass>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- CLASS FEATURES                                               -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="Spellcasting" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_SPELLCASTING">
+    <compendium display="false" />
+    <description>
+      <p><em>1st-level Artificer feature</em></p>
+      <p>You have learned how to channel magical energy through objects. Intelligence is your spellcasting ability for your Artificer spells.</p>
+      <p><b>Tools Required.</b> You produce your Artificer spells through tools. You can use Thieves' Tools, Tinker's Tools, or another kind of Artisan's Tools with which you have proficiency as a Spellcasting Focus, and you must have one of those focuses in hand when you cast an Artificer spell.</p>
+      <p><b>Cantrips.</b> You know two Artificer cantrips of your choice. Acid Splash and Prestidigitation are recommended. At levels 10 and 14 you learn another cantrip of your choice.</p>
+      <p><b>Spell Slots.</b> The Artificer Features table shows how many spell slots you have to cast your level 1+ spells.</p>
+      <p><b>Prepared Spells of Level 1+.</b> You prepare the list of level 1+ spells available to you. To start, choose two level 1 Artificer spells. Cure Wounds and Grease are recommended. The number of spells on your list increases as you gain Artificer levels. Whenever that number increases, choose additional Artificer spells.</p>
+      <p><b>Changing Your Prepared Spells.</b> Whenever you finish a Long Rest, you can change your list of prepared spells.</p>
+    </description>
+    <sheet>
+      <description>You cast Artificer spells through tools (Thieves' Tools, Tinker's Tools, or Artisan's Tools). Intelligence is your spellcasting ability. You know {{artificer:cantrips:known}} cantrips and can prepare {{artificer:spellcasting:prepare}} spells.</description>
+    </sheet>
+    <rules>
+      <grant type="Grants" id="ID_INTERNAL_GRANT_MULTICLASS_SPELLCASTING_SLOTS_HALF_ROUND_UP" />
+      <stat name="artificer:spellcasting:slots:1" value="2" level="1" />
+      <stat name="artificer:cantrips:known" value="2" level="1" />
+      <stat name="artificer:cantrips:known" value="1" level="10" />
+      <stat name="artificer:cantrips:known" value="1" level="14" />
+      <stat name="artificer:spellcasting:prepare" value="intelligence:modifier" />
+      <stat name="artificer:spellcasting:prepare" value="level:artificer" />
+      <select type="Spell" name="Cantrip (Artificer)" supports="Artificer, 0" number="2" />
+      <select type="Spell" name="Cantrip (Artificer)" supports="Artificer, 0" level="10" />
+      <select type="Spell" name="Cantrip (Artificer)" supports="Artificer, 0" level="14" />
+    </rules>
+  </element>
+
+  <element name="Tinker's Magic" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_TINKERS_MAGIC">
+    <compendium display="false" />
+    <description>
+      <p><em>1st-level Artificer feature</em></p>
+      <p>You know the Mending cantrip.</p>
+      <p>As a Magic action while holding Tinker's Tools, you can create one item in an unoccupied space within 5 feet of yourself, choosing the item from the following list: Ball Bearings, Basket, Bedroll, Bell, Blanket, Block and Tackle, Bottle (Glass), Bucket, Caltrops, Candle, Crowbar, Flask, Grappling Hook, Hunting Trap, Jug, Lamp, Manacles, Net, Oil, Paper, Parchment, Pole, Pouch, Rope, Sack, Shovel, Spikes (Iron), String, Tinderbox, Torch, Vial.</p>
+      <p>See the rules for the item in the Player's Handbook. The item lasts until you finish a Long Rest, at which point it vanishes.</p>
+      <p>You can use this feature a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses when you finish a Long Rest.</p>
+    </description>
+    <sheet action="Magic Action" usage="{{intelligence:modifier:min1}}/Long Rest">
+      <description>While holding Tinker's Tools, create one mundane item (from a list of 31 common objects) in an unoccupied space within 5 feet. The item vanishes when you finish a Long Rest.</description>
+    </sheet>
+    <rules>
+      <grant type="Spell" id="ID_PHB_SPELL_MENDING" spellcasting="Artificer" prepared="true" />
+      <stat name="intelligence:modifier:min1" value="1" bonus="base" />
+      <stat name="intelligence:modifier:min1" value="intelligence:modifier" bonus="base" />
+    </rules>
+  </element>
+
+  <element name="Replicate Magic Item" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_REPLICATE_MAGIC_ITEM">
+    <compendium display="false" />
+    <description>
+      <p><em>2nd-level Artificer feature</em></p>
+      <p>You have learned arcane plans that you use to make magic items.</p>
+      <p><b>Plans Known.</b> When you gain this feature, choose four plans to learn from the Magic Item Plans (Artificer Level 2+) table. Whenever you gain an Artificer level, you can replace one of the plans you know with a new plan for which you qualify.</p>
+      <p><b>Creating an Item.</b> When you finish a Long Rest, you can create one or two different magic items if you have Tinker's Tools in hand. Each item is based on one of the plans you know.</p>
+      <p>If a created item requires Attunement, you can attune yourself to it the instant you create it.</p>
+      <p><b>Duration.</b> A magic item created by this feature functions as the normal magic item, except its magic isn't permanent; when you die, the magic item vanishes after 1d4 days. If you replace a plan you know with a new plan, any magic item created with the replaced plan immediately vanishes.</p>
+      <p><b>Spellcasting Focus.</b> You can use any Wand or Weapon created by this feature as a Spellcasting Focus in lieu of using a set of Artisan's Tools.</p>
+    </description>
+    <sheet usage="Long Rest">
+      <description>You know {{replicate:plans:known}} magic item plans and can create {{replicate:items:max}} magic items per Long Rest using Tinker's Tools. Items are non-permanent — they vanish when you die (after 1d4 days) or if you replace their plan.</description>
+    </sheet>
+    <rules>
+      <stat name="replicate:plans:known" value="4" level="2" />
+      <stat name="replicate:plans:known" value="1" level="6" />
+      <stat name="replicate:plans:known" value="1" level="10" />
+      <stat name="replicate:plans:known" value="1" level="14" />
+      <stat name="replicate:plans:known" value="1" level="18" />
+      <stat name="replicate:items:max" value="2" level="2" />
+      <stat name="replicate:items:max" value="1" level="6" />
+      <stat name="replicate:items:max" value="1" level="10" />
+      <stat name="replicate:items:max" value="1" level="14" />
+      <stat name="replicate:items:max" value="1" level="18" />
+    </rules>
+  </element>
+
+  <element name="Artificer Subclass" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_SUBCLASS">
+    <compendium display="false" />
+    <description>
+      <p><em>3rd-level Artificer feature</em></p>
+      <p>You gain an Artificer subclass of your choice. The Alchemist, Armorer, Artillerist, Battle Smith, and Cartographer subclasses are detailed after this class's description. A subclass is a specialization that grants you features at certain Artificer levels. For the rest of your career, you gain each of your subclass's features that are of your Artificer level or lower.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <select type="Archetype" name="Artificer Specialist" supports="EFA Artificer Specialist" level="3" />
+    </rules>
+  </element>
+
+  <element name="Ability Score Improvement" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_ASI">
+    <compendium display="false" />
+    <description>
+      <p><em>4th-level Artificer feature (also 8th, 12th, and 16th)</em></p>
+      <p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <select type="Feat" name="Feat (Artificer)" />
+    </rules>
+  </element>
+
+  <element name="Magic Item Tinker" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_MAGIC_ITEM_TINKER">
+    <compendium display="false" />
+    <description>
+      <p><em>6th-level Artificer feature</em></p>
+      <p>Your Replicate Magic Item feature gains the following options.</p>
+      <p><b>Charge Magic Item.</b> As a Bonus Action, you can touch a magic item within 5 feet of yourself that you created with Replicate Magic Item and that uses charges. You expend a level 1+ spell slot and recharge the item. The number of charges the item regains is equal to the level of spell slot expended.</p>
+      <p><b>Drain Magic Item.</b> As a Bonus Action, you can touch a magic item within 5 feet of yourself that you created with Replicate Magic Item and cause the item to vanish, converting its magical energy into a spell slot. The slot is level 1 if the item is Common or level 2 if the item is Uncommon or Rare. Once you use this feature, you can't do so again until you finish a Long Rest. Any spell you create with this feature vanishes when you finish a Long Rest.</p>
+      <p><b>Transmute Magic Item.</b> As a Magic action, you can touch one magic item within 5 feet of yourself that you created with Replicate Magic Item and transform it into a different magic item. The resulting item must be based on a magic item plan you know. Once you use this feature, you can't do so again until you finish a Long Rest.</p>
+    </description>
+    <sheet>
+      <description>Your Replicate Magic Item gains three options: Charge Magic Item (Bonus Action, expend spell slot to recharge item by that many charges); Drain Magic Item (Bonus Action, destroy created item for a level 1–2 spell slot, 1/Long Rest); Transmute Magic Item (Magic Action, transform created item into another known plan, 1/Long Rest).</description>
+    </sheet>
+    <rules></rules>
+  </element>
+
+  <element name="Flash of Genius" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_FLASH_OF_GENIUS">
+    <compendium display="false" />
+    <description>
+      <p><em>7th-level Artificer feature</em></p>
+      <p>When you or a creature you can see within 30 feet of you fails an ability check or a saving throw, you can take a Reaction to add a bonus to the roll, potentially causing it to succeed. The bonus equals your Intelligence modifier (minimum of +1).</p>
+      <p>You can take this Reaction a number of times equal to your Intelligence modifier (minimum of once). You regain all expended uses when you finish a Long Rest.</p>
+    </description>
+    <sheet action="Reaction" usage="{{intelligence:modifier:min1}}/Long Rest">
+      <description>When you or a creature within 30 feet fails an ability check or saving throw, add +{{intelligence:modifier}} to the roll (minimum +1), potentially causing it to succeed.</description>
+    </sheet>
+    <rules></rules>
+  </element>
+
+  <element name="Magic Item Adept" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_MAGIC_ITEM_ADEPT">
+    <compendium display="false" />
+    <description>
+      <p><em>10th-level Artificer feature</em></p>
+      <p>You can now attune to up to four magic items at once.</p>
+    </description>
+    <sheet>
+      <description>You can attune to up to four magic items at once.</description>
+    </sheet>
+    <rules>
+      <stat name="attunement:max" value="1" bonus="magic item adept" />
+    </rules>
+  </element>
+
+  <element name="Spell-Storing Item" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_SPELL_STORING_ITEM">
+    <compendium display="false" />
+    <description>
+      <p><em>11th-level Artificer feature</em></p>
+      <p>Whenever you finish a Long Rest, you can touch one Simple or Martial weapon or one item that you can use as a Spellcasting Focus, and you store a spell in it, choosing a level 1, 2, or 3 Artificer spell that has a casting time of an action and doesn't require a Material component that is consumed by the spell.</p>
+      <p>While holding the object, a creature can take a Magic action to produce the spell's effect from it, using your spellcasting ability modifier. If the spell requires Concentration, the creature must concentrate. Once a creature has used the object to produce the spell's effect, the object can't be used this way again until the start of the creature's next turn.</p>
+      <p>The spell stays in the object until it's been used a number of times equal to twice your Intelligence modifier (minimum of twice) or until you use this feature again to store a spell in an object.</p>
+    </description>
+    <sheet usage="Long Rest">
+      <description>After a Long Rest, store a level 1–3 Artificer spell (action cast time, no consumed Material component) in a weapon or Spellcasting Focus. Any creature can activate it as a Magic action using your spell save DC/attack. It can be used {{intelligence:modifier:min1:x2}} times before the effect ends.</description>
+    </sheet>
+    <rules>
+      <stat name="intelligence:modifier:min1:x2" value="2" bonus="base" />
+      <stat name="intelligence:modifier:min1:x2" value="intelligence:modifier:x2" bonus="base" />
+    </rules>
+  </element>
+
+  <element name="Advanced Artifice" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_ADVANCED_ARTIFICE">
+    <compendium display="false" />
+    <description>
+      <p><em>14th-level Artificer feature</em></p>
+      <p>You gain the following benefits.</p>
+      <p><b>Magic Item Savant.</b> You can now attune to up to five magic items at once.</p>
+      <p><b>Refreshed Genius.</b> When you finish a Short Rest, you regain one expended use of your Flash of Genius feature.</p>
+    </description>
+    <sheet>
+      <description>You can attune to up to five magic items at once. When you finish a Short Rest, regain one expended use of Flash of Genius.</description>
+    </sheet>
+    <rules>
+      <stat name="attunement:max" value="1" bonus="advanced artifice" />
+    </rules>
+  </element>
+
+  <element name="Magic Item Master" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_MAGIC_ITEM_MASTER">
+    <compendium display="false" />
+    <description>
+      <p><em>18th-level Artificer feature</em></p>
+      <p>You can now attune to up to six magic items at once.</p>
+    </description>
+    <sheet>
+      <description>You can attune to up to six magic items at once.</description>
+    </sheet>
+    <rules>
+      <stat name="attunement:max" value="1" bonus="magic item master" />
+    </rules>
+  </element>
+
+  <element name="Epic Boon" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_EPIC_BOON">
+    <compendium display="false" />
+    <description>
+      <p><em>19th-level Artificer feature</em></p>
+      <p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Energy Resistance is recommended.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <select type="Feat" name="Epic Boon (Artificer)" supports="Epic Boon" />
+    </rules>
+  </element>
+
+  <element name="Soul of Artifice" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_SOUL_OF_ARTIFICE">
+    <compendium display="false" />
+    <description>
+      <p><em>20th-level Artificer feature</em></p>
+      <p>You have developed a mystical connection to your magic items, which you can draw on for aid. You gain the following benefits.</p>
+      <p><b>Cheat Death.</b> If you're reduced to 0 Hit Points but not killed outright, you can disintegrate any number of Uncommon or Rare magic items created by your Replicate Magic Item feature. If you do so, your Hit Points instead change to a number equal to 20 times the number of magic items disintegrated.</p>
+      <p><b>Magical Guidance.</b> When you finish a Short Rest, you regain all expended uses of your Flash of Genius if you have Attunement to at least one magic item.</p>
+    </description>
+    <sheet>
+      <description>Cheat Death: when reduced to 0 HP (not killed outright), disintegrate any number of your Uncommon/Rare Replicate items; your HP becomes 20 × items disintegrated. Magical Guidance: Short Rest restores all Flash of Genius uses if attuned to at least one item.</description>
+    </sheet>
+    <rules></rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- SUBCLASS: ALCHEMIST                                          -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="Alchemist" type="Archetype" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_ALCHEMIST">
+    <supports>EFA Artificer Specialist</supports>
+    <description>
+      <p><em>Craft Magic Elixirs and Potions</em></p>
+      <p>An Alchemist is an expert at combining reagents to produce magical effects. Alchemists use their creations to give life and to leech it away.</p>
+      <div element="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_TOOLS_OF_THE_TRADE" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_SPELLS" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_EXPERIMENTAL_ELIXIR" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_ALCHEMICAL_SAVANT" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_RESTORATIVE_REAGENTS" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_CHEMICAL_MASTERY" />
+    </description>
+    <sheet display="false" />
+    <rules>
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_TOOLS_OF_THE_TRADE" level="3" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_SPELLS" level="3" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_EXPERIMENTAL_ELIXIR" level="3" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_ALCHEMICAL_SAVANT" level="5" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_RESTORATIVE_REAGENTS" level="9" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_CHEMICAL_MASTERY" level="15" />
+    </rules>
+  </element>
+
+  <element name="Tools of the Trade (Alchemist)" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_TOOLS_OF_THE_TRADE">
+    <compendium display="false" />
+    <description>
+      <p><em>3rd-level Alchemist feature</em></p>
+      <p>You gain the following benefits.</p>
+      <p><b>Tool Proficiency.</b> You gain proficiency with Alchemist's Supplies and the Herbalism Kit. If you already have one of these proficiencies, you gain proficiency with one other type of Artisan's Tools of your choice (or with two other types if you have both).</p>
+      <p><b>Potion Crafting.</b> When you brew a potion using the crafting rules in the Dungeon Master's Guide, the amount of time required to craft it is halved.</p>
+    </description>
+    <sheet>
+      <description>You gain proficiency with Alchemist's Supplies and Herbalism Kit. When brewing potions (DMG rules), crafting time is halved.</description>
+    </sheet>
+    <rules>
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_ALCHEMISTS_SUPPLIES" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
+    </rules>
+  </element>
+
+  <element name="Alchemist Spells" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_SPELLS">
+    <compendium display="false" />
+    <description>
+      <p><em>3rd-level Alchemist feature</em></p>
+      <p>When you reach an Artificer level specified in the Alchemist Spells table, you thereafter always have the listed spells prepared.</p>
+      <table>
+        <thead><tr><td>Artificer Level</td><td>Spells</td></tr></thead>
+        <tr><td>3</td><td>Healing Word, Ray of Sickness</td></tr>
+        <tr><td>5</td><td>Flaming Sphere, Melf's Acid Arrow</td></tr>
+        <tr><td>9</td><td>Gaseous Form, Mass Healing Word</td></tr>
+        <tr><td>13</td><td>Death Ward, Vitriolic Sphere</td></tr>
+        <tr><td>17</td><td>Cloudkill, Raise Dead</td></tr>
+      </table>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <grant type="Spell" id="ID_PHB_SPELL_HEALING_WORD" spellcasting="Artificer" prepared="true" level="3" />
+      <grant type="Spell" id="ID_PHB_SPELL_RAY_OF_SICKNESS" spellcasting="Artificer" prepared="true" level="3" />
+      <grant type="Spell" id="ID_PHB_SPELL_FLAMING_SPHERE" spellcasting="Artificer" prepared="true" level="5" />
+      <grant type="Spell" id="ID_PHB_SPELL_MELFS_ACID_ARROW" spellcasting="Artificer" prepared="true" level="5" />
+      <grant type="Spell" id="ID_PHB_SPELL_GASEOUS_FORM" spellcasting="Artificer" prepared="true" level="9" />
+      <grant type="Spell" id="ID_PHB_SPELL_MASS_HEALING_WORD" spellcasting="Artificer" prepared="true" level="9" />
+      <grant type="Spell" id="ID_PHB_SPELL_DEATH_WARD" spellcasting="Artificer" prepared="true" level="13" />
+      <grant type="Spell" id="ID_PHB_SPELL_VITRIOLIC_SPHERE" spellcasting="Artificer" prepared="true" level="13" />
+      <grant type="Spell" id="ID_PHB_SPELL_CLOUDKILL" spellcasting="Artificer" prepared="true" level="17" />
+      <grant type="Spell" id="ID_PHB_SPELL_RAISE_DEAD" spellcasting="Artificer" prepared="true" level="17" />
+    </rules>
+  </element>
+
+  <element name="Experimental Elixir" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_EXPERIMENTAL_ELIXIR">
+    <compendium display="false" />
+    <description>
+      <p><em>3rd-level Alchemist feature</em></p>
+      <p>Whenever you finish a Long Rest while holding Alchemist's Supplies, you can use that tool to magically produce two elixirs. For each elixir, roll on the Experimental Elixir table for the elixir's effect, which is triggered when someone drinks it. As a Bonus Action, a creature can drink the elixir or administer it to another creature within 5 feet. As a Magic action while holding Alchemist's Supplies, you can expend one spell slot to create another elixir, choosing its effect from the table rather than rolling.</p>
+      <p>When you reach certain Artificer levels, you can make additional elixirs at the end of each Long Rest: three at level 5, four at level 9, and five at level 15.</p>
+      <table>
+        <thead><tr><td>1d6</td><td>Effect</td></tr></thead>
+        <tr><td>1</td><td><b>Healing.</b> Regain 2d8 + Intelligence modifier HP (increases: 3d8 at level 9, 4d8 at level 15).</td></tr>
+        <tr><td>2</td><td><b>Swiftness.</b> Speed increases by 10 feet for 1 hour (15 ft at level 9, 20 ft at level 15).</td></tr>
+        <tr><td>3</td><td><b>Resilience.</b> +1 bonus to AC for 10 minutes (1 hour at level 9, 8 hours at level 15).</td></tr>
+        <tr><td>4</td><td><b>Boldness.</b> Roll 1d4 and add it to every attack roll and saving throw for 1 minute (10 min at level 9, 1 hour at level 15).</td></tr>
+        <tr><td>5</td><td><b>Flight.</b> Gain a Fly Speed of 10 feet for 10 minutes (20 ft at level 9, 30 ft at level 15).</td></tr>
+        <tr><td>6</td><td>Choose the effect by selecting one of the other rows.</td></tr>
+      </table>
+    </description>
+    <sheet usage="{{alchemist:elixirs:max}} elixirs/Long Rest">
+      <description>After a Long Rest with Alchemist's Supplies in hand, produce {{alchemist:elixirs:max}} elixirs by rolling on the Experimental Elixir table (Healing 2d8+Int, Swiftness +10ft speed 1hr, Resilience +1 AC 10min, Boldness 1d4 to attacks/saves 1min, Flight 10ft Fly 10min, or choose). Bonus Action to drink/administer. Also spend spell slots (Magic Action) to create additional elixirs with chosen effect.</description>
+    </sheet>
+    <rules>
+      <stat name="alchemist:elixirs:max" value="2" level="3" />
+      <stat name="alchemist:elixirs:max" value="1" level="5" />
+      <stat name="alchemist:elixirs:max" value="1" level="9" />
+      <stat name="alchemist:elixirs:max" value="1" level="15" />
+    </rules>
+  </element>
+
+  <element name="Alchemical Savant" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_ALCHEMICAL_SAVANT">
+    <compendium display="false" />
+    <description>
+      <p><em>5th-level Alchemist feature</em></p>
+      <p>Whenever you cast a spell using your Alchemist's Supplies as the Spellcasting Focus, you gain a bonus to one roll of the spell. That roll must restore Hit Points or be a damage roll that deals Acid, Fire, or Poison damage. The bonus equals your Intelligence modifier (minimum bonus of +1).</p>
+    </description>
+    <sheet>
+      <description>When you cast a spell using Alchemist's Supplies as focus, add +{{intelligence:modifier}} (min +1) to one healing roll or one Acid, Fire, or Poison damage roll.</description>
+    </sheet>
+    <rules></rules>
+  </element>
+
+  <element name="Restorative Reagents" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_RESTORATIVE_REAGENTS">
+    <compendium display="false" />
+    <description>
+      <p><em>9th-level Alchemist feature</em></p>
+      <p>You can cast Lesser Restoration without expending a spell slot and without preparing the spell, provided you use Alchemist's Supplies as the Spellcasting Focus. You can do so a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses when you finish a Long Rest.</p>
+    </description>
+    <sheet usage="{{intelligence:modifier:min1}}/Long Rest">
+      <description>Cast Lesser Restoration for free using Alchemist's Supplies as focus (no spell slot or preparation required).</description>
+    </sheet>
+    <rules>
+      <grant type="Spell" id="ID_PHB_SPELL_LESSER_RESTORATION" spellcasting="Artificer" prepared="true" />
+    </rules>
+  </element>
+
+  <element name="Chemical Mastery" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_CHEMICAL_MASTERY">
+    <compendium display="false" />
+    <description>
+      <p><em>15th-level Alchemist feature</em></p>
+      <p>You gain the following benefits.</p>
+      <p><b>Alchemical Eruption.</b> When you cast an Artificer spell that deals Acid, Fire, or Poison damage to a target, you can also deal 2d8 Force damage to that target. You can use this benefit only once on each of your turns.</p>
+      <p><b>Chemical Resistance.</b> You gain Resistance to Acid damage and Poison damage. You also gain Immunity to the Poisoned condition.</p>
+      <p><b>Conjured Cauldron.</b> You can cast Tasha's Bubbling Cauldron without expending a spell slot, without preparing the spell, and without Material components, provided you use Alchemist's Supplies as the Spellcasting Focus. Once you use this feature, you can't use it again until you finish a Long Rest.</p>
+    </description>
+    <sheet>
+      <description>Alchemical Eruption: once per turn, when dealing Acid/Fire/Poison damage with an Artificer spell, also deal 2d8 Force damage to that target. Chemical Resistance: Resistance to Acid and Poison damage; Immunity to Poisoned condition. Conjured Cauldron: cast Tasha's Bubbling Cauldron for free (1/Long Rest) using Alchemist's Supplies.</description>
+    </sheet>
+    <rules>
+      <grant type="Condition Immunity" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_ACID" />
+      <grant type="Condition Immunity" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+    </rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- SUBCLASS: ARMORER                                            -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="Armorer" type="Archetype" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_ARMORER">
+    <supports>EFA Artificer Specialist</supports>
+    <description>
+      <p><em>Craft Magic Armor to Enhance Your Abilities</em></p>
+      <p>An Armorer modifies armor to function almost like a second skin. The armor is enhanced to hone the Armorer's magic, unleash potent attacks, and generate a formidable defense.</p>
+      <div element="ID_EFA_ARCHETYPE_FEATURE_ARMORER_TOOLS_OF_THE_TRADE" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_ARMORER_SPELLS" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_ARMORER_ARCANE_ARMOR" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_ARMORER_ARMOR_MODEL" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_ARMORER_EXTRA_ATTACK" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_ARMORER_IMPROVED_ARMORER" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_ARMORER_PERFECTED_ARMOR" />
+    </description>
+    <sheet display="false" />
+    <rules>
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_ARMORER_TOOLS_OF_THE_TRADE" level="3" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_ARMORER_SPELLS" level="3" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_ARMORER_ARCANE_ARMOR" level="3" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_ARMORER_ARMOR_MODEL" level="3" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_ARMORER_EXTRA_ATTACK" level="5" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_ARMORER_IMPROVED_ARMORER" level="9" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_ARMORER_PERFECTED_ARMOR" level="15" />
+    </rules>
+  </element>
+
+  <element name="Tools of the Trade (Armorer)" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ARMORER_TOOLS_OF_THE_TRADE">
+    <compendium display="false" />
+    <description><p><em>3rd-level Armorer feature</em></p><p>Armor Training: you gain training with Heavy armor. Tool Proficiency: you gain proficiency with Smith's Tools. Armor Crafting: when you craft nonmagical or magic armor, the amount of time required to craft it is halved.</p></description>
+    <sheet><description>Gain Heavy armor proficiency and Smith's Tools proficiency. Crafting armor (magical or nonmagical) takes half the normal time.</description></sheet>
+    <rules>
+      <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_HEAVY_ARMOR" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_SMITHS_TOOLS" />
+    </rules>
+  </element>
+
+  <element name="Armorer Spells" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ARMORER_SPELLS">
+    <compendium display="false" />
+    <description>
+      <p><em>3rd-level Armorer feature</em></p>
+      <table>
+        <thead><tr><td>Artificer Level</td><td>Spells</td></tr></thead>
+        <tr><td>3</td><td>Magic Missile, Thunderwave</td></tr>
+        <tr><td>5</td><td>Mirror Image, Shatter</td></tr>
+        <tr><td>9</td><td>Hypnotic Pattern, Lightning Bolt</td></tr>
+        <tr><td>13</td><td>Fire Shield, Greater Invisibility</td></tr>
+        <tr><td>17</td><td>Passwall, Wall of Force</td></tr>
+      </table>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <grant type="Spell" id="ID_PHB_SPELL_MAGIC_MISSILE" spellcasting="Artificer" prepared="true" level="3" />
+      <grant type="Spell" id="ID_PHB_SPELL_THUNDERWAVE" spellcasting="Artificer" prepared="true" level="3" />
+      <grant type="Spell" id="ID_PHB_SPELL_MIRROR_IMAGE" spellcasting="Artificer" prepared="true" level="5" />
+      <grant type="Spell" id="ID_PHB_SPELL_SHATTER" spellcasting="Artificer" prepared="true" level="5" />
+      <grant type="Spell" id="ID_PHB_SPELL_HYPNOTIC_PATTERN" spellcasting="Artificer" prepared="true" level="9" />
+      <grant type="Spell" id="ID_PHB_SPELL_LIGHTNING_BOLT" spellcasting="Artificer" prepared="true" level="9" />
+      <grant type="Spell" id="ID_PHB_SPELL_FIRE_SHIELD" spellcasting="Artificer" prepared="true" level="13" />
+      <grant type="Spell" id="ID_PHB_SPELL_GREATER_INVISIBILITY" spellcasting="Artificer" prepared="true" level="13" />
+      <grant type="Spell" id="ID_PHB_SPELL_PASSWALL" spellcasting="Artificer" prepared="true" level="17" />
+      <grant type="Spell" id="ID_PHB_SPELL_WALL_OF_FORCE" spellcasting="Artificer" prepared="true" level="17" />
+    </rules>
+  </element>
+
+  <element name="Arcane Armor" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ARMORER_ARCANE_ARMOR">
+    <compendium display="false" />
+    <description><p><em>3rd-level Armorer feature</em></p><p>As a Magic action while you have Smith's Tools in hand, you can turn a suit of armor you are wearing into Arcane Armor. No Strength Requirement: if the armor normally has a Strength requirement, the Arcane Armor lacks this requirement for you. Quick Don and Doff: you can don or doff the armor as a Utilize action. The armor can't be removed against your will. Spellcasting Focus: you can use the Arcane Armor as a Spellcasting Focus for your Artificer spells. The armor continues to be Arcane Armor until you don another suit of armor or you die.</p></description>
+    <sheet action="Magic Action">
+      <description>While holding Smith's Tools, turn worn armor into Arcane Armor: no Strength requirement, don/doff as Utilize action, can't be removed against your will, serves as Spellcasting Focus.</description>
+    </sheet>
+    <rules></rules>
+  </element>
+
+  <element name="Armor Model" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ARMORER_ARMOR_MODEL">
+    <compendium display="false" />
+    <description><p><em>3rd-level Armorer feature</em></p><p>Customize your Arcane Armor by choosing one of three models: Dreadnaught, Guardian, or Infiltrator. Each model includes a special weapon you can add your Intelligence modifier (instead of Strength or Dexterity) to for attack and damage rolls. You can change the model whenever you finish a Short or Long Rest with Smith's Tools in hand.</p>
+    <p><b>Dreadnaught:</b> Force Demolisher (Simple Melee, Reach, 1d10 Force; push/pull up to 10 ft); Giant Stature (Bonus Action, transform and enlarge for 1 minute, reach +5 ft, size becomes Large if smaller, uses = Int mod min 1, Long Rest).</p>
+    <p><b>Guardian:</b> Thunder Pulse (Simple Melee, 1d8 Thunder; creatures hit have Disadvantage on attacks until your next turn); Defensive Field (while Bloodied, Bonus Action to gain Temp HP = Artificer level; lose when you doff armor).</p>
+    <p><b>Infiltrator:</b> Lightning Launcher (Simple Ranged, 90/300 ft, 1d6 Lightning; once per turn when you hit, deal extra 1d6 Lightning); Powered Steps (Speed +5 ft); Dampening Field (Advantage on Dexterity (Stealth) checks; if armor imposes Disadvantage on Stealth, Advantage and Disadvantage cancel).</p></description>
+    <sheet>
+      <description>Choose a model for your Arcane Armor (change on Short/Long Rest with Smith's Tools). Add Intelligence (not Strength/Dex) to the model's special weapon attacks. Dreadnaught: Force Demolisher (Reach, 1d10 Force, push/pull) + Giant Stature (Bonus Action enlarge). Guardian: Thunder Pulse (1d8 Thunder, hit creature has Disadv on attacks) + Defensive Field (Bloodied → Bonus Action for Artificer level Temp HP). Infiltrator: Lightning Launcher (90/300 ft, 1d6 Lightning, +1d6 once/turn) + Powered Steps (+5 ft Speed) + Dampening Field (Adv on Stealth).</description>
+    </sheet>
+    <rules></rules>
+  </element>
+
+  <element name="Extra Attack (Armorer)" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ARMORER_EXTRA_ATTACK">
+    <compendium display="false" />
+    <description><p><em>5th-level Armorer feature</em></p><p>You can attack twice instead of once whenever you take the Attack action on your turn.</p></description>
+    <sheet><description>Attack twice when you take the Attack action.</description></sheet>
+    <rules>
+      <stat name="extra attack:count" value="2" level="5" bonus="extra attack" />
+    </rules>
+  </element>
+
+  <element name="Improved Armorer" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ARMORER_IMPROVED_ARMORER">
+    <compendium display="false" />
+    <description><p><em>9th-level Armorer feature</em></p><p>Armor Replication: you learn an additional plan for your Replicate Magic Item feature, and it must be in the Armor category. You can create an additional item with that feature, also in the Armor category. Improved Arsenal: you gain a +1 bonus to attack and damage rolls made with the special weapon of your Arcane Armor model.</p></description>
+    <sheet><description>Learn one additional Armor-category Replicate plan and can create one additional Armor-category item. Gain +1 to attack and damage rolls with your Arcane Armor model's special weapon.</description></sheet>
+    <rules></rules>
+  </element>
+
+  <element name="Perfected Armor" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ARMORER_PERFECTED_ARMOR">
+    <compendium display="false" />
+    <description><p><em>15th-level Armorer feature</em></p><p>Your Arcane Armor gains additional benefits based on its model. Dreadnaught: Force Demolisher deals 2d6 Force; Giant Stature reach increases 10 ft more, size can become Large or Huge (your choice), and you have Advantage on Strength checks and Strength saving throws while enlarged. Guardian: Thunder Pulse deals 1d10; when a Huge-or-smaller creature within 30 ft ends its turn, Reaction to force a Strength saving throw (DC = your spell save DC) — on failure, pull creature up to 25 ft toward you; if within 5 ft you can make a melee weapon attack; uses = Int mod (min 1), Long Rest. Infiltrator: Lightning Launcher deals 2d6; creatures taking Lightning from it are outlined in magical light (Dim Light 5 ft radius, Disadvantage on attacks against it) until start of your next turn; as Bonus Action gain Fly Speed = twice your Speed until end of turn, uses = Int mod (min 1), Long Rest.</p></description>
+    <sheet><description>Model upgrades: Dreadnaught — 2d6 Force Demolisher, Giant Stature can enlarge to Large/Huge with Adv on Str. Guardian — 1d10 Thunder Pulse, Reaction to pull creature 25 ft (Str save). Infiltrator — 2d6 Lightning Launcher, hit creatures glow; Bonus Action Fly speed = 2x Speed (Int mod/Long Rest).</description></sheet>
+    <rules></rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- SUBCLASS: ARTILLERIST                                        -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="Artillerist" type="Archetype" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_ARTILLERIST">
+    <supports>EFA Artificer Specialist</supports>
+    <description>
+      <p><em>Wield Destructive Power from Afar</em></p>
+      <p>An Artillerist specializes in using magic to hurl energy, projectiles, and explosions on a battlefield.</p>
+      <div element="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_TOOLS_OF_THE_TRADE" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_SPELLS" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_ELDRITCH_CANNON" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_ARCANE_FIREARM" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_EXPLOSIVE_CANNON" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_FORTIFIED_POSITION" />
+    </description>
+    <sheet display="false" />
+    <rules>
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_TOOLS_OF_THE_TRADE" level="3" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_SPELLS" level="3" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_ELDRITCH_CANNON" level="3" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_ARCANE_FIREARM" level="5" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_EXPLOSIVE_CANNON" level="9" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_FORTIFIED_POSITION" level="15" />
+    </rules>
+  </element>
+
+  <element name="Tools of the Trade (Artillerist)" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_TOOLS_OF_THE_TRADE">
+    <compendium display="false" />
+    <description><p><em>3rd-level Artillerist feature</em></p><p>Ranged Weaponry: you gain proficiency with Martial Ranged weapons. Tool Proficiency: you gain proficiency with Woodcarver's Tools. Wand Crafting: when you craft a magic Wand, the amount of time required to craft it is halved.</p></description>
+    <sheet><description>Gain proficiency with Martial Ranged weapons and Woodcarver's Tools. Crafting magic Wands takes half the normal time.</description></sheet>
+    <rules>
+      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_WOODCARVERS_TOOLS" />
+    </rules>
+  </element>
+
+  <element name="Artillerist Spells" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_SPELLS">
+    <compendium display="false" />
+    <description>
+      <p><em>3rd-level Artillerist feature</em></p>
+      <table>
+        <thead><tr><td>Artificer Level</td><td>Spells</td></tr></thead>
+        <tr><td>3</td><td>Shield, Thunderwave</td></tr>
+        <tr><td>5</td><td>Scorching Ray, Shatter</td></tr>
+        <tr><td>9</td><td>Fireball, Wind Wall</td></tr>
+        <tr><td>13</td><td>Ice Storm, Wall of Fire</td></tr>
+        <tr><td>17</td><td>Cone of Cold, Wall of Force</td></tr>
+      </table>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <grant type="Spell" id="ID_PHB_SPELL_SHIELD" spellcasting="Artificer" prepared="true" level="3" />
+      <grant type="Spell" id="ID_PHB_SPELL_THUNDERWAVE" spellcasting="Artificer" prepared="true" level="3" />
+      <grant type="Spell" id="ID_PHB_SPELL_SCORCHING_RAY" spellcasting="Artificer" prepared="true" level="5" />
+      <grant type="Spell" id="ID_PHB_SPELL_SHATTER" spellcasting="Artificer" prepared="true" level="5" />
+      <grant type="Spell" id="ID_PHB_SPELL_FIREBALL" spellcasting="Artificer" prepared="true" level="9" />
+      <grant type="Spell" id="ID_PHB_SPELL_WIND_WALL" spellcasting="Artificer" prepared="true" level="9" />
+      <grant type="Spell" id="ID_PHB_SPELL_ICE_STORM" spellcasting="Artificer" prepared="true" level="13" />
+      <grant type="Spell" id="ID_PHB_SPELL_WALL_OF_FIRE" spellcasting="Artificer" prepared="true" level="13" />
+      <grant type="Spell" id="ID_PHB_SPELL_CONE_OF_COLD" spellcasting="Artificer" prepared="true" level="17" />
+      <grant type="Spell" id="ID_PHB_SPELL_WALL_OF_FORCE" spellcasting="Artificer" prepared="true" level="17" />
+    </rules>
+  </element>
+
+  <element name="Eldritch Cannon" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_ELDRITCH_CANNON">
+    <compendium display="false" />
+    <description>
+      <p><em>3rd-level Artillerist feature</em></p>
+      <p>Using Smith's Tools or Woodcarver's Tools, you can take a Magic action to create a Small or Tiny Eldritch Cannon in an unoccupied space on a horizontal surface within 5 feet of yourself. You can have only one cannon at a time and can't create one while you already have one.</p>
+      <p><b>Eldritch Cannon</b> (Small or Tiny Object): AC 18; HP 5 + 5 × Artificer level (d8s); Immunities: Poison, Psychic. Activate Cannon (Bonus Action within 60 feet): order the cannon to use one option:</p>
+      <p><b>Flamethrower:</b> 15-foot Cone, Dexterity saving throw (DC = your spell save DC), 2d8 Fire damage on a failed save or half on a success. Flammable objects that aren't being worn or carried start burning.</p>
+      <p><b>Force Ballista:</b> Ranged spell attack, one creature or object within 120 feet, 2d8 Force damage, and if it's a creature it's pushed up to 5 feet away.</p>
+      <p><b>Protector:</b> Grants itself and each creature of your choice within 10 feet Temporary Hit Points equal to 1d8 plus your Intelligence modifier (minimum +1).</p>
+    </description>
+    <sheet action="Magic Action">
+      <description>Create an Eldritch Cannon (AC 18, HP {{cannon:hp}}) in an unoccupied space within 5 feet using Smith's or Woodcarver's Tools. Activate with Bonus Action within 60 feet: Flamethrower (15-ft Cone, 2d8 Fire Dex save), Force Ballista (ranged spell attack 120 ft, 2d8 Force + push 5 ft), or Protector (1d8+{{intelligence:modifier:min1}} Temp HP to self and allies within 10 ft). One cannon at a time; disappears at 0 HP or after 1 hour.</description>
+    </sheet>
+    <rules>
+      <stat name="cannon:hp" value="5" />
+      <stat name="cannon:hp" value="level:artificer:5" />
+    </rules>
+  </element>
+
+  <element name="Arcane Firearm" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_ARCANE_FIREARM">
+    <compendium display="false" />
+    <description><p><em>5th-level Artillerist feature</em></p><p>When you finish a Long Rest, you can use Woodcarver's Tools to carve special sigils into a Rod, Staff, Wand, or Martial Ranged weapon and thereby turn it into your Arcane Firearm. The sigils disappear from the object if you later carve them on a different item. You can use your Arcane Firearm as a Spellcasting Focus for your Artificer spells. When you cast an Artificer spell through the firearm, roll 1d8 and you gain a bonus to one of the spell's damage rolls equal to the number rolled.</p></description>
+    <sheet usage="Long Rest">
+      <description>Carve sigils into a Rod, Staff, Wand, or Martial Ranged weapon to create your Arcane Firearm (Spellcasting Focus). When casting an Artificer spell through it, roll 1d8 and add the result to one damage roll of the spell.</description>
+    </sheet>
+    <rules></rules>
+  </element>
+
+  <element name="Explosive Cannon" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_EXPLOSIVE_CANNON">
+    <compendium display="false" />
+    <description><p><em>9th-level Artillerist feature</em></p><p>Your Eldritch Cannon is now more destructive. Detonate: when your cannon takes damage, you can take a Reaction (within 60 feet) to command it to detonate, destroying it and forcing each creature within 20 feet to make a Dexterity saving throw (DC = your spell save DC), taking 3d10 Force damage on a failure or half on a success. Firepower: your cannon's damage rolls and the number of Temporary Hit Points granted by Protector each increase by 1d8.</p></description>
+    <sheet>
+      <description>Eldritch Cannon upgrades: Detonate (Reaction within 60 ft when cannon takes damage — destroy cannon, 3d10 Force 20-ft radius Dex save). Firepower: each cannon damage/healing roll increases by 1d8.</description>
+    </sheet>
+    <rules></rules>
+  </element>
+
+  <element name="Fortified Position" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_FORTIFIED_POSITION">
+    <compendium display="false" />
+    <description><p><em>15th-level Artillerist feature</em></p><p>Double Firepower: you can now have two cannons at the same time, creating two with the same Magic action (expend a separate spell slot for the second). You can activate both with the same Bonus Action. You can't create a third cannon while you have two. Shimmering Field Projection: you and your allies have Half Cover while within 10 feet of your Eldritch Cannon.</p></description>
+    <sheet>
+      <description>Create two Eldritch Cannons at once (same Magic action, second requires an additional spell slot). Activate both with the same Bonus Action. Shimmering Field: you and allies within 10 ft of a cannon have Half Cover (+2 AC and Dex saves).</description>
+    </sheet>
+    <rules></rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- SUBCLASS: BATTLE SMITH                                       -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="Battle Smith" type="Archetype" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_BATTLE_SMITH">
+    <supports>EFA Artificer Specialist</supports>
+    <description>
+      <p><em>Command a Construct Guardian</em></p>
+      <p>A Battle Smith is a combination of protector and medic, an expert at defending others and repairing both materiel and personnel. Battle Smiths are accompanied by a Steel Defender, a protective companion of their own creation.</p>
+      <div element="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_BATTLE_READY" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_SPELLS" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_STEEL_DEFENDER" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_EXTRA_ATTACK" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_ARCANE_JOLT" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_IMPROVED_DEFENDER" />
+    </description>
+    <sheet display="false" />
+    <rules>
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_BATTLE_READY" level="3" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_SPELLS" level="3" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_STEEL_DEFENDER" level="3" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_EXTRA_ATTACK" level="5" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_ARCANE_JOLT" level="9" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_IMPROVED_DEFENDER" level="15" />
+    </rules>
+  </element>
+
+  <element name="Battle Ready" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_BATTLE_READY">
+    <compendium display="false" />
+    <description><p><em>3rd-level Battle Smith feature</em></p><p>Arcane Empowerment: when you attack with a magic weapon, you can use your Intelligence modifier, instead of your Strength or Dexterity modifier, for the attack and damage rolls. Weapon Knowledge: you gain proficiency with Martial weapons. You can use a weapon with which you have proficiency as a Spellcasting Focus for your Artificer spells.</p></description>
+    <sheet><description>Arcane Empowerment: use Intelligence (instead of Str/Dex) for attack and damage rolls when attacking with a magic weapon. Weapon Knowledge: proficiency with Martial weapons; can use a proficient weapon as a Spellcasting Focus.</description></sheet>
+    <rules>
+      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" />
+    </rules>
+  </element>
+
+  <element name="Battle Smith Spells" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_SPELLS">
+    <compendium display="false" />
+    <description>
+      <p><em>3rd-level Battle Smith feature</em></p>
+      <table>
+        <thead><tr><td>Artificer Level</td><td>Spells</td></tr></thead>
+        <tr><td>3</td><td>Heroism, Shield</td></tr>
+        <tr><td>5</td><td>Shining Smite, Warding Bond</td></tr>
+        <tr><td>9</td><td>Aura of Vitality, Conjure Barrage</td></tr>
+        <tr><td>13</td><td>Aura of Purity, Fire Shield</td></tr>
+        <tr><td>17</td><td>Banishing Smite, Mass Cure Wounds</td></tr>
+      </table>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <grant type="Spell" id="ID_PHB_SPELL_HEROISM" spellcasting="Artificer" prepared="true" level="3" />
+      <grant type="Spell" id="ID_PHB_SPELL_SHIELD" spellcasting="Artificer" prepared="true" level="3" />
+      <grant type="Spell" id="ID_PHB_SPELL_BRANDING_SMITE" spellcasting="Artificer" prepared="true" level="5" />
+      <grant type="Spell" id="ID_PHB_SPELL_WARDING_BOND" spellcasting="Artificer" prepared="true" level="5" />
+      <grant type="Spell" id="ID_PHB_SPELL_AURA_OF_VITALITY" spellcasting="Artificer" prepared="true" level="9" />
+      <grant type="Spell" id="ID_PHB_SPELL_CONJURE_BARRAGE" spellcasting="Artificer" prepared="true" level="9" />
+      <grant type="Spell" id="ID_PHB_SPELL_AURA_OF_PURITY" spellcasting="Artificer" prepared="true" level="13" />
+      <grant type="Spell" id="ID_PHB_SPELL_FIRE_SHIELD" spellcasting="Artificer" prepared="true" level="13" />
+      <grant type="Spell" id="ID_PHB_SPELL_BANISHING_SMITE" spellcasting="Artificer" prepared="true" level="17" />
+      <grant type="Spell" id="ID_PHB_SPELL_MASS_CURE_WOUNDS" spellcasting="Artificer" prepared="true" level="17" />
+    </rules>
+  </element>
+
+  <element name="Steel Defender" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_STEEL_DEFENDER">
+    <compendium display="false" />
+    <description>
+      <p><em>3rd-level Battle Smith feature</em></p>
+      <p>Your tinkering has borne you a companion, a Steel Defender. You determine the defender's appearance and whether it has two legs or four; your choices don't affect the defender's game statistics.</p>
+      <p><b>Steel Defender</b> (Medium Construct, Neutral): AC 12 + your Intelligence modifier; HP 5 + 5 × your Artificer level (d8s); Speed 40 ft. STR 14 (+2) / DEX 12 (+1) / CON 14 (+2) / INT 4 (–3) / WIS 10 (+0) / CHA 6 (–2). Immunities: Poison, Charmed, Exhaustion, Poisoned. Senses: Darkvision 60 ft, Passive Perception 10. Languages: understands languages you know. CR: None (PB = your Proficiency Bonus). Steel Bond: add PB to any ability check or saving throw the defender makes. Force-Empowered Rend: melee attack, bonus = your spell attack modifier, reach 5 ft, 1d8 + 2 + Intelligence modifier Force damage. Repair (3/Day): defender or Construct/object within 5 ft regains 2d8 + Intelligence modifier HP. Deflect Attack (Reaction): when a creature the defender can see within 5 ft is attacked by another creature, the attacker makes the attack with Disadvantage.</p>
+      <p>The defender is Friendly to you and obeys you. It vanishes if you die. In combat it acts during your turn; the only action it takes is Dodge unless you use a Bonus Action to command it. You can also use a Bonus Action to command it to take the Force-Empowered Rend action.</p>
+      <p>If the defender dies within the last hour, you can take a Magic action to touch it and expend a spell slot; the defender returns to life after 1 minute with all its Hit Points restored. Whenever you finish a Long Rest, you can create a new defender if you have Smith's Tools in hand and the original is gone.</p>
+    </description>
+    <sheet>
+      <description>You have a Steel Defender (AC {{steel defender:ac}}, HP {{steel defender:hp}}). It acts on your turn (Dodge unless Bonus Action commanded). Force-Empowered Rend: melee spell attack, 1d8+2+{{intelligence:modifier}} Force. Repair 3/Day: 2d8+{{intelligence:modifier}} HP. Deflect Attack reaction: attacker has Disadvantage. Revive with Magic Action + spell slot if recently dead; recreate on Long Rest with Smith's Tools.</description>
+    </sheet>
+    <rules>
+      <stat name="steel defender:ac" value="12" />
+      <stat name="steel defender:ac" value="intelligence:modifier" />
+      <stat name="steel defender:hp" value="5" />
+      <stat name="steel defender:hp" value="level:artificer:5" />
+    </rules>
+  </element>
+
+  <element name="Extra Attack (Battle Smith)" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_EXTRA_ATTACK">
+    <compendium display="false" />
+    <description><p><em>5th-level Battle Smith feature</em></p><p>You can attack twice instead of once whenever you take the Attack action on your turn. You can forgo one of your attacks when you take the Attack action to command your Steel Defender to take the Force-Empowered Rend action.</p></description>
+    <sheet><description>Attack twice on the Attack action. You can forgo one attack to command your Steel Defender to make a Force-Empowered Rend attack.</description></sheet>
+    <rules>
+      <stat name="extra attack:count" value="2" level="5" bonus="extra attack" />
+    </rules>
+  </element>
+
+  <element name="Arcane Jolt" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_ARCANE_JOLT">
+    <compendium display="false" />
+    <description><p><em>9th-level Battle Smith feature</em></p><p>When either you hit a target with an attack roll using a magic weapon or your Steel Defender hits a target, you can channel magical energy through the strike to create one of these effects: Destructive Energy (target takes an extra 2d6 Force damage); Restorative Energy (choose one creature or object you can see within 30 feet — healing energy flows into the chosen recipient, restoring 2d6 Hit Points to it). Uses = your Intelligence modifier (minimum of once), no more than once per turn. Regain all uses on Long Rest.</p></description>
+    <sheet usage="{{intelligence:modifier:min1}}/Long Rest">
+      <description>When you or your Steel Defender hit with a magic weapon attack, channel energy: Destructive (2d6 extra Force damage to target) OR Restorative (restore 2d6 HP to one creature/object within 30 ft). Once per turn.</description>
+    </sheet>
+    <rules></rules>
+  </element>
+
+  <element name="Improved Defender" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_IMPROVED_DEFENDER">
+    <compendium display="false" />
+    <description><p><em>15th-level Battle Smith feature</em></p><p>Your Arcane Jolt and Steel Defender have become more powerful. Improved Jolt: the extra damage and healing of your Arcane Jolt both increase to 4d6. Improved Deflection: whenever your Steel Defender uses its Deflect Attack, the attacker takes Force damage equal to 1d4 plus your Intelligence modifier.</p></description>
+    <sheet><description>Arcane Jolt now deals/heals 4d6. Steel Defender's Deflect Attack now deals 1d4+{{intelligence:modifier}} Force damage to the attacker.</description></sheet>
+    <rules></rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- SUBCLASS: CARTOGRAPHER                                       -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="Cartographer" type="Archetype" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_CARTOGRAPHER">
+    <supports>EFA Artificer Specialist</supports>
+    <description>
+      <p><em>Chart Advantageous Courses through Turmoil</em></p>
+      <p>Cartographers are the premier navigators and reconnaissance agents. Using their creations, Cartographers can highlight threats, safeguard allies, and carve portals to distant locations.</p>
+      <div element="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_TOOLS_OF_THE_TRADE" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_SPELLS" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_ADVENTURERS_ATLAS" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_MAPPING_MAGIC" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_GUIDED_PRECISION" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_INGENIOUS_MOVEMENT" />
+      <div element="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_SUPERIOR_ATLAS" />
+    </description>
+    <sheet display="false" />
+    <rules>
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_TOOLS_OF_THE_TRADE" level="3" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_SPELLS" level="3" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_ADVENTURERS_ATLAS" level="3" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_MAPPING_MAGIC" level="3" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_GUIDED_PRECISION" level="5" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_INGENIOUS_MOVEMENT" level="9" />
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_SUPERIOR_ATLAS" level="15" />
+    </rules>
+  </element>
+
+  <element name="Tools of the Trade (Cartographer)" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_TOOLS_OF_THE_TRADE">
+    <compendium display="false" />
+    <description><p><em>3rd-level Cartographer feature</em></p><p>Tool Proficiency: you gain proficiency with Calligrapher's Supplies and Cartographer's Tools. If you already have one of these proficiencies, gain proficiency with one other type of Artisan's Tools (or two other types if you have both). Scroll Crafting: when you scribe a Spell Scroll using the crafting rules in the Player's Handbook, the amount of time required to craft it is halved.</p></description>
+    <sheet><description>Gain proficiency with Calligrapher's Supplies and Cartographer's Tools. Scribing Spell Scrolls (PHB rules) takes half the normal time.</description></sheet>
+    <rules>
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_CALLIGRAPHERS_SUPPLIES" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_CARTOGRAPHERS_TOOLS" />
+    </rules>
+  </element>
+
+  <element name="Cartographer Spells" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_SPELLS">
+    <compendium display="false" />
+    <description>
+      <p><em>3rd-level Cartographer feature</em></p>
+      <table>
+        <thead><tr><td>Artificer Level</td><td>Spells</td></tr></thead>
+        <tr><td>3</td><td>Faerie Fire, Guiding Bolt, Healing Word</td></tr>
+        <tr><td>5</td><td>Locate Object, Mind Spike</td></tr>
+        <tr><td>9</td><td>Call Lightning, Clairvoyance</td></tr>
+        <tr><td>13</td><td>Banishment, Locate Creature</td></tr>
+        <tr><td>17</td><td>Scrying, Teleportation Circle</td></tr>
+      </table>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <grant type="Spell" id="ID_PHB_SPELL_FAERIE_FIRE" spellcasting="Artificer" prepared="true" level="3" />
+      <grant type="Spell" id="ID_PHB_SPELL_GUIDING_BOLT" spellcasting="Artificer" prepared="true" level="3" />
+      <grant type="Spell" id="ID_PHB_SPELL_HEALING_WORD" spellcasting="Artificer" prepared="true" level="3" />
+      <grant type="Spell" id="ID_PHB_SPELL_LOCATE_OBJECT" spellcasting="Artificer" prepared="true" level="5" />
+      <grant type="Spell" id="ID_PHB_SPELL_MIND_SPIKE" spellcasting="Artificer" prepared="true" level="5" />
+      <grant type="Spell" id="ID_PHB_SPELL_CALL_LIGHTNING" spellcasting="Artificer" prepared="true" level="9" />
+      <grant type="Spell" id="ID_PHB_SPELL_CLAIRVOYANCE" spellcasting="Artificer" prepared="true" level="9" />
+      <grant type="Spell" id="ID_PHB_SPELL_BANISHMENT" spellcasting="Artificer" prepared="true" level="13" />
+      <grant type="Spell" id="ID_PHB_SPELL_LOCATE_CREATURE" spellcasting="Artificer" prepared="true" level="13" />
+      <grant type="Spell" id="ID_PHB_SPELL_SCRYING" spellcasting="Artificer" prepared="true" level="17" />
+      <grant type="Spell" id="ID_PHB_SPELL_TELEPORTATION_CIRCLE" spellcasting="Artificer" prepared="true" level="17" />
+    </rules>
+  </element>
+
+  <element name="Adventurer's Atlas" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_ADVENTURERS_ATLAS">
+    <compendium display="false" />
+    <description><p><em>3rd-level Cartographer feature</em></p><p>Whenever you finish a Long Rest while holding Cartographer's Tools, you can use that tool to create a set of magical maps by touching at least two creatures (one of whom can be yourself), up to a maximum equal to 1 plus your Intelligence modifier (minimum of two creatures). Each target receives a magical map that constantly updates to show the relative position of all the map holders but is illegible to all others. The maps last until you die or use this feature again, at which point all existing maps vanish. While carrying the map, a target gains: Awareness (add 1d4 to Initiative rolls); Positioning (knows location of all other map holders on same plane; when casting a spell or creating another effect that requires being able to see the effect's target, a map holder can target another map holder regardless of sight or cover, so long as the other map holder is still within the effect's range).</p></description>
+    <sheet usage="Long Rest">
+      <description>Create magical maps for up to {{atlas:targets}} creatures (minimum 2) you touch. Map holders gain: Awareness (+1d4 to Initiative) and Positioning (know locations of other holders; can target other holders with spells regardless of sight/cover while in range). Maps vanish when you die or use this feature again.</description>
+    </sheet>
+    <rules>
+      <stat name="atlas:targets" value="1" />
+      <stat name="atlas:targets" value="intelligence:modifier" />
+    </rules>
+  </element>
+
+  <element name="Mapping Magic" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_MAPPING_MAGIC">
+    <compendium display="false" />
+    <description><p><em>3rd-level Cartographer feature</em></p><p>Illuminated Cartography: you can cast Faerie Fire without expending a spell slot, outlining the affected creatures as if in ink. You can do so a number of times equal to your Intelligence modifier (minimum of once), and you regain all expended uses when you finish a Long Rest. Portal Jump: on your turn, you can spend an amount of movement equal to half your Speed (round down) to teleport to an unoccupied space you can see within 10 feet of yourself or within 5 feet of a creature that is within 30 feet of you and holding one of your Adventurer's Atlas maps. You can't use this benefit if your Speed is 0.</p></description>
+    <sheet usage="Illuminated Cartography: {{intelligence:modifier:min1}}/Long Rest">
+      <description>Illuminated Cartography: cast Faerie Fire for free (creatures outlined in ink). Portal Jump: spend half your Speed (rounded down) of movement to teleport up to 10 ft to a visible unoccupied space, or to within 5 ft of an Atlas map holder within 30 ft.</description>
+    </sheet>
+    <rules></rules>
+  </element>
+
+  <element name="Guided Precision" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_GUIDED_PRECISION">
+    <compendium display="false" />
+    <description><p><em>5th-level Cartographer feature</em></p><p>Once per turn, whenever you cast a spell from your Cartographer Spells list or hit a creature affected by your Faerie Fire with an attack roll, you can add your Intelligence modifier to one damage roll of the spell or attack. In addition, taking damage can't cause you to lose Concentration on Faerie Fire.</p></description>
+    <sheet>
+      <description>Once per turn, when you cast a Cartographer spell or hit a Faerie Fire-affected creature with an attack, add +{{intelligence:modifier}} to one damage roll. Concentration on Faerie Fire can't be broken by taking damage.</description>
+    </sheet>
+    <rules></rules>
+  </element>
+
+  <element name="Ingenious Movement" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_INGENIOUS_MOVEMENT">
+    <compendium display="false" />
+    <description><p><em>9th-level Cartographer feature</em></p><p>When you use your Flash of Genius feature, you or a willing creature of your choice that you can see within 30 feet of yourself can teleport up to 30 feet to an unoccupied space you can see as part of that Reaction.</p></description>
+    <sheet>
+      <description>When you use Flash of Genius, you or a willing creature within 30 ft can also teleport up to 30 ft to an unoccupied space you can see.</description>
+    </sheet>
+    <rules></rules>
+  </element>
+
+  <element name="Superior Atlas" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_SUPERIOR_ATLAS">
+    <compendium display="false" />
+    <description><p><em>15th-level Cartographer feature</em></p><p>Your Adventurer's Atlas improves with two additional benefits. Safe Haven: when a map holder would be reduced to 0 Hit Points but not killed outright, that creature can destroy its map. The creature's Hit Points instead change to a number equal to twice your Artificer level, and the creature is teleported to an unoccupied space within 5 feet of you or another map holder of its choice. Unerring Path: if you are one of the map holders for your Adventurer's Atlas, you can cast Find the Path without expending a spell slot, without preparing the spell, and without spell components. Once you use this benefit, you can't use it again until you finish a Long Rest.</p></description>
+    <sheet>
+      <description>Superior Atlas adds: Safe Haven (a map holder reduced to 0 HP but not killed can destroy their map — HP becomes {{atlas:safe haven:hp}}, teleport to within 5 ft of you or another holder) and Unerring Path (cast Find the Path for free, 1/Long Rest, no components, while you hold a map).</description>
+    </sheet>
+    <rules>
+      <stat name="atlas:safe haven:hp" value="level:artificer:2" />
+    </rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- SPELL: HOMUNCULUS SERVANT                                    -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="Homunculus Servant" type="Spell" source="Eberron: Forge of the Artificer" id="ID_EFA_SPELL_HOMUNCULUS_SERVANT">
+    <supports>Artificer, 2</supports>
+    <description>
+      <p>You summon a special homunculus in an unoccupied space within range. This creature uses the Homunculus Servant stat block. If you already have a homunculus from this spell, the homunculus is replaced by the new one. You determine the homunculus's appearance, such as a mechanical-looking bird, winged vial, or miniature animate cauldron.</p>
+      <p><em>Combat.</em> The homunculus is an ally to you and your allies. In combat, it shares your Initiative count, but it takes its turn immediately after yours. It obeys your commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its movement to avoid danger.</p>
+      <p><em>Using a Higher-Level Spell Slot.</em> Use the spell slot's level for the spell's level in the stat block.</p>
+      <h5>Homunculus Servant</h5>
+      <p><em>Tiny Construct, Neutral</em></p>
+      <ul>
+        <li><b>AC</b> 13</li>
+        <li><b>HP</b> 5 + 5 per spell level (d4s equal to the spell's level)</li>
+        <li><b>Speed</b> 20 ft., Fly 30 ft.</li>
+        <li><b>STR</b> 4 (–3) | <b>DEX</b> 15 (+2) | <b>CON</b> 12 (+1) | <b>INT</b> 10 (+0) | <b>WIS</b> 10 (+0) | <b>CHA</b> 7 (–2)</li>
+        <li><b>Immunities</b> Poison; Exhaustion, Poisoned</li>
+        <li><b>Senses</b> Darkvision 60 ft., Passive Perception 10</li>
+        <li><b>Languages</b> Telepathy 1 mile (works only with you)</li>
+        <li><b>Evasion.</b> If subjected to a Dexterity saving throw for half damage, the homunculus takes no damage on a success and half damage on a failure. It can't use this trait if it has the Incapacitated condition.</li>
+        <li><b>Magic Bond.</b> Add the spell level to any ability check or saving throw the homunculus makes.</li>
+        <li><b>Force Strike.</b> Melee or Ranged Attack Roll: bonus equals your spell attack modifier, reach 5 ft. or range 30 ft. Hit: 1d6 plus the spell's level Force damage.</li>
+        <li><b>Channel Magic (Reaction).</b> Trigger: you cast a spell that has a range of touch while the homunculus is within 120 feet of you. Response: the homunculus delivers the spell through its touch.</li>
+      </ul>
+    </description>
+    <setters>
+      <set name="keywords">conjuration, ritual</set>
+      <set name="level">2</set>
+      <set name="school">Conjuration</set>
+      <set name="time">1 hour or Ritual</set>
+      <set name="range">10 feet</set>
+      <set name="hasVerbalComponent">true</set>
+      <set name="hasSomaticComponent">true</set>
+      <set name="hasMaterialComponent">true</set>
+      <set name="materialComponent">a gem worth 100+ GP</set>
+      <set name="duration">Instantaneous</set>
+      <set name="isConcentration">false</set>
+      <set name="isRitual">true</set>
+    </setters>
+  </element>
+
+</elements>
