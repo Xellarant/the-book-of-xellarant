@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+  <info>
+    <update version="0.1.1">
+      <file name="efa-source.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/Eberron%20Forge%20of%20the%20Artificer/efa-source.xml" />
+      <file name="efa-species-feats.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/Eberron%20Forge%20of%20the%20Artificer/efa-species-feats.xml" />
+      <file name="efa-class.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/Eberron%20Forge%20of%20the%20Artificer/efa-class.xml" />
+      <file name="efa-backgrounds.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/Eberron%20Forge%20of%20the%20Artificer/efa-backgrounds.xml" />
+    </update>
+  </info>
+
+  <element name="Eberron: Forge of the Artificer" type="Source" source="Eberron: Forge of the Artificer" id="ID_EFA_SOURCE_EBERRON_FORGE_OF_THE_ARTIFICER">
+    <description>
+      <p>An extensive supplement to <em>Eberron: Rising from the Last War</em>, adding new character options for the world of Eberron. Includes the complete Artificer class with five subclasses (Alchemist, Armorer, Artillerist, Battle Smith, and Cartographer), seventeen backgrounds tied to the dragonmarked houses, five species (Changeling, Kalashtar, Khoravar, Shifter, and Warforged), twenty-eight feats including all twelve dragonmark feats and their greater variants, and the Homunculus Servant spell.</p>
+    </description>
+    <setters>
+      <set name="abbreviation">EFA</set>
+      <set name="url"></set>
+      <set name="image"></set>
+      <set name="author" abbreviation="EFA" url="">Wizards of the Coast</set>
+      <set name="homebrew">false</set>
+      <set name="release">20251125</set>
+    </setters>
+  </element>
+
+</elements>

@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+  <info>
+    <name>Eberron: Forge of the Artificer - Species and Feats</name>
+    <update version="0.1.2">
+      <file name="efa-species-feats.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/Eberron%20Forge%20of%20the%20Artificer/efa-species-feats.xml" />
+    </update>
+  </info>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- SPECIES: CHANGELING                                          -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="Changeling" type="Race" source="Eberron: Forge of the Artificer" id="ID_EFA_RACE_CHANGELING">
+    <description>
+      <p>With ever-changing appearances, changelings reside in many societies undetected. Each changeling can supernaturally adopt any face they like. The first changelings appeared in the Feywild, and their wondrous, mutable essence lingers in changelings today. In their true form, changelings appear faded, their features almost devoid of detail.</p>
+      <p>Many changelings develop identities with more depth, crafting a persona complete with history and beliefs for negotiation, investigation, and combat.</p>
+      <h4>Changeling Traits</h4>
+      <p><b>Creature Type:</b> Fey</p>
+      <p><b>Size:</b> Medium (about 4–7 feet tall) or Small (about 2–4 feet tall), chosen when you select this species</p>
+      <p><b>Speed:</b> 30 feet</p>
+      <div element="ID_EFA_RACIAL_TRAIT_CHANGELING_INSTINCTS" />
+      <div element="ID_EFA_RACIAL_TRAIT_CHANGELING_SHAPE_SHIFTER" />
+    </description>
+    <sheet display="false" />
+    <rules>
+      <select type="Racial Trait" name="Size (Changeling)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL||ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
+      <stat name="innate speed" value="30" bonus="base" />
+      <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_CHANGELING_INSTINCTS" />
+      <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_CHANGELING_SHAPE_SHIFTER" />
+      <grant type="Language" id="ID_LANGUAGE_COMMON" />
+      <select type="Language" name="Language (Changeling)" supports="Standard||Exotic" />
+    </rules>
+  </element>
+  <element name="Changeling Instincts" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_CHANGELING_INSTINCTS">
+    <compendium display="false" />
+    <description><p>Thanks to your connection to the fey realm, you gain proficiency in two of the following skills of your choice: Deception, Insight, Intimidation, Performance, or Persuasion.</p></description>
+    <sheet display="false" />
+    <rules>
+      <select type="Proficiency" name="Changeling Instincts" number="2" supports="Skill,(Deception||Insight||Intimidation||Performance||Persuasion)" />
+    </rules>
+  </element>
+  <element name="Shape-Shifter" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_CHANGELING_SHAPE_SHIFTER">
+    <compendium display="false" />
+    <description><p>As an action, you can shape-shift to change your appearance and your voice. You can change your coloration, hair length, and sex. You can also adjust your height and weight and can change your size between Medium and Small. You can make yourself appear as a member of another playable species, though none of your game statistics change. You can't duplicate an individual you've never seen, and you must adopt a form with the same basic arrangement of limbs. Your clothing and equipment aren't changed. While shape-shifted with this trait, you have Advantage on Charisma checks. You stay in the new form until you take an action to revert to your true form.</p></description>
+    <sheet action="Action">
+      <description>Change your appearance, voice, coloration, hair, sex, height, weight, and size (between Medium and Small). You can appear as another playable species; game statistics don't change. No duplicating unseen individuals. Advantage on Charisma checks while shape-shifted. Revert as an Action.</description>
+    </sheet>
+    <rules></rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- SPECIES: KALASHTAR                                           -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="Kalashtar" type="Race" source="Eberron: Forge of the Artificer" id="ID_EFA_RACE_KALASHTAR">
+    <description>
+      <p>Kalashtar are created from the union of humanity and renegade spirits called quori from the plane of dreams. They appear human but their spiritual connection affects them in a variety of ways — symmetrical, slightly angular features, and eyes that often glow when concentrating or expressing strong emotions. Kalashtar can't communicate directly with their quori spirits; rather, kalashtar might experience them as a source of instinct and inspiration.</p>
+      <h4>Kalashtar Traits</h4>
+      <p><b>Creature Type:</b> Aberration</p>
+      <p><b>Size:</b> Medium (about 6–7 feet tall)</p>
+      <p><b>Speed:</b> 30 feet</p>
+      <div element="ID_EFA_RACIAL_TRAIT_KALASHTAR_DUAL_MIND" />
+      <div element="ID_EFA_RACIAL_TRAIT_KALASHTAR_MENTAL_DISCIPLINE" />
+      <div element="ID_EFA_RACIAL_TRAIT_KALASHTAR_MIND_LINK" />
+      <div element="ID_EFA_RACIAL_TRAIT_KALASHTAR_SEVERED_FROM_DREAMS" />
+    </description>
+    <sheet display="false" />
+    <rules>
+      <grant type="Size" id="ID_SIZE_MEDIUM" />
+      <stat name="innate speed" value="30" bonus="base" />
+      <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_KALASHTAR_DUAL_MIND" />
+      <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_KALASHTAR_MENTAL_DISCIPLINE" />
+      <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_KALASHTAR_MIND_LINK" />
+      <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_KALASHTAR_SEVERED_FROM_DREAMS" />
+      <grant type="Language" id="ID_LANGUAGE_COMMON" />
+      <select type="Language" name="Language (Kalashtar)" supports="Standard||Exotic" />
+    </rules>
+  </element>
+  <element name="Dual Mind" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_KALASHTAR_DUAL_MIND">
+    <compendium display="false" />
+    <description><p>You have Advantage on Wisdom and Charisma saving throws.</p></description>
+    <sheet><description>You have Advantage on Wisdom and Charisma saving throws.</description></sheet>
+    <rules></rules>
+  </element>
+  <element name="Mental Discipline" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_KALASHTAR_MENTAL_DISCIPLINE">
+    <compendium display="false" />
+    <description><p>You have Resistance to Psychic damage.</p></description>
+    <sheet><description>You have Resistance to Psychic damage.</description></sheet>
+    <rules>
+      <grant type="Condition Immunity" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PSYCHIC" />
+    </rules>
+  </element>
+  <element name="Mind Link" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_KALASHTAR_MIND_LINK">
+    <compendium display="false" />
+    <description><p>You have telepathy with a range in feet equal to 10 times your level. When you're using this trait to speak telepathically to a creature, you can take a Magic action to give that creature the ability to speak telepathically with you for 1 hour or until you take another Magic action to end this effect.</p></description>
+    <sheet>
+      <description>You have telepathy with a range of {{level:10}} feet. As a Magic action, grant a creature you're telepathically speaking with the ability to telepathically reply to you for 1 hour (or until you use another Magic action to end it).</description>
+    </sheet>
+    <rules></rules>
+  </element>
+  <element name="Severed from Dreams" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_KALASHTAR_SEVERED_FROM_DREAMS">
+    <compendium display="false" />
+    <description><p>You can't be the target of the Dream spell. In addition, when you finish a Long Rest, you gain proficiency in one skill of your choice. This proficiency lasts until you finish another Long Rest.</p></description>
+    <sheet>
+      <description>You can't be targeted by the Dream spell. After each Long Rest, gain proficiency in one skill of your choice until your next Long Rest.</description>
+    </sheet>
+    <rules></rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- SPECIES: KHORAVAR                                            -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="Khoravar" type="Race" source="Eberron: Forge of the Artificer" id="ID_EFA_RACE_KHORAVAR">
+    <description>
+      <p>Over centuries, those descended from both humans and elves have developed their own communities and traditions in Khorvaire. The rise of House Lyrandar and House Medani has strengthened this identity. Members of these communities call themselves Khoravar, an Elvish term meaning "children of Khorvaire," as they dislike the term "half-elf."</p>
+      <p>Many Khoravar espouse the idea of being "the bridge between," facilitating communication between members of different cultures or species. Khoravar who seek to build bridges between the Material Plane and the Feywild of Thelanis often become druids or warlocks with archfey patrons.</p>
+      <h4>Khoravar Traits</h4>
+      <p><b>Creature Type:</b> Humanoid</p>
+      <p><b>Size:</b> Medium (about 4–6 feet tall) or Small (about 2–4 feet tall), chosen when you select this species</p>
+      <p><b>Speed:</b> 30 feet</p>
+      <div element="ID_EFA_RACIAL_TRAIT_KHORAVAR_DARKVISION" />
+      <div element="ID_EFA_RACIAL_TRAIT_KHORAVAR_FEY_ANCESTRY" />
+      <div element="ID_EFA_RACIAL_TRAIT_KHORAVAR_FEY_GIFT" />
+      <div element="ID_EFA_RACIAL_TRAIT_KHORAVAR_LETHARGY_RESILIENCE" />
+      <div element="ID_EFA_RACIAL_TRAIT_KHORAVAR_SKILL_VERSATILITY" />
+    </description>
+    <sheet display="false" />
+    <rules>
+      <select type="Racial Trait" name="Size (Khoravar)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL||ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
+      <stat name="innate speed" value="30" bonus="base" />
+      <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_KHORAVAR_DARKVISION" />
+      <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_KHORAVAR_FEY_ANCESTRY" />
+      <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_KHORAVAR_FEY_GIFT" />
+      <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_KHORAVAR_LETHARGY_RESILIENCE" />
+      <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_KHORAVAR_SKILL_VERSATILITY" />
+      <grant type="Language" id="ID_LANGUAGE_COMMON" />
+      <grant type="Language" id="ID_LANGUAGE_ELVISH" />
+    </rules>
+  </element>
+  <element name="Darkvision (Khoravar)" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_KHORAVAR_DARKVISION">
+    <compendium display="false" />
+    <description><p>You have Darkvision with a range of 60 feet.</p></description>
+    <sheet><description>You have Darkvision with a range of 60 feet.</description></sheet>
+    <rules>
+      <grant type="Vision" id="ID_VISION_DARKVISION" />
+    </rules>
+  </element>
+  <element name="Fey Ancestry" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_KHORAVAR_FEY_ANCESTRY">
+    <compendium display="false" />
+    <description><p>You have Advantage on saving throws you make to avoid or end the Charmed condition.</p></description>
+    <sheet><description>Advantage on saving throws to avoid or end the Charmed condition.</description></sheet>
+    <rules></rules>
+  </element>
+  <element name="Fey Gift" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_KHORAVAR_FEY_GIFT">
+    <compendium display="false" />
+    <description><p>You know the Friends cantrip. Whenever you finish a Long Rest, you can replace that cantrip with a different cantrip from the Cleric, Druid, or Wizard spell list. Intelligence, Wisdom, or Charisma is your spellcasting ability for the spell you cast with this trait (chosen when you select this species).</p></description>
+    <sheet>
+      <description>You know the Friends cantrip (or a Cleric/Druid/Wizard cantrip, replaceable each Long Rest). Spellcasting ability: {{khoravar:spellcasting ability}}.</description>
+    </sheet>
+    <rules>
+      <grant type="Spell" id="ID_PHB_SPELL_FRIENDS" />
+      <select type="Racial Trait" name="Spellcasting Ability (Khoravar)" supports="Khoravar Spellcasting Ability" />
+    </rules>
+  </element>
+  <element name="Intelligence (Khoravar)" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_KHORAVAR_INTELLIGENCE">
+    <supports>Khoravar Spellcasting Ability</supports>
+    <compendium display="false" />
+    <description><p>Your spellcasting ability for Khoravar spells is Intelligence.</p></description>
+    <sheet display="false" />
+    <rules><stat name="khoravar:spellcasting ability" value="Intelligence" inline="true" /></rules>
+  </element>
+  <element name="Wisdom (Khoravar)" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_KHORAVAR_WISDOM">
+    <supports>Khoravar Spellcasting Ability</supports>
+    <compendium display="false" />
+    <description><p>Your spellcasting ability for Khoravar spells is Wisdom.</p></description>
+    <sheet display="false" />
+    <rules><stat name="khoravar:spellcasting ability" value="Wisdom" inline="true" /></rules>
+  </element>
+  <element name="Charisma (Khoravar)" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_KHORAVAR_CHARISMA">
+    <supports>Khoravar Spellcasting Ability</supports>
+    <compendium display="false" />
+    <description><p>Your spellcasting ability for Khoravar spells is Charisma.</p></description>
+    <sheet display="false" />
+    <rules><stat name="khoravar:spellcasting ability" value="Charisma" inline="true" /></rules>
+  </element>
+  <element name="Lethargy Resilience" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_KHORAVAR_LETHARGY_RESILIENCE">
+    <compendium display="false" />
+    <description><p>When you fail a saving throw to avoid or end the Unconscious condition, you can succeed instead. Once you use this trait, you can't do so again until you finish 1d4 Long Rests.</p></description>
+    <sheet usage="1d4 Long Rests">
+      <description>When you fail a save to avoid or end the Unconscious condition, you can succeed instead.</description>
+    </sheet>
+    <rules></rules>
+  </element>
+  <element name="Skill Versatility" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_KHORAVAR_SKILL_VERSATILITY">
+    <compendium display="false" />
+    <description><p>You gain proficiency in one skill or with one tool of your choice. Whenever you finish a Long Rest, you can replace it with another skill or tool proficiency.</p></description>
+    <sheet>
+      <description>Proficiency in one skill or tool of your choice, replaceable after each Long Rest.</description>
+    </sheet>
+    <rules>
+      <select type="Proficiency" name="Skill or Tool Versatility (Khoravar)" supports="Skill||Tool" />
+    </rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- SPECIES: SHIFTER                                             -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="Shifter" type="Race" source="Eberron: Forge of the Artificer" id="ID_EFA_RACE_SHIFTER">
+    <description>
+      <p>Shifters — sometimes called "weretouched" — descend from people who contracted full or partial lycanthropy. Humanoids with a bestial aspect, shifters can't change shape fully, but they can enhance their animalistic features temporarily in a process they call "shifting." Shifters resemble humans in height and build but are typically more lithe and flexible. Their facial features have a bestial cast, and many possess prominent canine teeth. They grow fur-like hair on nearly every part of their bodies.</p>
+      <h4>Shifter Traits</h4>
+      <p><b>Creature Type:</b> Humanoid</p>
+      <p><b>Size:</b> Medium (about 4–7 feet tall) or Small (about 2–4 feet tall), chosen when you select this species</p>
+      <p><b>Speed:</b> 30 feet</p>
+      <div element="ID_EFA_RACIAL_TRAIT_SHIFTER_BESTIAL_INSTINCTS" />
+      <div element="ID_EFA_RACIAL_TRAIT_SHIFTER_DARKVISION" />
+      <div element="ID_EFA_RACIAL_TRAIT_SHIFTER_SHIFTING" />
+    </description>
+    <sheet display="false" />
+    <rules>
+      <select type="Racial Trait" name="Size (Shifter)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL||ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
+      <stat name="innate speed" value="30" bonus="base" />
+      <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_SHIFTER_BESTIAL_INSTINCTS" />
+      <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_SHIFTER_DARKVISION" />
+      <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_SHIFTER_SHIFTING" />
+      <grant type="Language" id="ID_LANGUAGE_COMMON" />
+    </rules>
+  </element>
+  <element name="Bestial Instincts" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_SHIFTER_BESTIAL_INSTINCTS">
+    <compendium display="false" />
+    <description><p>Channeling the beast within, you gain proficiency in one of the following skills of your choice: Acrobatics, Athletics, Intimidation, or Survival.</p></description>
+    <sheet display="false" />
+    <rules>
+      <select type="Proficiency" name="Bestial Instincts (Shifter)" supports="Skill,(Acrobatics||Athletics||Intimidation||Survival)" />
+    </rules>
+  </element>
+  <element name="Darkvision (Shifter)" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_SHIFTER_DARKVISION">
+    <compendium display="false" />
+    <description><p>You have Darkvision with a range of 60 feet.</p></description>
+    <sheet><description>You have Darkvision with a range of 60 feet.</description></sheet>
+    <rules><grant type="Vision" id="ID_VISION_DARKVISION" /></rules>
+  </element>
+  <element name="Shifting" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_SHIFTER_SHIFTING">
+    <compendium display="false" />
+    <description>
+      <p>As a Bonus Action, you can shape-shift to assume a more bestial appearance for 1 minute or until you revert as a Bonus Action. When you shift, you gain Temporary Hit Points equal to 2 times your Proficiency Bonus. You can shift a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
+      <p>When you shift, choose one of the following options (chosen when you select this species):</p>
+      <p><b>Beasthide:</b> You gain 1d6 additional Temporary Hit Points. While shifted, you have a +1 bonus to your Armor Class.</p>
+      <p><b>Longtooth:</b> When you shift and as a Bonus Action on other turns while shifted, you can use your elongated fangs to make an Unarmed Strike. On a hit you deal Piercing damage equal to 1d6 plus your Strength modifier instead of the normal Unarmed Strike damage.</p>
+      <p><b>Swiftstride:</b> While shifted, your Speed increases by 10 feet. Additionally, you can move up to 10 feet as a Reaction when a creature ends its turn within 5 feet of you. This reactive movement doesn't provoke Opportunity Attacks.</p>
+      <p><b>Wildhunt:</b> While shifted, you have Advantage on Wisdom checks. Additionally, no creature within 30 feet of you can have Advantage on an attack roll against you unless you have the Incapacitated condition.</p>
+    </description>
+    <sheet action="Bonus Action" usage="{{proficiency}}/Long Rest">
+      <description>Shift for 1 minute (revert as Bonus Action). Gain {{shifting:temp hp}} Temporary HP. Choose your shifting type: Beasthide (+1d6 Temp HP, +1 AC), Longtooth (Unarmed Strike 1d6+Str Piercing as Bonus Action), Swiftstride (+10 ft Speed, move 10 ft Reaction when creature ends turn adjacent), Wildhunt (Adv on Wis checks; no creature within 30 ft can Adv attack rolls against you).</description>
+    </sheet>
+    <rules>
+      <stat name="shifting:temp hp" value="proficiency:2" />
+      <select type="Racial Trait" name="Shifting Form (Shifter)" supports="EFA Shifter Form" />
+    </rules>
+  </element>
+  <element name="Beasthide" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_SHIFTER_BEASTHIDE">
+    <supports>EFA Shifter Form</supports>
+    <compendium display="false" />
+    <description><p>While shifted, you gain 1d6 additional Temporary Hit Points and have a +1 bonus to your Armor Class.</p></description>
+    <sheet display="false" />
+    <rules></rules>
+  </element>
+  <element name="Longtooth" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_SHIFTER_LONGTOOTH">
+    <supports>EFA Shifter Form</supports>
+    <compendium display="false" />
+    <description><p>When you shift and as a Bonus Action on other turns while shifted, you can use your elongated fangs to make an Unarmed Strike dealing 1d6 + Strength modifier Piercing damage.</p></description>
+    <sheet display="false" />
+    <rules></rules>
+  </element>
+  <element name="Swiftstride" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_SHIFTER_SWIFTSTRIDE">
+    <supports>EFA Shifter Form</supports>
+    <compendium display="false" />
+    <description><p>While shifted, Speed increases by 10 feet. You can move up to 10 feet as a Reaction when a creature ends its turn within 5 feet of you (no Opportunity Attacks).</p></description>
+    <sheet display="false" />
+    <rules></rules>
+  </element>
+  <element name="Wildhunt" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_SHIFTER_WILDHUNT">
+    <supports>EFA Shifter Form</supports>
+    <compendium display="false" />
+    <description><p>While shifted, Advantage on Wisdom checks. No creature within 30 feet can have Advantage on attack rolls against you unless you have the Incapacitated condition.</p></description>
+    <sheet display="false" />
+    <rules></rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- SPECIES: WARFORGED                                           -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="Warforged" type="Race" source="Eberron: Forge of the Artificer" id="ID_EFA_RACE_WARFORGED">
+    <description>
+      <p>Warforged are mechanical beings built as weapons to fight in the Last War. An unexpected breakthrough produced sentient beings made from wood and metal that nevertheless can feel pain and emotion. Warforged comprise a blend of organic and inorganic materials. Rootlike cords infused with alchemical fluids serve as their muscles, wrapped around a framework of steel, darkwood, or stone. Armored plates form a protective outer shell.</p>
+      <h4>Warforged Traits</h4>
+      <p><b>Creature Type:</b> Construct</p>
+      <p><b>Size:</b> Medium (about 6–8 feet tall) or Small (about 3–4 feet tall), chosen when you select this species</p>
+      <p><b>Speed:</b> 30 feet</p>
+      <div element="ID_EFA_RACIAL_TRAIT_WARFORGED_CONSTRUCT_RESILIENCE" />
+      <div element="ID_EFA_RACIAL_TRAIT_WARFORGED_INTEGRATED_PROTECTION" />
+      <div element="ID_EFA_RACIAL_TRAIT_WARFORGED_SENTRYS_REST" />
+      <div element="ID_EFA_RACIAL_TRAIT_WARFORGED_SPECIALIZED_DESIGN" />
+      <div element="ID_EFA_RACIAL_TRAIT_WARFORGED_TIRELESS" />
+    </description>
+    <sheet display="false" />
+    <rules>
+      <select type="Racial Trait" name="Size (Warforged)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL||ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
+      <stat name="innate speed" value="30" bonus="base" />
+      <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_WARFORGED_CONSTRUCT_RESILIENCE" />
+      <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_WARFORGED_INTEGRATED_PROTECTION" />
+      <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_WARFORGED_SENTRYS_REST" />
+      <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_WARFORGED_SPECIALIZED_DESIGN" />
+      <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_WARFORGED_TIRELESS" />
+      <grant type="Language" id="ID_LANGUAGE_COMMON" />
+    </rules>
+  </element>
+  <element name="Construct Resilience" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_WARFORGED_CONSTRUCT_RESILIENCE">
+    <compendium display="false" />
+    <description><p>You have Resistance to Poison damage. You also have Advantage on saving throws to avoid or end the Poisoned condition.</p></description>
+    <sheet><description>Resistance to Poison damage. Advantage on saving throws to avoid or end the Poisoned condition.</description></sheet>
+    <rules>
+      <grant type="Condition Immunity" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+    </rules>
+  </element>
+  <element name="Integrated Protection" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_WARFORGED_INTEGRATED_PROTECTION">
+    <compendium display="false" />
+    <description><p>You gain a +1 bonus to your Armor Class. In addition, armor you have donned can't be removed against your will while you're alive.</p></description>
+    <sheet><description>+1 bonus to Armor Class. Armor you've donned can't be removed against your will while alive.</description></sheet>
+    <rules>
+      <stat name="ac:misc" value="1" />
+    </rules>
+  </element>
+  <element name="Sentry's Rest" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_WARFORGED_SENTRYS_REST">
+    <compendium display="false" />
+    <description><p>You don't need to sleep, and magic can't put you to sleep. You can finish a Long Rest in 6 hours if you spend those hours in an inactive, motionless state. During this time, you appear inert but remain conscious.</p></description>
+    <sheet><description>No sleep needed; immune to magical sleep. Long Rest requires only 6 hours of inactive, motionless state. You appear inert but remain conscious throughout.</description></sheet>
+    <rules></rules>
+  </element>
+  <element name="Specialized Design" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_WARFORGED_SPECIALIZED_DESIGN">
+    <compendium display="false" />
+    <description><p>You gain one skill proficiency and one tool proficiency of your choice.</p></description>
+    <sheet display="false" />
+    <rules>
+      <select type="Proficiency" name="Skill Proficiency (Warforged)" supports="Skill" />
+      <select type="Proficiency" name="Tool Proficiency (Warforged)" supports="Tool" />
+    </rules>
+  </element>
+  <element name="Tireless" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_WARFORGED_TIRELESS">
+    <compendium display="false" />
+    <description><p>You don't gain Exhaustion levels from dehydration, malnutrition, or suffocation.</p></description>
+    <sheet><description>You don't gain Exhaustion levels from dehydration, malnutrition, or suffocation.</description></sheet>
+    <rules></rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- DRAGONMARK FEATS                                             -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+
+  <element name="Aberrant Dragonmark" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_ABERRANT_DRAGONMARK">
+    <supports>Dragonmark</supports>
+    <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
+    <requirements>!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING</requirements>
+    <description>
+      <p><em>Dragonmark Feat (Prerequisite: Eberron Campaign, Can't Have Another Dragonmark Feat)</em></p>
+      <p><b>Aberrant Fortitude.</b> When you fail a Constitution saving throw, you can take a Reaction to roll 1d4 and add the number rolled to the save, potentially turning the failure into a success. Once you've used this benefit, you can't use it again until you finish a Long Rest.</p>
+      <p><b>Aberrant Magic.</b> You know one cantrip of your choice from the Sorcerer spell list. Also, choose a level 1 spell from that list. You always have that spell prepared, can cast it once without a spell slot (regain on Short or Long Rest), and can cast it using any spell slots you have. Constitution is your spellcasting ability.</p>
+      <p><b>Aberrant Surge.</b> When you cast the level 1 spell from this feat, expend one Hit Point Die and roll it. On an even number, gain Temporary Hit Points equal to the roll. On an odd number, one creature within 30 feet (not you) takes Force damage equal to the roll. If no other creatures are in range, you take the damage.</p>
+    </description>
+    <sheet>
+      <description>Aberrant Fortitude: Reaction to roll 1d4 + add to failed Con save (1/Long Rest). Aberrant Magic: know one Sorcerer cantrip + one level 1 Sorcerer spell (always prepared, free cast 1/Short or Long Rest; Con spellcasting ability). Aberrant Surge: when casting that spell, expend a Hit Die — even result = that many Temp HP; odd result = Force damage to creature within 30 ft.</description>
+    </sheet>
+    <rules>
+      <select type="Spell" name="Cantrip (Aberrant Dragonmark)" supports="Sorcerer, 0" />
+      <select type="Spell" name="Level 1 Spell (Aberrant Dragonmark)" supports="Sorcerer, 1" />
+    </rules>
+  </element>
+
+  <element name="Mark of Detection" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_DETECTION">
+    <supports>Dragonmark</supports>
+    <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
+    <description>
+      <p><em>Dragonmark Feat (Prerequisite: Eberron Campaign, Can't Have Another Dragonmark Feat)</em></p>
+      <p><b>Deductive Intuition.</b> When you make an Intelligence (Investigation) or Wisdom (Insight) check, you can roll 1d4 and add the number rolled to the ability check.</p>
+      <p><b>Magical Detection.</b> You always have the Detect Magic and Detect Poison and Disease spells prepared. Cast each once without a slot (regain on Long Rest); also cast using any spell slots. Intelligence, Wisdom, or Charisma is your spellcasting ability (chosen when you select this feat). At level 3, you also always have See Invisibility prepared and can cast it the same way.</p>
+      <p><b>Spells of the Mark.</b> If you have Spellcasting or Pact Magic, the Mark of Detection spells are added to your spell list.</p>
+    </description>
+    <sheet><description>Deductive Intuition: +1d4 to Intelligence (Investigation) or Wisdom (Insight) checks. Always have Detect Magic and Detect Poison and Disease prepared (free once/Long Rest; {{detection:spellcasting ability}} spellcasting). At level 3+: also have See Invisibility.</description></sheet>
+    <rules>
+      <grant type="Spell" id="ID_PHB_SPELL_DETECT_MAGIC" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_DETECT_POISON_AND_DISEASE" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_SEE_INVISIBILITY" prepared="true" level="3" />
+      <select type="Racial Trait" name="Spellcasting Ability (Mark of Detection)" supports="EFA Mark of Detection Spellcasting" />
+    </rules>
+  </element>
+  <element name="Intelligence (Mark of Detection)" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_DETECTION_INT"><supports>EFA Mark of Detection Spellcasting</supports><compendium display="false" /><description/><sheet display="false" /><rules><stat name="detection:spellcasting ability" value="Intelligence" inline="true" /></rules></element>
+  <element name="Wisdom (Mark of Detection)" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_DETECTION_WIS"><supports>EFA Mark of Detection Spellcasting</supports><compendium display="false" /><description/><sheet display="false" /><rules><stat name="detection:spellcasting ability" value="Wisdom" inline="true" /></rules></element>
+  <element name="Charisma (Mark of Detection)" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_DETECTION_CHA"><supports>EFA Mark of Detection Spellcasting</supports><compendium display="false" /><description/><sheet display="false" /><rules><stat name="detection:spellcasting ability" value="Charisma" inline="true" /></rules></element>
+
+  <element name="Mark of Finding" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_FINDING">
+    <supports>Dragonmark</supports>
+    <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
+    <description><p><em>Dragonmark Feat</em></p><p><b>Hunter's Intuition.</b> When you make a Wisdom (Perception or Survival) check, roll 1d4 and add it. <b>Finder's Magic.</b> Always have Hunter's Mark prepared (free cast once, regain on Long Rest; also via spell slots). At level 3, also always have Locate Object. Intelligence, Wisdom, or Charisma is your spellcasting ability (chosen when you select this feat). Spells of the Mark added to your list if you have Spellcasting or Pact Magic.</p></description>
+    <sheet><description>Hunter's Intuition: +1d4 to Wisdom (Perception or Survival) checks. Always have Hunter's Mark prepared (free once/Long Rest). At level 3+: also have Locate Object.</description></sheet>
+    <rules>
+      <grant type="Spell" id="ID_PHB_SPELL_HUNTERS_MARK" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_LOCATE_OBJECT" prepared="true" level="3" />
+    </rules>
+  </element>
+
+  <element name="Mark of Handling" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_HANDLING">
+    <supports>Dragonmark</supports>
+    <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
+    <description><p><em>Dragonmark Feat</em></p><p><b>Wild Intuition.</b> +1d4 to Intelligence (Nature) or Wisdom (Animal Handling) checks. <b>Primal Connection.</b> Always have Animal Friendship and Speak with Animals prepared (free once each, Long Rest). At level 3, can target Monstrosities with Intelligence 3 or lower with these spells. Intelligence, Wisdom, or Charisma spellcasting ability.</p></description>
+    <sheet><description>Wild Intuition: +1d4 to Intelligence (Nature) or Wisdom (Animal Handling) checks. Always have Animal Friendship and Speak with Animals (free once/Long Rest each). At level 3+: can target Monstrosities (Int 3 or lower) with these spells.</description></sheet>
+    <rules>
+      <grant type="Spell" id="ID_PHB_SPELL_ANIMAL_FRIENDSHIP" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_SPEAK_WITH_ANIMALS" prepared="true" />
+    </rules>
+  </element>
+
+  <element name="Mark of Healing" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_HEALING">
+    <supports>Dragonmark</supports>
+    <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
+    <description><p><em>Dragonmark Feat</em></p><p><b>Medical Intuition.</b> +1d4 to Wisdom (Medicine) checks or ability checks using a Herbalism Kit. <b>Healing Touch.</b> Always have Cure Wounds prepared (free once, Long Rest). At level 3, also always have Lesser Restoration. Intelligence, Wisdom, or Charisma spellcasting ability.</p></description>
+    <sheet><description>Medical Intuition: +1d4 to Wisdom (Medicine) or Herbalism Kit checks. Always have Cure Wounds (free once/Long Rest). At level 3+: also have Lesser Restoration.</description></sheet>
+    <rules>
+      <grant type="Spell" id="ID_PHB_SPELL_CURE_WOUNDS" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_LESSER_RESTORATION" prepared="true" level="3" />
+    </rules>
+  </element>
+
+  <element name="Mark of Hospitality" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_HOSPITALITY">
+    <supports>Dragonmark</supports>
+    <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
+    <description><p><em>Dragonmark Feat</em></p><p><b>Ever Hospitable.</b> +1d4 to Charisma (Persuasion) checks or ability checks using Brewer's Supplies or Cook's Utensils. <b>Innkeeper's Magic.</b> Always have Purify Food and Drink and Unseen Servant prepared (free once each, Long Rest). At level 3, also have Calm Emotions. Intelligence, Wisdom, or Charisma spellcasting ability.</p></description>
+    <sheet><description>Ever Hospitable: +1d4 to Charisma (Persuasion), Brewer's Supplies, or Cook's Utensils checks. Always have Purify Food and Drink and Unseen Servant (free once each/Long Rest). At level 3+: also have Calm Emotions.</description></sheet>
+    <rules>
+      <grant type="Spell" id="ID_PHB_SPELL_PURIFY_FOOD_AND_DRINK" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_UNSEEN_SERVANT" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_CALM_EMOTIONS" prepared="true" level="3" />
+    </rules>
+  </element>
+
+  <element name="Mark of Making" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_MAKING">
+    <supports>Dragonmark</supports>
+    <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
+    <description><p><em>Dragonmark Feat</em></p><p><b>Artisan's Intuition.</b> +1d4 to Intelligence (Arcana) checks or ability checks using Artisan's Tools. <b>Spellsmith.</b> Know the Mending cantrip. Always have Magic Weapon prepared (free once, Long Rest). Intelligence, Wisdom, or Charisma spellcasting ability.</p></description>
+    <sheet><description>Artisan's Intuition: +1d4 to Intelligence (Arcana) or Artisan's Tools checks. Know Mending cantrip. Always have Magic Weapon (free once/Long Rest).</description></sheet>
+    <rules>
+      <grant type="Spell" id="ID_PHB_SPELL_MENDING" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_MAGIC_WEAPON" prepared="true" />
+    </rules>
+  </element>
+
+  <element name="Mark of Passage" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_PASSAGE">
+    <supports>Dragonmark</supports>
+    <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
+    <description><p><em>Dragonmark Feat</em></p><p><b>Courier's Speed.</b> Your Speed increases by 5 feet. <b>Intuitive Motion.</b> +1d4 to Strength (Athletics) or Dexterity (Acrobatics) checks. <b>Magical Passage.</b> Always have Misty Step prepared (free once, Long Rest). Intelligence, Wisdom, or Charisma spellcasting ability.</p></description>
+    <sheet><description>Courier's Speed: +5 feet to Speed. Intuitive Motion: +1d4 to Strength (Athletics) or Dexterity (Acrobatics) checks. Always have Misty Step (free once/Long Rest).</description></sheet>
+    <rules>
+      <stat name="innate speed:misc" value="5" />
+      <grant type="Spell" id="ID_PHB_SPELL_MISTY_STEP" prepared="true" />
+    </rules>
+  </element>
+
+  <element name="Mark of Scribing" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_SCRIBING">
+    <supports>Dragonmark</supports>
+    <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
+    <description><p><em>Dragonmark Feat</em></p><p><b>Gifted Scribe.</b> +1d4 to Intelligence (History) checks or ability checks using Calligrapher's Supplies. <b>Scribe's Insight.</b> Know the Message cantrip. Always have Comprehend Languages prepared (free once, Long Rest). At level 3, also always have Magic Mouth. Intelligence, Wisdom, or Charisma spellcasting ability.</p></description>
+    <sheet><description>Gifted Scribe: +1d4 to Intelligence (History) or Calligrapher's Supplies checks. Know Message cantrip. Always have Comprehend Languages (free once/Long Rest). At level 3+: also have Magic Mouth.</description></sheet>
+    <rules>
+      <grant type="Spell" id="ID_PHB_SPELL_MESSAGE" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_COMPREHEND_LANGUAGES" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_MAGIC_MOUTH" prepared="true" level="3" />
+    </rules>
+  </element>
+
+  <element name="Mark of Sentinel" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_SENTINEL">
+    <supports>Dragonmark</supports>
+    <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
+    <description><p><em>Dragonmark Feat</em></p><p><b>Sentinel's Intuition.</b> +1d4 to Wisdom (Insight or Perception) checks. <b>Guardian's Shield.</b> Always have Shield prepared (free once, Long Rest). <b>Vigilant Guardian.</b> When a creature you can see within 5 feet is hit by an attack, you can Reaction to swap places with that creature, and you are hit by the attack instead. Uses = Proficiency Bonus, regain on Long Rest. Intelligence, Wisdom, or Charisma spellcasting ability.</p></description>
+    <sheet usage="{{proficiency}}/Long Rest">
+      <description>Sentinel's Intuition: +1d4 to Wisdom (Insight or Perception) checks. Always have Shield (free once/Long Rest). Vigilant Guardian: Reaction to swap places with an adjacent creature hit by an attack — you are hit instead.</description>
+    </sheet>
+    <rules>
+      <grant type="Spell" id="ID_PHB_SPELL_SHIELD" prepared="true" />
+    </rules>
+  </element>
+
+  <element name="Mark of Shadow" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_SHADOW">
+    <supports>Dragonmark</supports>
+    <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
+    <description><p><em>Dragonmark Feat</em></p><p><b>Cunning Intuition.</b> +1d4 to Dexterity (Stealth) or Charisma (Performance) checks. <b>Shape Shadows.</b> Know the Minor Illusion cantrip. Always have Invisibility prepared (free once, Long Rest). Intelligence, Wisdom, or Charisma spellcasting ability.</p></description>
+    <sheet><description>Cunning Intuition: +1d4 to Dexterity (Stealth) or Charisma (Performance) checks. Know Minor Illusion cantrip. Always have Invisibility (free once/Long Rest).</description></sheet>
+    <rules>
+      <grant type="Spell" id="ID_PHB_SPELL_MINOR_ILLUSION" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_INVISIBILITY" prepared="true" />
+    </rules>
+  </element>
+
+  <element name="Mark of Storm" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_STORM">
+    <supports>Dragonmark</supports>
+    <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
+    <description><p><em>Dragonmark Feat</em></p><p><b>Windwright's Intuition.</b> +1d4 to Dexterity (Acrobatics) checks or ability checks using Navigator's Tools. <b>Storm's Boon.</b> Resistance to Lightning damage. <b>Storm Magic.</b> Know the Thunderclap cantrip. At level 3, also always have Gust of Wind prepared (free once, Long Rest). Intelligence, Wisdom, or Charisma spellcasting ability.</p></description>
+    <sheet><description>Windwright's Intuition: +1d4 to Dexterity (Acrobatics) or Navigator's Tools checks. Storm's Boon: Resistance to Lightning damage. Know Thunderclap cantrip. At level 3+: always have Gust of Wind (free once/Long Rest).</description></sheet>
+    <rules>
+      <grant type="Condition Immunity" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_THUNDERCLAP" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_GUST_OF_WIND" prepared="true" level="3" />
+    </rules>
+  </element>
+
+  <element name="Mark of Warding" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_WARDING">
+    <supports>Dragonmark</supports>
+    <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
+    <description><p><em>Dragonmark Feat</em></p><p><b>Warden's Intuition.</b> +1d4 to Intelligence (Investigation) checks or ability checks using Thieves' Tools. <b>Wards and Seals.</b> Always have Alarm and Mage Armor prepared (free once each, Long Rest). At level 3, also always have Arcane Lock. Intelligence, Wisdom, or Charisma spellcasting ability.</p></description>
+    <sheet><description>Warden's Intuition: +1d4 to Intelligence (Investigation) or Thieves' Tools checks. Always have Alarm and Mage Armor (free once each/Long Rest). At level 3+: also have Arcane Lock.</description></sheet>
+    <rules>
+      <grant type="Spell" id="ID_PHB_SPELL_ALARM" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_MAGE_ARMOR" prepared="true" />
+      <grant type="Spell" id="ID_PHB_SPELL_ARCANE_LOCK" prepared="true" level="3" />
+    </rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- GENERAL FEATS (GREATER DRAGONMARKS)                          -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+
+  <element name="Greater Aberrant Mark" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_ABERRANT_MARK">
+    <prerequisite>Level 4+; Aberrant Dragonmark Feat</prerequisite>
+    <requirements>ID_EFA_FEAT_ABERRANT_DRAGONMARK</requirements>
+    <description><p><em>General Feat (Prerequisite: Level 4+, Aberrant Dragonmark Feat)</em></p><p><b>Ability Score Increase.</b> Increase your Constitution score by 1, to a maximum of 20. <b>Improved Fortitude.</b> When you use Aberrant Fortitude, roll 1d6 instead of 1d4. You also regain your use of Aberrant Fortitude when you finish a Short Rest. <b>Mark of Inspiration.</b> When you cast a cantrip, roll one or two unexpended Hit Dice. You gain Temp HP = roll + Con modifier, and one creature within 30 ft takes Force damage = roll. Those dice are then expended. Uses = Proficiency Bonus, Long Rest.</p></description>
+    <sheet usage="{{proficiency}}/Long Rest"><description>+1 Con. Improved Fortitude: roll 1d6 (not 1d4) for Aberrant Fortitude; regain use on Short Rest. Mark of Inspiration: when you cast a cantrip, roll 1–2 Hit Dice — gain that many Temp HP + Con mod, and a creature within 30 ft takes that much Force damage.</description></sheet>
+    <rules><stat name="constitution" value="1" requirements="constitution:max20" /></rules>
+  </element>
+
+  <element name="Greater Mark of Detection" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_DETECTION">
+    <prerequisite>Level 4+; Mark of Detection Feat</prerequisite>
+    <requirements>ID_EFA_FEAT_MARK_OF_DETECTION</requirements>
+    <description><p><em>General Feat (Prerequisite: Level 4+, Mark of Detection Feat)</em></p><p><b>Ability Score Increase.</b> +1 to one ability score of your choice, max 20. <b>Improved Intuition.</b> When you use Deductive Intuition, roll 1d6 instead of 1d4. <b>Shared Detection.</b> When you use Magical Detection to cast See Invisibility without a slot, you can also choose one creature within 30 feet — that creature also gains the spell's benefits for its duration.</p></description>
+    <sheet><description>+1 to one ability score. Improved Intuition: roll 1d6 for Deductive Intuition. Shared Detection: when casting See Invisibility via Magical Detection, one creature within 30 ft also benefits.</description></sheet>
+    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Detection)" supports="Ability Score Increase" /></rules>
+  </element>
+
+  <element name="Greater Mark of Finding" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_FINDING">
+    <prerequisite>Level 4+; Mark of Finding Feat</prerequisite>
+    <requirements>ID_EFA_FEAT_MARK_OF_FINDING</requirements>
+    <description><p><em>General Feat (Prerequisite: Level 4+, Mark of Finding Feat)</em></p><p><b>Ability Score Increase.</b> +1 to one ability score of your choice, max 20. <b>Improved Intuition.</b> Roll 1d6 instead of 1d4 for Hunter's Intuition. <b>Improved Finding.</b> When you use Finder's Magic to cast Hunter's Mark without a slot, the range of the spell is doubled and the target can't benefit from the Invisible condition for the duration.</p></description>
+    <sheet><description>+1 to one ability score. Improved Intuition: roll 1d6 for Hunter's Intuition. Improved Finding: free Hunter's Mark has doubled range; target can't benefit from Invisible condition.</description></sheet>
+    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Finding)" supports="Ability Score Increase" /></rules>
+  </element>
+
+  <element name="Greater Mark of Handling" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_HANDLING">
+    <prerequisite>Level 4+; Mark of Handling Feat</prerequisite>
+    <requirements>ID_EFA_FEAT_MARK_OF_HANDLING</requirements>
+    <description><p><em>General Feat (Prerequisite: Level 4+, Mark of Handling Feat)</em></p><p><b>Ability Score Increase.</b> +1 to one ability score, max 20. <b>Improved Intuition.</b> Roll 1d6 for Wild Intuition. <b>Improved Handling.</b> While mounted, immediately after hitting a target within 5 feet of your mount with a melee attack, your mount can Reaction to move up to its Speed or take the Attack action (one attack only). <b>Subdue Animal.</b> Magic action: exert command over one Beast or Monstrosity within 30 feet (Int 3 or lower). Target must succeed on Wisdom save (DC 8 + Wisdom mod + PB) or become Frightened until start of your next turn. Uses = PB, Long Rest.</p></description>
+    <sheet usage="{{proficiency}}/Long Rest"><description>+1 to one ability score. Improved Intuition: 1d6 for Wild Intuition. Improved Handling: after hitting while mounted, mount can Reaction to move its Speed or make one attack. Subdue Animal (Magic Action): Beast/Monstrosity within 30 ft (Int ≤3) must make Wis save (DC {{subdue animal:dc}}) or become Frightened until your next turn.</description></sheet>
+    <rules>
+      <select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Handling)" supports="Ability Score Increase" />
+      <stat name="subdue animal:dc" value="8" />
+      <stat name="subdue animal:dc" value="wisdom:modifier" />
+      <stat name="subdue animal:dc" value="proficiency" />
+    </rules>
+  </element>
+
+  <element name="Greater Mark of Healing" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_HEALING">
+    <prerequisite>Level 4+; Mark of Healing Feat</prerequisite>
+    <requirements>ID_EFA_FEAT_MARK_OF_HEALING</requirements>
+    <description><p><em>General Feat (Prerequisite: Level 4+, Mark of Healing Feat)</em></p><p><b>Ability Score Increase.</b> +1 to one ability score, max 20. <b>Improved Intuition.</b> Roll 1d6 for Medical Intuition. <b>Improved Healing.</b> You can use Healing Touch to cast Cure Wounds without a slot a number of times equal to your Proficiency Bonus (Long Rest). Additionally, when you cast Cure Wounds and roll dice to determine HP restored, treat any 1 or 2 on a die as a 3.</p></description>
+    <sheet usage="{{proficiency}}/Long Rest (Improved Healing)"><description>+1 to one ability score. Improved Intuition: 1d6 for Medical Intuition. Improved Healing: cast Cure Wounds free up to PB times/Long Rest; treat 1s and 2s on healing dice as 3s.</description></sheet>
+    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Healing)" supports="Ability Score Increase" /></rules>
+  </element>
+
+  <element name="Greater Mark of Hospitality" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_HOSPITALITY">
+    <prerequisite>Level 4+; Mark of Hospitality Feat</prerequisite>
+    <requirements>ID_EFA_FEAT_MARK_OF_HOSPITALITY</requirements>
+    <description><p><em>General Feat (Prerequisite: Level 4+, Mark of Hospitality Feat)</em></p><p><b>Ability Score Increase.</b> +1 to one ability score, max 20. <b>Improved Intuition.</b> Roll 1d6 for Ever Hospitable. <b>Inspired Hospitality.</b> When you cast Purify Food and Drink, you can modify it so that instead of its normal effect, each creature of your choice within 30 feet is refreshed: Exhaustion level reduced by 1, and the creature gains Temp HP equal to PB + Intelligence/Wisdom/Charisma modifier (chosen when you select this feat). Once you modify the spell this way, you can't do so again until you finish a Long Rest.</p></description>
+    <sheet usage="1/Long Rest (Inspired Hospitality)"><description>+1 to one ability score. Improved Intuition: 1d6 for Ever Hospitable. Inspired Hospitality: when casting Purify Food and Drink, instead refresh creatures within 30 ft — reduce Exhaustion by 1 and grant {{hospitality:temp hp}} Temp HP each.</description></sheet>
+    <rules>
+      <select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Hospitality)" supports="Ability Score Increase" />
+      <stat name="hospitality:temp hp" value="proficiency" />
+      <stat name="hospitality:temp hp" value="charisma:modifier" bonus="ability" />
+    </rules>
+  </element>
+
+  <element name="Greater Mark of Making" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_MAKING">
+    <prerequisite>Level 4+; Mark of Making Feat</prerequisite>
+    <requirements>ID_EFA_FEAT_MARK_OF_MAKING</requirements>
+    <description><p><em>General Feat (Prerequisite: Level 4+, Mark of Making Feat)</em></p><p><b>Ability Score Increase.</b> +1 to one ability score, max 20. <b>Improved Intuition.</b> Roll 1d6 for Artisan's Intuition. <b>Improved Making.</b> When you use Spellsmith to cast Magic Weapon without a slot, you cast the spell as its level 3 version.</p></description>
+    <sheet><description>+1 to one ability score. Improved Intuition: 1d6 for Artisan's Intuition. Improved Making: free Magic Weapon cast becomes level 3 version.</description></sheet>
+    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Making)" supports="Ability Score Increase" /></rules>
+  </element>
+
+  <element name="Greater Mark of Passage" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_PASSAGE">
+    <prerequisite>Level 4+; Mark of Passage Feat</prerequisite>
+    <requirements>ID_EFA_FEAT_MARK_OF_PASSAGE</requirements>
+    <description><p><em>General Feat (Prerequisite: Level 4+, Mark of Passage Feat)</em></p><p><b>Ability Score Increase.</b> +1 to one ability score, max 20. <b>Improved Intuition.</b> Roll 1d6 for Intuitive Motion. <b>Inspired Passage.</b> When you use Magical Passage to cast Misty Step without a slot, you can also choose up to two willing creatures within 30 feet — each can Reaction to also teleport up to 30 feet to an unoccupied space it can see.</p></description>
+    <sheet><description>+1 to one ability score. Improved Intuition: 1d6 for Intuitive Motion. Inspired Passage: when casting free Misty Step, up to two willing creatures within 30 ft can Reaction to also teleport up to 30 ft.</description></sheet>
+    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Passage)" supports="Ability Score Increase" /></rules>
+  </element>
+
+  <element name="Greater Mark of Scribing" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_SCRIBING">
+    <prerequisite>Level 4+; Mark of Scribing Feat</prerequisite>
+    <requirements>ID_EFA_FEAT_MARK_OF_SCRIBING</requirements>
+    <description><p><em>General Feat (Prerequisite: Level 4+, Mark of Scribing Feat)</em></p><p><b>Ability Score Increase.</b> +1 to one ability score, max 20. <b>Improved Intuition.</b> Roll 1d6 for Gifted Scribe. <b>Inspired Scribing.</b> When you cast Comprehend Languages, you can modify the spell to encompass up to three willing creatures within 30 feet. Each also gains the spell's benefits. You and the chosen creatures can communicate telepathically within 1 mile of each other for the duration. Once you modify the spell this way, you can't do so again until you finish a Long Rest.</p></description>
+    <sheet usage="1/Long Rest (Inspired Scribing)"><description>+1 to one ability score. Improved Intuition: 1d6 for Gifted Scribe. Inspired Scribing: when casting Comprehend Languages, extend to three willing creatures within 30 ft; all gain the benefit and can telepathically communicate within 1 mile for the duration.</description></sheet>
+    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Scribing)" supports="Ability Score Increase" /></rules>
+  </element>
+
+  <element name="Greater Mark of Sentinel" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_SENTINEL">
+    <prerequisite>Level 4+; Mark of Sentinel Feat</prerequisite>
+    <requirements>ID_EFA_FEAT_MARK_OF_SENTINEL</requirements>
+    <description><p><em>General Feat (Prerequisite: Level 4+, Mark of Sentinel Feat)</em></p><p><b>Ability Score Increase.</b> +1 to one ability score, max 20. <b>Improved Intuition.</b> Roll 1d6 for Sentinel's Intuition. <b>Improved Sentinel.</b> When you use Vigilant Guardian to swap places with a creature that is being attacked, you can also make one attack with a weapon or Unarmed Strike as part of that same Reaction.</p></description>
+    <sheet><description>+1 to one ability score. Improved Intuition: 1d6 for Sentinel's Intuition. Improved Sentinel: when using Vigilant Guardian to swap places, also make one weapon or Unarmed Strike attack as part of that Reaction.</description></sheet>
+    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Sentinel)" supports="Ability Score Increase" /></rules>
+  </element>
+
+  <element name="Greater Mark of Shadow" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_SHADOW">
+    <prerequisite>Level 4+; Mark of Shadow Feat</prerequisite>
+    <requirements>ID_EFA_FEAT_MARK_OF_SHADOW</requirements>
+    <description><p><em>General Feat (Prerequisite: Level 4+, Mark of Shadow Feat)</em></p><p><b>Ability Score Increase.</b> +1 to one ability score, max 20. <b>Improved Intuition.</b> Roll 1d6 for Cunning Intuition. <b>Improved Shadow.</b> When you use Shape Shadows to cast Invisibility without a slot, you cast the spell as its level 3 version.</p></description>
+    <sheet><description>+1 to one ability score. Improved Intuition: 1d6 for Cunning Intuition. Improved Shadow: free Invisibility becomes level 3 version.</description></sheet>
+    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Shadow)" supports="Ability Score Increase" /></rules>
+  </element>
+
+  <element name="Greater Mark of Storm" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_STORM">
+    <prerequisite>Level 4+; Mark of Storm Feat</prerequisite>
+    <requirements>ID_EFA_FEAT_MARK_OF_STORM</requirements>
+    <description><p><em>General Feat (Prerequisite: Level 4+, Mark of Storm Feat)</em></p><p><b>Ability Score Increase.</b> +1 to one ability score, max 20. <b>Improved Intuition.</b> Roll 1d5 instead of 1d4 for Windwright's Intuition. <b>Improved Storm.</b> When you use Storm Magic to cast Gust of Wind without a slot, you also gain a Fly Speed of 60 feet for the duration of the spell.</p></description>
+    <sheet><description>+1 to one ability score. Improved Intuition: roll 1d5 for Windwright's Intuition. Improved Storm: free Gust of Wind also grants Fly Speed of 60 feet for its duration.</description></sheet>
+    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Storm)" supports="Ability Score Increase" /></rules>
+  </element>
+
+  <element name="Greater Mark of Warding" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_WARDING">
+    <prerequisite>Level 4+; Mark of Warding Feat</prerequisite>
+    <requirements>ID_EFA_FEAT_MARK_OF_WARDING</requirements>
+    <description><p><em>General Feat (Prerequisite: Level 4+, Mark of Warding Feat)</em></p><p><b>Ability Score Increase.</b> +1 to one ability score, max 20. <b>Improved Intuition.</b> Roll 1d6 for Warden's Intuition. <b>Improved Warding.</b> When a creature makes an attack roll against you or a creature you can see within 30 feet, you can Reaction to impose Disadvantage on that roll. Uses = Proficiency Bonus, Long Rest.</p></description>
+    <sheet usage="{{proficiency}}/Long Rest"><description>+1 to one ability score. Improved Intuition: 1d6 for Warden's Intuition. Improved Warding: Reaction to impose Disadvantage on an attack roll against you or a creature within 30 ft.</description></sheet>
+    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Warding)" supports="Ability Score Increase" /></rules>
+  </element>
+
+  <element name="Potent Dragonmark" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_POTENT_DRAGONMARK">
+    <prerequisite>Level 4+; Any Dragonmark Feat</prerequisite>
+    <description><p><em>General Feat (Prerequisite: Level 4+, Any Dragonmark Feat)</em></p><p><b>Ability Score Increase.</b> Increase the spellcasting ability score used by your Dragonmark feat by 1, to a maximum of 20. <b>Dragonmark Preparation.</b> You always have the spells on your Spells of the Mark list (if any) prepared. <b>Dragonmark Spellcasting.</b> You have one extra spell slot to cast the spells granted by your Dragonmark feat. The slot's level is half your level (round up), maximum level 5. You regain it on a Short or Long Rest. You can use this slot only to cast a spell you have prepared because of your Dragonmark feat.</p></description>
+    <sheet><description>+1 to your Dragonmark spellcasting ability score. Always have your Spells of the Mark prepared. Gain one extra spell slot at level {{potent dragonmark:slot level}} (max 5) that recharges on Short or Long Rest; usable only for Dragonmark spells.</description></sheet>
+    <rules>
+      <stat name="potent dragonmark:slot level" value="level:half:rounded up" />
+    </rules>
+  </element>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- EPIC BOON: BOON OF SIBERYS                                   -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <element name="Boon of Siberys" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_BOON_OF_SIBERYS">
+    <supports>Epic Boon</supports>
+    <prerequisite>Level 19+; Eberron Campaign</prerequisite>
+    <description>
+      <p><em>Epic Boon Feat (Prerequisite: Level 19+, Eberron Campaign)</em></p>
+      <p>This feat can represent either a Siberys dragonmark or a powerful aberrant dragonmark.</p>
+      <p><b>Ability Score Increase.</b> Increase one ability score of your choice by 1, to a maximum of 30.</p>
+      <p><b>Aberrant Magic.</b> Choose a level 8 or lower spell from the Sorcerer spell list, or a spell from the Siberys Dragonmark Spells table. You always have that spell prepared. You can cast it once without a spell slot or spell components, and you regain the ability to cast it that way when you finish a Short or Long Rest. You can also cast the spell using any spell slots you have. Intelligence, Wisdom, or Charisma is your spellcasting ability (chosen when you gain this feat).</p>
+      <p>Suggested spells by dragonmark: Animal Shapes (Handling), Control Weather (Storm), Demiplane (Making), Heroes' Feast (Hospitality), Maze (Warding), Mind Blank (Sentinel), Plane Shift (Passage), Project Image (Shadow), Regenerate (Healing), Symbol (Scribing), Teleport (Finding), True Seeing (Detection).</p>
+    </description>
+    <sheet>
+      <description>+1 to one ability score (max 30). Choose a Sorcerer spell of level 8 or lower (or from Siberys Dragonmark Spells table) — always have it prepared; cast it free once per Short or Long Rest (no components). Can also cast using spell slots.</description>
+    </sheet>
+    <rules>
+      <select type="Ability Score Improvement" name="Ability Score Increase (Boon of Siberys)" supports="Ability Score Increase, 30" />
+      <select type="Spell" name="Siberys Spell (Boon of Siberys)" supports="Sorcerer,(1||2||3||4||5||6||7||8)" />
+    </rules>
+  </element>
+
+</elements>
