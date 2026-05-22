@@ -2,7 +2,7 @@
 <elements>
   <info>
     <name>Eberron: Forge of the Artificer - Species and Feats</name>
-    <update version="0.1.2">
+    <update version="0.1.3">
       <file name="efa-species-feats.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/Eberron%20Forge%20of%20the%20Artificer/efa-species-feats.xml" />
     </update>
   </info>
@@ -23,8 +23,10 @@
     </description>
     <sheet display="false" />
     <rules>
-      <select type="Racial Trait" name="Size (Changeling)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL||ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
+      <select type="Racial Trait" name="Size (Changeling)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL|ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
       <stat name="innate speed" value="30" bonus="base" />
+      <grant type="Racial Trait" id="ID_INTERNAL_RACIAL_TRAIT_TYPE_FEY" />
+      <grant type="Grants" id="ID_INTERNAL_GRANT_RACE_CHANGELING" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_CHANGELING_INSTINCTS" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_CHANGELING_SHAPE_SHIFTER" />
       <grant type="Language" id="ID_LANGUAGE_COMMON" />
@@ -67,6 +69,8 @@
     <rules>
       <grant type="Size" id="ID_SIZE_MEDIUM" />
       <stat name="innate speed" value="30" bonus="base" />
+      <grant type="Racial Trait" id="ID_INTERNAL_RACIAL_TRAIT_TYPE_ABERRATION" />
+      <grant type="Grants" id="ID_INTERNAL_GRANT_RACE_KALASHTAR" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_KALASHTAR_DUAL_MIND" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_KALASHTAR_MENTAL_DISCIPLINE" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_KALASHTAR_MIND_LINK" />
@@ -125,8 +129,9 @@
     </description>
     <sheet display="false" />
     <rules>
-      <select type="Racial Trait" name="Size (Khoravar)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL||ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
+      <select type="Racial Trait" name="Size (Khoravar)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL|ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
       <stat name="innate speed" value="30" bonus="base" />
+      <grant type="Grants" id="ID_INTERNAL_GRANT_RACE_HALF_ELF" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_KHORAVAR_DARKVISION" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_KHORAVAR_FEY_ANCESTRY" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_KHORAVAR_FEY_GIFT" />
@@ -217,8 +222,9 @@
     </description>
     <sheet display="false" />
     <rules>
-      <select type="Racial Trait" name="Size (Shifter)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL||ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
+      <select type="Racial Trait" name="Size (Shifter)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL|ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
       <stat name="innate speed" value="30" bonus="base" />
+      <grant type="Grants" id="ID_INTERNAL_GRANT_RACE_SHIFTER" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_SHIFTER_BESTIAL_INSTINCTS" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_SHIFTER_DARKVISION" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_SHIFTER_SHIFTING" />
@@ -304,8 +310,10 @@
     </description>
     <sheet display="false" />
     <rules>
-      <select type="Racial Trait" name="Size (Warforged)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL||ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
+      <select type="Racial Trait" name="Size (Warforged)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL|ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
       <stat name="innate speed" value="30" bonus="base" />
+      <grant type="Racial Trait" id="ID_INTERNAL_RACIAL_TRAIT_TYPE_CONSTRUCT" />
+      <grant type="Grants" id="ID_INTERNAL_GRANT_RACE_WARFORGED" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_WARFORGED_CONSTRUCT_RESILIENCE" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_WARFORGED_INTEGRATED_PROTECTION" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_WARFORGED_SENTRYS_REST" />
