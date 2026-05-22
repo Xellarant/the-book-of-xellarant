@@ -123,8 +123,18 @@
       <stat name="artificer:cantrips:known" value="2" level="1" />
       <stat name="artificer:cantrips:known" value="1" level="10" />
       <stat name="artificer:cantrips:known" value="1" level="14" />
-      <stat name="artificer:spellcasting:prepare" value="intelligence:modifier" />
-      <stat name="artificer:spellcasting:prepare" value="level:artificer" />
+      <stat name="artificer:spellcasting:prepare" value="2" level="1" />
+      <stat name="artificer:spellcasting:prepare" value="1" level="2" />
+      <stat name="artificer:spellcasting:prepare" value="1" level="3" />
+      <stat name="artificer:spellcasting:prepare" value="1" level="4" />
+      <stat name="artificer:spellcasting:prepare" value="1" level="5" />
+      <stat name="artificer:spellcasting:prepare" value="1" level="7" />
+      <stat name="artificer:spellcasting:prepare" value="2" level="9" />
+      <stat name="artificer:spellcasting:prepare" value="1" level="11" />
+      <stat name="artificer:spellcasting:prepare" value="1" level="13" />
+      <stat name="artificer:spellcasting:prepare" value="1" level="15" />
+      <stat name="artificer:spellcasting:prepare" value="2" level="17" />
+      <stat name="artificer:spellcasting:prepare" value="1" level="19" />
       <select type="Spell" name="Cantrip (Artificer)" supports="Artificer, 0" number="2" />
       <select type="Spell" name="Cantrip (Artificer)" supports="Artificer, 0" level="10" />
       <select type="Spell" name="Cantrip (Artificer)" supports="Artificer, 0" level="14" />
@@ -144,7 +154,7 @@
       <description>While holding Tinker's Tools, create one mundane item (from a list of 31 common objects) in an unoccupied space within 5 feet. The item vanishes when you finish a Long Rest.</description>
     </sheet>
     <rules>
-      <grant type="Spell" id="ID_PHB_SPELL_MENDING" spellcasting="Artificer" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MENDING" spellcasting="Artificer" prepared="true" />
       <stat name="intelligence:modifier:min1" value="1" bonus="base" />
       <stat name="intelligence:modifier:min1" value="intelligence:modifier" bonus="base" />
     </rules>
@@ -376,16 +386,16 @@
     </description>
     <sheet display="false" />
     <rules>
-      <grant type="Spell" id="ID_PHB_SPELL_HEALING_WORD" spellcasting="Artificer" prepared="true" level="3" />
-      <grant type="Spell" id="ID_PHB_SPELL_RAY_OF_SICKNESS" spellcasting="Artificer" prepared="true" level="3" />
-      <grant type="Spell" id="ID_PHB_SPELL_FLAMING_SPHERE" spellcasting="Artificer" prepared="true" level="5" />
-      <grant type="Spell" id="ID_PHB_SPELL_MELFS_ACID_ARROW" spellcasting="Artificer" prepared="true" level="5" />
-      <grant type="Spell" id="ID_PHB_SPELL_GASEOUS_FORM" spellcasting="Artificer" prepared="true" level="9" />
-      <grant type="Spell" id="ID_PHB_SPELL_MASS_HEALING_WORD" spellcasting="Artificer" prepared="true" level="9" />
-      <grant type="Spell" id="ID_PHB_SPELL_DEATH_WARD" spellcasting="Artificer" prepared="true" level="13" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_HEALING_WORD" spellcasting="Artificer" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_RAY_OF_SICKNESS" spellcasting="Artificer" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_FLAMING_SPHERE" spellcasting="Artificer" prepared="true" level="5" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MELFS_ACID_ARROW" spellcasting="Artificer" prepared="true" level="5" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_GASEOUS_FORM" spellcasting="Artificer" prepared="true" level="9" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MASS_HEALING_WORD" spellcasting="Artificer" prepared="true" level="9" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_DEATH_WARD" spellcasting="Artificer" prepared="true" level="13" />
       <grant type="Spell" id="ID_WOTC_PHB24_SPELL_VITRIOLIC_SPHERE" spellcasting="Artificer" prepared="true" level="13" />
-      <grant type="Spell" id="ID_PHB_SPELL_CLOUDKILL" spellcasting="Artificer" prepared="true" level="17" />
-      <grant type="Spell" id="ID_PHB_SPELL_RAISE_DEAD" spellcasting="Artificer" prepared="true" level="17" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CLOUDKILL" spellcasting="Artificer" prepared="true" level="17" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_RAISE_DEAD" spellcasting="Artificer" prepared="true" level="17" />
     </rules>
   </element>
 
@@ -438,7 +448,7 @@
       <description>Cast Lesser Restoration for free using Alchemist's Supplies as focus (no spell slot or preparation required).</description>
     </sheet>
     <rules>
-      <grant type="Spell" id="ID_PHB_SPELL_LESSER_RESTORATION" spellcasting="Artificer" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_LESSER_RESTORATION" spellcasting="Artificer" prepared="true" />
     </rules>
   </element>
 
@@ -455,8 +465,8 @@
       <description>Alchemical Eruption: once per turn, when dealing Acid/Fire/Poison damage with an Artificer spell, also deal 2d8 Force damage to that target. Chemical Resistance: Resistance to Acid and Poison damage; Immunity to Poisoned condition. Conjured Cauldron: cast Tasha's Bubbling Cauldron for free (1/Long Rest) using Alchemist's Supplies.</description>
     </sheet>
     <rules>
-      <grant type="Condition Immunity" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_ACID" />
-      <grant type="Condition Immunity" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+      <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_ACID" />
+      <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
     </rules>
   </element>
 
@@ -513,16 +523,16 @@
     </description>
     <sheet display="false" />
     <rules>
-      <grant type="Spell" id="ID_PHB_SPELL_MAGIC_MISSILE" spellcasting="Artificer" prepared="true" level="3" />
-      <grant type="Spell" id="ID_PHB_SPELL_THUNDERWAVE" spellcasting="Artificer" prepared="true" level="3" />
-      <grant type="Spell" id="ID_PHB_SPELL_MIRROR_IMAGE" spellcasting="Artificer" prepared="true" level="5" />
-      <grant type="Spell" id="ID_PHB_SPELL_SHATTER" spellcasting="Artificer" prepared="true" level="5" />
-      <grant type="Spell" id="ID_PHB_SPELL_HYPNOTIC_PATTERN" spellcasting="Artificer" prepared="true" level="9" />
-      <grant type="Spell" id="ID_PHB_SPELL_LIGHTNING_BOLT" spellcasting="Artificer" prepared="true" level="9" />
-      <grant type="Spell" id="ID_PHB_SPELL_FIRE_SHIELD" spellcasting="Artificer" prepared="true" level="13" />
-      <grant type="Spell" id="ID_PHB_SPELL_GREATER_INVISIBILITY" spellcasting="Artificer" prepared="true" level="13" />
-      <grant type="Spell" id="ID_PHB_SPELL_PASSWALL" spellcasting="Artificer" prepared="true" level="17" />
-      <grant type="Spell" id="ID_PHB_SPELL_WALL_OF_FORCE" spellcasting="Artificer" prepared="true" level="17" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MAGIC_MISSILE" spellcasting="Artificer" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_THUNDERWAVE" spellcasting="Artificer" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MIRROR_IMAGE" spellcasting="Artificer" prepared="true" level="5" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SHATTER" spellcasting="Artificer" prepared="true" level="5" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_HYPNOTIC_PATTERN" spellcasting="Artificer" prepared="true" level="9" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_LIGHTNING_BOLT" spellcasting="Artificer" prepared="true" level="9" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_FIRE_SHIELD" spellcasting="Artificer" prepared="true" level="13" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_GREATER_INVISIBILITY" spellcasting="Artificer" prepared="true" level="13" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_PASSWALL" spellcasting="Artificer" prepared="true" level="17" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_WALL_OF_FORCE" spellcasting="Artificer" prepared="true" level="17" />
     </rules>
   </element>
 
@@ -601,7 +611,7 @@
     <description><p><em>3rd-level Artillerist feature</em></p><p>Ranged Weaponry: you gain proficiency with Martial Ranged weapons. Tool Proficiency: you gain proficiency with Woodcarver's Tools. Wand Crafting: when you craft a magic Wand, the amount of time required to craft it is halved.</p></description>
     <sheet><description>Gain proficiency with Martial Ranged weapons and Woodcarver's Tools. Crafting magic Wands takes half the normal time.</description></sheet>
     <rules>
-      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_WEAPONS" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_RANGED_WEAPONS" />
       <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_WOODCARVERS_TOOLS" />
     </rules>
   </element>
@@ -621,16 +631,16 @@
     </description>
     <sheet display="false" />
     <rules>
-      <grant type="Spell" id="ID_PHB_SPELL_SHIELD" spellcasting="Artificer" prepared="true" level="3" />
-      <grant type="Spell" id="ID_PHB_SPELL_THUNDERWAVE" spellcasting="Artificer" prepared="true" level="3" />
-      <grant type="Spell" id="ID_PHB_SPELL_SCORCHING_RAY" spellcasting="Artificer" prepared="true" level="5" />
-      <grant type="Spell" id="ID_PHB_SPELL_SHATTER" spellcasting="Artificer" prepared="true" level="5" />
-      <grant type="Spell" id="ID_PHB_SPELL_FIREBALL" spellcasting="Artificer" prepared="true" level="9" />
-      <grant type="Spell" id="ID_PHB_SPELL_WIND_WALL" spellcasting="Artificer" prepared="true" level="9" />
-      <grant type="Spell" id="ID_PHB_SPELL_ICE_STORM" spellcasting="Artificer" prepared="true" level="13" />
-      <grant type="Spell" id="ID_PHB_SPELL_WALL_OF_FIRE" spellcasting="Artificer" prepared="true" level="13" />
-      <grant type="Spell" id="ID_PHB_SPELL_CONE_OF_COLD" spellcasting="Artificer" prepared="true" level="17" />
-      <grant type="Spell" id="ID_PHB_SPELL_WALL_OF_FORCE" spellcasting="Artificer" prepared="true" level="17" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SHIELD" spellcasting="Artificer" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_THUNDERWAVE" spellcasting="Artificer" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SCORCHING_RAY" spellcasting="Artificer" prepared="true" level="5" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SHATTER" spellcasting="Artificer" prepared="true" level="5" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_FIREBALL" spellcasting="Artificer" prepared="true" level="9" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_WIND_WALL" spellcasting="Artificer" prepared="true" level="9" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_ICE_STORM" spellcasting="Artificer" prepared="true" level="13" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_WALL_OF_FIRE" spellcasting="Artificer" prepared="true" level="13" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CONE_OF_COLD" spellcasting="Artificer" prepared="true" level="17" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_WALL_OF_FORCE" spellcasting="Artificer" prepared="true" level="17" />
     </rules>
   </element>
 
@@ -648,8 +658,11 @@
       <description>Create an Eldritch Cannon (AC 18, HP {{cannon:hp}}) in an unoccupied space within 5 feet using Smith's or Woodcarver's Tools. Activate with Bonus Action within 60 feet: Flamethrower (15-ft Cone, 2d8 Fire Dex save), Force Ballista (ranged spell attack 120 ft, 2d8 Force + push 5 ft), or Protector (1d8+{{intelligence:modifier:min1}} Temp HP to self and allies within 10 ft). One cannon at a time; disappears at 0 HP or after 1 hour.</description>
     </sheet>
     <rules>
-      <stat name="cannon:hp" value="5" />
-      <stat name="cannon:hp" value="level:artificer:5" />
+      <stat name="cannon:hp" value="level:artificer" />
+      <stat name="cannon:hp" value="level:artificer" />
+      <stat name="cannon:hp" value="level:artificer" />
+      <stat name="cannon:hp" value="level:artificer" />
+      <stat name="cannon:hp" value="level:artificer" />
     </rules>
   </element>
 
@@ -688,6 +701,7 @@
     <description>
       <p><em>Command a Construct Guardian</em></p>
       <p>A Battle Smith is a combination of protector and medic, an expert at defending others and repairing both materiel and personnel. Battle Smiths are accompanied by a Steel Defender, a protective companion of their own creation.</p>
+      <div element="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_TOOLS_OF_THE_TRADE" />
       <div element="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_BATTLE_READY" />
       <div element="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_SPELLS" />
       <div element="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_STEEL_DEFENDER" />
@@ -697,6 +711,7 @@
     </description>
     <sheet display="false" />
     <rules>
+      <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_TOOLS_OF_THE_TRADE" level="3" />
       <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_BATTLE_READY" level="3" />
       <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_SPELLS" level="3" />
       <grant type="Archetype Feature" id="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_STEEL_DEFENDER" level="3" />
@@ -715,6 +730,15 @@
     </rules>
   </element>
 
+  <element name="Tools of the Trade (Battle Smith)" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_TOOLS_OF_THE_TRADE">
+    <compendium display="false" />
+    <description><p><em>3rd-level Battle Smith feature</em></p><p>Tool Proficiency: you gain proficiency with Smith's Tools. If you already have this proficiency, you gain proficiency with one other type of Artisan's Tools of your choice. Weapon Crafting: when you craft a nonmagical or magic weapon, the amount of time required to craft it is halved.</p></description>
+    <sheet><description>Gain proficiency with Smith's Tools. Crafting weapons (magical or nonmagical) takes half the normal time.</description></sheet>
+    <rules>
+      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_SMITHS_TOOLS" />
+    </rules>
+  </element>
+
   <element name="Battle Smith Spells" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_SPELLS">
     <compendium display="false" />
     <description>
@@ -730,16 +754,16 @@
     </description>
     <sheet display="false" />
     <rules>
-      <grant type="Spell" id="ID_PHB_SPELL_HEROISM" spellcasting="Artificer" prepared="true" level="3" />
-      <grant type="Spell" id="ID_PHB_SPELL_SHIELD" spellcasting="Artificer" prepared="true" level="3" />
-      <grant type="Spell" id="ID_PHB_SPELL_BRANDING_SMITE" spellcasting="Artificer" prepared="true" level="5" />
-      <grant type="Spell" id="ID_PHB_SPELL_WARDING_BOND" spellcasting="Artificer" prepared="true" level="5" />
-      <grant type="Spell" id="ID_PHB_SPELL_AURA_OF_VITALITY" spellcasting="Artificer" prepared="true" level="9" />
-      <grant type="Spell" id="ID_PHB_SPELL_CONJURE_BARRAGE" spellcasting="Artificer" prepared="true" level="9" />
-      <grant type="Spell" id="ID_PHB_SPELL_AURA_OF_PURITY" spellcasting="Artificer" prepared="true" level="13" />
-      <grant type="Spell" id="ID_PHB_SPELL_FIRE_SHIELD" spellcasting="Artificer" prepared="true" level="13" />
-      <grant type="Spell" id="ID_PHB_SPELL_BANISHING_SMITE" spellcasting="Artificer" prepared="true" level="17" />
-      <grant type="Spell" id="ID_PHB_SPELL_MASS_CURE_WOUNDS" spellcasting="Artificer" prepared="true" level="17" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_HEROISM" spellcasting="Artificer" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SHIELD" spellcasting="Artificer" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SHINING_SMITE" spellcasting="Artificer" prepared="true" level="5" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_WARDING_BOND" spellcasting="Artificer" prepared="true" level="5" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_AURA_OF_VITALITY" spellcasting="Artificer" prepared="true" level="9" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CONJURE_BARRAGE" spellcasting="Artificer" prepared="true" level="9" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_AURA_OF_PURITY" spellcasting="Artificer" prepared="true" level="13" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_FIRE_SHIELD" spellcasting="Artificer" prepared="true" level="13" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_BANISHING_SMITE" spellcasting="Artificer" prepared="true" level="17" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MASS_CURE_WOUNDS" spellcasting="Artificer" prepared="true" level="17" />
     </rules>
   </element>
 
@@ -753,14 +777,92 @@
       <p>If the defender dies within the last hour, you can take a Magic action to touch it and expend a spell slot; the defender returns to life after 1 minute with all its Hit Points restored. Whenever you finish a Long Rest, you can create a new defender if you have Smith's Tools in hand and the original is gone.</p>
     </description>
     <sheet>
-      <description>You have a Steel Defender (AC {{steel defender:ac}}, HP {{steel defender:hp}}). It acts on your turn (Dodge unless Bonus Action commanded). Force-Empowered Rend: melee spell attack, 1d8+2+{{intelligence:modifier}} Force. Repair 3/Day: 2d8+{{intelligence:modifier}} HP. Deflect Attack reaction: attacker has Disadvantage. Revive with Magic Action + spell slot if recently dead; recreate on Long Rest with Smith's Tools.</description>
+      <description>You have a Steel Defender (Medium Construct) — see its stat block among your companions. It acts on your turn (Dodge unless you spend a Bonus Action to command it). Force-Empowered Rend: melee attack, bonus equals your spell attack modifier, 1d8+2+{{intelligence:modifier}} Force. Repair 3/Day: 2d8+{{intelligence:modifier}} HP. Deflect Attack reaction: the attacker has Disadvantage. Revive with a Magic action + spell slot if recently dead; recreate on a Long Rest with Smith's Tools.</description>
     </sheet>
     <rules>
-      <stat name="steel defender:ac" value="12" />
-      <stat name="steel defender:ac" value="intelligence:modifier" />
-      <stat name="steel defender:hp" value="5" />
-      <stat name="steel defender:hp" value="level:artificer:5" />
+      <select type="Companion" name="Steel Defender" supports="EFA Steel Defender" default="ID_EFA_COMPANION_ARTIFICER_STEEL_DEFENDER" />
     </rules>
+  </element>
+
+  <!-- Steel Defender Companion -->
+  <element name="Steel Defender" type="Companion" source="Eberron: Forge of the Artificer" id="ID_EFA_COMPANION_ARTIFICER_STEEL_DEFENDER">
+    <supports>EFA Steel Defender</supports>
+    <description>
+      <p>Your tinkering has borne you a faithful companion, a Steel Defender. It is Friendly to you and your allies, and it obeys your commands.</p>
+      <p><b>Proficiency Bonus (PB)</b> equals your Proficiency Bonus.</p>
+    </description>
+    <setters>
+      <set name="size">Medium</set>
+      <set name="type">Construct</set>
+      <set name="alignment">neutral</set>
+      <set name="ac">12 + your Intelligence modifier</set>
+      <set name="hp">5 + five times your Artificer level (the defender has a number of Hit Dice [d8s] equal to your Artificer level)</set>
+      <set name="speed">40 ft.</set>
+      <set name="strength">14</set>
+      <set name="dexterity">12</set>
+      <set name="constitution">14</set>
+      <set name="intelligence">4</set>
+      <set name="wisdom">10</set>
+      <set name="charisma">6</set>
+      <set name="immunities">poison</set>
+      <set name="conditionImmunities">charmed, exhaustion, poisoned</set>
+      <set name="senses">darkvision 60 ft., passive Perception 10</set>
+      <set name="languages">understands the languages you know</set>
+      <set name="challenge">—</set>
+      <set name="traits">ID_EFA_COMPANION_TRAIT_STEEL_DEFENDER_STEEL_BOND</set>
+      <set name="actions">ID_EFA_COMPANION_ACTION_STEEL_DEFENDER_FORCE_EMPOWERED_REND,ID_EFA_COMPANION_ACTION_STEEL_DEFENDER_REPAIR</set>
+      <set name="reactions">ID_EFA_COMPANION_REACTION_STEEL_DEFENDER_DEFLECT_ATTACK</set>
+    </setters>
+    <rules>
+      <stat name="companion:ac" value="12" bonus="base" />
+      <stat name="companion:ac" value="intelligence:modifier" bonus="intelligence modifier" />
+      <stat name="companion:hp:max" value="5" />
+      <stat name="companion:hp:max" value="level:artificer" />
+      <stat name="companion:hp:max" value="level:artificer" />
+      <stat name="companion:hp:max" value="level:artificer" />
+      <stat name="companion:hp:max" value="level:artificer" />
+      <stat name="companion:hp:max" value="level:artificer" />
+      <stat name="companion:speed" value="40" bonus="base" />
+      <stat name="companion:proficiency" value="proficiency" bonus="base" />
+      <stat name="companion:strength:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+      <stat name="companion:dexterity:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+      <stat name="companion:constitution:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+      <stat name="companion:intelligence:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+      <stat name="companion:wisdom:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+      <stat name="companion:charisma:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+    </rules>
+  </element>
+  <element name="Steel Bond" type="Companion Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_COMPANION_TRAIT_STEEL_DEFENDER_STEEL_BOND">
+    <description>
+      <p>Add your Proficiency Bonus to any ability check or saving throw the defender makes.</p>
+    </description>
+    <sheet>
+      <description>Add your Proficiency Bonus to any ability check or saving throw the defender makes.</description>
+    </sheet>
+  </element>
+  <element name="Force-Empowered Rend" type="Companion Action" source="Eberron: Forge of the Artificer" id="ID_EFA_COMPANION_ACTION_STEEL_DEFENDER_FORCE_EMPOWERED_REND">
+    <description>
+      <p><i>Melee Attack Roll:</i> bonus equals your spell attack modifier, reach 5 ft. <i>Hit:</i> 1d8 + 2 plus your Intelligence modifier Force damage.</p>
+    </description>
+    <sheet>
+      <description>Melee Attack: bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + 2 + your Intelligence modifier Force damage.</description>
+    </sheet>
+  </element>
+  <element name="Repair" type="Companion Action" source="Eberron: Forge of the Artificer" id="ID_EFA_COMPANION_ACTION_STEEL_DEFENDER_REPAIR">
+    <description>
+      <p>The defender, or one Construct or object it can see within 5 feet of itself, regains a number of Hit Points equal to 2d8 plus your Intelligence modifier.</p>
+    </description>
+    <sheet usage="3/Day">
+      <description>The defender, or one Construct or object within 5 ft, regains 2d8 + your Intelligence modifier Hit Points.</description>
+    </sheet>
+  </element>
+  <element name="Deflect Attack" type="Companion Reaction" source="Eberron: Forge of the Artificer" id="ID_EFA_COMPANION_REACTION_STEEL_DEFENDER_DEFLECT_ATTACK">
+    <description>
+      <p><i>Trigger:</i> A creature the defender can see within 5 feet of itself makes an attack roll against a creature other than the defender. <i>Response:</i> The triggering creature makes the attack roll with Disadvantage.</p>
+    </description>
+    <sheet>
+      <description>Trigger: a creature the defender can see within 5 ft attacks a creature other than the defender. Response: that attack is made with Disadvantage.</description>
+    </sheet>
   </element>
 
   <element name="Extra Attack (Battle Smith)" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_EXTRA_ATTACK">
@@ -841,17 +943,17 @@
     </description>
     <sheet display="false" />
     <rules>
-      <grant type="Spell" id="ID_PHB_SPELL_FAERIE_FIRE" spellcasting="Artificer" prepared="true" level="3" />
-      <grant type="Spell" id="ID_PHB_SPELL_GUIDING_BOLT" spellcasting="Artificer" prepared="true" level="3" />
-      <grant type="Spell" id="ID_PHB_SPELL_HEALING_WORD" spellcasting="Artificer" prepared="true" level="3" />
-      <grant type="Spell" id="ID_PHB_SPELL_LOCATE_OBJECT" spellcasting="Artificer" prepared="true" level="5" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_FAERIE_FIRE" spellcasting="Artificer" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_GUIDING_BOLT" spellcasting="Artificer" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_HEALING_WORD" spellcasting="Artificer" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_LOCATE_OBJECT" spellcasting="Artificer" prepared="true" level="5" />
       <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MIND_SPIKE" spellcasting="Artificer" prepared="true" level="5" />
-      <grant type="Spell" id="ID_PHB_SPELL_CALL_LIGHTNING" spellcasting="Artificer" prepared="true" level="9" />
-      <grant type="Spell" id="ID_PHB_SPELL_CLAIRVOYANCE" spellcasting="Artificer" prepared="true" level="9" />
-      <grant type="Spell" id="ID_PHB_SPELL_BANISHMENT" spellcasting="Artificer" prepared="true" level="13" />
-      <grant type="Spell" id="ID_PHB_SPELL_LOCATE_CREATURE" spellcasting="Artificer" prepared="true" level="13" />
-      <grant type="Spell" id="ID_PHB_SPELL_SCRYING" spellcasting="Artificer" prepared="true" level="17" />
-      <grant type="Spell" id="ID_PHB_SPELL_TELEPORTATION_CIRCLE" spellcasting="Artificer" prepared="true" level="17" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CALL_LIGHTNING" spellcasting="Artificer" prepared="true" level="9" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CLAIRVOYANCE" spellcasting="Artificer" prepared="true" level="9" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_BANISHMENT" spellcasting="Artificer" prepared="true" level="13" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_LOCATE_CREATURE" spellcasting="Artificer" prepared="true" level="13" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SCRYING" spellcasting="Artificer" prepared="true" level="17" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_TELEPORTATION_CIRCLE" spellcasting="Artificer" prepared="true" level="17" />
     </rules>
   </element>
 
@@ -901,7 +1003,8 @@
       <description>Superior Atlas adds: Safe Haven (a map holder reduced to 0 HP but not killed can destroy their map — HP becomes {{atlas:safe haven:hp}}, teleport to within 5 ft of you or another holder) and Unerring Path (cast Find the Path for free, 1/Long Rest, no components, while you hold a map).</description>
     </sheet>
     <rules>
-      <stat name="atlas:safe haven:hp" value="level:artificer:2" />
+      <stat name="atlas:safe haven:hp" value="level:artificer" />
+      <stat name="atlas:safe haven:hp" value="level:artificer" />
     </rules>
   </element>
 
@@ -909,7 +1012,7 @@
   <!-- SPELL: HOMUNCULUS SERVANT                                    -->
   <!-- ═══════════════════════════════════════════════════════════ -->
   <element name="Homunculus Servant" type="Spell" source="Eberron: Forge of the Artificer" id="ID_EFA_SPELL_HOMUNCULUS_SERVANT">
-    <supports>Artificer, 2</supports>
+    <supports>Artificer</supports>
     <description>
       <p>You summon a special homunculus in an unoccupied space within range. This creature uses the Homunculus Servant stat block. If you already have a homunculus from this spell, the homunculus is replaced by the new one. You determine the homunculus's appearance, such as a mechanical-looking bird, winged vial, or miniature animate cauldron.</p>
       <p><em>Combat.</em> The homunculus is an ally to you and your allies. In combat, it shares your Initiative count, but it takes its turn immediately after yours. It obeys your commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its movement to avoid danger.</p>

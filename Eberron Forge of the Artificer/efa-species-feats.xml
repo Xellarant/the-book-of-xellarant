@@ -86,7 +86,7 @@
     <description><p>You have Resistance to Psychic damage.</p></description>
     <sheet><description>You have Resistance to Psychic damage.</description></sheet>
     <rules>
-      <grant type="Condition Immunity" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PSYCHIC" />
+      <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_PSYCHIC" />
     </rules>
   </element>
   <element name="Mind Link" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_KALASHTAR_MIND_LINK">
@@ -157,7 +157,7 @@
       <description>You know the Friends cantrip (or a Cleric/Druid/Wizard cantrip, replaceable each Long Rest). Spellcasting ability: {{khoravar:spellcasting ability}}.</description>
     </sheet>
     <rules>
-      <grant type="Spell" id="ID_PHB_SPELL_FRIENDS" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_FRIENDS" />
       <select type="Racial Trait" name="Spellcasting Ability (Khoravar)" supports="Khoravar Spellcasting Ability" />
     </rules>
   </element>
@@ -319,7 +319,7 @@
     <description><p>You have Resistance to Poison damage. You also have Advantage on saving throws to avoid or end the Poisoned condition.</p></description>
     <sheet><description>Resistance to Poison damage. Advantage on saving throws to avoid or end the Poisoned condition.</description></sheet>
     <rules>
-      <grant type="Condition Immunity" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+      <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
     </rules>
   </element>
   <element name="Integrated Protection" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_WARFORGED_INTEGRATED_PROTECTION">
@@ -386,9 +386,9 @@
     </description>
     <sheet><description>Deductive Intuition: +1d4 to Intelligence (Investigation) or Wisdom (Insight) checks. Always have Detect Magic and Detect Poison and Disease prepared (free once/Long Rest; {{detection:spellcasting ability}} spellcasting). At level 3+: also have See Invisibility.</description></sheet>
     <rules>
-      <grant type="Spell" id="ID_PHB_SPELL_DETECT_MAGIC" prepared="true" />
-      <grant type="Spell" id="ID_PHB_SPELL_DETECT_POISON_AND_DISEASE" prepared="true" />
-      <grant type="Spell" id="ID_PHB_SPELL_SEE_INVISIBILITY" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_DETECT_MAGIC" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_DETECT_POISON_AND_DISEASE" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SEE_INVISIBILITY" prepared="true" level="3" />
       <select type="Racial Trait" name="Spellcasting Ability (Mark of Detection)" supports="EFA Mark of Detection Spellcasting" />
     </rules>
   </element>
@@ -402,8 +402,8 @@
     <description><p><em>Dragonmark Feat</em></p><p><b>Hunter's Intuition.</b> When you make a Wisdom (Perception or Survival) check, roll 1d4 and add it. <b>Finder's Magic.</b> Always have Hunter's Mark prepared (free cast once, regain on Long Rest; also via spell slots). At level 3, also always have Locate Object. Intelligence, Wisdom, or Charisma is your spellcasting ability (chosen when you select this feat). Spells of the Mark added to your list if you have Spellcasting or Pact Magic.</p></description>
     <sheet><description>Hunter's Intuition: +1d4 to Wisdom (Perception or Survival) checks. Always have Hunter's Mark prepared (free once/Long Rest). At level 3+: also have Locate Object.</description></sheet>
     <rules>
-      <grant type="Spell" id="ID_PHB_SPELL_HUNTERS_MARK" prepared="true" />
-      <grant type="Spell" id="ID_PHB_SPELL_LOCATE_OBJECT" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_HUNTERS_MARK" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_LOCATE_OBJECT" prepared="true" level="3" />
     </rules>
   </element>
 
@@ -413,8 +413,8 @@
     <description><p><em>Dragonmark Feat</em></p><p><b>Wild Intuition.</b> +1d4 to Intelligence (Nature) or Wisdom (Animal Handling) checks. <b>Primal Connection.</b> Always have Animal Friendship and Speak with Animals prepared (free once each, Long Rest). At level 3, can target Monstrosities with Intelligence 3 or lower with these spells. Intelligence, Wisdom, or Charisma spellcasting ability.</p></description>
     <sheet><description>Wild Intuition: +1d4 to Intelligence (Nature) or Wisdom (Animal Handling) checks. Always have Animal Friendship and Speak with Animals (free once/Long Rest each). At level 3+: can target Monstrosities (Int 3 or lower) with these spells.</description></sheet>
     <rules>
-      <grant type="Spell" id="ID_PHB_SPELL_ANIMAL_FRIENDSHIP" prepared="true" />
-      <grant type="Spell" id="ID_PHB_SPELL_SPEAK_WITH_ANIMALS" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_ANIMAL_FRIENDSHIP" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SPEAK_WITH_ANIMALS" prepared="true" />
     </rules>
   </element>
 
@@ -424,8 +424,8 @@
     <description><p><em>Dragonmark Feat</em></p><p><b>Medical Intuition.</b> +1d4 to Wisdom (Medicine) checks or ability checks using a Herbalism Kit. <b>Healing Touch.</b> Always have Cure Wounds prepared (free once, Long Rest). At level 3, also always have Lesser Restoration. Intelligence, Wisdom, or Charisma spellcasting ability.</p></description>
     <sheet><description>Medical Intuition: +1d4 to Wisdom (Medicine) or Herbalism Kit checks. Always have Cure Wounds (free once/Long Rest). At level 3+: also have Lesser Restoration.</description></sheet>
     <rules>
-      <grant type="Spell" id="ID_PHB_SPELL_CURE_WOUNDS" prepared="true" />
-      <grant type="Spell" id="ID_PHB_SPELL_LESSER_RESTORATION" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CURE_WOUNDS" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_LESSER_RESTORATION" prepared="true" level="3" />
     </rules>
   </element>
 
@@ -435,9 +435,9 @@
     <description><p><em>Dragonmark Feat</em></p><p><b>Ever Hospitable.</b> +1d4 to Charisma (Persuasion) checks or ability checks using Brewer's Supplies or Cook's Utensils. <b>Innkeeper's Magic.</b> Always have Purify Food and Drink and Unseen Servant prepared (free once each, Long Rest). At level 3, also have Calm Emotions. Intelligence, Wisdom, or Charisma spellcasting ability.</p></description>
     <sheet><description>Ever Hospitable: +1d4 to Charisma (Persuasion), Brewer's Supplies, or Cook's Utensils checks. Always have Purify Food and Drink and Unseen Servant (free once each/Long Rest). At level 3+: also have Calm Emotions.</description></sheet>
     <rules>
-      <grant type="Spell" id="ID_PHB_SPELL_PURIFY_FOOD_AND_DRINK" prepared="true" />
-      <grant type="Spell" id="ID_PHB_SPELL_UNSEEN_SERVANT" prepared="true" />
-      <grant type="Spell" id="ID_PHB_SPELL_CALM_EMOTIONS" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_PURIFY_FOOD_AND_DRINK" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_UNSEEN_SERVANT" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CALM_EMOTIONS" prepared="true" level="3" />
     </rules>
   </element>
 
@@ -447,8 +447,8 @@
     <description><p><em>Dragonmark Feat</em></p><p><b>Artisan's Intuition.</b> +1d4 to Intelligence (Arcana) checks or ability checks using Artisan's Tools. <b>Spellsmith.</b> Know the Mending cantrip. Always have Magic Weapon prepared (free once, Long Rest). Intelligence, Wisdom, or Charisma spellcasting ability.</p></description>
     <sheet><description>Artisan's Intuition: +1d4 to Intelligence (Arcana) or Artisan's Tools checks. Know Mending cantrip. Always have Magic Weapon (free once/Long Rest).</description></sheet>
     <rules>
-      <grant type="Spell" id="ID_PHB_SPELL_MENDING" prepared="true" />
-      <grant type="Spell" id="ID_PHB_SPELL_MAGIC_WEAPON" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MENDING" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MAGIC_WEAPON" prepared="true" />
     </rules>
   </element>
 
@@ -459,7 +459,7 @@
     <sheet><description>Courier's Speed: +5 feet to Speed. Intuitive Motion: +1d4 to Strength (Athletics) or Dexterity (Acrobatics) checks. Always have Misty Step (free once/Long Rest).</description></sheet>
     <rules>
       <stat name="innate speed:misc" value="5" />
-      <grant type="Spell" id="ID_PHB_SPELL_MISTY_STEP" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MISTY_STEP" prepared="true" />
     </rules>
   </element>
 
@@ -469,9 +469,9 @@
     <description><p><em>Dragonmark Feat</em></p><p><b>Gifted Scribe.</b> +1d4 to Intelligence (History) checks or ability checks using Calligrapher's Supplies. <b>Scribe's Insight.</b> Know the Message cantrip. Always have Comprehend Languages prepared (free once, Long Rest). At level 3, also always have Magic Mouth. Intelligence, Wisdom, or Charisma spellcasting ability.</p></description>
     <sheet><description>Gifted Scribe: +1d4 to Intelligence (History) or Calligrapher's Supplies checks. Know Message cantrip. Always have Comprehend Languages (free once/Long Rest). At level 3+: also have Magic Mouth.</description></sheet>
     <rules>
-      <grant type="Spell" id="ID_PHB_SPELL_MESSAGE" prepared="true" />
-      <grant type="Spell" id="ID_PHB_SPELL_COMPREHEND_LANGUAGES" prepared="true" />
-      <grant type="Spell" id="ID_PHB_SPELL_MAGIC_MOUTH" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MESSAGE" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_COMPREHEND_LANGUAGES" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MAGIC_MOUTH" prepared="true" level="3" />
     </rules>
   </element>
 
@@ -483,7 +483,7 @@
       <description>Sentinel's Intuition: +1d4 to Wisdom (Insight or Perception) checks. Always have Shield (free once/Long Rest). Vigilant Guardian: Reaction to swap places with an adjacent creature hit by an attack — you are hit instead.</description>
     </sheet>
     <rules>
-      <grant type="Spell" id="ID_PHB_SPELL_SHIELD" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SHIELD" prepared="true" />
     </rules>
   </element>
 
@@ -493,8 +493,8 @@
     <description><p><em>Dragonmark Feat</em></p><p><b>Cunning Intuition.</b> +1d4 to Dexterity (Stealth) or Charisma (Performance) checks. <b>Shape Shadows.</b> Know the Minor Illusion cantrip. Always have Invisibility prepared (free once, Long Rest). Intelligence, Wisdom, or Charisma spellcasting ability.</p></description>
     <sheet><description>Cunning Intuition: +1d4 to Dexterity (Stealth) or Charisma (Performance) checks. Know Minor Illusion cantrip. Always have Invisibility (free once/Long Rest).</description></sheet>
     <rules>
-      <grant type="Spell" id="ID_PHB_SPELL_MINOR_ILLUSION" prepared="true" />
-      <grant type="Spell" id="ID_PHB_SPELL_INVISIBILITY" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MINOR_ILLUSION" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_INVISIBILITY" prepared="true" />
     </rules>
   </element>
 
@@ -504,9 +504,9 @@
     <description><p><em>Dragonmark Feat</em></p><p><b>Windwright's Intuition.</b> +1d4 to Dexterity (Acrobatics) checks or ability checks using Navigator's Tools. <b>Storm's Boon.</b> Resistance to Lightning damage. <b>Storm Magic.</b> Know the Thunderclap cantrip. At level 3, also always have Gust of Wind prepared (free once, Long Rest). Intelligence, Wisdom, or Charisma spellcasting ability.</p></description>
     <sheet><description>Windwright's Intuition: +1d4 to Dexterity (Acrobatics) or Navigator's Tools checks. Storm's Boon: Resistance to Lightning damage. Know Thunderclap cantrip. At level 3+: always have Gust of Wind (free once/Long Rest).</description></sheet>
     <rules>
-      <grant type="Condition Immunity" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING" />
+      <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING" />
       <grant type="Spell" id="ID_WOTC_PHB24_SPELL_THUNDERCLAP" prepared="true" />
-      <grant type="Spell" id="ID_PHB_SPELL_GUST_OF_WIND" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_GUST_OF_WIND" prepared="true" level="3" />
     </rules>
   </element>
 
@@ -516,9 +516,9 @@
     <description><p><em>Dragonmark Feat</em></p><p><b>Warden's Intuition.</b> +1d4 to Intelligence (Investigation) checks or ability checks using Thieves' Tools. <b>Wards and Seals.</b> Always have Alarm and Mage Armor prepared (free once each, Long Rest). At level 3, also always have Arcane Lock. Intelligence, Wisdom, or Charisma spellcasting ability.</p></description>
     <sheet><description>Warden's Intuition: +1d4 to Intelligence (Investigation) or Thieves' Tools checks. Always have Alarm and Mage Armor (free once each/Long Rest). At level 3+: also have Arcane Lock.</description></sheet>
     <rules>
-      <grant type="Spell" id="ID_PHB_SPELL_ALARM" prepared="true" />
-      <grant type="Spell" id="ID_PHB_SPELL_MAGE_ARMOR" prepared="true" />
-      <grant type="Spell" id="ID_PHB_SPELL_ARCANE_LOCK" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_ALARM" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MAGE_ARMOR" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_ARCANE_LOCK" prepared="true" level="3" />
     </rules>
   </element>
 
@@ -644,6 +644,7 @@
     <description><p><em>General Feat (Prerequisite: Level 4+, Any Dragonmark Feat)</em></p><p><b>Ability Score Increase.</b> Increase the spellcasting ability score used by your Dragonmark feat by 1, to a maximum of 20. <b>Dragonmark Preparation.</b> You always have the spells on your Spells of the Mark list (if any) prepared. <b>Dragonmark Spellcasting.</b> You have one extra spell slot to cast the spells granted by your Dragonmark feat. The slot's level is half your level (round up), maximum level 5. You regain it on a Short or Long Rest. You can use this slot only to cast a spell you have prepared because of your Dragonmark feat.</p></description>
     <sheet><description>+1 to your Dragonmark spellcasting ability score. Always have your Spells of the Mark prepared. Gain one extra spell slot at level {{potent dragonmark:slot level}} (max 5) that recharges on Short or Long Rest; usable only for Dragonmark spells.</description></sheet>
     <rules>
+      <select type="Ability Score Improvement" name="Ability Score Increase (Potent Dragonmark)" supports="Ability Score Increase" />
       <stat name="potent dragonmark:slot level" value="level:half:rounded up" />
     </rules>
   </element>
