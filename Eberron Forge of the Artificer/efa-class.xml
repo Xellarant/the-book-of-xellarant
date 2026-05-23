@@ -2,7 +2,7 @@
 <elements>
   <info>
     <name>Eberron: Forge of the Artificer - Class</name>
-    <update version="0.1.3">
+    <update version="0.1.4">
       <file name="efa-class.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/Eberron%20Forge%20of%20the%20Artificer/efa-class.xml" />
     </update>
   </info>
@@ -81,7 +81,7 @@
       <stat name="artificer:spellcasting:slots:5" value="1" level="17" />
       <stat name="artificer:spellcasting:slots:5" value="1" level="19" />
       <!-- Archetype selection at level 3 -->
-      <select type="Archetype" name="Artificer Specialist" supports="EFA Artificer Specialist" level="3" />
+      <select type="Archetype" name="Artificer Specialist" supports="Artificer Specialist" level="3" />
     </rules>
     <multiclass id="ID_EFA_MULTICLASS_ARTIFICER">
       <prerequisite>Intelligence 13</prerequisite>
@@ -196,7 +196,7 @@
     </description>
     <sheet display="false" />
     <rules>
-      <select type="Archetype" name="Artificer Specialist" supports="EFA Artificer Specialist" level="3" />
+      <select type="Archetype" name="Artificer Specialist" supports="Artificer Specialist" level="3" />
     </rules>
   </element>
 
@@ -331,7 +331,7 @@
   <!-- SUBCLASS: ALCHEMIST                                          -->
   <!-- ═══════════════════════════════════════════════════════════ -->
   <element name="Alchemist" type="Archetype" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_ALCHEMIST">
-    <supports>EFA Artificer Specialist</supports>
+    <supports>Artificer Specialist</supports>
     <description>
       <p><em>Craft Magic Elixirs and Potions</em></p>
       <p>An Alchemist is an expert at combining reagents to produce magical effects. Alchemists use their creations to give life and to leech it away.</p>
@@ -474,7 +474,7 @@
   <!-- SUBCLASS: ARMORER                                            -->
   <!-- ═══════════════════════════════════════════════════════════ -->
   <element name="Armorer" type="Archetype" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_ARMORER">
-    <supports>EFA Artificer Specialist</supports>
+    <supports>Artificer Specialist</supports>
     <description>
       <p><em>Craft Magic Armor to Enhance Your Abilities</em></p>
       <p>An Armorer modifies armor to function almost like a second skin. The armor is enhanced to hone the Armorer's magic, unleash potent attacks, and generate a formidable defense.</p>
@@ -584,7 +584,7 @@
   <!-- SUBCLASS: ARTILLERIST                                        -->
   <!-- ═══════════════════════════════════════════════════════════ -->
   <element name="Artillerist" type="Archetype" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_ARTILLERIST">
-    <supports>EFA Artificer Specialist</supports>
+    <supports>Artificer Specialist</supports>
     <description>
       <p><em>Wield Destructive Power from Afar</em></p>
       <p>An Artillerist specializes in using magic to hurl energy, projectiles, and explosions on a battlefield.</p>
@@ -697,7 +697,7 @@
   <!-- SUBCLASS: BATTLE SMITH                                       -->
   <!-- ═══════════════════════════════════════════════════════════ -->
   <element name="Battle Smith" type="Archetype" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_BATTLE_SMITH">
-    <supports>EFA Artificer Specialist</supports>
+    <supports>Artificer Specialist</supports>
     <description>
       <p><em>Command a Construct Guardian</em></p>
       <p>A Battle Smith is a combination of protector and medic, an expert at defending others and repairing both materiel and personnel. Battle Smiths are accompanied by a Steel Defender, a protective companion of their own creation.</p>
@@ -894,7 +894,7 @@
   <!-- SUBCLASS: CARTOGRAPHER                                       -->
   <!-- ═══════════════════════════════════════════════════════════ -->
   <element name="Cartographer" type="Archetype" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_CARTOGRAPHER">
-    <supports>EFA Artificer Specialist</supports>
+    <supports>Artificer Specialist</supports>
     <description>
       <p><em>Chart Advantageous Courses through Turmoil</em></p>
       <p>Cartographers are the premier navigators and reconnaissance agents. Using their creations, Cartographers can highlight threats, safeguard allies, and carve portals to distant locations.</p>
