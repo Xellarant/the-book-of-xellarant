@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.5">
-			<file name="avenger-condemnation.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/alterations/avenger-condemnation.xml" />
+		<update version="0.0.6">
+			<file name="avenger-condemnation.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/subclasses/avenger-condemnation.xml" />
 		</update>
 	</info>
 

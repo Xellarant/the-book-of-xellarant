@@ -3,8 +3,8 @@
 	<info>
 		<name>Way of the Equilibrium</name>
 		<description>The Way of the Equilibrium from Arcane Artillery</description>
-		<update version="0.0.3">
-			<file name="monk-equilibrium.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/alterations/monk-equilibrium.xml" />
+		<update version="0.0.4">
+			<file name="monk-equilibrium.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/subclasses/monk-equilibrium.xml" />
 		</update>
 	</info>
 	<element name="Way of the Equilibrium" type="Archetype" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_MONK_WAY_OF_EQUILIBRIUM">

@@ -3,8 +3,8 @@
 		<name>Alterations</name>
 		<description>Feats born of experimental magics and techniques from The Book of Xellarant.</description>
 		<author url="https://github.com/xellarant">Xellarant</author>
-		<update version="0.0.2">
-			<file name="feats.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/alterations/feats.xml" />
+		<update version="0.0.3">
+			<file name="feats.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/feats.xml" />
 		</update>
 	</info>
     <element name="Aberrant Dragonmark β" type="Feat" source="The Book of Xellarant" id="ID_TBOX_FEAT_ABERRANT_DRAGONMARK_BETA">
