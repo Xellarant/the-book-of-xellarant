@@ -13,6 +13,56 @@
   <element name="Artificer" type="Class" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_ARTIFICER">
     <description>
       <p>Masters of invention, Artificers use ingenuity and magic to unlock extraordinary capabilities in objects. They see magic as a complex system waiting to be decoded and then harnessed in their spells and inventions.</p>
+      <p class="indent">Artificers channel magic through tools, formulas, and crafted objects. Whether they are battlefield engineers, alchemists, armorers, cartographers, or battle medics, they turn preparation into practical miracles.</p>
+      <h3>CLASS FEATURES</h3>
+      <p>As an Artificer, you gain the following class features.</p>
+      <h5>HIT POINTS</h5>
+      <ul class="unstyled">
+        <li><strong>Hit Dice:</strong> 1d8 per Artificer level</li>
+        <li><strong>Hit Points at 1st Level:</strong> 8 + your Constitution modifier</li>
+        <li><strong>Hit Points at Higher Levels:</strong> 1d8 (or 5) + your Constitution modifier per Artificer level after 1st</li>
+      </ul>
+      <h5>PROFICIENCIES</h5>
+      <ul class="unstyled">
+        <li><strong>Armor:</strong> Light armor, medium armor, shields</li>
+        <li><strong>Weapons:</strong> Simple weapons</li>
+        <li><strong>Tools:</strong> Thieves' Tools, Tinker's Tools, one type of Artisan's Tools of your choice</li>
+      </ul>
+      <ul class="unstyled">
+        <li><strong>Saving Throws:</strong> Constitution, Intelligence</li>
+        <li><strong>Skills:</strong> Choose two from Arcana, History, Investigation, Medicine, Nature, Perception, and Sleight of Hand</li>
+      </ul>
+      <h5>EQUIPMENT</h5>
+      <p>You start with the following equipment, in addition to the equipment granted by your background:</p>
+      <ul>
+        <li><i>(a)</i> Studded Leather Armor, Dagger, Thieves' Tools, Tinker's Tools, Dungeoneer's Pack, and 16 GP; or <i>(b)</i> 150 GP</li>
+      </ul>
+      <h5 class="caption">THE ARTIFICER</h5>
+      <table class="class-features">
+        <thead>
+          <tr><td class="col-5">Level</td><td>PB</td><td class="left">Features</td><td>Plans</td><td>Items</td><td>Cantrips</td><td>Prepared</td><td>1st</td><td>2nd</td><td>3rd</td><td>4th</td><td>5th</td></tr>
+        </thead>
+        <tr><td> 1st</td><td>+2</td><td class="left">Spellcasting, Tinker's Magic</td><td>-</td><td>-</td><td>2</td><td>2</td><td>2</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+        <tr><td> 2nd</td><td>+2</td><td class="left">Replicate Magic Item</td><td>4</td><td>2</td><td>2</td><td>3</td><td>2</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+        <tr><td> 3rd</td><td>+2</td><td class="left">Artificer Subclass</td><td>4</td><td>2</td><td>2</td><td>4</td><td>3</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+        <tr><td> 4th</td><td>+2</td><td class="left">Ability Score Improvement</td><td>4</td><td>2</td><td>2</td><td>5</td><td>3</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+        <tr><td> 5th</td><td>+3</td><td class="left">Subclass Feature</td><td>4</td><td>2</td><td>2</td><td>6</td><td>4</td><td>2</td><td>-</td><td>-</td><td>-</td></tr>
+        <tr><td> 6th</td><td>+3</td><td class="left">Magic Item Tinker</td><td>5</td><td>3</td><td>2</td><td>6</td><td>4</td><td>2</td><td>-</td><td>-</td><td>-</td></tr>
+        <tr><td> 7th</td><td>+3</td><td class="left">Flash of Genius</td><td>5</td><td>3</td><td>2</td><td>7</td><td>4</td><td>3</td><td>-</td><td>-</td><td>-</td></tr>
+        <tr><td> 8th</td><td>+3</td><td class="left">Ability Score Improvement</td><td>5</td><td>3</td><td>2</td><td>7</td><td>4</td><td>3</td><td>-</td><td>-</td><td>-</td></tr>
+        <tr><td> 9th</td><td>+4</td><td class="left">Subclass Feature</td><td>5</td><td>3</td><td>2</td><td>9</td><td>4</td><td>3</td><td>2</td><td>-</td><td>-</td></tr>
+        <tr><td>10th</td><td>+4</td><td class="left">Magic Item Adept</td><td>6</td><td>4</td><td>3</td><td>9</td><td>4</td><td>3</td><td>2</td><td>-</td><td>-</td></tr>
+        <tr><td>11th</td><td>+4</td><td class="left">Spell-Storing Item</td><td>6</td><td>4</td><td>3</td><td>10</td><td>4</td><td>3</td><td>3</td><td>-</td><td>-</td></tr>
+        <tr><td>12th</td><td>+4</td><td class="left">Ability Score Improvement</td><td>6</td><td>4</td><td>3</td><td>10</td><td>4</td><td>3</td><td>3</td><td>-</td><td>-</td></tr>
+        <tr><td>13th</td><td>+5</td><td class="left">-</td><td>6</td><td>4</td><td>3</td><td>11</td><td>4</td><td>3</td><td>3</td><td>1</td><td>-</td></tr>
+        <tr><td>14th</td><td>+5</td><td class="left">Advanced Artifice</td><td>7</td><td>5</td><td>4</td><td>11</td><td>4</td><td>3</td><td>3</td><td>1</td><td>-</td></tr>
+        <tr><td>15th</td><td>+5</td><td class="left">Subclass Feature</td><td>7</td><td>5</td><td>4</td><td>12</td><td>4</td><td>3</td><td>3</td><td>2</td><td>-</td></tr>
+        <tr><td>16th</td><td>+5</td><td class="left">Ability Score Improvement</td><td>7</td><td>5</td><td>4</td><td>12</td><td>4</td><td>3</td><td>3</td><td>2</td><td>-</td></tr>
+        <tr><td>17th</td><td>+6</td><td class="left">-</td><td>7</td><td>5</td><td>4</td><td>14</td><td>4</td><td>3</td><td>3</td><td>3</td><td>1</td></tr>
+        <tr><td>18th</td><td>+6</td><td class="left">Magic Item Master</td><td>8</td><td>6</td><td>4</td><td>14</td><td>4</td><td>3</td><td>3</td><td>3</td><td>1</td></tr>
+        <tr><td>19th</td><td>+6</td><td class="left">Epic Boon</td><td>8</td><td>6</td><td>4</td><td>15</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td></tr>
+        <tr><td>20th</td><td>+6</td><td class="left">Soul of Artifice</td><td>8</td><td>6</td><td>4</td><td>15</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td></tr>
+      </table>
       <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_SPELLCASTING" />
       <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_TINKERS_MAGIC" />
       <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_REPLICATE_MAGIC_ITEM" />
@@ -27,13 +77,9 @@
       <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_EPIC_BOON" />
       <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_SOUL_OF_ARTIFICE" />
     </description>
-    <sheet>
-      <description>A magical crafter and inventor of wonders who uses ingenuity and magic to unlock extraordinary capabilities in objects.</description>
-      <setters>
-        <set name="short">An inventor who harnesses magic through tools and crafted objects.</set>
-      </setters>
-    </sheet>
+    <sheet display="false" />
     <setters>
+      <set name="short">An inventor who harnesses magic through tools and crafted objects.</set>
       <set name="hd">d8</set>
       <set name="hp">8</set>
       <set name="proficiencies">Simple weapons, Thieves' Tools, Tinker's Tools, one type of Artisan's Tools of your choice, Light armor, Medium armor, Shields</set>
@@ -69,19 +115,6 @@
       <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_MAGIC_ITEM_MASTER" level="18" />
       <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_EPIC_BOON" level="19" />
       <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_SOUL_OF_ARTIFICE" level="20" />
-      <!-- Spellcasting setup -->
-      <stat name="artificer:spellcasting:slots:1" value="2" level="1" />
-      <stat name="artificer:spellcasting:slots:1" value="1" level="3" />
-      <stat name="artificer:spellcasting:slots:2" value="2" level="5" />
-      <stat name="artificer:spellcasting:slots:3" value="2" level="9" />
-      <stat name="artificer:spellcasting:slots:3" value="1" level="11" />
-      <stat name="artificer:spellcasting:slots:4" value="1" level="13" />
-      <stat name="artificer:spellcasting:slots:4" value="1" level="15" />
-      <stat name="artificer:spellcasting:slots:4" value="1" level="17" />
-      <stat name="artificer:spellcasting:slots:5" value="1" level="17" />
-      <stat name="artificer:spellcasting:slots:5" value="1" level="19" />
-      <!-- Archetype selection at level 3 -->
-      <select type="Archetype" name="Artificer Specialist" supports="Artificer Specialist" level="3" />
     </rules>
     <multiclass id="ID_EFA_MULTICLASS_ARTIFICER">
       <prerequisite>Intelligence 13</prerequisite>
@@ -117,9 +150,23 @@
     <sheet>
       <description>You cast Artificer spells through tools (Thieves' Tools, Tinker's Tools, or Artisan's Tools). Intelligence is your spellcasting ability. You know {{artificer:cantrips:known}} cantrips and can prepare {{artificer:spellcasting:prepare}} spells.</description>
     </sheet>
+    <spellcasting name="Artificer" ability="Intelligence" prepare="true">
+      <list known="true">Artificer</list>
+    </spellcasting>
     <rules>
       <grant type="Grants" id="ID_INTERNAL_GRANT_MULTICLASS_SPELLCASTING_SLOTS_HALF_UP" requirements="ID_INTERNAL_GRANT_MULTICLASS" />
       <stat name="artificer:spellcasting:slots:1" value="2" level="1" />
+      <stat name="artificer:spellcasting:slots:1" value="1" level="3" />
+      <stat name="artificer:spellcasting:slots:1" value="1" level="5" />
+      <stat name="artificer:spellcasting:slots:2" value="2" level="5" />
+      <stat name="artificer:spellcasting:slots:2" value="1" level="7" />
+      <stat name="artificer:spellcasting:slots:3" value="2" level="9" />
+      <stat name="artificer:spellcasting:slots:3" value="1" level="11" />
+      <stat name="artificer:spellcasting:slots:4" value="1" level="13" />
+      <stat name="artificer:spellcasting:slots:4" value="1" level="15" />
+      <stat name="artificer:spellcasting:slots:4" value="1" level="17" />
+      <stat name="artificer:spellcasting:slots:5" value="1" level="17" />
+      <stat name="artificer:spellcasting:slots:5" value="1" level="19" />
       <stat name="artificer:cantrips:known" value="2" level="1" />
       <stat name="artificer:cantrips:known" value="1" level="10" />
       <stat name="artificer:cantrips:known" value="1" level="14" />
@@ -135,9 +182,9 @@
       <stat name="artificer:spellcasting:prepare" value="1" level="15" />
       <stat name="artificer:spellcasting:prepare" value="2" level="17" />
       <stat name="artificer:spellcasting:prepare" value="1" level="19" />
-      <select type="Spell" name="Cantrip (Artificer)" supports="Artificer, 0" number="2" />
-      <select type="Spell" name="Cantrip (Artificer)" supports="Artificer, 0" level="10" />
-      <select type="Spell" name="Cantrip (Artificer)" supports="Artificer, 0" level="14" />
+      <select type="Spell" name="Cantrip (Artificer)" supports="$(spellcasting:list), 0" number="2" spellcasting="Artificer" />
+      <select type="Spell" name="Cantrip (Artificer)" supports="$(spellcasting:list), 0" level="10" spellcasting="Artificer" />
+      <select type="Spell" name="Cantrip (Artificer)" supports="$(spellcasting:list), 0" level="14" spellcasting="Artificer" />
     </rules>
   </element>
 
@@ -165,11 +212,89 @@
     <description>
       <p><em>2nd-level Artificer feature</em></p>
       <p>You have learned arcane plans that you use to make magic items.</p>
-      <p><b>Plans Known.</b> When you gain this feature, choose four plans to learn from the Magic Item Plans (Artificer Level 2+) table. Whenever you gain an Artificer level, you can replace one of the plans you know with a new plan for which you qualify.</p>
-      <p><b>Creating an Item.</b> When you finish a Long Rest, you can create one or two different magic items if you have Tinker's Tools in hand. Each item is based on one of the plans you know.</p>
-      <p>If a created item requires Attunement, you can attune yourself to it the instant you create it.</p>
+      <p><b>Plans Known.</b> When you gain this feature, choose four plans to learn from the Magic Item Plans (Artificer Level 2+) table (see the Dungeon Master's Guide for the items' descriptions). Bag of Holding, Cap of Water Breathing, Sending Stones, and Wand of the War Mage are recommended. Whenever you gain an Artificer level, you can replace one of the plans you know with a new plan for which you qualify.</p>
+      <p>You learn another plan of your choice when you reach certain Artificer levels, as shown in the Plans Known column of the Artificer Features table. When you choose a plan to learn, you choose it from any Magic Item Plans table for which you qualify; your qualification is based on your Artificer level.</p>
+      <p><b>Creating an Item.</b> When you finish a Long Rest, you can create one or two different magic items if you have Tinker's Tools in hand. Each item is based on one of the plans you know for this feature.</p>
+      <p>If a created item requires Attunement, you can attune yourself to it the instant you create it. If you decide to attune to the item later, you must do so using the normal process for Attunement.</p>
+      <p>When you reach certain Artificer levels specified in the Magic Items column of the Artificer Features table, the number of magic items you can create at the end of a Long Rest increases. Each item you create must be based on a different plan you know.</p>
+      <p>You can't have more magic items from this feature than the number shown in the Magic Items column of the Artificer Features table for your level. If you try to exceed your maximum number of magic items for this feature, the oldest item vanishes, and then the new item appears.</p>
       <p><b>Duration.</b> A magic item created by this feature functions as the normal magic item, except its magic isn't permanent; when you die, the magic item vanishes after 1d4 days. If you replace a plan you know with a new plan, any magic item created with the replaced plan immediately vanishes.</p>
+      <p>If an item that you created with this feature is a container, such as a Bag of Holding, and it vanishes, its contents harmlessly appear in and around its space.</p>
       <p><b>Spellcasting Focus.</b> You can use any Wand or Weapon created by this feature as a Spellcasting Focus in lieu of using a set of Artisan's Tools.</p>
+      <p><b>Crafting More Magic Items.</b> The Replicate Magic Item feature isn't the only way for an Artificer to make magic items. The Dungeon Master's Guide provides rules for characters, not just Artificers, who want to make magic items of all sorts. Though many different characters can make magic items, Artificers can do it faster than others; each Artificer subclass improves a character's speed at making items of a certain category.</p>
+      <p>When an Artificer crafts a magic item using the normal rules in the Dungeon Master's Guide, the character gains no special connection to that item. Class features that refer to items created by your Replicate Magic Item feature don't apply to items you craft by other means.</p>
+      <h5>Magic Item Plans (Artificer Level 2+)</h5>
+      <table>
+        <thead><tr><td>Magic Item Plan</td><td>Attunement</td></tr></thead>
+        <tr><td>Alchemy Jug</td><td>No</td></tr>
+        <tr><td>Bag of Holding</td><td>No</td></tr>
+        <tr><td>Cap of Water Breathing</td><td>No</td></tr>
+        <tr><td>Common magic item that isn't a Potion, a Scroll, or cursed</td><td>Varies</td></tr>
+        <tr><td>Goggles of Night</td><td>No</td></tr>
+        <tr><td>Manifold Tool</td><td>Yes</td></tr>
+        <tr><td>Repeating Shot</td><td>Yes</td></tr>
+        <tr><td>Returning Weapon</td><td>No</td></tr>
+        <tr><td>Rope of Climbing</td><td>No</td></tr>
+        <tr><td>Sending Stones</td><td>No</td></tr>
+        <tr><td>Shield +1</td><td>No</td></tr>
+        <tr><td>Wand of Magic Detection</td><td>No</td></tr>
+        <tr><td>Wand of Secrets</td><td>No</td></tr>
+        <tr><td>Wand of the War Mage +1</td><td>Yes</td></tr>
+        <tr><td>Weapon +1</td><td>No</td></tr>
+        <tr><td>Wraps of Unarmed Power, +1</td><td>No</td></tr>
+      </table>
+      <h5>Magic Item Plans (Artificer Level 6+)</h5>
+      <table>
+        <thead><tr><td>Magic Item Plan</td><td>Attunement</td></tr></thead>
+        <tr><td>Armor +1</td><td>No</td></tr>
+        <tr><td>Boots of Elvenkind</td><td>No</td></tr>
+        <tr><td>Boots of the Winding Path</td><td>Yes</td></tr>
+        <tr><td>Cloak of Elvenkind</td><td>Yes</td></tr>
+        <tr><td>Cloak of the Manta Ray</td><td>Yes</td></tr>
+        <tr><td>Dazzling Weapon</td><td>Yes</td></tr>
+        <tr><td>Eyes of Charming</td><td>Yes</td></tr>
+        <tr><td>Eyes of Minute Seeing</td><td>No</td></tr>
+        <tr><td>Gloves of Thievery</td><td>No</td></tr>
+        <tr><td>Helm of Awareness</td><td>No</td></tr>
+        <tr><td>Lantern of Revealing</td><td>No</td></tr>
+        <tr><td>Mind Sharpener</td><td>Yes</td></tr>
+        <tr><td>Necklace of Adaptation</td><td>Yes</td></tr>
+        <tr><td>Pipes of Haunting</td><td>No</td></tr>
+        <tr><td>Repulsion Shield</td><td>No</td></tr>
+        <tr><td>Ring of Swimming</td><td>No</td></tr>
+        <tr><td>Ring of Water Walking</td><td>No</td></tr>
+        <tr><td>Sentinel Shield</td><td>No</td></tr>
+        <tr><td>Spell-Refueling Ring</td><td>Yes</td></tr>
+        <tr><td>Wand of Magic Missiles</td><td>No</td></tr>
+        <tr><td>Wand of Web</td><td>Yes</td></tr>
+        <tr><td>Weapon of Warning</td><td>Yes</td></tr>
+      </table>
+      <h5>Magic Item Plans (Artificer Level 10+)</h5>
+      <table>
+        <thead><tr><td>Magic Item Plan</td><td>Attunement</td></tr></thead>
+        <tr><td>Armor of Resistance</td><td>Yes</td></tr>
+        <tr><td>Dagger of Venom</td><td>No</td></tr>
+        <tr><td>Elven Chain</td><td>No</td></tr>
+        <tr><td>Ring of Feather Falling</td><td>Yes</td></tr>
+        <tr><td>Ring of Jumping</td><td>Yes</td></tr>
+        <tr><td>Ring of Mind Shielding</td><td>Yes</td></tr>
+        <tr><td>Shield, +2</td><td>No</td></tr>
+        <tr><td>Uncommon Wondrous Item that isn't cursed</td><td>Varies</td></tr>
+        <tr><td>Wand of the War Mage, +2</td><td>Yes</td></tr>
+        <tr><td>Weapon, +2</td><td>No</td></tr>
+        <tr><td>Wraps of Unarmed Power, +2</td><td>No</td></tr>
+      </table>
+      <h5>Magic Item Plans (Artificer Level 14+)</h5>
+      <table>
+        <thead><tr><td>Magic Item Plan</td><td>Attunement</td></tr></thead>
+        <tr><td>Armor, +2</td><td>No</td></tr>
+        <tr><td>Arrow-Catching Shield</td><td>Yes</td></tr>
+        <tr><td>Flame Tongue</td><td>Yes</td></tr>
+        <tr><td>Rare Wondrous Item that isn't cursed</td><td>Varies</td></tr>
+        <tr><td>Ring of Free Action</td><td>Yes</td></tr>
+        <tr><td>Ring of Protection</td><td>Yes</td></tr>
+        <tr><td>Ring of the Ram</td><td>Yes</td></tr>
+      </table>
     </description>
     <sheet usage="Long Rest">
       <description>You know {{replicate:plans:known}} magic item plans and can create {{replicate:items:max}} magic items per Long Rest using Tinker's Tools. Items are non-permanent — they vanish when you die (after 1d4 days) or if you replace their plan.</description>
@@ -218,7 +343,7 @@
       <p><em>6th-level Artificer feature</em></p>
       <p>Your Replicate Magic Item feature gains the following options.</p>
       <p><b>Charge Magic Item.</b> As a Bonus Action, you can touch a magic item within 5 feet of yourself that you created with Replicate Magic Item and that uses charges. You expend a level 1+ spell slot and recharge the item. The number of charges the item regains is equal to the level of spell slot expended.</p>
-      <p><b>Drain Magic Item.</b> As a Bonus Action, you can touch a magic item within 5 feet of yourself that you created with Replicate Magic Item and cause the item to vanish, converting its magical energy into a spell slot. The slot is level 1 if the item is Common or level 2 if the item is Uncommon or Rare. Once you use this feature, you can't do so again until you finish a Long Rest. Any spell you create with this feature vanishes when you finish a Long Rest.</p>
+      <p><b>Drain Magic Item.</b> As a Bonus Action, you can touch a magic item within 5 feet of yourself that you created with Replicate Magic Item and cause the item to vanish, converting its magical energy into a spell slot. The slot is level 1 if the item is Common or level 2 if the item is Uncommon or Rare. Once you use this feature, you can't do so again until you finish a Long Rest. Any spell slot you create with this feature vanishes when you finish a Long Rest.</p>
       <p><b>Transmute Magic Item.</b> As a Magic action, you can touch one magic item within 5 feet of yourself that you created with Replicate Magic Item and transform it into a different magic item. The resulting item must be based on a magic item plan you know. Once you use this feature, you can't do so again until you finish a Long Rest.</p>
     </description>
     <sheet>
@@ -433,7 +558,7 @@
       <p>Whenever you cast a spell using your Alchemist's Supplies as the Spellcasting Focus, you gain a bonus to one roll of the spell. That roll must restore Hit Points or be a damage roll that deals Acid, Fire, or Poison damage. The bonus equals your Intelligence modifier (minimum bonus of +1).</p>
     </description>
     <sheet>
-      <description>When you cast a spell using Alchemist's Supplies as focus, add +{{intelligence:modifier}} (min +1) to one healing roll or one Acid, Fire, or Poison damage roll.</description>
+      <description>When you cast a spell using Alchemist's Supplies as focus, add +{{intelligence:modifier}} (min +1) to one roll that restores HP or one Acid, Fire, or Poison damage roll.</description>
     </sheet>
     <rules></rules>
   </element>
@@ -679,7 +804,7 @@
     <compendium display="false" />
     <description><p><em>9th-level Artillerist feature</em></p><p>Your Eldritch Cannon is now more destructive. Detonate: when your cannon takes damage, you can take a Reaction (within 60 feet) to command it to detonate, destroying it and forcing each creature within 20 feet to make a Dexterity saving throw (DC = your spell save DC), taking 3d10 Force damage on a failure or half on a success. Firepower: your cannon's damage rolls and the number of Temporary Hit Points granted by Protector each increase by 1d8.</p></description>
     <sheet>
-      <description>Eldritch Cannon upgrades: Detonate (Reaction within 60 ft when cannon takes damage — destroy cannon, 3d10 Force 20-ft radius Dex save). Firepower: each cannon damage/healing roll increases by 1d8.</description>
+      <description>Eldritch Cannon upgrades: Detonate (Reaction within 60 ft when cannon takes damage; destroy cannon, 3d10 Force 20-ft radius Dex save). Firepower: cannon damage rolls and Protector Temp HP increase by 1d8.</description>
     </sheet>
     <rules></rules>
   </element>

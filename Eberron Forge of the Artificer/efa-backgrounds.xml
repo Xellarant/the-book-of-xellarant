@@ -31,6 +31,9 @@
       <p><b>Tool Proficiency:</b> Disguise Kit</p>
       <p><b>Equipment:</b> Choose A or B: (A) Dagger, Disguise Kit, Costume, Traveler's Clothes, 16 GP; or (B) 50 GP</p>
     </description>
+    <setters>
+      <set name="short">Strength, Constitution, Charisma, Aberrant Dragonmark Feat, History and Intimidation Skills, Disguise Kit</set>
+    </setters>
     <sheet display="false" />
     <rules>
       <grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_STR_CON_CHA" />
@@ -54,6 +57,9 @@
       <p><b>Tool Proficiency:</b> Cartographer's Tools</p>
       <p><b>Equipment:</b> Choose A or B: (A) Cartographer's Tools, Bullseye Lantern, Map, Map or Scroll Case, Shovel, Tent, Traveler's Clothes, 17 GP; or (B) 50 GP</p>
     </description>
+    <setters>
+      <set name="short">Dexterity, Intelligence, Wisdom, Skilled Feat, History and Survival Skills, Cartographer's Tools</set>
+    </setters>
     <sheet display="false" />
     <rules>
       <grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_DEX_INT_WIS" />
@@ -77,6 +83,9 @@
       <p><b>Tool Proficiency:</b> Choose one kind of Artisan's Tools</p>
       <p><b>Equipment:</b> Choose A or B: (A) Artisan's Tools (same as above), Fine Clothes, 20 GP; or (B) 50 GP</p>
     </description>
+    <setters>
+      <set name="short">Strength, Intelligence, Charisma, Lucky Feat, Investigation and Persuasion Skills, one Artisan's Tool</set>
+    </setters>
     <sheet display="false" />
     <rules>
       <grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_STR_INT_CHA" />
@@ -100,6 +109,9 @@
       <p><b>Tool Proficiency:</b> Choose one kind of Artisan's Tools</p>
       <p><b>Equipment:</b> Choose A or B: (A) Artisan's Tools (same as above), Crowbar, Fine Clothes, 2 Pouches, 17 GP; or (B) 50 GP</p>
     </description>
+    <setters>
+      <set name="short">Strength, Dexterity, Intelligence, Mark of Making Feat, Investigation and Sleight of Hand Skills, one Artisan's Tool</set>
+    </setters>
     <sheet display="false" />
     <rules>
       <grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_STR_DEX_INT" />
@@ -123,6 +135,9 @@
       <p><b>Tool Proficiency:</b> Choose one kind of Gaming Set</p>
       <p><b>Equipment:</b> Choose A or B: (A) Spear, Shortbow, 20 Arrows, Gaming Set (same as above), Fine Clothes, Healer's Kit, Quiver, 1 GP; or (B) 50 GP</p>
     </description>
+    <setters>
+      <set name="short">Strength, Constitution, Wisdom, Mark of Sentinel Feat, Insight and Perception Skills, one Gaming Set</set>
+    </setters>
     <sheet display="false" />
     <rules>
       <grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_STR_CON_WIS" />
@@ -146,6 +161,9 @@
       <p><b>Tool Proficiency:</b> Cook's Utensils</p>
       <p><b>Equipment:</b> Choose A or B: (A) Cook's Utensils, Fine Clothes, Iron Pot, Lamp, Oil (5 flasks), Perfume, 26 GP; or (B) 50 GP</p>
     </description>
+    <setters>
+      <set name="short">Dexterity, Wisdom, Charisma, Mark of Hospitality Feat, Insight and Persuasion Skills, Cook's Utensils</set>
+    </setters>
     <sheet display="false" />
     <rules>
       <grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_DEX_WIS_CHA" />
@@ -169,6 +187,9 @@
       <p><b>Tool Proficiency:</b> Herbalism Kit</p>
       <p><b>Equipment:</b> Choose A or B: (A) Herbalism Kit, Fine Clothes, Healer's Kit, 25 GP; or (B) 50 GP</p>
     </description>
+    <setters>
+      <set name="short">Dexterity, Constitution, Wisdom, Mark of Healing Feat, Medicine and Stealth Skills, Herbalism Kit</set>
+    </setters>
     <sheet display="false" />
     <rules>
       <grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_DEX_CON_WIS" />
@@ -192,6 +213,9 @@
       <p><b>Tool Proficiency:</b> Thieves' Tools</p>
       <p><b>Equipment:</b> Choose A or B: (A) Thieves' Tools, Fine Clothes, 10 GP; or (B) 50 GP</p>
     </description>
+    <setters>
+      <set name="short">Strength, Constitution, Intelligence, Mark of Warding Feat, Arcana and Investigation Skills, Thieves' Tools</set>
+    </setters>
     <sheet display="false" />
     <rules>
       <grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_STR_CON_INT" />
@@ -215,6 +239,9 @@
       <p><b>Tool Proficiency:</b> Navigator's Tools</p>
       <p><b>Equipment:</b> Choose A or B: (A) Navigator's Tools, Fine Clothes, 10 GP; or (B) 50 GP</p>
     </description>
+    <setters>
+      <set name="short">Strength, Dexterity, Charisma, Mark of Storm Feat, Acrobatics and Nature Skills, Navigator's Tools</set>
+    </setters>
     <sheet display="false" />
     <rules>
       <grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_STR_DEX_CHA" />
@@ -238,6 +265,9 @@
       <p><b>Tool Proficiency:</b> Disguise Kit</p>
       <p><b>Equipment:</b> Choose A or B: (A) Disguise Kit, Fine Clothes, 10 GP; or (B) 50 GP</p>
     </description>
+    <setters>
+      <set name="short">Dexterity, Intelligence, Wisdom, Mark of Detection Feat, Insight and Investigation Skills, Disguise Kit</set>
+    </setters>
     <sheet display="false" />
     <rules>
       <grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_DEX_INT_WIS" />
@@ -261,6 +291,9 @@
       <p><b>Tool Proficiency:</b> Cartographer's Tools</p>
       <p><b>Equipment:</b> Choose A or B: (A) Cartographer's Tools, Fine Clothes, Map, Map or Scroll Case, 18 GP; or (B) 50 GP</p>
     </description>
+    <setters>
+      <set name="short">Dexterity, Constitution, Intelligence, Mark of Passage Feat, Acrobatics and Athletics Skills, Cartographer's Tools</set>
+    </setters>
     <sheet display="false" />
     <rules>
       <grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_DEX_CON_INT" />
@@ -284,6 +317,9 @@
       <p><b>Tool Proficiency:</b> Disguise Kit</p>
       <p><b>Equipment:</b> Choose A or B: (A) Disguise Kit, Fine Clothes, 10 GP; or (B) 50 GP</p>
     </description>
+    <setters>
+      <set name="short">Dexterity, Wisdom, Charisma, Mark of Shadow Feat, Deception and Stealth Skills, Disguise Kit</set>
+    </setters>
     <sheet display="false" />
     <rules>
       <grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_DEX_WIS_CHA" />
@@ -307,6 +343,9 @@
       <p><b>Tool Proficiency:</b> Calligrapher's Supplies</p>
       <p><b>Equipment:</b> Choose A or B: (A) Calligrapher's Supplies, Fine Clothes, Ink, 5 Ink Pens, Paper (30 sheets), Parchment (9 sheets), 8 GP; or (B) 50 GP</p>
     </description>
+    <setters>
+      <set name="short">Intelligence, Wisdom, Charisma, Mark of Scribing Feat, History and Perception Skills, Calligrapher's Supplies</set>
+    </setters>
     <sheet display="false" />
     <rules>
       <grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_INT_WIS_CHA" />
@@ -330,6 +369,9 @@
       <p><b>Tool Proficiency:</b> Choose one kind of Gaming Set</p>
       <p><b>Equipment:</b> Choose A or B: (A) Gaming Set (same as above), Climber's Kit, Fine Clothes, Hunting Trap, Manacles, 2 GP; or (B) 50 GP</p>
     </description>
+    <setters>
+      <set name="short">Constitution, Intelligence, Wisdom, Mark of Finding Feat, Perception and Survival Skills, one Gaming Set</set>
+    </setters>
     <sheet display="false" />
     <rules>
       <grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_CON_INT_WIS" />
@@ -353,6 +395,9 @@
       <p><b>Tool Proficiency:</b> Choose one kind of Musical Instrument</p>
       <p><b>Equipment:</b> Choose A or B: (A) Musical Instrument (same as above), Costume, Fine Clothes, 13 GP; or (B) 50 GP</p>
     </description>
+    <setters>
+      <set name="short">Dexterity, Intelligence, Charisma, Mark of Shadow Feat, Performance and Stealth Skills, one Musical Instrument</set>
+    </setters>
     <sheet display="false" />
     <rules>
       <grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_DEX_INT_CHA" />
@@ -376,6 +421,9 @@
       <p><b>Tool Proficiency:</b> Herbalism Kit</p>
       <p><b>Equipment:</b> Choose A or B: (A) Herbalism Kit, Fine Clothes, Net, 29 GP; or (B) 50 GP</p>
     </description>
+    <setters>
+      <set name="short">Constitution, Wisdom, Charisma, Mark of Handling Feat, Animal Handling and Nature Skills, Herbalism Kit</set>
+    </setters>
     <sheet display="false" />
     <rules>
       <grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_CON_WIS_CHA" />
@@ -399,6 +447,9 @@
       <p><b>Tool Proficiency:</b> Thieves' Tools</p>
       <p><b>Equipment:</b> Choose A or B: (A) Thieves' Tools, Bullseye Lantern, Crowbar, Oil (10 flasks), Traveler's Clothes, 10 GP; or (B) 50 GP</p>
     </description>
+    <setters>
+      <set name="short">Constitution, Intelligence, Charisma, Alert Feat, Insight and Investigation Skills, Thieves' Tools</set>
+    </setters>
     <sheet display="false" />
     <rules>
       <grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_COMBINATION_CON_INT_CHA" />
