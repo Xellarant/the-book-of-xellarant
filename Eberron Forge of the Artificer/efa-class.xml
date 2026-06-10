@@ -63,19 +63,20 @@
         <tr><td>19th</td><td>+6</td><td class="left">Epic Boon</td><td>8</td><td>6</td><td>4</td><td>15</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td></tr>
         <tr><td>20th</td><td>+6</td><td class="left">Soul of Artifice</td><td>8</td><td>6</td><td>4</td><td>15</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td></tr>
       </table>
-      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_SPELLCASTING" />
-      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_TINKERS_MAGIC" />
-      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_REPLICATE_MAGIC_ITEM" />
-      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_SUBCLASS" />
-      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_ASI" />
-      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_MAGIC_ITEM_TINKER" />
-      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_FLASH_OF_GENIUS" />
-      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_MAGIC_ITEM_ADEPT" />
-      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_SPELL_STORING_ITEM" />
-      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_ADVANCED_ARTIFICE" />
-      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_MAGIC_ITEM_MASTER" />
-      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_EPIC_BOON" />
-      <div element="ID_EFA_CLASS_FEATURE_ARTIFICER_SOUL_OF_ARTIFICE" />
+      <h5>FEATURE SUMMARIES</h5>
+      <p><b>Spellcasting.</b> You cast Artificer spells through tools, using Intelligence as your spellcasting ability. You know Artificer cantrips and prepare level 1+ Artificer spells as shown in the class table.</p>
+      <p><b>Tinker's Magic.</b> You know Mending. While holding Tinker's Tools, you can take a Magic action to create a common mundane item in an unoccupied space within 5 feet of yourself; it lasts until you finish a Long Rest.</p>
+      <p><b>Replicate Magic Item.</b> You learn magic item plans and can create magic items from those plans when you finish a Long Rest with Tinker's Tools in hand. Created items are temporary, and Wands or Weapons created this way can serve as your Spellcasting Focus.</p>
+      <p><b>Artificer Subclass.</b> At level 3, choose an Artificer subclass. Your choice grants features at certain Artificer levels.</p>
+      <p><b>Ability Score Improvement.</b> At levels 4, 8, 12, and 16, you gain the Ability Score Improvement feat or another feat for which you qualify.</p>
+      <p><b>Magic Item Tinker.</b> Your replicated magic items gain Charge Magic Item, Drain Magic Item, and Transmute Magic Item options.</p>
+      <p><b>Flash of Genius.</b> When you or a creature you can see within 30 feet fails an ability check or saving throw, you can take a Reaction to add your Intelligence modifier to the roll, potentially causing it to succeed.</p>
+      <p><b>Magic Item Adept.</b> You can attune to up to four magic items at once.</p>
+      <p><b>Spell-Storing Item.</b> After a Long Rest, you can store a level 1-3 Artificer spell in a weapon or Spellcasting Focus, allowing a creature holding it to produce the spell's effect.</p>
+      <p><b>Advanced Artifice.</b> You can attune to up to five magic items, and a Short Rest restores one expended use of Flash of Genius.</p>
+      <p><b>Magic Item Master.</b> You can attune to up to six magic items at once.</p>
+      <p><b>Epic Boon.</b> At level 19, you gain an Epic Boon feat or another feat for which you qualify.</p>
+      <p><b>Soul of Artifice.</b> You can disintegrate replicated Uncommon or Rare magic items to avoid dropping to 0 Hit Points, and a Short Rest can restore all expended Flash of Genius uses while you are attuned to a magic item.</p>
     </description>
     <sheet display="false" />
     <setters>
@@ -460,12 +461,13 @@
     <description>
       <p><em>Craft Magic Elixirs and Potions</em></p>
       <p>An Alchemist is an expert at combining reagents to produce magical effects. Alchemists use their creations to give life and to leech it away.</p>
-      <div element="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_TOOLS_OF_THE_TRADE" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_SPELLS" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_EXPERIMENTAL_ELIXIR" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_ALCHEMICAL_SAVANT" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_RESTORATIVE_REAGENTS" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_ALCHEMIST_CHEMICAL_MASTERY" />
+      <h5>SUBCLASS FEATURES</h5>
+      <p><b>Tools of the Trade.</b> You gain Alchemist's Supplies and Herbalism Kit proficiency, and potion crafting takes half the normal time.</p>
+      <p><b>Alchemist Spells.</b> You always have Healing Word, Ray of Sickness, Flaming Sphere, Melf's Acid Arrow, Gaseous Form, Mass Healing Word, Death Ward, Vitriolic Sphere, Cloudkill, and Raise Dead prepared at the listed Artificer levels.</p>
+      <p><b>Experimental Elixir.</b> After a Long Rest with Alchemist's Supplies in hand, you magically create elixirs with healing, swiftness, resilience, boldness, flight, or chosen effects; you can spend spell slots to create more.</p>
+      <p><b>Alchemical Savant.</b> When you cast a spell using Alchemist's Supplies as the Spellcasting Focus, you add your Intelligence modifier to one roll that restores Hit Points or deals Acid, Fire, or Poison damage.</p>
+      <p><b>Restorative Reagents.</b> You can cast Lesser Restoration without a spell slot or preparation using Alchemist's Supplies as the Spellcasting Focus.</p>
+      <p><b>Chemical Mastery.</b> Your Artificer spells that deal Acid, Fire, or Poison damage can also deal Force damage once per turn. You gain Acid and Poison resistance, immunity to the Poisoned condition, and can cast Tasha's Bubbling Cauldron for free once per Long Rest.</p>
     </description>
     <sheet display="false" />
     <rules>
@@ -603,13 +605,14 @@
     <description>
       <p><em>Craft Magic Armor to Enhance Your Abilities</em></p>
       <p>An Armorer modifies armor to function almost like a second skin. The armor is enhanced to hone the Armorer's magic, unleash potent attacks, and generate a formidable defense.</p>
-      <div element="ID_EFA_ARCHETYPE_FEATURE_ARMORER_TOOLS_OF_THE_TRADE" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_ARMORER_SPELLS" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_ARMORER_ARCANE_ARMOR" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_ARMORER_ARMOR_MODEL" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_ARMORER_EXTRA_ATTACK" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_ARMORER_IMPROVED_ARMORER" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_ARMORER_PERFECTED_ARMOR" />
+      <h5>SUBCLASS FEATURES</h5>
+      <p><b>Tools of the Trade.</b> You gain Heavy armor training and Smith's Tools proficiency, and armor crafting takes half the normal time.</p>
+      <p><b>Armorer Spells.</b> You always have Magic Missile, Thunderwave, Mirror Image, Shatter, Hypnotic Pattern, Lightning Bolt, Fire Shield, Greater Invisibility, Passwall, and Wall of Force prepared at the listed Artificer levels.</p>
+      <p><b>Arcane Armor.</b> While holding Smith's Tools, you can use a Magic action to turn worn armor into Arcane Armor: it ignores Strength requirements for you, can be donned or doffed quickly, cannot be removed against your will, and serves as a Spellcasting Focus.</p>
+      <p><b>Armor Model.</b> Choose Dreadnaught, Guardian, or Infiltrator armor, each with a special weapon and model benefits. You can change the model after a Short or Long Rest with Smith's Tools in hand.</p>
+      <p><b>Extra Attack.</b> You can attack twice instead of once when you take the Attack action.</p>
+      <p><b>Improved Armorer.</b> You learn and create one additional Armor-category Replicate Magic Item plan, and your Arcane Armor's special weapon gains a +1 bonus to attack and damage rolls.</p>
+      <p><b>Perfected Armor.</b> Your armor model gains stronger benefits: Dreadnaught improves Force Demolisher and Giant Stature, Guardian improves Thunder Pulse and gains a pulling Reaction, and Infiltrator improves Lightning Launcher and gains a burst of flight.</p>
     </description>
     <sheet display="false" />
     <rules>
@@ -713,12 +716,13 @@
     <description>
       <p><em>Wield Destructive Power from Afar</em></p>
       <p>An Artillerist specializes in using magic to hurl energy, projectiles, and explosions on a battlefield.</p>
-      <div element="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_TOOLS_OF_THE_TRADE" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_SPELLS" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_ELDRITCH_CANNON" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_ARCANE_FIREARM" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_EXPLOSIVE_CANNON" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_ARTILLERIST_FORTIFIED_POSITION" />
+      <h5>SUBCLASS FEATURES</h5>
+      <p><b>Tools of the Trade.</b> You gain Martial Ranged weapon and Woodcarver's Tools proficiency, and magic Wand crafting takes half the normal time.</p>
+      <p><b>Artillerist Spells.</b> You always have Shield, Thunderwave, Scorching Ray, Shatter, Fireball, Wind Wall, Ice Storm, Wall of Fire, Cone of Cold, and Wall of Force prepared at the listed Artificer levels.</p>
+      <p><b>Eldritch Cannon.</b> You can create a Small or Tiny Eldritch Cannon and activate it as a Bonus Action, choosing Flamethrower, Force Ballista, or Protector effects.</p>
+      <p><b>Arcane Firearm.</b> After a Long Rest, you can turn a Rod, Staff, Wand, or Martial Ranged weapon into an Arcane Firearm that serves as a Spellcasting Focus and adds 1d8 to one damage roll of an Artificer spell cast through it.</p>
+      <p><b>Explosive Cannon.</b> Your cannon gains a detonation Reaction, and its damage rolls and Protector Temporary Hit Points increase by 1d8.</p>
+      <p><b>Fortified Position.</b> You can maintain two Eldritch Cannons, activate both with the same Bonus Action, and you and allies near a cannon gain Half Cover.</p>
     </description>
     <sheet display="false" />
     <rules>
@@ -826,13 +830,14 @@
     <description>
       <p><em>Command a Construct Guardian</em></p>
       <p>A Battle Smith is a combination of protector and medic, an expert at defending others and repairing both materiel and personnel. Battle Smiths are accompanied by a Steel Defender, a protective companion of their own creation.</p>
-      <div element="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_TOOLS_OF_THE_TRADE" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_BATTLE_READY" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_SPELLS" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_STEEL_DEFENDER" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_EXTRA_ATTACK" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_ARCANE_JOLT" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_BATTLE_SMITH_IMPROVED_DEFENDER" />
+      <h5>SUBCLASS FEATURES</h5>
+      <p><b>Tools of the Trade.</b> You gain Smith's Tools proficiency, and weapon crafting takes half the normal time.</p>
+      <p><b>Battle Ready.</b> You gain Martial weapon proficiency, can use proficient weapons as Artificer Spellcasting Focuses, and can use Intelligence for attack and damage rolls with magic weapons.</p>
+      <p><b>Battle Smith Spells.</b> You always have Heroism, Shield, Shining Smite, Warding Bond, Aura of Vitality, Conjure Barrage, Aura of Purity, Fire Shield, Banishing Smite, and Mass Cure Wounds prepared at the listed Artificer levels.</p>
+      <p><b>Steel Defender.</b> You gain a Steel Defender companion that acts on your turn, obeys your Bonus Action commands, can attack with Force-Empowered Rend, Repair creatures or objects, and impose Disadvantage with Deflect Attack.</p>
+      <p><b>Extra Attack.</b> You can attack twice when you take the Attack action, and you can forgo one attack to command your Steel Defender to make Force-Empowered Rend.</p>
+      <p><b>Arcane Jolt.</b> When you hit with a magic weapon or your Steel Defender hits, you can deal extra Force damage or restore Hit Points to a creature or object within 30 feet.</p>
+      <p><b>Improved Defender.</b> Arcane Jolt increases to 4d6, and Deflect Attack deals Force damage to the attacker.</p>
     </description>
     <sheet display="false" />
     <rules>
@@ -915,6 +920,10 @@
     <description>
       <p>Your tinkering has borne you a faithful companion, a Steel Defender. It is Friendly to you and your allies, and it obeys your commands.</p>
       <p><b>Proficiency Bonus (PB)</b> equals your Proficiency Bonus.</p>
+      <p><b>Steel Bond.</b> Add your Proficiency Bonus to any ability check or saving throw the defender makes.</p>
+      <p><b>Force-Empowered Rend.</b> Melee Attack Roll: bonus equals your spell attack modifier, reach 5 ft. Hit: 1d8 + 2 plus your Intelligence modifier Force damage.</p>
+      <p><b>Repair.</b> The defender, or one Construct or object it can see within 5 feet of itself, regains Hit Points equal to 2d8 plus your Intelligence modifier.</p>
+      <p><b>Deflect Attack.</b> When a creature the defender can see within 5 feet of itself makes an attack roll against a creature other than the defender, the triggering creature makes the attack roll with Disadvantage.</p>
     </description>
     <setters>
       <set name="size">Medium</set>
@@ -1023,13 +1032,14 @@
     <description>
       <p><em>Chart Advantageous Courses through Turmoil</em></p>
       <p>Cartographers are the premier navigators and reconnaissance agents. Using their creations, Cartographers can highlight threats, safeguard allies, and carve portals to distant locations.</p>
-      <div element="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_TOOLS_OF_THE_TRADE" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_SPELLS" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_ADVENTURERS_ATLAS" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_MAPPING_MAGIC" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_GUIDED_PRECISION" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_INGENIOUS_MOVEMENT" />
-      <div element="ID_EFA_ARCHETYPE_FEATURE_CARTOGRAPHER_SUPERIOR_ATLAS" />
+      <h5>SUBCLASS FEATURES</h5>
+      <p><b>Tools of the Trade.</b> You gain Calligrapher's Supplies and Cartographer's Tools proficiency, and scribing Spell Scrolls takes half the normal time.</p>
+      <p><b>Cartographer Spells.</b> You always have Faerie Fire, Guiding Bolt, Healing Word, Locate Object, Mind Spike, Call Lightning, Clairvoyance, Banishment, Locate Creature, Scrying, and Teleportation Circle prepared at the listed Artificer levels.</p>
+      <p><b>Adventurer's Atlas.</b> After a Long Rest with Cartographer's Tools, you create magical maps for yourself and allies. Map holders add 1d4 to Initiative, know each other's locations on the same plane, and can target another map holder regardless of sight or cover while still in range.</p>
+      <p><b>Mapping Magic.</b> You can cast Faerie Fire without a spell slot a number of times equal to your Intelligence modifier, and you can spend half your Speed to teleport to a nearby space or near an Adventurer's Atlas map holder.</p>
+      <p><b>Guided Precision.</b> Once per turn, when you cast a Cartographer spell or hit a creature affected by your Faerie Fire, you can add your Intelligence modifier to one damage roll; taking damage also can't break your Concentration on Faerie Fire.</p>
+      <p><b>Ingenious Movement.</b> When you use Flash of Genius, you or a willing creature you can see within 30 feet can teleport up to 30 feet as part of the same Reaction.</p>
+      <p><b>Superior Atlas.</b> A map holder reduced to 0 Hit Points can destroy its map to stay standing and teleport near another holder, and you can cast Find the Path for free once per Long Rest while holding a map.</p>
     </description>
     <sheet display="false" />
     <rules>
