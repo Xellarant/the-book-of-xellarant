@@ -2,7 +2,7 @@
 <elements>
   <info>
     <name>Eberron: Forge of the Artificer - Class</name>
-    <update version="0.1.4">
+    <update version="0.1.5">
       <file name="efa-class.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/Eberron%20Forge%20of%20the%20Artificer/efa-class.xml" />
     </update>
   </info>
@@ -262,9 +262,6 @@
       <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_REPLICATE_MAGIC_ITEM" level="2" />
       <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_SUBCLASS" level="3" />
       <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_ASI" level="4" />
-      <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_ASI" level="8" />
-      <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_ASI" level="12" />
-      <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_ASI" level="16" />
       <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_MAGIC_ITEM_TINKER" level="6" />
       <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_FLASH_OF_GENIUS" level="7" />
       <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_MAGIC_ITEM_ADEPT" level="10" />
@@ -523,7 +520,7 @@
     </description>
     <sheet display="false" />
     <rules>
-      <select type="Archetype" name="Artificer Specialist" supports="Artificer Specialist" level="3" />
+      <select type="Archetype" name="Artificer Specialist" supports="Artificer Specialist" />
     </rules>
   </element>
 
@@ -535,7 +532,10 @@
     </description>
     <sheet display="false" />
     <rules>
-      <select type="Feat" name="Feat (Artificer)" />
+      <select type="Feat" name="Feat (Artificer)" level="4" />
+      <select type="Feat" name="Feat (Artificer 8)" level="8" />
+      <select type="Feat" name="Feat (Artificer 12)" level="12" />
+      <select type="Feat" name="Feat (Artificer 16)" level="16" />
     </rules>
   </element>
 
@@ -636,7 +636,7 @@
     </description>
     <sheet display="false" />
     <rules>
-      <select type="Feat" name="Epic Boon (Artificer)" supports="Epic Boon" />
+      <select type="Feat" name="Epic Boon (Artificer 19)" level="19" />
     </rules>
   </element>
 
