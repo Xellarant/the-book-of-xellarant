@@ -4,11 +4,12 @@
 		<name>Drakewarden</name>
 		<description>The Drakewarden from Fizban's Treasury of Dragons</description>
 		<author url="https://dnd.wizards.com/products/treasury-dragons">Fizban's Treasury of Dragons</author>
-		<update version="0.0.2">
-			<file name="ranger-drakewarden.xml" url="https://raw.githubusercontent.com/AuroraLegacy/elements/master/supplements/fizbans-treasury-of-dragons/archetypes/ranger-drakewarden.xml" />
+		<update version="0.0.3">
+			<file name="ranger-drakewarden.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/subclasses/ranger-drakewarden.xml" />
 		</update>
 	</info>
-	<element name="Drakewarden" type="Archetype" source="Fizban's Treasury of Dragons" id="ID_WOTC_FTOD_ARCHETYPE_RANGER_DRAKEWARDEN">
+	<element name="Drakewarden (Revised)" type="Archetype" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_RANGER_DRAKEWARDEN">
+		<requirements>ID_TBOX_CLASS_RANGER_REVISED</requirements>
 		<supports>Ranger Archetype</supports>
 		<description>
 			<p>Your connection to the natural world takes the form of a draconic spirit, which can manifest in physical form as a drake. As your powers grow, your drake grows as well, blossoming from a small four-legged companion to a majestic winged creature large and strong enough for you to ride. Along the way, you gain an increasing share of the awe-inspiring power of dragons.</p>
@@ -25,27 +26,26 @@
 				<tr><td>5</td><td>An ancient Draconic inscription on a standing stone empowered you when you read it aloud.</td></tr>
 				<tr><td>6</td><td>You had a vivid dream of a mysterious figure accompanied by seven yellow canaries, who warned you of impending doom. When you awoke, your drake was there, watching you.</td></tr>
 			</table>
-			<div element="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_DRACONIC_GIFT" />
-			<div element="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_DRAKE_COMPANION" />
+			<div element="ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_DRACONIC_GIFT" />
+			<div element="ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_DRAKE_COMPANION" />
 			<div class="reference">
-				<div element="ID_WOTC_FTOD_INFORMATION_DRAKE_COMPANION" />
+				<div element="ID_TBOX_INFORMATION_DRAKE_COMPANION" />
 			</div>
-			<div element="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_BOND_OF_FANG_AND_SCALE" />
-			<div element="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_DRAKES_BREATH" />
-			<div element="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_PERFECTED_BOND" />
+			<div element="ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_BOND_OF_FANG_AND_SCALE" />
+			<div element="ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_DRAKES_BREATH" />
+			<div element="ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_PERFECTED_BOND" />
 		</description>
 		<sheet display="false" />
 		<rules>
-			<grant type="Archetype Feature" id="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_DRACONIC_GIFT" level="3" />
-			<grant type="Archetype Feature" id="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_DRAKE_COMPANION" level="3" requirements="!ID_TBOX_CLASS_RANGER_REVISED" />
-			<grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_DRAKE_COMPANION" level="3" requirements="ID_TBOX_CLASS_RANGER_REVISED" />
-			<grant type="Archetype Feature" id="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_BOND_OF_FANG_AND_SCALE" level="7" />
-			<grant type="Archetype Feature" id="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_DRAKES_BREATH" level="11" />
-			<grant type="Archetype Feature" id="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_PERFECTED_BOND" level="15" />
+			<grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_DRACONIC_GIFT" level="3" />
+			<grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_DRAKE_COMPANION" level="3" />
+			<grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_BOND_OF_FANG_AND_SCALE" level="7" />
+			<grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_DRAKES_BREATH" level="11" />
+			<grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_PERFECTED_BOND" level="15" />
 		</rules>
 	</element>
 
-	<element name="Draconic Gift" type="Archetype Feature" source="Fizban's Treasury of Dragons" id="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_DRACONIC_GIFT">
+	<element name="Draconic Gift" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_DRACONIC_GIFT">
 		<description>
 			<p><em>3rd-Level Drakewarden Feature</em></p>
 			<p>The bond you share with your drake creates a connection to dragonkind, granting you understanding and empowering your presence. You gain the following benefits:</p>
@@ -59,32 +59,8 @@
 		</rules>
 	</element>
 
-	<element name="Drake Companion" type="Archetype Feature" source="Fizban's Treasury of Dragons" id="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_DRAKE_COMPANION">
-		<description>
-			<p><em>3rd-Level Drakewarden Feature</em></p>
-			<p>As an action, you can magically summon the drake that is bound to you. It appears in an unoccupied space of your choice within 30 feet of you.</p>
-			<p class="indent">The drake is friendly to you and your companions, and it obeys your commands. See its game statistics in the accompanying Drake Companion stat block, which uses your proficiency bonus (PB) in several places. Whenever you summon the drake, choose a damage type listed in its Draconic Essence trait. You can determine the cosmetic characteristics of the drake, such as its color, its scale texture, or any visible effect of its Draconic Essence; your choice has no effect on its game statistics.</p>
-			<p class="indent">In combat, the drake shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the Dodge action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are incapacitated, the drake can take any action of its choice, not just Dodge.</p>
-			<p class="indent">The drake remains until it is reduced to 0 hit points, until you use this feature to summon the drake again, or until you die. Anything the drake was wearing or carrying is left behind when the drake vanishes.</p>
-			<p class="indent">Once you summon the drake, you can’t do so again until you finish a long rest, unless you expend a spell slot of 1st level or higher to summon it.</p>
-			<div class="reference">
-				<div element="ID_WOTC_FTOD_INFORMATION_DRAKE_COMPANION" />
-			</div>
-		</description>
-		<sheet action="Action" usage="1/Long Rest">
-			<description>You can magically summon the drake. It appears in an unoccupied space of your choice within 30 feet of you. The drake is friendly to you and your companions, and it obeys your commands. &#13;
-			In combat, the drake shares your initiative count, but it takes its turn immediately after yours. It can move and use its reaction on its own, but the only action it takes on its turn is the Dodge action, unless you take a bonus action on your turn to command it to take another action. That action can be one in its stat block or some other action. If you are incapacitated, the drake can take any action of its choice, not just Dodge. &#13;
-			The drake remains until it is reduced to 0 hit points, until you use this feature to summon the drake again, or until you die. Anything the drake was wearing or carrying is left behind when the drake vanishes. &#13;
-			You can also expend a spell slot of 1st level or higher to summon it.</description>
-		</sheet>
-		<rules>
-			<select type="Companion" name="Drake Companion" supports="Drake Companion" default="ID_WOTC_FTOD_COMPANION_DRAKEWARDEN_DRAKE_COMPANION_SMALL" requirements="!ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_BOND_OF_FANG_AND_SCALE"/>
-			<select type="Companion" name="Drake Companion" supports="Drake Companion" default="ID_WOTC_FTOD_COMPANION_DRAKEWARDEN_DRAKE_COMPANION_MEDIUM"  requirements="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_BOND_OF_FANG_AND_SCALE,!ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_PERFECTED_BOND"/>
-			<select type="Companion" name="Drake Companion" supports="Drake Companion" default="ID_WOTC_FTOD_COMPANION_DRAKEWARDEN_DRAKE_COMPANION_LARGE"  requirements="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_PERFECTED_BOND"/>
-		</rules>
-	</element>
 
-	<element name="Bond of Fang and Scale" type="Archetype Feature" source="Fizban's Treasury of Dragons" id="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_BOND_OF_FANG_AND_SCALE">
+	<element name="Bond of Fang and Scale" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_BOND_OF_FANG_AND_SCALE">
 		<description>
 			<p><em>7th-Level Drakewarden Feature</em></p>
 			<p>The bond you share with your drake intensifies, protecting you and stoking the drake’s fury. When you summon your drake, it grows wings on its back and gains a flying speed equal to its walking speed.</p>
@@ -103,7 +79,7 @@
 		</sheet>
 	</element>
 
-	<element name="Drake’s Breath" type="Archetype Feature" source="Fizban's Treasury of Dragons" id="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_DRAKES_BREATH">
+	<element name="Drake’s Breath" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_DRAKES_BREATH">
 		<description>
 			<p><em>11th-Level Drakewarden Feature</em></p>
 			<p>As an action, you can exhale a 30-foot cone of damaging breath or cause your drake to exhale it. Choose acid, cold, fire, lightning, or poison damage (your choice doesn’t have to match your drake’s Draconic Essence). Each creature in the cone must make a Dexterity saving throw against your spell save DC, taking 8d6 damage on a failed save, or half as much damage on a successful one.</p>
@@ -118,7 +94,7 @@
 		</sheet>
 	</element>
 
-	<element name="Perfected Bond" type="Archetype Feature" source="Fizban's Treasury of Dragons" id="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_PERFECTED_BOND">
+	<element name="Perfected Bond" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_PERFECTED_BOND">
 		<description>
 			<p><em>15th-Level Drakewarden Feature</em></p>
 			<p>Your bond to your drake reaches the pinnacle of its power. While your drake is summoned, you and the drake gain the following benefits:</p>
@@ -131,134 +107,7 @@
 		</sheet>
 	</element>
 
-	<element name="Drake Companion" type="Companion" source="Fizban's Treasury of Dragons" id="ID_WOTC_FTOD_COMPANION_DRAKEWARDEN_DRAKE_COMPANION_SMALL">
-		<supports>Drake Companion</supports>
-		<requirements>!ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_BOND_OF_FANG_AND_SCALE</requirements>
-		<setters>
-			<set name="size">Small</set>
-			<set name="type">Dragon</set>
-			<set name="alignment">Unaligned</set>
-			<set name="ac">14 + PB (natural armor)</set>
-			<set name="hp">5 + five times your ranger level (the drake has a number of hit dice [d10s] equal to your ranger level)</set>
-			<set name="speed">40 ft.</set>
-			<set name="strength">16</set>
-			<set name="dexterity">12</set>
-			<set name="constitution">15</set>
-			<set name="intelligence">8</set>
-			<set name="wisdom">14</set>
-			<set name="charisma">8</set>
-			<set name="saves">Dex +1 plus PB, Wis +2 plus PB</set>
-			<set name="immunities">determined by the drake’s Draconic Essence trait</set>
-			<set name="senses">darkvision 60 ft., passive Perception 12</set>
-			<set name="languages">Draconic</set>
-			<set name="challenge">—</set>
-			<set name="proficiency">0</set>
-			<set name="traits">ID_WOTC_FTOD_COMPANION_TRAIT_DRAKEWARDEN_DRACONIC_ESSENCE</set>
-			<set name="actions">ID_WOTC_FTOD_COMPANION_ACTION_DRAKEWARDEN_BITE</set>
-			<set name="reactions">ID_WOTC_FTOD_COMPANION_REACTION_DRAKEWARDEN_INFUSED_STRIKES</set>
-		</setters>
-		<rules>
-			<stat name="companion:ac" value="14" bonus="base" />
-			<stat name="companion:ac" value="proficiency" bonus="proficiency" />
-			<stat name="companion:hp:max" value="5" />
-			<stat name="companion:hp:max" value="level:ranger" />
-			<stat name="companion:hp:max" value="level:ranger" />
-			<stat name="companion:hp:max" value="level:ranger" />
-			<stat name="companion:hp:max" value="level:ranger" />
-			<stat name="companion:hp:max" value="level:ranger" />
-			<stat name="companion:speed" value="40" bonus="base" />	
-			<stat name="companion:dexterity:save:proficiency" value="companion:proficiency" bonus="proficiency" />
-			<stat name="companion:constitution:save:proficiency" value="companion:proficiency" bonus="proficiency" />
-			<stat name="companion:proficiency" value="proficiency" bonus="proficiency"/>
-		</rules>
-	</element>
-	<element name="Drake Companion" type="Companion" source="Fizban's Treasury of Dragons" id="ID_WOTC_FTOD_COMPANION_DRAKEWARDEN_DRAKE_COMPANION_MEDIUM">
-		<compendium display="false" />
-		<supports>Drake Companion</supports>
-		<requirements>ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_BOND_OF_FANG_AND_SCALE</requirements>
-		<setters>
-			<set name="size">Medium</set>
-			<set name="type">Dragon</set>
-			<set name="alignment">Unaligned</set>
-			<set name="ac">14 + PB (natural armor)</set>
-			<set name="hp">5 + five times your ranger level (the drake has a number of hit dice [d10s] equal to your ranger level)</set>
-			<set name="speed">40 ft.</set>
-			<set name="strength">16</set>
-			<set name="dexterity">12</set>
-			<set name="constitution">15</set>
-			<set name="intelligence">8</set>
-			<set name="wisdom">14</set>
-			<set name="charisma">8</set>
-			<set name="saves">Dex +1 plus PB, Wis +2 plus PB</set>
-			<set name="immunities">determined by the drake’s Draconic Essence trait</set>
-			<set name="senses">darkvision 60 ft., passive Perception 12</set>
-			<set name="languages">Draconic</set>
-			<set name="challenge">—</set>
-			<set name="proficiency">0</set>
-			<set name="traits">ID_WOTC_FTOD_COMPANION_TRAIT_DRAKEWARDEN_DRACONIC_ESSENCE</set>
-			<set name="actions">ID_WOTC_FTOD_COMPANION_ACTION_DRAKEWARDEN_MAGIC_FANG</set>
-			<set name="reactions">ID_WOTC_FTOD_COMPANION_REACTION_DRAKEWARDEN_INFUSED_STRIKES</set>
-		</setters>
-		<rules>
-			<stat name="companion:ac" value="14" bonus="base" />
-			<stat name="companion:ac" value="proficiency" bonus="proficiency" />
-			<stat name="companion:hp:max" value="5" />
-			<stat name="companion:hp:max" value="level:ranger" />
-			<stat name="companion:hp:max" value="level:ranger" />
-			<stat name="companion:hp:max" value="level:ranger" />
-			<stat name="companion:hp:max" value="level:ranger" />
-			<stat name="companion:hp:max" value="level:ranger" />
-			<stat name="companion:speed" value="40" bonus="base" />	
-			<stat name="companion:speed:fly" value="companion:speed" bonus="base" />	
-			<stat name="companion:dexterity:save:proficiency" value="companion:proficiency" bonus="proficiency" />
-			<stat name="companion:constitution:save:proficiency" value="companion:proficiency" bonus="proficiency" />
-			<stat name="companion:proficiency" value="proficiency" bonus="proficiency"/>
-		</rules>
-	</element>
-	<element name="Drake Companion" type="Companion" source="Fizban's Treasury of Dragons" id="ID_WOTC_FTOD_COMPANION_DRAKEWARDEN_DRAKE_COMPANION_LARGE">
-		<compendium display="false" />
-		<supports>Drake Companion</supports>
-		<requirements>ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_PERFECTED_BOND</requirements>
-		<setters>
-			<set name="size">Large</set>
-			<set name="type">Dragon</set>
-			<set name="alignment">Unaligned</set>
-			<set name="ac">14 + PB (natural armor)</set>
-			<set name="hp">5 + five times your ranger level (the drake has a number of hit dice [d10s] equal to your ranger level)</set>
-			<set name="speed">40 ft.</set>
-			<set name="strength">16</set>
-			<set name="dexterity">12</set>
-			<set name="constitution">15</set>
-			<set name="intelligence">8</set>
-			<set name="wisdom">14</set>
-			<set name="charisma">8</set>
-			<set name="saves">Dex +1 plus PB, Wis +2 plus PB</set>
-			<set name="immunities">determined by the drake’s Draconic Essence trait</set>
-			<set name="senses">darkvision 60 ft., passive Perception 12</set>
-			<set name="languages">Draconic</set>
-			<set name="challenge">—</set>
-			<set name="proficiency">0</set>
-			<set name="traits">ID_WOTC_FTOD_COMPANION_TRAIT_DRAKEWARDEN_DRACONIC_ESSENCE</set>
-			<set name="actions">ID_WOTC_FTOD_COMPANION_ACTION_DRAKEWARDEN_EMPOWERED_BITE</set>
-			<set name="reactions">ID_WOTC_FTOD_COMPANION_REACTION_DRAKEWARDEN_INFUSED_STRIKES</set>
-		</setters>
-		<rules>
-			<stat name="companion:ac" value="14" bonus="base" />
-			<stat name="companion:ac" value="proficiency" bonus="proficiency" />
-			<stat name="companion:hp:max" value="5" />
-			<stat name="companion:hp:max" value="level:ranger" />
-			<stat name="companion:hp:max" value="level:ranger" />
-			<stat name="companion:hp:max" value="level:ranger" />
-			<stat name="companion:hp:max" value="level:ranger" />
-			<stat name="companion:hp:max" value="level:ranger" />
-			<stat name="companion:speed" value="40" bonus="base" />	
-			<stat name="companion:speed:fly" value="companion:speed" bonus="base" />	
-			<stat name="companion:dexterity:save:proficiency" value="companion:proficiency" bonus="proficiency" />
-			<stat name="companion:constitution:save:proficiency" value="companion:proficiency" bonus="proficiency" />
-			<stat name="companion:proficiency" value="proficiency" bonus="proficiency"/>
-		</rules>
-	</element>
-	<element name="Draconic Essence" type="Companion Trait" source="Fizban's Treasury of Dragons" id="ID_WOTC_FTOD_COMPANION_TRAIT_DRAKEWARDEN_DRACONIC_ESSENCE">
+	<element name="Draconic Essence" type="Companion Trait" source="The Book of Xellarant" id="ID_TBOX_COMPANION_TRAIT_DRAKEWARDEN_DRACONIC_ESSENCE">
 		<description>
 			<p>When you summon the drake, choose a damage type: acid, cold, fire, lightning, or poison. The chosen type determines the drake’s damage immunity and the damage of its Infused Strikes trait.</p>
 		</description>
@@ -266,7 +115,7 @@
 			<description>When you summon the drake, choose a damage type: acid, cold, fire, lightning, or poison. The chosen type determines the drake’s damage immunity and the damage of its Infused Strikes trait.</description>
 		</sheet>
 	</element>
-	<element name="Bite" type="Companion Action" source="Fizban's Treasury of Dragons" id="ID_WOTC_FTOD_COMPANION_ACTION_DRAKEWARDEN_BITE">
+	<element name="Bite" type="Companion Action" source="The Book of Xellarant" id="ID_TBOX_COMPANION_ACTION_DRAKEWARDEN_BITE">
 		<description>
 			<p><i>Melee Weapon Attack:</i> +3 plus PB to hit, reach 5 ft., one target. <i>Hit:</i> 1d6 plus PB piercing damage.</p>
 		</description>
@@ -274,7 +123,7 @@
 			<description>Melee Weapon Attack: +3 plus PB to hit, reach 5 ft., one target. Hit: 1d6 plus PB piercing damage.</description>
 		</sheet>
 	</element>
-	<element name="Magic Fang" type="Companion Action" source="Fizban's Treasury of Dragons" id="ID_WOTC_FTOD_COMPANION_ACTION_DRAKEWARDEN_MAGIC_FANG">
+	<element name="Magic Fang" type="Companion Action" source="The Book of Xellarant" id="ID_TBOX_COMPANION_ACTION_DRAKEWARDEN_MAGIC_FANG">
 		<description>
 			<p><i>Melee Weapon Attack:</i> +3 plus PB to hit, reach 5 ft., one target. <i>Hit:</i> 1d6 plus PB piercing damage.</p>
 		</description>
@@ -283,7 +132,7 @@
 			<description>Melee Weapon Attack: +3 plus PB to hit, reach 5 ft., one target. Hit: 1d6 plus PB piercing damage plus 1d6 damage of the type chosen for its Draconic Essence.</description>
 		</sheet>
 	</element>
-	<element name="Empowered Bite" type="Companion Action" source="Fizban's Treasury of Dragons" id="ID_WOTC_FTOD_COMPANION_ACTION_DRAKEWARDEN_EMPOWERED_BITE">
+	<element name="Empowered Bite" type="Companion Action" source="The Book of Xellarant" id="ID_TBOX_COMPANION_ACTION_DRAKEWARDEN_EMPOWERED_BITE">
 		<description>
 			<p><i>Melee Weapon Attack:</i> +3 plus PB to hit, reach 5 ft., one target. <i>Hit:</i> 1d6 plus PB piercing damage.</p>
 		</description>
@@ -292,7 +141,7 @@
 			<description>Melee Weapon Attack: +3 plus PB to hit, reach 5 ft., one target. Hit: 1d6 plus PB piercing damage plus 2d6 damage of the type chosen for its Draconic Essence.</description>
 		</sheet>
 	</element>
-	<element name="Infused Strikes" type="Companion Reaction" source="Fizban's Treasury of Dragons" id="ID_WOTC_FTOD_COMPANION_REACTION_DRAKEWARDEN_INFUSED_STRIKES">
+	<element name="Infused Strikes" type="Companion Reaction" source="The Book of Xellarant" id="ID_TBOX_COMPANION_REACTION_DRAKEWARDEN_INFUSED_STRIKES">
 		<description>
 			<p>When another creature within 30 feet of the drake that it can see hits with a weapon attack, the drake infuses the strike with its essence, causing the attack to deal an extra 1d6 damage of the type determined by its Draconic Essence.</p>
 		</description>
@@ -301,7 +150,7 @@
 		</sheet>
 	</element>
 
-	<element name="Draconic Spirit" type="Information" source="Fizban's Treasury of Dragons" id="ID_WOTC_FTOD_INFORMATION_DRAKE_COMPANION">
+	<element name="Draconic Spirit" type="Information" source="The Book of Xellarant" id="ID_TBOX_INFORMATION_DRAKE_COMPANION">
 		<description>
 			<p style="margin-bottom:-5px"><em>Small Dragon, Unaligned</em></p>
 			<h4 style="margin-top:5px" />

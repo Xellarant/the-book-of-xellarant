@@ -3,7 +3,7 @@
 	<info>
 		<name>Grudge of Indomitable Fury</name>
 		<description>Grudge of Indomitable Fury subclass for 5e Avenger</description>
-		<update version="0.0.3">
+		<update version="0.0.4">
 			<file name="avenger-fury.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/subclasses/avenger-fury.xml" />
 		</update>
 	</info>
@@ -39,7 +39,7 @@
         </sheet>
     </element>	
 	<element name="Channel Divinity" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_GOIF_CHANNEL_DIVINITY">
-		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_FURY_CHANNEL_DIVINITY</requirements>
+		<requirements>!ID_TBOX_FEATURE_REPLACEMENT_AVENGER_FURY_CHANNEL_DIVINITY</requirements>
 		<description>
 			<p>At 3rd level, your grudge enables you to channel divine energy for fueling magical effects. Each Channel Divinity option provided by your grudge explains how to use it. When you use your Channel Divinity, you choose which option to use. You must then finish a short or long rest to use your Channel Divinity again.</p>
 			<p>As a part of your Vengeful Grudge, you have the following two Channel Divinity options.</p>
@@ -50,12 +50,12 @@
 			<description>You have the Oath of Enmity and Oath of Pursuit Channel Divinity options.</description>
 		</sheet>
 		<rules>
-			<grant type="Archetype Feature" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_OOV_CHANNEL_DIVINITY_OATH_OF_ENMITY" />
-			<grant type="Archetype Feature" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_OOV_CHANNEL_DIVINITY_OATH_OF_PURSUIT" />
+			<grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_OOV_CHANNEL_DIVINITY_OATH_OF_ENMITY" />
+			<grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_OOV_CHANNEL_DIVINITY_OATH_OF_PURSUIT" />
 		</rules>
 	</element>
     
-	<element name="Channel Divinity: Oath of Enmity" type="Archetype Feature" source="The Book of Xellarant" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_OOV_CHANNEL_DIVINITY_OATH_OF_ENMITY">
+	<element name="Channel Divinity: Oath of Enmity" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_OOV_CHANNEL_DIVINITY_OATH_OF_ENMITY">
 		<description>
 			<p class="indent">As a bonus action, you can use your Channel Divinity to concentrate the bonds of fate between you and your current Wrathful Censure target. While this effect is active, both you and your Wrathful Censure target have disadvantage on attacks made against creatures other than you or the target. This effect lasts until the Wrathful Censure ends.</p>
 		</description>
@@ -63,7 +63,7 @@
 			<description>As a bonus action, you can use your Channel Divinity to concentrate the bonds of fate between you and your current Wrathful Censure target. While this effect is active, both you and your Wrathful Censure target have disadvantage on attacks made against creatures other than you or the target. This effect lasts until the Wrathful Censure ends.</description>
 		</sheet>
 	</element>
-	<element name="Channel Divinity: Oath of Pursuit" type="Archetype Feature" source="The Book of Xellarant" id="ID_WOTC_PHB_ARCHETYPE_FEATURE_OOV_CHANNEL_DIVINITY_OATH_OF_PURSUIT">
+	<element name="Channel Divinity: Oath of Pursuit" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_OOV_CHANNEL_DIVINITY_OATH_OF_PURSUIT">
 		<description>
 			<p>You can invoke a blessing of protection from your god when personal danger would threaten your mission. As a reaction when you would be hit by an attack, you can use your Channel Divinity to gain a bonus to AC equal to your Charisma modifier (minimum +2) until the end of your next turn.</p>
 		</description>
@@ -72,7 +72,7 @@
 		</sheet>
 	</element>
     <element name="Grudge Spells" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_GOIF_GRUDGE_SPELLS">
-		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_FURY_GRUDGE_SPELLS</requirements>
+		<requirements>!ID_TBOX_FEATURE_REPLACEMENT_AVENGER_FURY_GRUDGE_SPELLS</requirements>
 		<description>
 			<p>You gain grudge spells at the avenger levels listed.</p>
 			<h5>GRUDGE OF FURY SPELLS</h5>
@@ -102,7 +102,7 @@
 		</rules>
 	</element>
 	<element name="Domineering Will" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_GOIF_DOMINEERING_WILL">
-		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_FURY_DOMINEERING_WILL</requirements>
+		<requirements>!ID_TBOX_FEATURE_REPLACEMENT_AVENGER_FURY_DOMINEERING_WILL</requirements>
 		<description>
 			<p>At 6th level, your desire for vengeance bolsters your mental state so that you approach your enemy undeterred. When you make a Wisdom and Charisma saving throw, you can spend a use of Wrathful Censure to have advantage on the saving throw.</p>
 		</description>
@@ -111,7 +111,7 @@
 		</sheet>
 	</element>
 	<element name="Unyielding Determination" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_GOIF_UNYIELDING_DETERMINATION">
-		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_FURY_UNYIELDING_DETERMINATION</requirements>
+		<requirements>!ID_TBOX_FEATURE_REPLACEMENT_AVENGER_FURY_UNYIELDING_DETERMINATION</requirements>
 		<description>
 			<p>At 10th level, fear can no longer cause you to hesitate in exacting your revenge. You are immune to the frightened condition.</p>
 		</description>
@@ -120,7 +120,7 @@
 		</sheet>
 	</element>
 	<element name="Hindering Smite" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_GOIF_HINDERING_SMITE">
-		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_FURY_HINDERING_SMITE</requirements>
+		<requirements>!ID_TBOX_FEATURE_REPLACEMENT_AVENGER_FURY_HINDERING_SMITE</requirements>
 		<description>
 			<p>At 14th level, your vengeful wrath makes escape more difficult for your censure targets. When you use your Divine Smite feature on a Wrathful Censure target, the target must make a Wisdom saving throw against your avenger spell save DC. On a failed save, the target’s speed is halved until the end of your next turn.</p>
 		</description>
@@ -129,7 +129,7 @@
 		</sheet>
 	</element>
 	<element name="Furious Onslaught" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_GOIF_FURIOUS_ONSLAUGHT">
-		<requirements>!ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_FURY_FURIOUS_ONSLAUGHT</requirements>
+		<requirements>!ID_TBOX_FEATURE_REPLACEMENT_AVENGER_FURY_FURIOUS_ONSLAUGHT</requirements>
 		<description>
 			<p>At 18th level, you are able to make a weapon attack against your current Wrathful Censure target as a bonus action. If you are wielding two weapons, you instead have advantage on any weapon attack you make as a bonus action against your current Wrathful Censure target.</p>
 		</description>
@@ -139,10 +139,10 @@
 	</element>
 
 	<!--Feature Replacement Grants-->
-	<element name="Grudge Spells Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_FURY_GRUDGE_SPELLS" />
-	<element name="Fury Channel Divinity Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_FURY_CHANNEL_DIVINITY" />
-	<element name="Domineering Will Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_FURY_DOMINEERING_WILL" />
-	<element name="Unyielding Determination Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_FURY_UNYIELDING_DETERMINATION" />
-	<element name="Hindering Smite Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_FURY_HINDERING_SMITE" />
-	<element name="Furious Onslaught Feature Replacement" type="Grants" source="Internal" id="ID_INTERNAL_FEATURE_REPLACEMENT_AVENGER_FURY_FURIOUS_ONSLAUGHT" />
+	<element name="Grudge Spells Feature Replacement" type="Grants" source="The Book of Xellarant" id="ID_TBOX_FEATURE_REPLACEMENT_AVENGER_FURY_GRUDGE_SPELLS" />
+	<element name="Fury Channel Divinity Feature Replacement" type="Grants" source="The Book of Xellarant" id="ID_TBOX_FEATURE_REPLACEMENT_AVENGER_FURY_CHANNEL_DIVINITY" />
+	<element name="Domineering Will Feature Replacement" type="Grants" source="The Book of Xellarant" id="ID_TBOX_FEATURE_REPLACEMENT_AVENGER_FURY_DOMINEERING_WILL" />
+	<element name="Unyielding Determination Feature Replacement" type="Grants" source="The Book of Xellarant" id="ID_TBOX_FEATURE_REPLACEMENT_AVENGER_FURY_UNYIELDING_DETERMINATION" />
+	<element name="Hindering Smite Feature Replacement" type="Grants" source="The Book of Xellarant" id="ID_TBOX_FEATURE_REPLACEMENT_AVENGER_FURY_HINDERING_SMITE" />
+	<element name="Furious Onslaught Feature Replacement" type="Grants" source="The Book of Xellarant" id="ID_TBOX_FEATURE_REPLACEMENT_AVENGER_FURY_FURIOUS_ONSLAUGHT" />
 </elements>

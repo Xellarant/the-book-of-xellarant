@@ -4,7 +4,7 @@
 		<name>Custom Background</name>
 		<description>Basic template for a custom background.</description>
 		<author url="https://github.com/xellarant">Xellarant</author>
-		<update version="0.0.5">
+		<update version="0.0.6">
 			<file name="custom-background.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/backgrounds/custom-background.xml" />
 		</update>
 	</info>
@@ -25,14 +25,14 @@
 		</setters>
 		<rules>
 			<select type="Proficiency" name="Skill Proficiency (Custom)" supports="Skill" number="2" />
-			<!-- <grant type="Background Feature" id="ID_BACKGROUND_FEATURE_POSITIONOFPRIVILEGE" /> -->
+			<!-- <grant type="Background Feature" id="ID_TBOX_BACKGROUND_FEATURE_POSITIONOFPRIVILEGE" /> -->
 			<select type="Background Feature" name="Background Feature" supports="Background Feature" />
 			<select type="Background Feature" name="2nd Background Feature" supports="2nd Background Feature" optional="true" />
 			<select type="Background Sub-Feature" name="Skillset" supports="Sub-Feature"/>
-			<select type="Language" name="Language, Custom Background" supports="Standard||Exotic" number="2" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_LINGUISTIC" />
-			<select type="Proficiency" name="Tool Proficiency, Custom Background" supports="Tool" number="2" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_HANDY" />
-			<select type="Language" name="Language, Custom Background" supports="Standard||Exotic" number="1" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_VERSATILE" />
-			<select type="Proficiency" name="Tool Proficiency, Custom Background" supports="Tool" number="1" requirements="ID_XELL_TBOX_BACKGROUND_FEATURE_VERSATILE" />
+			<select type="Language" name="Language, Custom Background" supports="Standard||Exotic" number="2" requirements="ID_TBOX_BACKGROUND_FEATURE_LINGUISTIC" />
+			<select type="Proficiency" name="Tool Proficiency, Custom Background" supports="Tool" number="2" requirements="ID_TBOX_BACKGROUND_FEATURE_HANDY" />
+			<select type="Language" name="Language, Custom Background" supports="Standard||Exotic" number="1" requirements="ID_TBOX_BACKGROUND_FEATURE_VERSATILE" />
+			<select type="Proficiency" name="Tool Proficiency, Custom Background" supports="Tool" number="1" requirements="ID_TBOX_BACKGROUND_FEATURE_VERSATILE" />
 			<select type="List" name="Personality Trait" number="2">
 				<item id="1">I'm often more guarded (even covert) than I need to be.</item>
 				<item id="2">I'm way more open than most.</item>
@@ -69,28 +69,28 @@
 			</select>
 		</rules>
 	</element>
-	<!-- <element name="Feature: Position of Privilege" type="Background Feature" source="Player’s Handbook" id="ID_BACKGROUND_FEATURE_POSITIONOFPRIVILEGE">
+	<!-- <element name="Feature: Position of Privilege" type="Background Feature" source="The Book of Xellarant" id="ID_TBOX_BACKGROUND_FEATURE_POSITIONOFPRIVILEGE">
 		<supports>Background Feature, Noble</supports>
 		<description>
 			<p>Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are. The common folk make every effort to accommodate you and avoid your displeasure, and other people of high birth treat you as a member of the same social sphere. You can secure an audience with a local noble if you need to.</p>
 		</description>
 		<sheet alt="Position of Privilege" />
 	</element> -->
-	<element name="Sub-Feature: Linguistic" type="Background Sub-Feature" source="The Book of Xellarant" id="ID_XELL_TBOX_BACKGROUND_FEATURE_LINGUISTIC">
+	<element name="Sub-Feature: Linguistic" type="Background Sub-Feature" source="The Book of Xellarant" id="ID_TBOX_BACKGROUND_FEATURE_LINGUISTIC">
 		<supports>Sub-Feature</supports>
 		<description>
 			<p>Linguistic. Your background gives you two language proficiencies.</p>
 		</description>
 		<sheet display="false" />
 	</element>
-	<element name="Sub-Feature: Handy" type="Background Sub-Feature" source="The Book of Xellarant" id="ID_XELL_TBOX_BACKGROUND_FEATURE_HANDY">
+	<element name="Sub-Feature: Handy" type="Background Sub-Feature" source="The Book of Xellarant" id="ID_TBOX_BACKGROUND_FEATURE_HANDY">
 		<supports>Sub-Feature</supports>
 		<description>
 			<p>Handy. Your background gives you two tool proficiencies.</p>
 		</description>
 		<sheet display="false" />
 	</element>
-	<element name="Sub-Feature: Versatile" type="Background Sub-Feature" source="The Book of Xellarant" id="ID_XELL_TBOX_BACKGROUND_FEATURE_VERSATILE">
+	<element name="Sub-Feature: Versatile" type="Background Sub-Feature" source="The Book of Xellarant" id="ID_TBOX_BACKGROUND_FEATURE_VERSATILE">
 		<supports>Sub-Feature</supports>
 		<description>
 			<p>Versatile. Your background gives you one language proficiency and one tool proficiency.</p>

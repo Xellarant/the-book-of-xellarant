@@ -4,7 +4,7 @@
 		<name>Ranger (Revised 2021)</name>
 		<description>The Re-Revised Ranger class from 2016 Wizards UA as it would fit as a Ranger Class replacement.</description>
 		<author url="https://media.wizards.com/2016/dnd/downloads/UA_RevisedRanger.pdf">Wizards of the Coast</author>
-		<update version="0.4.10">
+		<update version="0.4.12">
 			<file name="class-ranger-revised.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/classes/class-ranger-revised.xml" />
 		</update>
 	</info>
@@ -253,81 +253,6 @@
 			While tracking other creatures, you also learn their exact number, their sizes, and how long ago they passed through the area.</description>
 		</sheet>
 	</element>
-	<element name="Fighting Style" type="Class Feature" source="Player’s Handbook" id="ID_WOTC_CLASSFEATURE_RANGER_FIGHTING_STYLE">
-		<description>
-			<p>At 2nd level, you adopt a particular style of fighting as your specialty. Choose one of the following options. You can’t take a Fighting Style option more than once, even if you later get to choose again.</p>
-			<h5 class="caption">ARCHERY</h5>
-			<p>You gain a +2 bonus to attack rolls you make with ranged weapons.</p>
-			<h5 class="caption">DEFENSE</h5>
-			<p>While you are wearing armor, you gain a +1 bonus to AC.</p>
-			<h5 class="caption">DUELING</h5>
-			<p>When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.</p>
-			<h5 class="caption">TWO-WEAPON FIGHTING</h5>
-			<p>When you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack.</p>
-		</description>
-		<rules>
-			<select type="Class Feature" name="Fighting Style" supports="Fighting Style,Ranger" level="2"/>
-		</rules>
-	</element>
-	<element name="Spellcasting" type="Class Feature" source="Player’s Handbook" id="ID_WOTC_CLASSFEATURE_RANGER_SPELLCASTING">
-		<description>
-			<p>By the time you reach 2nd level, you have learned to use the magical essence of nature to cast spells, much as a druid does. See chapter 10 for the general rules of spellcasting and chapter 11 for the ranger spell list.</p>
-			<h5>SPELL SLOTS</h5>
-			<p>The Ranger table shows how many spell slots you have to cast your ranger spells of 1st level and higher. To cast one of these spells, you must expend a slot of the spell’s level or higher. You regain all expended spell slots when you finish a long rest.</p>
-			<p class="indent">For example, if you know the 1st-level spell animal friendship and have a 1st-level and a 2nd-level spell slot available, you can cast animal friendship using either slot.</p>
-			<p>You can use a druidic focus as a spellcasting focus for your ranger spells. A druidic focus might be a sprig of mistletoe or holly, a wand or rod made of yew or another special wood, a staff drawn whole from a living tree, or an object incorporating feathers, fur, bones, and teeth from sacred animals.</p>
-			<h5>SPELLS KNOWN OF 1ST LEVEL AND HIGHER</h5>
-			<p>You know two 1st-level spells of your choice from the ranger spell list.</p>
-			<p class="indent">The Spells Known column of the Ranger table shows when you learn more ranger spells of your choice. Each of these spells must be of a level for which you have spell slots. For instance, when you reach 5th level in this class, you can learn one new spell of 1st or 2nd level.</p>
-			<p class="indent">Additionally, when you gain a level in this class, you can choose one of the ranger spells you know and replace it with another spell from the ranger spell list, which also must be of a level for which you have spell slots.</p>
-			<h5>SPELLCASTING ABILITY</h5>
-			<p>Wisdom is your spellcasting ability for your ranger spells, since your magic draws on your attunement to nature. You use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a ranger spell you cast and when making an attack roll with one.</p>
-			<center>
-				<p><strong>Spell save DC</strong> = 8 + your proficiency bonus + your Wisdom modifier</p>
-				<p><strong>Spell attack modifier</strong> = your proficiency bonus + your Wisdom modifier</p>
-			</center>
-		</description>
-		<sheet display="true">
-			<description>You have learned to use the magical essence of nature to cast spells, much as a druid does.</description>
-		</sheet>
-		<spellcasting name="Ranger" ability="Wisdom" allowReplace="true">
-			<list>Ranger</list>
-		</spellcasting>
-		<rules>
-			<grant type="Grants" id="ID_INTERNAL_GRANT_MULTICLASS_SPELLCASTING_SLOTS_HALF" requirements="ID_INTERNAL_GRANT_MULTICLASS"/>
-			<stat name="ranger:spellcasting:slots:1" value="2" level="2" />
-			<stat name="ranger:spellcasting:slots:1" value="1" level="3" />
-			<stat name="ranger:spellcasting:slots:1" value="1" level="5" />
-			<stat name="ranger:spellcasting:slots:2" value="2" level="5" />
-			<stat name="ranger:spellcasting:slots:2" value="1" level="7" />
-			<stat name="ranger:spellcasting:slots:3" value="2" level="9" />
-			<stat name="ranger:spellcasting:slots:3" value="1" level="11" />
-			<stat name="ranger:spellcasting:slots:4" value="1" level="13" />
-			<stat name="ranger:spellcasting:slots:4" value="1" level="15" />
-			<stat name="ranger:spellcasting:slots:4" value="1" level="17" />
-			<stat name="ranger:spellcasting:slots:5" value="1" level="17" />
-			<stat name="ranger:spellcasting:slots:5" value="1" level="19" />
-			<select type="Spell" name="Spellcasting (Ranger)" supports="$(spellcasting:list),$(spellcasting:slots)" level="2" number="2" spellcasting="Ranger"/>
-			<select type="Spell" name="Spellcasting (Ranger)" supports="$(spellcasting:list),$(spellcasting:slots)" level="3" spellcasting="Ranger" />
-			<select type="Spell" name="Spellcasting (Ranger)" supports="$(spellcasting:list),$(spellcasting:slots)" level="5" spellcasting="Ranger" />
-			<select type="Spell" name="Spellcasting (Ranger)" supports="$(spellcasting:list),$(spellcasting:slots)" level="7" spellcasting="Ranger" />
-			<select type="Spell" name="Spellcasting (Ranger)" supports="$(spellcasting:list),$(spellcasting:slots)" level="9" spellcasting="Ranger" />
-			<select type="Spell" name="Spellcasting (Ranger)" supports="$(spellcasting:list),$(spellcasting:slots)" level="11" spellcasting="Ranger" />
-			<select type="Spell" name="Spellcasting (Ranger)" supports="$(spellcasting:list),$(spellcasting:slots)" level="13" spellcasting="Ranger" />
-			<select type="Spell" name="Spellcasting (Ranger)" supports="$(spellcasting:list),$(spellcasting:slots)" level="15" spellcasting="Ranger" />
-			<select type="Spell" name="Spellcasting (Ranger)" supports="$(spellcasting:list),$(spellcasting:slots)" level="17" spellcasting="Ranger" />
-			<select type="Spell" name="Spellcasting (Ranger)" supports="$(spellcasting:list),$(spellcasting:slots)" level="19" spellcasting="Ranger" />
-		</rules>
-	</element>
-	<element name="Ranger Archetype" type="Class Feature" source="Player’s Handbook" id="ID_WOTC_CLASSFEATURE_RANGER_RANGER_ARCHETYPE">
-		<description>
-			<p>At 3rd level, you choose an archetype or conclave that you strive to emulate. Your choice grants you features at 3rd level and again at 7th, 11th, and 15th level.</p>
-		</description>
-		<sheet display="true" />
-		<rules>
-			<select type="Archetype" name="Ranger Archetype" supports="Ranger Archetype" />
-		</rules>
-	</element>
 	<element name="Primeval Awareness" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_PRIMEVAL_AWARENESS">
 		<supports>Ranger-Option-3</supports>
 		<description>
@@ -343,31 +268,6 @@
 			Also, by spending 1 uninterrupted minute in concentration (as if you were concentrating on a spell), you can sense whether any of your favored enemies are present within 5 miles of you. This feature reveals which of your favored enemies are present, their numbers, and the creatures’ general direction and distance (in miles) from you.
 			If there are multiple groups of your favored enemies within range, you learn this information for each group.</description>
 		</sheet>
-	</element>
-	<element name="Ability Score Improvement" type="Class Feature" source="Player’s Handbook" id="ID_WOTC_CLASSFEATURE_RANGER_ASI">
-		<compendium display="false" />
-		<description>
-			<p>When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.</p>
-		</description>
-		<sheet display="false" />
-		<rules>
-			<select type="Class Feature" name="Improvement Option (Ranger 4)" supports="Improvement Option,Ranger,4" level="4" />
-			<select type="Class Feature" name="Improvement Option (Ranger 8)" supports="Improvement Option,Ranger,8" level="8" />
-			<select type="Class Feature" name="Improvement Option (Ranger 12)" supports="Improvement Option,Ranger,12" level="12" />
-			<select type="Class Feature" name="Improvement Option (Ranger 16)" supports="Improvement Option,Ranger,16" level="16" />
-			<select type="Class Feature" name="Improvement Option (Ranger 19)" supports="Improvement Option,Ranger,19" level="19" />
-		</rules>
-	</element>
-	<element name="Extra Attack" type="Class Feature" source="Player’s Handbook" id="ID_WOTC_CLASSFEATURE_RANGER_EXTRA_ATTACK">
-		<description>
-			<p>Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.</p>
-		</description>
-		<sheet>
-			<description>You can attack twice, instead of once, whenever you take the Attack action on your turn.</description>
-		</sheet>
-		<rules>
-			<stat name="extra attack:count" value="2" level="5" bonus="extra attack" />
-		</rules>
 	</element>
 	<element name="Greater Favored Enemy" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_RANGER_REVISED_GREATER_FAVORED_ENEMY">
 		<description>
@@ -416,24 +316,6 @@
 		</description>
 		<sheet>
 			<description>You can use the Hide action as a bonus action on your turn. Also, you can’t be tracked by nonmagical means, unless you choose to leave a trail.</description>
-		</sheet>
-	</element>
-	<element name="Feral Senses" type="Class Feature" source="Player’s Handbook" id="ID_WOTC_CLASSFEATURE_RANGER_FERAL_SENSES">
-		<description>
-			<p>At 18th level, you gain preternatural senses that help you fight creatures you can’t see. When you attack a creature you can’t see, your inability to see it doesn’t impose disadvantage on your attack rolls against it.</p>
-			<p class="indent">You are also aware of the location of any invisible creature within 30 feet of you, provided that the creature isn’t hidden from you and you aren’t blinded or deafened.</p>
-		</description>
-		<sheet>
-			<description>When you attack a creature you can’t see, your inability to see it doesn’t impose disadvantage on your attack rolls against it. 
-			You are also aware of the location of any invisible creature within 30 feet of you, provided that the creature isn’t hidden from you and you aren’t blinded or deafened.</description>
-		</sheet>
-	</element>
-	<element name="Foe Slayer" type="Class Feature" source="Player’s Handbook" id="ID_WOTC_CLASSFEATURE_RANGER_FOE_SLAYER">
-		<description>
-			<p>At 20th level, you become an unparalleled hunter of your enemies. Once on each of your turns, you can add your Wisdom modifier to the attack roll or the damage roll of an attack you make against one of your favored enemies. You can choose to use this feature before or after the roll, but before any effects of the roll are applied.</p>
-		</description>
-		<sheet>
-			<description>Once on each of your turns, you can add {{wisdom:modifier}} to the attack roll or the damage roll of an attack you make against one of your favored enemies. You can choose to use this feature before or after the roll, but before any effects of the roll are applied.</description>
 		</sheet>
 	</element>
 
@@ -524,7 +406,7 @@
 
 	<!-- Optional Ranger Stuff -->
 	<!-- Deft Explorer -->
-	<element name="Deft Explorer" type="Class Feature" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER">
+	<element name="Deft Explorer" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASS_FEATURE_RANGER_DEFT_EXPLORER">
 		<supports>Ranger-Option-1-2</supports>
 		<description>
 			<p><i>1st-level ranger feature, which replaces the Natural Explorer feature</i></p>
@@ -548,12 +430,12 @@
 		</rules>
 	</element>
 
-	<element name="Ranger, LV01: Deft Explorer" type="Item" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_ITEM_OCF_RANGER_DEFT_EXPLORER">
+	<element name="Ranger, LV01: Deft Explorer" type="Item" source="The Book of Xellarant" id="ID_TBOX_ITEM_OCF_RANGER_DEFT_EXPLORER">
 		<compendium display="false" />
 		<description>
 			<p><i>You can equip this item to “enable” it. It remains hidden from the inventory on your character sheet.</i></p>
 			<div class="reference">
-				<div element="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER" />
+				<div element="ID_TBOX_CLASS_FEATURE_RANGER_DEFT_EXPLORER" />
 			</div>
 		</description>
 		<setters>
@@ -564,54 +446,15 @@
 		</setters>
 		<rules>
 			<grant type="Grants" id="ID_INTERNAL_FEATURE_REPLACEMENT_RANGER_NATURAL_EXPLORER" />
-			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER" requirements="[level:ranger revised:1]"/>
+			<grant type="Class Feature" id="ID_TBOX_CLASS_FEATURE_RANGER_DEFT_EXPLORER" requirements="[level:ranger revised:1]"/>
 		</rules>
 	</element>
 
-	<element name="Canny" type="Class Feature" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER_CANNY">
-		<description>
-			<p>Choose one of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses the chosen skill.</p>
-			<p class="indent">You can also speak, read, and write two additional languages of your choice.</p>
-		</description>
-		<sheet display="true">
-			<description>Choose one of your skill proficiencies. Your proficiency bonus is doubled for any ability check you make that uses the chosen skill. You can also speak, read, and write two additional languages of your choice.</description>
-		</sheet>
-		<rules>
-			<select type="Class Feature" name="Expertise (Canny)" supports="Expertise"/>
-			<select type="Language" name="Language (Canny)" number="2" />			
-		</rules>
-	</element>
 
-	<element name="Roving" type="Class Feature" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER_ROVING">
-		<description>
-			<p>Your walking speed increases by 5, and you gain a climbing speed and a swimming speed equal to your walking speed.</p>
-		</description>
-		<sheet display="true">
-			<description>Your walking speed increases by 5, and you gain a climbing speed and a swimming speed equal to your walking speed.</description>
-		</sheet>
-		<rules>
-			<stat name="speed" value="5" />
-			<stat name="speed:swim" value="speed" bonus="base" />
-			<stat name="speed:climb" value="speed" bonus="base" />
-		</rules>
-	</element>
 
-	<element name="Tireless" type="Class Feature" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_DEFT_EXPLORER_TIRELESS">
-		<description>
-			<p>As an action, you can give yourself a number of temporary hit points equal to 1d8 + your Wisdom modifier (minimum of 1 temporary hit point). You can use this action a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
-			<p class="indent">In addition, whenever you finish a short rest, your exhaustion level, if any, is decreased by 1.</p>
-		</description>
-		<sheet action="Action" usage="{{proficiency}}/Long Rest">
-			<description>You can give yourself a number of temporary hit points equal to 1d8 + {{tireless:hp}}. In addition, whenever you finish a short rest, your exhaustion level, if any, is decreased by 1.</description>
-		</sheet>
-		<rules>
-			<stat name="tireless:hp" value="1" bonus="base" />
-			<stat name="tireless:hp" value="wisdom:modifier" bonus="base" />
-		</rules>
-	</element>
 	
 	<!-- Favored Foe -->
-	<element name="Favored Foe" type="Class Feature" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_FAVORED_FOE">
+	<element name="Favored Foe" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASS_FEATURE_RANGER_FAVORED_FOE">
 		<supports>Ranger-Option-1-1</supports>
 		<description>
 			<p><i>1st-level ranger feature, which replaces the Favored Enemy feature and works with the Foe Slayer feature</i></p>
@@ -627,12 +470,12 @@
 		</sheet>
 	</element>
 
-	<element name="Ranger, LV01: Favored Foe" type="Item" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_ITEM_OCF_RANGER_FAVORED_FOE">
+	<element name="Ranger, LV01: Favored Foe" type="Item" source="The Book of Xellarant" id="ID_TBOX_ITEM_OCF_RANGER_FAVORED_FOE">
 		<compendium display="false" />
 		<description>
 			<p><i>You can equip this item to “enable” it. It remains hidden from the inventory on your character sheet.</i></p>
 			<div class="reference">
-				<div element="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_FAVORED_FOE" />
+				<div element="ID_TBOX_CLASS_FEATURE_RANGER_FAVORED_FOE" />
 			</div>
 		</description>
 		<setters>
@@ -643,48 +486,13 @@
 		</setters>
 		<rules>
 			<grant type="Grants" id="ID_INTERNAL_FEATURE_REPLACEMENT_RANGER_FAVORED_ENEMY" />
-			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_FAVORED_FOE" requirements="[level:ranger revised:1]"/>
+			<grant type="Class Feature" id="ID_TBOX_CLASS_FEATURE_RANGER_FAVORED_FOE" requirements="[level:ranger revised:1]"/>
 		</rules>
 	</element>
 
 	<!-- Additional Ranger Spells -->
-	<element name="Additional Ranger Spells" type="Class Feature" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_ADDITIONAL_RANGER_SPELLS">
-		<description>
-			<p><i>2nd-level ranger feature</i></p>
-			<p>The spells in the following list expand the ranger spell list in the <i>Player's Handbook</i>. The list is organized by spell level, not character level. If a spell can be cast as a ritual, the ritual tag appears after the spell's name. Each spell is in the <i>Player's Handbook</i>, unless it has an asterisk (a spell in chapter 3 of <i>Tasha’s Cauldron of Everything</i>). <i>Xanathar's Guide to Everything</i> also offers more spells.</p>
-			<table>
-				<thead>
-					<tr><td>Spell Level</td><td>Spells</td></tr>
-				</thead>
-				<tr><td>1st</td><td><em>Entangle, Searing smite</em></td></tr>
-				<tr><td>2nd</td><td><em>Aid, Enhance ability, Gust of wind, Magic weapon, Summon beast*</em></td></tr>
-				<tr><td>3rd</td><td><em>Elemental weapon, Meld into stone, Revivify, Summon fey*</em></td></tr>
-				<tr><td>4th</td><td><em>Dominate beast, Summon elemental*</em></td></tr>
-				<tr><td>5th</td><td><em>Greater restoration</em></td></tr>
-			</table>
-		</description>
-		<sheet display="false">
-			<description>The spells in the following list expand the ranger spell list in the <i>Player's Handbook</i>. The list is organized by spell level, not character level. If a spell can be cast as a ritual, the ritual tag appears after the spell's name. Each spell is in the <i>Player's Handbook</i>, unless it has an asterisk (a spell in chapter 3 of <i>Tasha’s Cauldron of Everything</i>). <i>Xanathar's Guide to Everything</i> also offers more spells.</description>
-		</sheet>
-		<spellcasting name="Ranger" extend="true">
-			<extend>ID_PHB_SPELL_ENTANGLE</extend>
-			<extend>ID_PHB_SPELL_SEARING_SMITE</extend>
-			<extend>ID_PHB_SPELL_AID</extend>
-			<extend>ID_PHB_SPELL_ENHANCE_ABILITY</extend>
-			<extend>ID_PHB_SPELL_GUST_OF_WIND</extend>
-			<extend>ID_PHB_SPELL_MAGIC_WEAPON</extend>
-			<extend>ID_WOTC_TCOE_SPELL_SUMMON_BEAST</extend>
-			<extend>ID_PHB_SPELL_ELEMENTAL_WEAPON</extend>
-			<extend>ID_PHB_SPELL_MELD_INTO_STONE</extend>
-			<extend>ID_PHB_SPELL_REVIVIFY</extend>
-			<extend>ID_WOTC_TCOE_SPELL_SUMMON_FEY</extend>
-			<extend>ID_PHB_SPELL_DOMINATE_BEAST</extend>
-			<extend>ID_WOTC_TCOE_SPELL_SUMMON_ELEMENTAL</extend>
-			<extend>ID_PHB_SPELL_GREATER_RESTORATION</extend>
-		</spellcasting>
-	</element>
 
-	<element name="Ranger, LV02: Additional Ranger Spells" type="Item" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_ITEM_OCF_RANGER_ADDITIONAL_RANGER_SPELLS">
+	<element name="Ranger, LV02: Additional Ranger Spells" type="Item" source="The Book of Xellarant" id="ID_TBOX_ITEM_OCF_RANGER_ADDITIONAL_RANGER_SPELLS">
 		<compendium display="false" />
 		<description>
 			<p><i>You can equip this item to “enable” it. It remains hidden from the inventory on your character sheet.</i></p>
@@ -704,17 +512,8 @@
 	</element>
 
 	<!-- Spellcasting Focus -->
-	<element name="Spellcasting Focus (Ranger)" type="Class Feature" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_SPELLCASTING_FOCUS">
-		<description>
-			<p><i>2nd-level ranger feature</i></p>
-			<p>You can use a druidic focus as a spellcasting focus for your ranger spells. A druidic focus might be a sprig of mistletoe or holly, a wand or rod made of yew or another special wood, a staff drawn whole from a living tree, or an object incorporating feathers, fur, bones, and teeth from sacred animals.</p>
-		</description>
-		<sheet alt="Spellcasting Focus">
-			<description>You can use a druidic focus as a spellcasting focus for your ranger spells.</description>
-		</sheet>
-	</element>
 
-	<element name="Ranger, LV02: Spellcasting Focus" type="Item" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_ITEM_OCF_RANGER_SPELLCASTING_FOCUS">
+	<element name="Ranger, LV02: Spellcasting Focus" type="Item" source="The Book of Xellarant" id="ID_TBOX_ITEM_OCF_RANGER_SPELLCASTING_FOCUS">
 		<compendium display="false" />
 		<description>
 			<p><i>You can equip this item to “enable” it. It remains hidden from the inventory on your character sheet.</i></p>
@@ -734,7 +533,7 @@
 	</element>
 
 	<!-- Primal Awareness -->
-	<element name="Primal Awareness" type="Class Feature" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_PRIMAL_AWARENESS">
+	<element name="Primal Awareness" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASS_FEATURE_RANGER_PRIMAL_AWARENESS">
 		<supports>Ranger-Option-3</supports>
 		<description>
 			<p><i>3rd-level ranger feature, which replaces the Primeval Awareness feature</i></p>
@@ -763,12 +562,12 @@
 		</rules>
 	</element>
 
-	<element name="Ranger, LV03: Primal Awareness" type="Item" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_ITEM_OCF_RANGER_PRIMAL_AWARENESS">
+	<element name="Ranger, LV03: Primal Awareness" type="Item" source="The Book of Xellarant" id="ID_TBOX_ITEM_OCF_RANGER_PRIMAL_AWARENESS">
 		<compendium display="false" />
 		<description>
 			<p><i>You can equip this item to “enable” it. It remains hidden from the inventory on your character sheet.</i></p>
 			<div class="reference">
-				<div element="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_PRIMAL_AWARENESS" />
+				<div element="ID_TBOX_CLASS_FEATURE_RANGER_PRIMAL_AWARENESS" />
 			</div>
 		</description>
 		<setters>
@@ -779,22 +578,13 @@
 		</setters>
 		<rules>
 			<grant type="Grants" id="ID_INTERNAL_FEATURE_REPLACEMENT_RANGER_PRIMEVAL_AWARENESS" />
-			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_PRIMAL_AWARENESS" requirements="[level:ranger revised:3]"/>
+			<grant type="Class Feature" id="ID_TBOX_CLASS_FEATURE_RANGER_PRIMAL_AWARENESS" requirements="[level:ranger revised:3]"/>
 		</rules>
 	</element>
 
 	<!-- Martial Versatility -->
-	<element name="Martial Versatility (Ranger)" type="Class Feature" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_MARTIAL_VERSATILITY">
-		<description>
-			<p><i>4th-level ranger feature</i></p>
-			<p>Whenever you reach a level in this class that grants the Ability Score Improvement feature, you can replace a fighting style you know with another fighting style available to rangers. This replacement represents a shift of focus in your martial practice.</p>
-		</description>
-		<sheet alt="Martial Versatility">
-			<description>Whenever you reach a level in Ranger class that grants the Ability Score Improvement feature, you can replace a fighting style you know with another fighting style available to rangers.</description>
-		</sheet>
-	</element>
 
-	<element name="Ranger, LV04: Martial Versatility" type="Item" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_ITEM_OCF_RANGER_MARTIAL_VERSATILITY">
+	<element name="Ranger, LV04: Martial Versatility" type="Item" source="The Book of Xellarant" id="ID_TBOX_ITEM_OCF_RANGER_MARTIAL_VERSATILITY">
 		<compendium display="false" />
 		<description>
 			<p><i>You can equip this item to “enable” it. It remains hidden from the inventory on your character sheet.</i></p>
@@ -814,7 +604,7 @@
 	</element>
 
 	<!-- Nature's Veil -->
-	<element name="Nature's Veil" type="Class Feature" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_NATURES_VEIL">
+	<element name="Nature's Veil" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASS_FEATURE_RANGER_NATURES_VEIL">
 		<supports>Ranger-Option-10</supports>
 		<description>
 			<p><i>10th-level ranger feature, which replaces the Hide in Plain Sight feature</i></p>
@@ -826,12 +616,12 @@
 		</sheet>
 	</element>
 
-	<element name="Ranger, LV10: Nature's Veil" type="Item" source="Tasha’s Cauldron of Everything" id="ID_WOTC_TCOE_ITEM_OCF_RANGER_NATURES_VEIL">
+	<element name="Ranger, LV10: Nature's Veil" type="Item" source="The Book of Xellarant" id="ID_TBOX_ITEM_OCF_RANGER_NATURES_VEIL">
 		<compendium display="false" />
 		<description>
 			<p><i>You can equip this item to “enable” it. It remains hidden from the inventory on your character sheet.</i></p>
 			<div class="reference">
-				<div element="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_NATURES_VEIL" />
+				<div element="ID_TBOX_CLASS_FEATURE_RANGER_NATURES_VEIL" />
 			</div>
 		</description>
 		<setters>
@@ -842,7 +632,7 @@
 		</setters>
 		<rules>
 			<grant type="Grants" id="ID_INTERNAL_FEATURE_REPLACEMENT_RANGER_HIDE_IN_PLAIN_SIGHT" />
-			<grant type="Class Feature" id="ID_WOTC_TCOE_CLASS_FEATURE_RANGER_NATURES_VEIL" requirements="[level:ranger revised:10]"/>
+			<grant type="Class Feature" id="ID_TBOX_CLASS_FEATURE_RANGER_NATURES_VEIL" requirements="[level:ranger revised:10]"/>
 		</rules>
 	</element>
 
@@ -871,7 +661,7 @@
             <grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_STALKERS_DODGE" level="15" />
         </rules>
     </element>
-    <element name="Deep Stalker Magic" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_DEEP_STALKER_MAGIC">
+    <element name="Deep Stalker Magic" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_DEEP_STALKER_MAGIC">
         <description>
             <p>At 3rd level, you gain darkvision out to range of 90 feet. If you already have darkvision, you increase its range by 30 feet. </p>
             <p class="indent">You also gain access to additional spells when you reach certain levels in this class, as shown in the Deep Stalker Spells table. The spell counts as a ranger spell for you, but it doesn't count against the number of ranger spells you know.</p>       
@@ -897,7 +687,7 @@
             <grant type="Spell" name="ID_PHB_SPELL_SEEMING" level="17" spellcasting="Ranger" />
         </rules>
     </element>
-    <element name="Underdark Scout" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_UNDERDARK_SCOUT">
+    <element name="Underdark Scout" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_UNDERDARK_SCOUT">
         <description>
             <p>At 3rd level, you master the art of the ambush. At the start of your first turn of each combat, your walking speed increases by 10 feet, which lasts until the end of that turn. If you take the Attack action on that turn, you can make one additional weapon attack as part of that action.</p>
             <p class="indent">You are also adept at evading creatures that rely on darkvision. Such creatures gain no benefit when attempting to detect you in dark and dim conditions. Additionally, when the DM determines if you can hide from a creature, that creature gains no benefit from its darkvision.</p>
@@ -907,7 +697,7 @@
         </sheet>
         <rules />
     </element>
-    <!-- <element name="Extra Attack" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_EXTRA_ATTACK">
+    <!-- <element name="Extra Attack" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_EXTRA_ATTACK">
         <description>
             <p>Beginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.</p>
         </description>
@@ -916,7 +706,7 @@
         </sheet>
         <rules />
     </element> -->
-    <element name="Iron Mind" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_IRON_MIND">
+    <element name="Iron Mind" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_IRON_MIND">
         <description>
             <p>By 7th level, you have honed your ability to resist the mind—altering powers of your prey. You gain proficiency in Wisdom saving throws. If you already have this proficiency, you instead gain proficiency in Intelligence or Charisma saving throws (your choice).</p>
         </description>
@@ -925,7 +715,7 @@
             <select type="Proficiency" name="Saving Throw Proficiency (Gloom Stalker)" supports="ID_PROFICIENCY_SAVINGTHROW_WISDOM|ID_PROFICIENCY_SAVINGTHROW_INTELLIGENCE|ID_PROFICIENCY_SAVINGTHROW_CHARISMA" default="ID_PROFICIENCY_SAVINGTHROW_WISDOM" />
         </rules>
     </element>
-    <element name="Stalker's Flurry" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_STALKERS_FURY">
+    <element name="Stalker's Flurry" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_STALKERS_FURY">
         <description>
             <p>At 11th level, you learn to attack with such unexpected speed that you can turn a miss into another strike. Once on each of your turns when you miss with a weapon attack, you can make another weapon attack as part of the same action.</p>
         </description>
@@ -934,7 +724,7 @@
         </sheet>
         <rules />
     </element>
-    <element name="Stalkers Dodge" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_STALKERS_DODGE">
+    <element name="Stalkers Dodge" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_DEEPSTALKER_STALKERS_DODGE">
         <description>
             <p>Starting at 15th level, you can dodge in unforeseen ways, with wisps of supernatural shadow around you. Whenever a creature makes an attack roll against you and doesn’t have advantage on the roll, you can use your reaction to impose disadvantage on it. You must use this feature before you know the outcome of the attack roll.</p>
         </description>
@@ -945,7 +735,7 @@
     </element>
     	
   <!-- Beast -->
-    <element name="Beast Conclave (beta)" type="Archetype" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_RANGER_REVISED_BEAST">
+    <element name="Beast Conclave (beta)" type="Archetype" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_RANGER_REVISED_BEAST">
         <supports>Ranger Conclave, Ranger Archetype</supports>
         <description>
             <p>Many rangers are more at home in the wilds than in civilization, to the point where animals consider them kin. Rangers of the Beast Conclave develop a close bond with a beast, then further strengthen that bond through the use of magic.</p>
@@ -966,7 +756,7 @@
             <grant type="Archetype Feature" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_BEAST_SUPERIOR_BEASTS_DEFENSE" level="15" />
         </rules>
     </element>
-    <element name="Animal Companion" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_BEAST_ANIMAL_COMPANION">
+    <element name="Animal Companion" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_BEAST_ANIMAL_COMPANION">
         <description>
             <p>At 3rd level, you learn to use your magic to create a powerful bond with a creature of the natural world.</p>
             <p class="indent">Within 8 hours of word and the expenditure of 50 gp worth of rare herbs and fine food, you call faorth an animal from the wilderness to serve as your faithful companion. You normally select your companion from among the following animals: an ape, a black bear, a boar, a giant badger, a giant weasel, a mule, a panther, or a wolf. However, you DM might pick one of these animals for you, based on the surrounding terrain and on what types of creatures would logically be present in the area.</p>
@@ -1024,7 +814,7 @@
     	    <stat name="companion:damage" value="Proficiency" />
         </rules>
     </element>
-    <element name="Coordinated Attack" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_BEAST_COORDINATED_ATTACK">
+    <element name="Coordinated Attack" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_BEAST_COORDINATED_ATTACK">
         <description>
             <p>Beginning at 5th level, when you gain the Extra Attack feature, you and your animal companion form a more cohesive fighting team. When you use the Attack action on your turn, if your companion can see you, you can forego one of your attacks, and it can use its reaction to make a melee attack.</p>
         </description>
@@ -1033,7 +823,7 @@
         </sheet>
         <rules />
     </element>
-    <element name="Beast's Defence" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_BEAST_BEASTS_DEFENSE">
+    <element name="Beast's Defence" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_BEAST_BEASTS_DEFENSE">
         <description>
             <p>At 7th level, while your companion can see you it has advantage on all saving throws.</p>
         </description>
@@ -1042,7 +832,7 @@
         </sheet>
         <rules />
     </element>
-    <element name="Storm of Claws and Fangs" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_BEAST_STORM_OF_CLAWS_AND_FANGS">
+    <element name="Storm of Claws and Fangs" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_BEAST_STORM_OF_CLAWS_AND_FANGS">
         <description>
             <p>Starting at 11th level, your companion can use its action to make a melee attack against each creature of its choice within 5 feet of it, with a separate attack for each target.</p>
         </description>
@@ -1051,7 +841,7 @@
         </sheet>
         <rules />
     </element>
-    <element name="Superior Beast's Defense" type="Archetype Feature" source="Unearthed Arcana: Revised Ranger" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_BEAST_SUPERIOR_BEASTS_DEFENSE">
+    <element name="Superior Beast's Defense" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_BEAST_SUPERIOR_BEASTS_DEFENSE">
         <description>
             <p>Beginning at 15th level, whenever an attacker that your companion can see hits it with an attack, it can use its reaction to halve the attack's damage against it.</p>
         </description>
@@ -1071,7 +861,7 @@
 			<p class="indent">The drake remains until it is reduced to 0 hit points, until you use this feature to summon the drake again, or until you die. Anything the drake was wearing or carrying is left behind when the drake vanishes.</p>
 			<p class="indent">Once you summon the drake, you can’t do so again until you finish a long rest, unless you expend a spell slot of 1st level or higher to summon it.</p>
 			<div class="reference">
-				<div element="ID_WOTC_FTOD_INFORMATION_DRAKE_COMPANION" />
+				<div element="ID_TBOX_INFORMATION_DRAKE_COMPANION" />
 			</div>
 		</description>
 		<sheet action="Action" usage="1/Long Rest">
@@ -1081,14 +871,14 @@
 			You can also expend a spell slot of 1st level or higher to summon it.</description>
 		</sheet>
 		<rules>
-			<select type="Companion" name="Drake Companion" supports="Drake Companion" default="ID_TBOX_COMPANION_DRAKEWARDEN_DRAKE_COMPANION_SMALL" requirements="!ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_BOND_OF_FANG_AND_SCALE"/>
-			<select type="Companion" name="Drake Companion" supports="Drake Companion" default="ID_TBOX_COMPANION_DRAKEWARDEN_DRAKE_COMPANION_MEDIUM"  requirements="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_BOND_OF_FANG_AND_SCALE,!ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_PERFECTED_BOND"/>
-			<select type="Companion" name="Drake Companion" supports="Drake Companion" default="ID_TBOX_COMPANION_DRAKEWARDEN_DRAKE_COMPANION_LARGE"  requirements="ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_PERFECTED_BOND"/>
+			<select type="Companion" name="Drake Companion" supports="Drake Companion" default="ID_TBOX_COMPANION_DRAKEWARDEN_DRAKE_COMPANION_SMALL" requirements="!ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_BOND_OF_FANG_AND_SCALE"/>
+			<select type="Companion" name="Drake Companion" supports="Drake Companion" default="ID_TBOX_COMPANION_DRAKEWARDEN_DRAKE_COMPANION_MEDIUM"  requirements="ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_BOND_OF_FANG_AND_SCALE,!ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_PERFECTED_BOND"/>
+			<select type="Companion" name="Drake Companion" supports="Drake Companion" default="ID_TBOX_COMPANION_DRAKEWARDEN_DRAKE_COMPANION_LARGE"  requirements="ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_PERFECTED_BOND"/>
 		</rules>
 	</element>
 	<element name="Drake Companion Revised" type="Companion" source="The Book of Xellarant" id="ID_TBOX_COMPANION_DRAKEWARDEN_DRAKE_COMPANION_SMALL">
 		<supports>Drake Companion</supports>
-		<requirements>!ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_BOND_OF_FANG_AND_SCALE</requirements>
+		<requirements>!ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_BOND_OF_FANG_AND_SCALE</requirements>
 		<setters>
 			<set name="size">Small</set>
 			<set name="type">Dragon</set>
@@ -1108,9 +898,9 @@
 			<set name="languages">Draconic</set>
 			<set name="challenge">—</set>
 			<set name="proficiency">0</set>
-			<set name="traits">ID_WOTC_FTOD_COMPANION_TRAIT_DRAKEWARDEN_DRACONIC_ESSENCE</set>
-			<set name="actions">ID_WOTC_FTOD_COMPANION_ACTION_DRAKEWARDEN_BITE</set>
-			<set name="reactions">ID_WOTC_FTOD_COMPANION_REACTION_DRAKEWARDEN_INFUSED_STRIKES</set>
+			<set name="traits">ID_TBOX_COMPANION_TRAIT_DRAKEWARDEN_DRACONIC_ESSENCE</set>
+			<set name="actions">ID_TBOX_COMPANION_ACTION_DRAKEWARDEN_BITE</set>
+			<set name="reactions">ID_TBOX_COMPANION_REACTION_DRAKEWARDEN_INFUSED_STRIKES</set>
 		</setters>
 		<rules>
 			<stat name="companion:ac" value="14" bonus="base" />
@@ -1130,7 +920,7 @@
 	<element name="Drake Companion Revised" type="Companion" source="The Book of Xellarant" id="ID_TBOX_COMPANION_DRAKEWARDEN_DRAKE_COMPANION_MEDIUM">
 		<compendium display="false" />
 		<supports>Drake Companion</supports>
-		<requirements>ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_BOND_OF_FANG_AND_SCALE</requirements>
+		<requirements>ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_BOND_OF_FANG_AND_SCALE</requirements>
 		<setters>
 			<set name="size">Medium</set>
 			<set name="type">Dragon</set>
@@ -1150,9 +940,9 @@
 			<set name="languages">Draconic</set>
 			<set name="challenge">—</set>
 			<set name="proficiency">0</set>
-			<set name="traits">ID_WOTC_FTOD_COMPANION_TRAIT_DRAKEWARDEN_DRACONIC_ESSENCE</set>
-			<set name="actions">ID_WOTC_FTOD_COMPANION_ACTION_DRAKEWARDEN_MAGIC_FANG</set>
-			<set name="reactions">ID_WOTC_FTOD_COMPANION_REACTION_DRAKEWARDEN_INFUSED_STRIKES</set>
+			<set name="traits">ID_TBOX_COMPANION_TRAIT_DRAKEWARDEN_DRACONIC_ESSENCE</set>
+			<set name="actions">ID_TBOX_COMPANION_ACTION_DRAKEWARDEN_MAGIC_FANG</set>
+			<set name="reactions">ID_TBOX_COMPANION_REACTION_DRAKEWARDEN_INFUSED_STRIKES</set>
 		</setters>
 		<rules>
 			<stat name="companion:ac" value="14" bonus="base" />
@@ -1173,7 +963,7 @@
 	<element name="Drake Companion Revised" type="Companion" source="The Book of Xellarant" id="ID_TBOX_COMPANION_DRAKEWARDEN_DRAKE_COMPANION_LARGE">
 		<compendium display="false" />
 		<supports>Drake Companion</supports>
-		<requirements>ID_WOTC_FTOD_ARCHETYPE_FEATURE_DRAKEWARDEN_PERFECTED_BOND</requirements>
+		<requirements>ID_TBOX_ARCHETYPE_FEATURE_DRAKEWARDEN_PERFECTED_BOND</requirements>
 		<setters>
 			<set name="size">Large</set>
 			<set name="type">Dragon</set>
@@ -1193,9 +983,9 @@
 			<set name="languages">Draconic</set>
 			<set name="challenge">—</set>
 			<set name="proficiency">0</set>
-			<set name="traits">ID_WOTC_FTOD_COMPANION_TRAIT_DRAKEWARDEN_DRACONIC_ESSENCE</set>
-			<set name="actions">ID_WOTC_FTOD_COMPANION_ACTION_DRAKEWARDEN_EMPOWERED_BITE</set>
-			<set name="reactions">ID_WOTC_FTOD_COMPANION_REACTION_DRAKEWARDEN_INFUSED_STRIKES</set>
+			<set name="traits">ID_TBOX_COMPANION_TRAIT_DRAKEWARDEN_DRACONIC_ESSENCE</set>
+			<set name="actions">ID_TBOX_COMPANION_ACTION_DRAKEWARDEN_EMPOWERED_BITE</set>
+			<set name="reactions">ID_TBOX_COMPANION_REACTION_DRAKEWARDEN_INFUSED_STRIKES</set>
 		</setters>
 		<rules>
 			<stat name="companion:ac" value="14" bonus="base" />

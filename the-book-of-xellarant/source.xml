@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.4">
+		<update version="0.0.5">
 			<file name="source.xml" url="https://raw.githubusercontent.com/xellarant/the-book-of-xellarant/master/the-book-of-xellarant/source.xml" />
 		</update>
 	</info>
 	
-	<element name="The Book of Xellarant" type="Source" source="Homebrew" id="ID_HBRW_TBOX_SOURCE_THE_BOOK_OF_XELLARANT">
+	<element name="The Book of Xellarant" type="Source" source="Homebrew" id="ID_TBOX_SOURCE_THE_BOOK_OF_XELLARANT">
 		<description>
 			<p>This book is a non-existent publication. Just ideas for customizations and homebrews present by Xellarant.</p>
 			<p>The book of Xellarant, similar to the darkhold, is known to corrupt its wielder... potentially to the point of driving them mad.</p>
