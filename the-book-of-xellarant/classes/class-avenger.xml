@@ -3,8 +3,8 @@
 	<info>
 		<name>Avenger</name>
 		<description>The Avenger class re-worked for 5e as per DMSGuild.</description>
-		<author url="https://media.wizards.com/2016/dnd/downloads/UA_RevisedAvenger.pdf">Wizards of the Coast</author>
-		<update version="0.0.5">
+		<author url="https://github.com/Xellarant">Xellarant (Aurora adaptation)</author>
+		<update version="0.0.6">
 			<file name="class-avenger.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/classes/class-avenger.xml" />
 		</update>
 	</info>
@@ -58,28 +58,28 @@
 			<h5 class="caption">THE AVENGER</h5>
 			<table class="class-features">
 				<thead>
-					<tr><td class="col-5">Level</td><td class="left">Features</td><td class="col-10">Spells Known</td><td>1st</td><td>2nd</td><td>3rd</td><td>4th</td><td>5th</td></tr>
+					<tr><td class="col-5">Level</td><td class="left">Features</td><td>1st</td><td>2nd</td><td>3rd</td><td>4th</td><td>5th</td></tr>
 				</thead>
-				<tr><td> 1st</td><td class="left">Vengeful Grudge, Unarmored Defense, Wrathful Censure</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-				<tr><td> 2nd</td><td class="left">Fighting Style, Spellcasting, Divine Smite</td><td>2</td><td>2</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-				<tr><td> 3rd</td><td class="left">Vengeful Grudge Feature</td><td>3</td><td>3</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-				<tr><td> 4th</td><td class="left">Ability Score Improvement</td><td>3</td><td>3</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-				<tr><td> 5th</td><td class="left">Extra Attack</td><td>4</td><td>4</td><td>2</td><td>—</td><td>—</td><td>—</td></tr>
-				<tr><td> 6th</td><td class="left">Vengeful Grudge Feature</td><td>4</td><td>4</td><td>2</td><td>—</td><td>—</td><td>—</td></tr>
-				<tr><td> 7th</td><td class="left">Evasion</td><td>5</td><td>4</td><td>3</td><td>—</td><td>—</td><td>—</td></tr>
-				<tr><td> 8th</td><td class="left">Ability Score Improvement</td><td>5</td><td>4</td><td>3</td><td>—</td><td>—</td><td>—</td></tr>
-				<tr><td> 9th</td><td class="left">Stalker's Shroud</td><td>6</td><td>4</td><td>3</td><td>2</td><td>—</td><td>—</td></tr>
-				<tr><td>10th</td><td class="left">Vengeful Grudge Feature</td><td>6</td><td>4</td><td>3</td><td>2</td><td>—</td><td>—</td></tr>
-				<tr><td>11th</td><td class="left">Improved Divine Smite</td><td>7</td><td>4</td><td>3</td><td>3</td><td>—</td><td>—</td></tr>
-				<tr><td>12th</td><td class="left">Ability Score Improvement</td><td>7</td><td>4</td><td>3</td><td>3</td><td>—</td><td>—</td></tr>
-				<tr><td>13th</td><td class="left">—</td><td>8</td><td>4</td><td>3</td><td>3</td><td>1</td><td>—</td></tr>
-				<tr><td>14th</td><td class="left">Vengeful Grudge Feature</td><td>8</td><td>4</td><td>3</td><td>3</td><td>1</td><td>—</td></tr>
-				<tr><td>15th</td><td class="left">Relentless Pursuit</td><td>9</td><td>4</td><td>3</td><td>3</td><td>2</td><td>—</td></tr>
-				<tr><td>16th</td><td class="left">Ability Score Improvement</td><td>9</td><td>4</td><td>3</td><td>3</td><td>2</td><td>—</td></tr>
-				<tr><td>17th</td><td class="left">—</td><td>10</td><td>4</td><td>3</td><td>3</td><td>3</td><td>1</td></tr>
-				<tr><td>18th</td><td class="left">Vengeful Grudge Feature</td><td>10</td><td>4</td><td>3</td><td>3</td><td>3</td><td>1</td></tr>
-				<tr><td>19th</td><td class="left">Ability Score Improvement</td><td>11</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td></tr>
-				<tr><td>20th</td><td class="left">Unstoppable Vengeance</td><td>11</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td></tr>
+				<tr><td> 1st</td><td class="left">Vengeful Grudge, Unarmored Defense, Wrathful Censure</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 2nd</td><td class="left">Fighting Style, Spellcasting, Divine Smite</td><td>2</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 3rd</td><td class="left">Vengeful Grudge Feature</td><td>3</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 4th</td><td class="left">Ability Score Improvement</td><td>3</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 5th</td><td class="left">Extra Attack</td><td>4</td><td>2</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 6th</td><td class="left">Vengeful Grudge Feature</td><td>4</td><td>2</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 7th</td><td class="left">Evasion</td><td>4</td><td>3</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 8th</td><td class="left">Ability Score Improvement</td><td>4</td><td>3</td><td>—</td><td>—</td><td>—</td></tr>
+				<tr><td> 9th</td><td class="left">Stalker's Shroud</td><td>4</td><td>3</td><td>2</td><td>—</td><td>—</td></tr>
+				<tr><td>10th</td><td class="left">Vengeful Grudge Feature</td><td>4</td><td>3</td><td>2</td><td>—</td><td>—</td></tr>
+				<tr><td>11th</td><td class="left">Improved Divine Smite</td><td>4</td><td>3</td><td>3</td><td>—</td><td>—</td></tr>
+				<tr><td>12th</td><td class="left">Ability Score Improvement</td><td>4</td><td>3</td><td>3</td><td>—</td><td>—</td></tr>
+				<tr><td>13th</td><td class="left">—</td><td>4</td><td>3</td><td>3</td><td>1</td><td>—</td></tr>
+				<tr><td>14th</td><td class="left">Vengeful Grudge Feature</td><td>4</td><td>3</td><td>3</td><td>1</td><td>—</td></tr>
+				<tr><td>15th</td><td class="left">Relentless Pursuit</td><td>4</td><td>3</td><td>3</td><td>2</td><td>—</td></tr>
+				<tr><td>16th</td><td class="left">Ability Score Improvement</td><td>4</td><td>3</td><td>3</td><td>2</td><td>—</td></tr>
+				<tr><td>17th</td><td class="left">—</td><td>4</td><td>3</td><td>3</td><td>3</td><td>1</td></tr>
+				<tr><td>18th</td><td class="left">Vengeful Grudge Feature</td><td>4</td><td>3</td><td>3</td><td>3</td><td>1</td></tr>
+				<tr><td>19th</td><td class="left">Ability Score Improvement</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td></tr>
+				<tr><td>20th</td><td class="left">Unstoppable Vengeance</td><td>4</td><td>3</td><td>3</td><td>3</td><td>2</td></tr>
 			</table>
 			<div element="ID_TBOX_CLASSFEATURE_AVENGER_VENGEFUL_GRUDGE" />
             <div element="ID_TBOX_CLASSFEATURE_AVENGER_UNARMORED_DEFENSE" />
@@ -182,9 +182,13 @@
             </ul>
             <p class="indent">You can use this feature a number of times equal to your Charisma modifier (minimum one). You regain all uses of this feature when you finish a short rest or long rest.</p>
 		</description>
-		<sheet action="Bonus Action" usage="{{proficiency}}/Short Rest">
+		<sheet action="Bonus Action" usage="{{avenger:wrathful censure:uses}}/Short Rest">
 			<description>You can take a bonus action to apply a wrathful censure on one creature you can see within 100 feet. The censure lasts for up to one minute, and immediately ends if the target moves more than 100 feet away from you. You may end a censure as a free action. You can not have disadvantage against with weapon attacks against your censure target, and you may use Charisma instead of Dex or Strength for those attack and damage rolls.</description>
 		</sheet>
+		<rules>
+			<stat name="avenger:wrathful censure:uses" value="1" bonus="base" />
+			<stat name="avenger:wrathful censure:uses" value="charisma:modifier" bonus="base" />
+		</rules>
 	</element>
 
     <element name="Fighting Style" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_AVENGER_FIGHTING_STYLE">
@@ -255,6 +259,7 @@
 			<list known="true">Avenger</list>
 		</spellcasting>
 		<rules>
+			<grant type="Grants" id="ID_INTERNAL_GRANTS_SPELLCASTING_FEATURE" />
 			<grant type="Grants" id="ID_INTERNAL_GRANT_MULTICLASS_SPELLCASTING_SLOTS_HALF" requirements="ID_INTERNAL_GRANT_MULTICLASS"/>
             <grant type="Proficiency" id="ID_INTERNAL_PROFICIENCY_SPELLFOCUS_GROUP_HOLY_SYMBOL" />
 			<stat name="avenger:spellcasting:slots:1" value="2" level="2" />
@@ -270,8 +275,10 @@
 			<stat name="avenger:spellcasting:slots:5" value="1" level="17" />
 			<stat name="avenger:spellcasting:slots:5" value="1" level="19" />
 			
-			<stat name="avenger:spellcasting:prepare" value="charisma:modifier" />
-			<stat name="avenger:spellcasting:prepare" value="level:avenger" />
+			<stat name="avenger:spellcasting:prepare:calculated" value="charisma:modifier" />
+			<stat name="avenger:spellcasting:prepare:calculated" value="level:avenger:half" />
+			<stat name="avenger:spellcasting:prepare" value="1" bonus="base" />
+			<stat name="avenger:spellcasting:prepare" value="avenger:spellcasting:prepare:calculated" bonus="base" />
 
 		</rules>
 	</element>
@@ -347,7 +354,7 @@
 		<description>
 			<p>At 15th level, the connection of fate between you and your chosen prey bends reality itself to prevent immediate escape. if the target of your Wrathful Censure willingly moves away from you, you can take a reaction at any time up to the end of the target’s movement to teleport to a space adjacent to the target.</p>
 		</description>
-		<sheet action="Reaction">If the target of your Wrathful Censure willingly moves away from you, you can take a reaction at any time up to the end of the target’s movement to teleport to a space adjacent to the target.</sheet>
+		<sheet action="Reaction"><description>If the target of your Wrathful Censure willingly moves away from you, you can take a reaction at any time up to the end of the target’s movement to teleport to a space adjacent to the target.</description></sheet>
 	</element>
 
     <element name="Unstoppable Vengeance" type="Class Feature" source="The Book of Xellarant" id="ID_TBOX_CLASSFEATURE_AVENGER_UNSTOPPABLE_VENGEANCE">
@@ -355,7 +362,7 @@
 			<p>At 20th level, when you apply your Wrathful Censure feature, you can choose to become immune to all damage, become immune to the frightened, stunned, and paralyzed conditions, have advantage on all saving throws, and move normally over difficult terrain until the end of your next turn, or until you make your first melee weapon attack against the censure’s target, whichever happens first. Attacking any other target or willingly moving away from the censure target will immediately end the duration of this feature’s benefit. This feature can be used once after you finish a short rest or long rest.</p>
 		</description>
 		<sheet usage="1/Short Rest">
-            <p>When you apply your Wrathful Censure feature, you can choose to become immune to all damage, become immune to the frightened, stunned, and paralyzed conditions, have advantage on all saving throws, and move normally over difficult terrain until the end of your next turn, or until you make your first melee weapon attack against the censure’s target. Attacking any other target or willingly moving away from the censure target ends the feature early.</p>
+            <description>When you apply your Wrathful Censure feature, you can choose to become immune to all damage, become immune to the frightened, stunned, and paralyzed conditions, have advantage on all saving throws, and move normally over difficult terrain until the end of your next turn, or until you make your first melee weapon attack against the censure’s target. Attacking any other target or willingly moving away from the censure target ends the feature early.</description>
         </sheet>
 	</element>
 
@@ -371,7 +378,8 @@
 	</element>
 
 	<!-- Avenger-specific spells -->
-	<element name="Avenger's Scope" type="Spell" source="The Book of Xellarant" id="ID_TBOX_SPELL_AVENGERS_SCOPE" requirements="ID_TBOX_CLASSFEATURE_AVENGER_WRATHFUL_CENSURE">
+	<element name="Avenger's Scope" type="Spell" source="The Book of Xellarant" id="ID_TBOX_SPELL_AVENGERS_SCOPE">
+		<requirements>ID_TBOX_CLASSFEATURE_AVENGER_WRATHFUL_CENSURE</requirements>
 		<supports>Avenger</supports>
 		<description>
 			<p class="indent"><em><b>SPECIAL. </b></em>You must have the Wrathful Censure feature to cast this spell.</p>
@@ -392,7 +400,8 @@
 			<set name="isRitual">false</set>
 		</setters>
 	</element>
-	<element name="Blessing of Vengeance" type="Spell" source="The Book of Xellarant" id="ID_TBOX_SPELL_BLESSING_OF_VENGEANCE" requirements="ID_TBOX_CLASSFEATURE_AVENGER_WRATHFUL_CENSURE">
+	<element name="Blessing of Vengeance" type="Spell" source="The Book of Xellarant" id="ID_TBOX_SPELL_BLESSING_OF_VENGEANCE">
+		<requirements>ID_TBOX_CLASSFEATURE_AVENGER_WRATHFUL_CENSURE</requirements>
 		<supports>Avenger</supports>
 		<description>
 			<p class="indent"><em><b>SPECIAL. </b></em>You must have the Wrathful Censure feature to cast this spell.</p>
@@ -414,7 +423,8 @@
 			<set name="isRitual">false</set>
 		</setters>
 	</element>
-	<element name="Illuminating Censure" type="Spell" source="The Book of Xellarant" id="ID_TBOX_SPELL_ILLUMINATING_CENSURE" requirements="ID_TBOX_CLASSFEATURE_AVENGER_WRATHFUL_CENSURE">
+	<element name="Illuminating Censure" type="Spell" source="The Book of Xellarant" id="ID_TBOX_SPELL_ILLUMINATING_CENSURE">
+		<requirements>ID_TBOX_CLASSFEATURE_AVENGER_WRATHFUL_CENSURE</requirements>
 		<supports>Avenger</supports>
 		<description>
 			<p class="indent"><em><b>SPECIAL. </b></em>You must have the Wrathful Censure feature to cast this spell.</p>
@@ -435,7 +445,8 @@
 			<set name="isRitual">false</set>
 		</setters>
 	</element>
-	<element name="Marking Censure" type="Spell" source="The Book of Xellarant" id="ID_TBOX_SPELL_MARKING_CENSURE" requirements="ID_TBOX_CLASSFEATURE_AVENGER_WRATHFUL_CENSURE">
+	<element name="Marking Censure" type="Spell" source="The Book of Xellarant" id="ID_TBOX_SPELL_MARKING_CENSURE">
+		<requirements>ID_TBOX_CLASSFEATURE_AVENGER_WRATHFUL_CENSURE</requirements>
 		<supports>Avenger</supports>
 		<description>
 			<p class="indent"><em><b>SPECIAL. </b></em>You must have the Wrathful Censure feature to cast this spell.</p>
@@ -456,7 +467,8 @@
 			<set name="isRitual">false</set>
 		</setters>
 	</element>
-	<element name="Inescapable Censure" type="Spell" source="The Book of Xellarant" id="ID_TBOX_SPELL_INESCAPABLE_CENSURE" requirements="ID_TBOX_CLASSFEATURE_AVENGER_WRATHFUL_CENSURE">
+	<element name="Inescapable Censure" type="Spell" source="The Book of Xellarant" id="ID_TBOX_SPELL_INESCAPABLE_CENSURE">
+		<requirements>ID_TBOX_CLASSFEATURE_AVENGER_WRATHFUL_CENSURE</requirements>
 		<supports>Avenger</supports>
 		<description>
 			<p class="indent"><em><b>SPECIAL. </b></em>You must have the Wrathful Censure feature to cast this spell.</p>
@@ -477,7 +489,8 @@
 			<set name="isRitual">false</set>
 		</setters>
 	</element>
-	<element name="Path to Vengeance" type="Spell" source="The Book of Xellarant" id="ID_TBOX_SPELL_PATH_TO_VENGEANCE" requirements="ID_TBOX_CLASSFEATURE_AVENGER_WRATHFUL_CENSURE">
+	<element name="Path to Vengeance" type="Spell" source="The Book of Xellarant" id="ID_TBOX_SPELL_PATH_TO_VENGEANCE">
+		<requirements>ID_TBOX_CLASSFEATURE_AVENGER_WRATHFUL_CENSURE</requirements>
 		<supports>Avenger</supports>
 		<description>
 			<p class="indent"><em><b>SPECIAL. </b></em>You must have the Wrathful Censure feature to cast this spell.</p>

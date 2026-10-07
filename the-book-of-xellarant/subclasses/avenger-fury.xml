@@ -3,7 +3,7 @@
 	<info>
 		<name>Grudge of Indomitable Fury</name>
 		<description>Grudge of Indomitable Fury subclass for 5e Avenger</description>
-		<update version="0.0.4">
+		<update version="0.0.5">
 			<file name="avenger-fury.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/subclasses/avenger-fury.xml" />
 		</update>
 	</info>
@@ -35,7 +35,7 @@
             <p>At 1st level, the obsessive nature of your grudge bolsters your morale when you invoke your desire for vengeance. When you use your Wrathful Censure feature, you gain temporary hit points equal to your avenger level.</p>
         </description>
         <sheet>
-            <p>When you use your Wrathful Censure feature, you gain temporary hit points equal to your avenger level.</p>
+            <description>When you use your Wrathful Censure feature, you gain temporary hit points equal to your avenger level.</description>
         </sheet>
     </element>	
 	<element name="Channel Divinity" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_GOIF_CHANNEL_DIVINITY">
@@ -65,7 +65,7 @@
 	</element>
 	<element name="Channel Divinity: Oath of Pursuit" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_OOV_CHANNEL_DIVINITY_OATH_OF_PURSUIT">
 		<description>
-			<p>You can invoke a blessing of protection from your god when personal danger would threaten your mission. As a reaction when you would be hit by an attack, you can use your Channel Divinity to gain a bonus to AC equal to your Charisma modifier (minimum +2) until the end of your next turn.</p>
+			<p>As a reaction when your current Wrathful Censure target ends its turn further away from you than it was at the start of its turn, you can use your Channel Divinity to enhance the censure, making the duration 8 hours, changing the maximum distance to 100 miles, and allowing you to sense the target’s exact location from where you are currently located until the censure ends.</p>
 		</description>
 		<sheet alt="Oath of Pursuit" action="Reaction" usage="Channel Divinity">
 			<description>As a reaction when your current Wrathful Censure target ends its turn further away from you than it was at the start of its turn, you can use your Channel Divinity to enhance the censure, making the duration 8 hours, changing the maximum distance to 100 miles, and allowing you to sense the target’s exact location from where you are currently located until the censure ends.</description>

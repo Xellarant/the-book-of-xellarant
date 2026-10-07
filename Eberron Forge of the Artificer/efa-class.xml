@@ -2,7 +2,7 @@
 <elements>
   <info>
     <name>Eberron: Forge of the Artificer - Class</name>
-    <update version="0.1.5">
+    <update version="0.1.6">
       <file name="efa-class.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/Eberron%20Forge%20of%20the%20Artificer/efa-class.xml" />
     </update>
   </info>
@@ -255,7 +255,7 @@
       <!-- One additional Artisan's Tool of choice -->
       <select type="Proficiency" name="Artisan's Tool (Artificer)" supports="Artisan tools" requirements="!ID_EFA_MULTICLASS_ARTIFICER" />
       <!-- Skill choices: 2 from Arcana, History, Investigation, Medicine, Nature, Perception, Sleight of Hand -->
-      <select type="Proficiency" name="Skill Proficiency (Artificer)" number="2" supports="Skill,(Arcana||History||Investigation||Medicine||Nature||Perception||Sleight of Hand)" requirements="!ID_EFA_MULTICLASS_ARTIFICER" />
+      <select type="Proficiency" name="Skill Proficiency (Artificer)" number="2" supports="ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_MEDICINE|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_SLEIGHTOFHAND" requirements="!ID_EFA_MULTICLASS_ARTIFICER" />
       <!-- Class features granted by level -->
       <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_SPELLCASTING" level="1" />
       <grant type="Class Feature" id="ID_EFA_CLASS_FEATURE_ARTIFICER_TINKERS_MAGIC" level="1" />
@@ -283,7 +283,7 @@
         <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" />
         <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" />
         <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_SHIELDS" />
-        <select type="Proficiency" name="Skill Proficiency (Artificer Multiclass)" supports="Skill,(Arcana||History||Investigation||Medicine||Nature||Perception||Sleight of Hand)" />
+        <select type="Proficiency" name="Skill Proficiency (Artificer Multiclass)" supports="ID_PROFICIENCY_SKILL_ARCANA|ID_PROFICIENCY_SKILL_HISTORY|ID_PROFICIENCY_SKILL_INVESTIGATION|ID_PROFICIENCY_SKILL_MEDICINE|ID_PROFICIENCY_SKILL_NATURE|ID_PROFICIENCY_SKILL_PERCEPTION|ID_PROFICIENCY_SKILL_SLEIGHTOFHAND" />
       </rules>
     </multiclass>
   </element>
@@ -347,6 +347,7 @@
       <select type="Spell" name="Cantrip (Artificer)" supports="$(spellcasting:list), 0" number="2" spellcasting="Artificer" />
       <select type="Spell" name="Cantrip (Artificer)" supports="$(spellcasting:list), 0" level="10" spellcasting="Artificer" />
       <select type="Spell" name="Cantrip (Artificer)" supports="$(spellcasting:list), 0" level="14" spellcasting="Artificer" />
+      <grant type="Grants" id="ID_INTERNAL_GRANTS_SPELLCASTING_FEATURE" />
     </rules>
   </element>
 
@@ -496,7 +497,7 @@
       </table>
     </description>
     <sheet usage="Long Rest">
-      <description>You know {{replicate:plans:known}} magic item plans and can create {{replicate:items:max}} magic items per Long Rest using Tinker's Tools. Items are non-permanent — they vanish when you die (after 1d4 days) or if you replace their plan.</description>
+      <description>You know {{replicate:plans:known}} magic item plans and can create {{replicate:items:max}} magic items per Long Rest using Tinker's Tools. Items are non-permanent — they vanish when you die (after 1d4 days) or if you replace their plan. Record the specific item for a category plan in your notes. Add created items to your inventory when you make them.</description>
     </sheet>
     <rules>
       <stat name="replicate:plans:known" value="4" level="2" />
@@ -509,6 +510,11 @@
       <stat name="replicate:items:max" value="1" level="10" />
       <stat name="replicate:items:max" value="1" level="14" />
       <stat name="replicate:items:max" value="1" level="18" />
+      <select type="Class Feature" name="Magic Item Plans (Artificer 2)" supports="EFA Artificer Plan" number="4" level="2" />
+      <select type="Class Feature" name="Magic Item Plan (Artificer 6)" supports="EFA Artificer Plan" level="6" />
+      <select type="Class Feature" name="Magic Item Plan (Artificer 10)" supports="EFA Artificer Plan" level="10" />
+      <select type="Class Feature" name="Magic Item Plan (Artificer 14)" supports="EFA Artificer Plan" level="14" />
+      <select type="Class Feature" name="Magic Item Plan (Artificer 18)" supports="EFA Artificer Plan" level="18" />
     </rules>
   </element>
 
@@ -593,8 +599,8 @@
       <description>After a Long Rest, store a level 1–3 Artificer spell (action cast time, no consumed Material component) in a weapon or Spellcasting Focus. Any creature can activate it as a Magic action using your spell save DC/attack. It can be used {{intelligence:modifier:min1:x2}} times before the effect ends.</description>
     </sheet>
     <rules>
-      <stat name="intelligence:modifier:min1:x2" value="2" bonus="base" />
-      <stat name="intelligence:modifier:min1:x2" value="intelligence:modifier:x2" bonus="base" />
+      <stat name="intelligence:modifier:min1:x2" value="intelligence:modifier:min1" />
+      <stat name="intelligence:modifier:min1:x2" value="intelligence:modifier:min1" />
     </rules>
   </element>
 
@@ -824,6 +830,15 @@
     <rules>
       <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_ACID" />
       <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_POISON" />
+      <grant type="Condition" id="ID_EFA_CONDITION_IMMUNITY_POISONED" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_TASHAS_BUBBLING_CAULDRON" spellcasting="Artificer">
+        <set name="spell-access">feature</set>
+        <set name="spell-ability">Intelligence</set>
+        <set name="spell-slots">none</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
     </rules>
   </element>
 
@@ -978,10 +993,16 @@
         <li><b>Dampening Field.</b> You have Advantage on Dexterity (Stealth) checks. If the armor imposes Disadvantage on such checks, the Advantage and Disadvantage cancel each other, as normal.</li>
       </ul>
     </description>
-    <sheet>
-      <description>Choose a model for your Arcane Armor (change on Short/Long Rest with Smith's Tools). Add Intelligence (not Strength/Dex) to the model's special weapon attacks. Dreadnaught: Force Demolisher (Reach, 1d10 Force, push/pull) + Giant Stature (Bonus Action enlarge). Guardian: Thunder Pulse (1d8 Thunder, hit creature has Disadv on attacks) + Defensive Field (Bloodied → Bonus Action for Artificer level Temp HP). Infiltrator: Lightning Launcher (90/300 ft, 1d6 Lightning, +1d6 once/turn) + Powered Steps (+5 ft Speed) + Dampening Field (Adv on Stealth).</description>
-    </sheet>
-    <rules></rules>
+    <sheet display="false" />
+    <rules>
+      <select type="Archetype Feature" name="Arcane Armor Model" supports="EFA Armor Model" />
+      <stat name="efa:armorer:weapon bonus" value="0" />
+      <stat name="efa:armorer:attack" value="proficiency" />
+      <stat name="efa:armorer:attack" value="intelligence:modifier" />
+      <stat name="efa:armorer:attack" value="efa:armorer:weapon bonus" />
+      <stat name="efa:armorer:damage" value="intelligence:modifier" />
+      <stat name="efa:armorer:damage" value="efa:armorer:weapon bonus" />
+    </rules>
   </element>
 
   <element name="Extra Attack (Armorer)" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ARMORER_EXTRA_ATTACK">
@@ -1007,7 +1028,12 @@
       <p><b>Improved Arsenal.</b> You gain a +1 bonus to attack and damage rolls made with the special weapon of your Arcane Armor model.</p>
     </description>
     <sheet><description>Learn one additional Armor-category Replicate plan and can create one additional Armor-category item. Gain +1 to attack and damage rolls with your Arcane Armor model's special weapon.</description></sheet>
-    <rules></rules>
+    <rules>
+      <stat name="replicate:plans:known" value="1" />
+      <stat name="replicate:items:max" value="1" />
+      <stat name="efa:armorer:weapon bonus" value="1" />
+      <select type="Class Feature" name="Armor Magic Item Plan (Improved Armorer)" supports="EFA Artificer Armor Plan" />
+    </rules>
   </element>
 
   <element name="Perfected Armor" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ARMORER_PERFECTED_ARMOR">
@@ -1057,6 +1083,16 @@
       <h5>Eldritch Cannon</h5>
       <p>Using Smith's Tools or Woodcarver's Tools, you can take a Magic action to create a Small or Tiny Eldritch Cannon in an unoccupied space on a horizontal surface within 5 feet of yourself. You determine its appearance, including whether you carry it or not (and your choice of legs or wheels, for the latter). It disappears if it is reduced to 0 Hit Points or after 1 hour. You can dismiss it early as a Magic action.</p>
       <p>Once you create a cannon, you can't do so again until you finish a Long Rest or expend a spell slot to create one. You can have only one cannon at a time and can't create one while you already have one.</p>
+      <h5>Cannon Statistics</h5>
+      <p>The cannon has AC 18 and Hit Points equal to five times your Artificer level.</p>
+      <h5>Activate Cannon</h5>
+      <p>While you are within 60 feet of the cannon, you can activate it as a Bonus Action, choosing one of the following options.</p>
+      <ul>
+        <li><b>Flamethrower.</b> The cannon produces a 15-foot Cone of fire. Creatures in the Cone make a Dexterity saving throw against your spell save DC; its damage is 2d8 Fire.</li>
+        <li><b>Force Ballista.</b> Make a ranged spell attack from the cannon against a target within 120 feet. On a hit, it takes 2d8 Force damage and can be pushed 5 feet away from the cannon.</li>
+        <li><b>Protector.</b> The cannon grants itself and allies within 10 feet Temporary Hit Points equal to 1d8 plus your Intelligence modifier (minimum modifier of +1).</li>
+      </ul>
+      <p>Explosive Cannon increases the damage and Protector Temporary Hit Points by 1d8 at Artificer level 9. Fortified Position permits two cannons at Artificer level 15.</p>
     </description>
     <sheet display="false" />
     <rules>
@@ -1121,9 +1157,19 @@
       <p><em>3rd-level Artillerist feature</em></p>
       <p>Using Smith's Tools or Woodcarver's Tools, you can take a Magic action to create a Small or Tiny Eldritch Cannon in an unoccupied space on a horizontal surface within 5 feet of yourself. You determine its appearance, including whether you carry it or not (and your choice of legs or wheels, for the latter). It disappears if it is reduced to 0 Hit Points or after 1 hour. You can dismiss it early as a Magic action.</p>
       <p>Once you create a cannon, you can't do so again until you finish a Long Rest or expend a spell slot to create one. You can have only one cannon at a time and can't create one while you already have one.</p>
+      <h5>Cannon Statistics</h5>
+      <p>The cannon has AC 18 and Hit Points equal to five times your Artificer level.</p>
+      <h5>Activate Cannon</h5>
+      <p>While you are within 60 feet of the cannon, you can activate it as a Bonus Action, choosing one of the following options.</p>
+      <ul>
+        <li><b>Flamethrower.</b> The cannon produces a 15-foot Cone of fire. Creatures in the Cone make a Dexterity saving throw against your spell save DC; its damage is 2d8 Fire.</li>
+        <li><b>Force Ballista.</b> Make a ranged spell attack from the cannon against a target within 120 feet. On a hit, it takes 2d8 Force damage and can be pushed 5 feet away from the cannon.</li>
+        <li><b>Protector.</b> The cannon grants itself and allies within 10 feet Temporary Hit Points equal to 1d8 plus your Intelligence modifier (minimum modifier of +1).</li>
+      </ul>
+      <p>Explosive Cannon increases the damage and Protector Temporary Hit Points by 1d8 at Artificer level 9. Fortified Position permits two cannons at Artificer level 15.</p>
     </description>
     <sheet action="Magic Action">
-      <description>Create an Eldritch Cannon (AC 18, HP {{cannon:hp}}) in an unoccupied space within 5 feet using Smith's or Woodcarver's Tools. Activate with Bonus Action within 60 feet: Flamethrower (15-ft Cone, 2d8 Fire Dex save), Force Ballista (ranged spell attack 120 ft, 2d8 Force + push 5 ft), or Protector (1d8+{{intelligence:modifier:min1}} Temp HP to self and allies within 10 ft). One cannon at a time; disappears at 0 HP or after 1 hour.</description>
+      <description>Create an Eldritch Cannon (AC 18, HP {{cannon:hp}}) in an unoccupied space within 5 feet using Smith's or Woodcarver's Tools. Activate with Bonus Action within 60 feet: Flamethrower (15-ft Cone, {{cannon:damage:dice}}d8 Fire Dex save), Force Ballista (ranged spell attack 120 ft, {{cannon:damage:dice}}d8 Force + push 5 ft), or Protector ({{cannon:protector:dice}}d8+{{intelligence:modifier:min1}} Temp HP to self and allies within 10 ft). Maximum {{cannon:count}} cannon(s) at a time; disappears at 0 HP or after 1 hour. Create one for free per Long Rest; additional creations require spell slots. At level 15, activate both with the same Bonus Action.</description>
     </sheet>
     <rules>
       <stat name="cannon:hp" value="level:artificer" />
@@ -1131,6 +1177,12 @@
       <stat name="cannon:hp" value="level:artificer" />
       <stat name="cannon:hp" value="level:artificer" />
       <stat name="cannon:hp" value="level:artificer" />
+      <stat name="cannon:damage:dice" value="2" />
+      <stat name="cannon:damage:dice" value="1" level="9" />
+      <stat name="cannon:protector:dice" value="1" />
+      <stat name="cannon:protector:dice" value="1" level="9" />
+      <stat name="cannon:count" value="1" />
+      <stat name="cannon:count" value="1" level="15" />
     </rules>
   </element>
 
@@ -1306,7 +1358,7 @@
       <h5>Steel Defender</h5>
       <p><em>Medium Construct, Neutral</em></p>
       <ul class="unstyled">
-        <li><b>AC</b> </li>
+        <li><b>AC</b> 12 + your Intelligence modifier</li>
         <li><b>HP</b> 5 + five times your Artificer level (the defender has a number of Hit Dice [d8s] equal to your Artificer level)</li>
         <li><b>Speed</b> Walk 40 ft.</li>
         <li><b>STR</b> 14 (+2) | <b>DEX</b> 12 (+1) | <b>CON</b> 14 (+2) | <b>INT</b> 4 (-3) | <b>WIS</b> 10 (+0) | <b>CHA</b> 6 (-2)</li>
@@ -1356,13 +1408,31 @@
       <stat name="companion:hp:max" value="level:artificer" />
       <stat name="companion:hp:max" value="level:artificer" />
       <stat name="companion:speed" value="40" bonus="base" />
-      <stat name="companion:proficiency" value="proficiency" bonus="base" />
-      <stat name="companion:strength:save:proficiency" value="companion:proficiency" bonus="proficiency" />
-      <stat name="companion:dexterity:save:proficiency" value="companion:proficiency" bonus="proficiency" />
-      <stat name="companion:constitution:save:proficiency" value="companion:proficiency" bonus="proficiency" />
-      <stat name="companion:intelligence:save:proficiency" value="companion:proficiency" bonus="proficiency" />
-      <stat name="companion:wisdom:save:proficiency" value="companion:proficiency" bonus="proficiency" />
-      <stat name="companion:charisma:save:proficiency" value="companion:proficiency" bonus="proficiency" />
+      <stat name="companion:strength:save:proficiency" value="proficiency" bonus="proficiency" />
+      <stat name="companion:dexterity:save:proficiency" value="proficiency" bonus="proficiency" />
+      <stat name="companion:constitution:save:proficiency" value="proficiency" bonus="proficiency" />
+      <stat name="companion:intelligence:save:proficiency" value="proficiency" bonus="proficiency" />
+      <stat name="companion:wisdom:save:proficiency" value="proficiency" bonus="proficiency" />
+      <stat name="companion:charisma:save:proficiency" value="proficiency" bonus="proficiency" />
+      <stat name="companion:acrobatics:proficiency" value="proficiency" bonus="base" />
+      <stat name="companion:animal handling:proficiency" value="proficiency" bonus="base" />
+      <stat name="companion:arcana:proficiency" value="proficiency" bonus="base" />
+      <stat name="companion:athletics:proficiency" value="proficiency" bonus="base" />
+      <stat name="companion:deception:proficiency" value="proficiency" bonus="base" />
+      <stat name="companion:history:proficiency" value="proficiency" bonus="base" />
+      <stat name="companion:insight:proficiency" value="proficiency" bonus="base" />
+      <stat name="companion:intimidation:proficiency" value="proficiency" bonus="base" />
+      <stat name="companion:investigation:proficiency" value="proficiency" bonus="base" />
+      <stat name="companion:medicine:proficiency" value="proficiency" bonus="base" />
+      <stat name="companion:nature:proficiency" value="proficiency" bonus="base" />
+      <stat name="companion:perception:proficiency" value="proficiency" bonus="base" />
+      <stat name="companion:performance:proficiency" value="proficiency" bonus="base" />
+      <stat name="companion:persuasion:proficiency" value="proficiency" bonus="base" />
+      <stat name="companion:religion:proficiency" value="proficiency" bonus="base" />
+      <stat name="companion:sleight of hand:proficiency" value="proficiency" bonus="base" />
+      <stat name="companion:stealth:proficiency" value="proficiency" bonus="base" />
+      <stat name="companion:survival:proficiency" value="proficiency" bonus="base" />
+      <stat name="companion:initiative" value="proficiency" />
     </rules>
   </element>
   <element name="Steel Bond" type="Companion Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_COMPANION_TRAIT_STEEL_DEFENDER_STEEL_BOND">
@@ -1544,7 +1614,7 @@
     </sheet>
     <rules>
       <stat name="atlas:targets" value="1" />
-      <stat name="atlas:targets" value="intelligence:modifier" />
+      <stat name="atlas:targets" value="intelligence:modifier:min1" />
     </rules>
   </element>
 
@@ -1601,6 +1671,14 @@
     <rules>
       <stat name="atlas:safe haven:hp" value="level:artificer" />
       <stat name="atlas:safe haven:hp" value="level:artificer" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_FIND_THE_PATH" spellcasting="Artificer">
+        <set name="spell-access">feature</set>
+        <set name="spell-ability">Intelligence</set>
+        <set name="spell-slots">none</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
     </rules>
   </element>
 
@@ -1637,7 +1715,7 @@
       <p><b>Evasion.</b> If the homunculus is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the homunculus instead takes no damage if it succeeds on the save and only half damage if it fails. It can't use this trait if it has the Incapacitated condition.</p>
       <p><b>Magic Bond.</b> Add the spell's level to any ability check or saving throw the homunculus makes.</p>
       <h5>Actions</h5>
-      <p><b>Force Strike.</b> Melee or Ranged Attack Roll:  Bonus equals your spell attack modifier, reach 5 ft. or range 30 ft. Hit: 1d6 + summonSpellLevel Force damage.</p>
+      <p><b>Force Strike.</b> Melee or Ranged Attack Roll:  Bonus equals your spell attack modifier, reach 5 ft. or range 30 ft. Hit: 1d6 + the spell's level Force damage.</p>
       <h5>Reactions</h5>
       <p><b>Channel Magic.</b> <i>Trigger:</i> You cast a spell that has a range of touch while the homunculus is within 120 feet of you. <i>Response:</i> The homunculus delivers the spell through its touch.</p>
     </description>
@@ -1655,6 +1733,685 @@
       <set name="isConcentration">false</set>
       <set name="isRitual">true</set>
     </setters>
+  </element>
+
+
+  <!-- Replicate Magic Item plan choices and Arcane Armor models -->
+  <element name="Alchemy Jug (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_ALCHEMY_JUG">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:2]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Alchemy Jug plan for Replicate Magic Item. Artificer level 2 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Alchemy Jug. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Bag of Holding (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_BAG_OF_HOLDING">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:2]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Bag of Holding plan for Replicate Magic Item. Artificer level 2 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Bag of Holding. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Cap of Water Breathing (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_CAP_OF_WATER_BREATHING">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:2]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Cap of Water Breathing plan for Replicate Magic Item. Artificer level 2 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Cap of Water Breathing. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Common magic item that isn't a Potion, a Scroll, or cursed (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_COMMON_MAGIC_ITEM_THAT_ISN_T_A_POTION_A_SCROLL_OR_CURSED">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:2]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Common magic item that isn't a Potion, a Scroll, or cursed plan for Replicate Magic Item. Artificer level 2 or higher is required. Attunement: Varies.</p>
+      <p>Choose a specific eligible item and record it in your notes. Each different item is a separate plan; do not learn the same item twice.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Common magic item that isn't a Potion, a Scroll, or cursed. Attunement: Varies.</description></sheet>
+    <setters><set name="allow duplicate">true</set></setters>
+  </element>
+
+  <element name="Goggles of Night (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_GOGGLES_OF_NIGHT">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:2]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Goggles of Night plan for Replicate Magic Item. Artificer level 2 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Goggles of Night. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Manifold Tool (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_MANIFOLD_TOOL">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:2]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Manifold Tool plan for Replicate Magic Item. Artificer level 2 or higher is required. Attunement: Yes.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Manifold Tool. Attunement: Yes.</description></sheet>
+  </element>
+
+  <element name="Repeating Shot (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_REPEATING_SHOT">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:2]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Repeating Shot plan for Replicate Magic Item. Artificer level 2 or higher is required. Attunement: Yes.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Repeating Shot. Attunement: Yes.</description></sheet>
+  </element>
+
+  <element name="Returning Weapon (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_RETURNING_WEAPON">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:2]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Returning Weapon plan for Replicate Magic Item. Artificer level 2 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Returning Weapon. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Rope of Climbing (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_ROPE_OF_CLIMBING">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:2]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Rope of Climbing plan for Replicate Magic Item. Artificer level 2 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Rope of Climbing. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Sending Stones (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_SENDING_STONES">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:2]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Sending Stones plan for Replicate Magic Item. Artificer level 2 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Sending Stones. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Shield +1 (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_SHIELD_PLUS_1">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:2]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Shield +1 plan for Replicate Magic Item. Artificer level 2 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Shield +1. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Wand of Magic Detection (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_WAND_OF_MAGIC_DETECTION">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:2]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Wand of Magic Detection plan for Replicate Magic Item. Artificer level 2 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Wand of Magic Detection. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Wand of Secrets (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_WAND_OF_SECRETS">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:2]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Wand of Secrets plan for Replicate Magic Item. Artificer level 2 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Wand of Secrets. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Wand of the War Mage +1 (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_WAND_OF_THE_WAR_MAGE_PLUS_1">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:2]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Wand of the War Mage +1 plan for Replicate Magic Item. Artificer level 2 or higher is required. Attunement: Yes.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Wand of the War Mage +1. Attunement: Yes.</description></sheet>
+  </element>
+
+  <element name="Weapon +1 (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_WEAPON_PLUS_1">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:2]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Weapon +1 plan for Replicate Magic Item. Artificer level 2 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Weapon +1. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Wraps of Unarmed Power, +1 (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_WRAPS_OF_UNARMED_POWER_PLUS_1">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:2]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Wraps of Unarmed Power, +1 plan for Replicate Magic Item. Artificer level 2 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Wraps of Unarmed Power, +1. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Armor +1 (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_ARMOR_PLUS_1">
+    <supports>EFA Artificer Plan,EFA Artificer Armor Plan</supports>
+    <requirements>[artificer:6]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Armor +1 plan for Replicate Magic Item. Artificer level 6 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Armor +1. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Boots of Elvenkind (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_BOOTS_OF_ELVENKIND">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:6]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Boots of Elvenkind plan for Replicate Magic Item. Artificer level 6 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Boots of Elvenkind. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Boots of the Winding Path (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_BOOTS_OF_THE_WINDING_PATH">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:6]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Boots of the Winding Path plan for Replicate Magic Item. Artificer level 6 or higher is required. Attunement: Yes.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Boots of the Winding Path. Attunement: Yes.</description></sheet>
+  </element>
+
+  <element name="Cloak of Elvenkind (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_CLOAK_OF_ELVENKIND">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:6]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Cloak of Elvenkind plan for Replicate Magic Item. Artificer level 6 or higher is required. Attunement: Yes.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Cloak of Elvenkind. Attunement: Yes.</description></sheet>
+  </element>
+
+  <element name="Cloak of the Manta Ray (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_CLOAK_OF_THE_MANTA_RAY">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:6]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Cloak of the Manta Ray plan for Replicate Magic Item. Artificer level 6 or higher is required. Attunement: Yes.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Cloak of the Manta Ray. Attunement: Yes.</description></sheet>
+  </element>
+
+  <element name="Dazzling Weapon (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_DAZZLING_WEAPON">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:6]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Dazzling Weapon plan for Replicate Magic Item. Artificer level 6 or higher is required. Attunement: Yes.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Dazzling Weapon. Attunement: Yes.</description></sheet>
+  </element>
+
+  <element name="Eyes of Charming (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_EYES_OF_CHARMING">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:6]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Eyes of Charming plan for Replicate Magic Item. Artificer level 6 or higher is required. Attunement: Yes.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Eyes of Charming. Attunement: Yes.</description></sheet>
+  </element>
+
+  <element name="Eyes of Minute Seeing (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_EYES_OF_MINUTE_SEEING">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:6]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Eyes of Minute Seeing plan for Replicate Magic Item. Artificer level 6 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Eyes of Minute Seeing. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Gloves of Thievery (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_GLOVES_OF_THIEVERY">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:6]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Gloves of Thievery plan for Replicate Magic Item. Artificer level 6 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Gloves of Thievery. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Helm of Awareness (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_HELM_OF_AWARENESS">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:6]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Helm of Awareness plan for Replicate Magic Item. Artificer level 6 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Helm of Awareness. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Lantern of Revealing (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_LANTERN_OF_REVEALING">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:6]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Lantern of Revealing plan for Replicate Magic Item. Artificer level 6 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Lantern of Revealing. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Mind Sharpener (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_MIND_SHARPENER">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:6]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Mind Sharpener plan for Replicate Magic Item. Artificer level 6 or higher is required. Attunement: Yes.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Mind Sharpener. Attunement: Yes.</description></sheet>
+  </element>
+
+  <element name="Necklace of Adaptation (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_NECKLACE_OF_ADAPTATION">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:6]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Necklace of Adaptation plan for Replicate Magic Item. Artificer level 6 or higher is required. Attunement: Yes.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Necklace of Adaptation. Attunement: Yes.</description></sheet>
+  </element>
+
+  <element name="Pipes of Haunting (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_PIPES_OF_HAUNTING">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:6]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Pipes of Haunting plan for Replicate Magic Item. Artificer level 6 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Pipes of Haunting. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Repulsion Shield (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_REPULSION_SHIELD">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:6]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Repulsion Shield plan for Replicate Magic Item. Artificer level 6 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Repulsion Shield. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Ring of Swimming (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_RING_OF_SWIMMING">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:6]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Ring of Swimming plan for Replicate Magic Item. Artificer level 6 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Ring of Swimming. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Ring of Water Walking (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_RING_OF_WATER_WALKING">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:6]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Ring of Water Walking plan for Replicate Magic Item. Artificer level 6 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Ring of Water Walking. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Sentinel Shield (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_SENTINEL_SHIELD">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:6]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Sentinel Shield plan for Replicate Magic Item. Artificer level 6 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Sentinel Shield. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Spell-Refueling Ring (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_SPELL_REFUELING_RING">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:6]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Spell-Refueling Ring plan for Replicate Magic Item. Artificer level 6 or higher is required. Attunement: Yes.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Spell-Refueling Ring. Attunement: Yes.</description></sheet>
+  </element>
+
+  <element name="Wand of Magic Missiles (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_WAND_OF_MAGIC_MISSILES">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:6]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Wand of Magic Missiles plan for Replicate Magic Item. Artificer level 6 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Wand of Magic Missiles. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Wand of Web (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_WAND_OF_WEB">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:6]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Wand of Web plan for Replicate Magic Item. Artificer level 6 or higher is required. Attunement: Yes.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Wand of Web. Attunement: Yes.</description></sheet>
+  </element>
+
+  <element name="Weapon of Warning (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_WEAPON_OF_WARNING">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:6]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Weapon of Warning plan for Replicate Magic Item. Artificer level 6 or higher is required. Attunement: Yes.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Weapon of Warning. Attunement: Yes.</description></sheet>
+  </element>
+
+  <element name="Armor of Resistance (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_ARMOR_OF_RESISTANCE">
+    <supports>EFA Artificer Plan,EFA Artificer Armor Plan</supports>
+    <requirements>[artificer:10]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Armor of Resistance plan for Replicate Magic Item. Artificer level 10 or higher is required. Attunement: Yes.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Armor of Resistance. Attunement: Yes.</description></sheet>
+  </element>
+
+  <element name="Dagger of Venom (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_DAGGER_OF_VENOM">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:10]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Dagger of Venom plan for Replicate Magic Item. Artificer level 10 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Dagger of Venom. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Elven Chain (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_ELVEN_CHAIN">
+    <supports>EFA Artificer Plan,EFA Artificer Armor Plan</supports>
+    <requirements>[artificer:10]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Elven Chain plan for Replicate Magic Item. Artificer level 10 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Elven Chain. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Ring of Feather Falling (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_RING_OF_FEATHER_FALLING">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:10]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Ring of Feather Falling plan for Replicate Magic Item. Artificer level 10 or higher is required. Attunement: Yes.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Ring of Feather Falling. Attunement: Yes.</description></sheet>
+  </element>
+
+  <element name="Ring of Jumping (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_RING_OF_JUMPING">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:10]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Ring of Jumping plan for Replicate Magic Item. Artificer level 10 or higher is required. Attunement: Yes.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Ring of Jumping. Attunement: Yes.</description></sheet>
+  </element>
+
+  <element name="Ring of Mind Shielding (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_RING_OF_MIND_SHIELDING">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:10]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Ring of Mind Shielding plan for Replicate Magic Item. Artificer level 10 or higher is required. Attunement: Yes.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Ring of Mind Shielding. Attunement: Yes.</description></sheet>
+  </element>
+
+  <element name="Shield, +2 (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_SHIELD_PLUS_2">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:10]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Shield, +2 plan for Replicate Magic Item. Artificer level 10 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Shield, +2. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Uncommon Wondrous Item that isn't cursed (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_UNCOMMON_WONDROUS_ITEM_THAT_ISN_T_CURSED">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:10]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Uncommon Wondrous Item that isn't cursed plan for Replicate Magic Item. Artificer level 10 or higher is required. Attunement: Varies.</p>
+      <p>Choose a specific eligible item and record it in your notes. Each different item is a separate plan; do not learn the same item twice.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Uncommon Wondrous Item that isn't cursed. Attunement: Varies.</description></sheet>
+    <setters><set name="allow duplicate">true</set></setters>
+  </element>
+
+  <element name="Wand of the War Mage, +2 (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_WAND_OF_THE_WAR_MAGE_PLUS_2">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:10]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Wand of the War Mage, +2 plan for Replicate Magic Item. Artificer level 10 or higher is required. Attunement: Yes.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Wand of the War Mage, +2. Attunement: Yes.</description></sheet>
+  </element>
+
+  <element name="Weapon, +2 (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_WEAPON_PLUS_2">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:10]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Weapon, +2 plan for Replicate Magic Item. Artificer level 10 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Weapon, +2. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Wraps of Unarmed Power, +2 (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_WRAPS_OF_UNARMED_POWER_PLUS_2">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:10]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Wraps of Unarmed Power, +2 plan for Replicate Magic Item. Artificer level 10 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Wraps of Unarmed Power, +2. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Armor, +2 (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_ARMOR_PLUS_2">
+    <supports>EFA Artificer Plan,EFA Artificer Armor Plan</supports>
+    <requirements>[artificer:14]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Armor, +2 plan for Replicate Magic Item. Artificer level 14 or higher is required. Attunement: No.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Armor, +2. Attunement: No.</description></sheet>
+  </element>
+
+  <element name="Arrow-Catching Shield (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_ARROW_CATCHING_SHIELD">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:14]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Arrow-Catching Shield plan for Replicate Magic Item. Artificer level 14 or higher is required. Attunement: Yes.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Arrow-Catching Shield. Attunement: Yes.</description></sheet>
+  </element>
+
+  <element name="Flame Tongue (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_FLAME_TONGUE">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:14]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Flame Tongue plan for Replicate Magic Item. Artificer level 14 or higher is required. Attunement: Yes.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Flame Tongue. Attunement: Yes.</description></sheet>
+  </element>
+
+  <element name="Rare Wondrous Item that isn't cursed (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_RARE_WONDROUS_ITEM_THAT_ISN_T_CURSED">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:14]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Rare Wondrous Item that isn't cursed plan for Replicate Magic Item. Artificer level 14 or higher is required. Attunement: Varies.</p>
+      <p>Choose a specific eligible item and record it in your notes. Each different item is a separate plan; do not learn the same item twice.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Rare Wondrous Item that isn't cursed. Attunement: Varies.</description></sheet>
+    <setters><set name="allow duplicate">true</set></setters>
+  </element>
+
+  <element name="Ring of Free Action (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_RING_OF_FREE_ACTION">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:14]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Ring of Free Action plan for Replicate Magic Item. Artificer level 14 or higher is required. Attunement: Yes.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Ring of Free Action. Attunement: Yes.</description></sheet>
+  </element>
+
+  <element name="Ring of Protection (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_RING_OF_PROTECTION">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:14]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Ring of Protection plan for Replicate Magic Item. Artificer level 14 or higher is required. Attunement: Yes.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Ring of Protection. Attunement: Yes.</description></sheet>
+  </element>
+
+  <element name="Ring of the Ram (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_RING_OF_THE_RAM">
+    <supports>EFA Artificer Plan</supports>
+    <requirements>[artificer:14]</requirements>
+    <compendium display="false" />
+    <description>
+      <p>You know the Ring of the Ram plan for Replicate Magic Item. Artificer level 14 or higher is required. Attunement: Yes.</p>
+      <p>Use the magic item description when you create an item from this plan.</p>
+    </description>
+    <sheet alt="Magic Item Plan"><description>Ring of the Ram. Attunement: Yes.</description></sheet>
+  </element>
+
+  <element name="Common Armor (Plan)" type="Class Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_CLASS_FEATURE_ARTIFICER_PLAN_COMMON_ARMOR">
+    <supports>EFA Artificer Armor Plan</supports>
+    <requirements>[artificer:2]</requirements>
+    <compendium display="false" />
+    <description><p>Choose a Common magic item in the Armor category that is not cursed, and record the specific item in your notes. This is a plan from the Common magic item option in the Artificer Level 2+ table. Each different item is a separate plan; do not learn the same item twice.</p></description>
+    <sheet alt="Magic Item Plan"><description>Common Armor that is not cursed; record the specific item in your notes.</description></sheet>
+    <setters><set name="allow duplicate">true</set></setters>
+  </element>
+
+  <element name="Dreadnaught (Arcane Armor)" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ARMORER_MODEL_DREADNAUGHT">
+    <supports>EFA Armor Model</supports>
+    <compendium display="false" />
+    <description><p>These benefits apply while you wear your Arcane Armor. You may use Intelligence for the model's special weapon attacks and damage. You can change models after a Short or Long Rest with Smith's Tools in hand.</p><p>You design your armor to become a towering juggernaut in battle. It has the following features:</p>
+      <ul>
+        <li><b>Force Demolisher.</b> An arcane wrecking ball or sledgehammer projects from your armor. The demolisher counts as a Simple Melee weapon with the Reach property, and it deals 1d10 Force damage on a hit. If you hit a creature that is at least one size smaller than you with the demolisher, you can push the creature up to 10 feet straight away from yourself or pull the creature up to 10 feet toward yourself.</li>
+        <li><b>Giant Stature.</b> As a Bonus Action, you transform and enlarge your armor for 1 minute. For the duration, your reach increases by 5 feet, and if you are smaller than Large, you become Large, along with anything you are wearing. If there isn't enough room for you to increase your size, your size doesn't change. You can use this Bonus Action a number of times equal to your Intelligence modifier (minimum of once). You regain all expended uses when you finish a Long Rest.</li>
+      </ul></description>
+    <sheet>
+      <description>Force Demolisher: +{{efa:armorer:attack}} to hit using Intelligence; 1d10+{{efa:armorer:damage}} Force, Reach. Against a smaller creature, push or pull 10 ft on a hit. Giant Stature: Bonus Action to become Large for 1 minute and gain 5 ft reach; {{intelligence:modifier:min1}}/Long Rest.</description>
+      <description level="15">Force Demolisher: +{{efa:armorer:attack}} to hit using Intelligence; 2d6+{{efa:armorer:damage}} Force, Reach. Against a smaller creature, push or pull 10 ft on a hit. Giant Stature: Bonus Action for 1 minute, choose Large or Huge, gain 10 ft reach and Advantage on Strength checks and saves; {{intelligence:modifier:min1}}/Long Rest.</description>
+    </sheet>
+  </element>
+
+  <element name="Guardian (Arcane Armor)" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ARMORER_MODEL_GUARDIAN">
+    <supports>EFA Armor Model</supports>
+    <compendium display="false" />
+    <description><p>These benefits apply while you wear your Arcane Armor. You may use Intelligence for the model's special weapon attacks and damage. You can change models after a Short or Long Rest with Smith's Tools in hand.</p><p>You design your armor to be in the front line of conflict. It has the following features:</p>
+      <p><b>Thunder Pulse.</b> You can discharge concussive blasts with strikes from your armor. The pulse counts as a Simple Melee weapon and deals 1d8 Thunder damage on a hit. A creature hit by the pulse has Disadvantage on attack rolls against targets other than you until the start of your next turn.</p>
+      <p><b>Defensive Field.</b> While Bloodied, you can take a Bonus Action to gain Temporary Hit Points equal to your Artificer level. You lose these Temporary Hit Points if you doff the armor.</p></description>
+    <sheet>
+      <description>Thunder Pulse: +{{efa:armorer:attack}} to hit using Intelligence; 1d8+{{efa:armorer:damage}} Thunder. A hit imposes Disadvantage on attacks against other targets until your next turn. While Bloodied, Defensive Field gives {{level:artificer}} Temporary HP as a Bonus Action; lost if you doff the armor.</description>
+      <description level="15">Thunder Pulse: +{{efa:armorer:attack}} to hit using Intelligence; 1d10+{{efa:armorer:damage}} Thunder. A hit imposes Disadvantage on attacks against other targets until your next turn. Defensive Field: while Bloodied, Bonus Action for {{level:artificer}} Temporary HP. Perfected Armor: Reaction when a Huge or smaller creature ends its turn within 30 ft; Strength save against your spell save DC or pull 25 ft, and attack if it reaches 5 ft. {{intelligence:modifier:min1}}/Long Rest.</description>
+    </sheet>
+  </element>
+
+  <element name="Infiltrator (Arcane Armor)" type="Archetype Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_ARCHETYPE_FEATURE_ARMORER_MODEL_INFILTRATOR">
+    <supports>EFA Armor Model</supports>
+    <compendium display="false" />
+    <description><p>These benefits apply while you wear your Arcane Armor. You may use Intelligence for the model's special weapon attacks and damage. You can change models after a Short or Long Rest with Smith's Tools in hand.</p><p>You customize your armor for subtler undertakings. It has the following features:</p>
+      <ul>
+        <li><b>Lightning Launcher.</b> A gemlike node appears on your armor, from which you can shoot bolts of lightning. The launcher counts as a Simple Ranged weapon with a normal range of 90 feet and a long range of 300 feet, and it deals 1d6 Lightning damage on a hit. Once on each of your turns when you hit a creature with the launcher, you can deal an extra 1d6 Lightning damage to that target.</li>
+        <li><b>Powered Steps.</b> Your Speed increases by 5 feet.</li>
+        <li><b>Dampening Field.</b> You have Advantage on Dexterity (Stealth) checks. If the armor imposes Disadvantage on such checks, the Advantage and Disadvantage cancel each other, as normal.</li>
+      </ul></description>
+    <sheet>
+      <description>Lightning Launcher: +{{efa:armorer:attack}} to hit using Intelligence, range 90/300 ft; 1d6+{{efa:armorer:damage}} Lightning, plus 1d6 once on each of your turns. Powered Steps: +5 ft Speed while wearing your Arcane Armor. Dampening Field: Advantage on Stealth; cancels armor Disadvantage.</description>
+      <description level="15">Lightning Launcher: +{{efa:armorer:attack}} to hit using Intelligence, range 90/300 ft; 2d6+{{efa:armorer:damage}} Lightning, plus 1d6 once on each of your turns. Targets glow in a 5-ft radius and have Disadvantage on attacks against you until your next turn. Powered Steps: +5 ft Speed in Arcane Armor. Dampening Field: Advantage on Stealth. Bonus Action Fly Speed = twice your Speed until turn end; {{intelligence:modifier:min1}}/Long Rest.</description>
+    </sheet>
+    <rules><stat name="innate speed:misc" value="5" equipped="[armor:any]" /></rules>
+  </element>
+
+  <element name="Immunity (Poisoned)" type="Condition" source="Eberron: Forge of the Artificer" id="ID_EFA_CONDITION_IMMUNITY_POISONED">
+    <supports>Immunity</supports>
+    <compendium display="false" />
+    <description><p>You are immune to the Poisoned condition.</p></description>
+    <sheet><description>You are immune to the Poisoned condition.</description></sheet>
   </element>
 
 </elements>

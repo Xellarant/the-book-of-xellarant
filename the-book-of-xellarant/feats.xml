@@ -3,12 +3,12 @@
 		<name>Alterations</name>
 		<description>Feats born of experimental magics and techniques from The Book of Xellarant.</description>
 		<author url="https://github.com/xellarant">Xellarant</author>
-		<update version="0.0.3">
+		<update version="0.0.4">
 			<file name="feats.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/feats.xml" />
 		</update>
 	</info>
     <element name="Aberrant Dragonmark β" type="Feat" source="The Book of Xellarant" id="ID_TBOX_FEAT_ABERRANT_DRAGONMARK_BETA">
-		<requirements>!ID_INTERNAL_GRANTS_DRAGONMARK,!ID_WOTC_WGTE_GRANTS_DARKMARKED</requirements>
+		<requirements>!ID_INTERNAL_GRANTS_DRAGONMARK,!ID_WOTC_WGTE_GRANTS_DARKMARKED,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING</requirements>
 		<prerequisite>No other dragonmark</prerequisite>
 		<description>
 			<p><em>Prerequisite: No other dragonmark</em></p>
@@ -23,10 +23,23 @@
 			<description>You learn spells and can cast them through your mark using Dexterity as your spellcasting ability.
 			When you cast the 1st-level spell through your mark, you can expend one of your Hit Dice and roll it. If you roll an even number, you gain a number of temporary hit points equal to the number rolled. If you roll an odd number, one random creature within 30 feet of you (not including you) takes force damage equal to the number rolled. If no other creatures are in range, you take the damage.</description>
 		</sheet>
+		<spellcasting name="TBOX Aberrant Dragonmark" ability="Dexterity"><list /></spellcasting>
 		<rules>
 			<stat name="dexterity" value="1" />
-			<select type="Spell" name="Cantrip, Aberrant Dragonmark β" supports="0,Sorcerer" />
-			<select type="Spell" name="1st-level Spell, Aberrant Dragonmark β" supports="1,Sorcerer" />
+			<select type="Spell" name="Cantrip, Aberrant Dragonmark β" supports="0,Sorcerer" spellcasting="TBOX Aberrant Dragonmark">
+				<set name="spell-access">known</set>
+				<set name="spell-ability">Dexterity</set>
+				<set name="spell-slots">none</set>
+				<set name="spell-counts-known">false</set>
+			</select>
+			<select type="Spell" name="1st-level Spell, Aberrant Dragonmark β" supports="1,Sorcerer" spellcasting="TBOX Aberrant Dragonmark">
+				<set name="spell-access">known</set>
+				<set name="spell-ability">Dexterity</set>
+				<set name="spell-slots">none</set>
+				<set name="spell-counts-known">false</set>
+				<set name="spell-uses">1</set>
+				<set name="spell-recharge">Short or Long Rest</set>
+			</select>
 		</rules>
 	</element>
 </elements>

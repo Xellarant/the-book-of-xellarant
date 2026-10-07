@@ -4,7 +4,7 @@
 		<name>Vigilante Background (Customizable)</name>
 		<description>Basic background of Vigilantes, dark enforcers of justice.</description>
 		<author url="https://github.com/xellarant">Xellarant</author>
-		<update version="0.0.5">
+		<update version="0.0.6">
 			<file name="vigilante-background.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/backgrounds/vigilante-background.xml" />
 		</update>
 	</info>
@@ -73,7 +73,8 @@
 		</rules>
 	</element>
 	<element name="Feature: Position of Privilege" type="Background Feature" source="The Book of Xellarant" id="ID_TBOX_BACKGROUND_FEATURE_POSITIONOFPRIVILEGE">
-		<supports>Background Feature, Noble</supports>
+		<compendium display="false" />
+		<supports>TBOX Background Feature</supports>
 		<description>
 			<p>Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are. The common folk make every effort to accommodate you and avoid your displeasure, and other people of high birth treat you as a member of the same social sphere. You can secure an audience with a local noble if you need to.</p>
 		</description>

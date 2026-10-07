@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.7">
+		<update version="0.0.8">
 			<file name="avenger-condemnation.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/subclasses/avenger-condemnation.xml" />
 		</update>
 	</info>
@@ -33,7 +33,7 @@
             <p>At 1st level, your bond with a primal force grants you insight needed to hunt down threats to nature. You add your proficiency bonus to Wisdom (Perception), Dexterity (Stealth), and Wisdom (Survival) checks made in natural environments. This is in addition to the bonuses you already have if trained in a skill.</p>
         </description>
         <sheet>
-            <p>You add your proficiency bonus to Wisdom (Perception), Dexterity (Stealth), and Wisdom (Survival) checks made in natural environments. This is in addition to the bonuses you already have if trained in a skill.</p>
+            <description>You add your proficiency bonus to Wisdom (Perception), Dexterity (Stealth), and Wisdom (Survival) checks made in natural environments. This is in addition to the bonuses you already have if trained in a skill.</description>
         </sheet>
     </element>	
 	<element name="Channel Divinity" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_GOPC_CHANNEL_DIVINITY">

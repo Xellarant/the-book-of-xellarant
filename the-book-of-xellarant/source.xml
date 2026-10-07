@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <elements>
 	<info>
-		<update version="0.0.5">
+		<update version="0.0.6">
 			<file name="source.xml" url="https://raw.githubusercontent.com/xellarant/the-book-of-xellarant/master/the-book-of-xellarant/source.xml" />
 		</update>
 	</info>
@@ -13,9 +13,8 @@
 		</description>
 		<setters>
 			<set name="abbreviation">TBOX</set>
-			<set name="url">https://xellarant.great-site.net/2021/05/07/the-book-of-xellarant/</set>
-			<set name="image">https://xellarant.great-site.net/wp-content/uploads/2021/05/Xav3.jpg</set>
-			<set name="author" abbreviation="XELL" url="https://www.xellarant.com/">Xellarant</set>
+			<set name="url">https://github.com/Xellarant/the-book-of-xellarant</set>
+			<set name="author" abbreviation="XELL" url="https://github.com/Xellarant">Xellarant</set>
 			<set name="homebrew">true</set>
 			<set name="release">20210506</set>
 		</setters>
@@ -29,7 +28,7 @@
 		<setters>
 			<set name="abbreviation">TBOB</set>
 			<set name="url">https://github.com/Xellarant/the-book-of-xellarant</set>
-			<set name="author" abbreviation="XELL" url="https://www.xellarant.com/">Xellarant</set>
+			<set name="author" abbreviation="XELL" url="https://github.com/Xellarant">Xellarant</set>
 			<set name="homebrew">true</set>
 			<set name="release">20260427</set>
 		</setters>

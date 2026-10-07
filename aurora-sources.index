@@ -2,17 +2,14 @@
 <index>
   <info>
     <name>Aurora Sources</name>
-    <description>Aggregates the archived Aurora Builder source indexes, community Reddit and D&amp;D Wiki indexes, and Aurora Legacy indexes.</description>
+    <description>Aggregates Aurora Legacy core, supplements, and Unearthed Arcana, archived third-party content, and the community Reddit and D&amp;D Wiki indexes.</description>
     <author url="https://github.com/Xellarant/the-book-of-xellarant">Xellarant</author>
-    <update version="1.0">
+    <update version="1.1">
       <file name="aurora-sources.index" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/aurora-sources.index" />
     </update>
   </info>
   <files>
-    <!-- Archived Aurora Builder repository -->
-    <file name="aurorabuilder-core.index" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/core.index" />
-    <file name="aurorabuilder-supplements.index" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/supplements.index" />
-    <file name="aurorabuilder-unearthed-arcana.index" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/unearthed-arcana.index" />
+    <!-- Archived third-party content not included by Aurora Legacy -->
     <file name="aurorabuilder-third-party.index" url="https://raw.githubusercontent.com/aurorabuilder/elements/master/third-party.index" />
 
     <!-- Community driven content linked from aurabuilder.com -->

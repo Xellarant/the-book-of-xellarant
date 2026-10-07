@@ -4,7 +4,7 @@
 		<name>Ranger (Revised 2021)</name>
 		<description>The Re-Revised Ranger class from 2016 Wizards UA as it would fit as a Ranger Class replacement.</description>
 		<author url="https://media.wizards.com/2016/dnd/downloads/UA_RevisedRanger.pdf">Wizards of the Coast</author>
-		<update version="0.4.12">
+		<update version="0.4.13">
 			<file name="class-ranger-revised.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/classes/class-ranger-revised.xml" />
 		</update>
 	</info>
@@ -671,7 +671,7 @@
                     <tr><td>Ranger Level</td><td>Spells</td></tr>
                 </thead>
                 <tr><td>3rd</td><td><em>disguise self</em></td></tr>
-                <tr><td>5rd</td><td><em>rope trick</em></td></tr>
+                <tr><td>5th</td><td><em>rope trick</em></td></tr>
                 <tr><td>9th</td><td><em>glyph of warding</em></td></tr>
                 <tr><td>13th</td><td><em>greater invisibility</em></td></tr>
                 <tr><td>17th</td><td><em>seeming</em></td></tr>
@@ -679,7 +679,9 @@
         </description>
         <sheet display="false" />
         <rules>
-            <grant type="Vision" id="ID_VISION_DARKVISION" />
+            <grant type="Vision" id="ID_VISION_DARKVISION" requirements="!ID_VISION_SUPERIORDARKVISION" />
+            <stat name="darkvision:range" value="30" requirements="!ID_VISION_SUPERIORDARKVISION" />
+            <stat name="superior darkvision:range" value="30" requirements="ID_VISION_SUPERIORDARKVISION" />
             <grant type="Spell" name="ID_PHB_SPELL_DISGUISE_SELF" level="3" spellcasting="Ranger"/>
             <grant type="Spell" name="ID_PHB_SPELL_ROPE_TRICK" level="5" spellcasting="Ranger" />
             <grant type="Spell" name="ID_PHB_SPELL_GLYPH_OF_WARDING" level="9" spellcasting="Ranger" />
@@ -759,12 +761,12 @@
     <element name="Animal Companion" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_BEAST_ANIMAL_COMPANION">
         <description>
             <p>At 3rd level, you learn to use your magic to create a powerful bond with a creature of the natural world.</p>
-            <p class="indent">Within 8 hours of word and the expenditure of 50 gp worth of rare herbs and fine food, you call faorth an animal from the wilderness to serve as your faithful companion. You normally select your companion from among the following animals: an ape, a black bear, a boar, a giant badger, a giant weasel, a mule, a panther, or a wolf. However, you DM might pick one of these animals for you, based on the surrounding terrain and on what types of creatures would logically be present in the area.</p>
+            <p class="indent">Within 8 hours of word and the expenditure of 50 gp worth of rare herbs and fine food, you call forth an animal from the wilderness to serve as your faithful companion. You normally select your companion from among the following animals: an ape, a black bear, a boar, a giant badger, a giant weasel, a mule, a panther, or a wolf. However, your DM might pick one of these animals for you, based on the surrounding terrain and on what types of creatures would logically be present in the area.</p>
             <p class="indent">At the end of the 8 hours, your animal companion appears and gains all the benefits of your Companion's Bond ability. You can have only one animal companion at a time.</p>
             <p class="indent">If your animal companion is ever slain, the magical bond you share allows you to return it to life. With 8 hours of work and the expenditure of 25 gp worth of rare herbs and fine food, you call forth your companion's spirit and use your magic to create a new body for it. You can return an animal companion to life this manner even if you do not possess any part of its body.</p>
             <p class="indent">If you use this ability to return a former animal to life while you have a current animal companion, your current companion leaves you and is replaced by the restored companion.</p>
             <h5>COMPANION'S BOND</h5>
-            <p>Your aninmal companion gains a variety of benefits while it is linked to you.</p>
+            <p>Your animal companion gains a variety of benefits while it is linked to you.</p>
             <p class="indent">The animal companion loses its Multiattack action, if it has one.</p>
             <p class="indent">The companion obeys your commands as best it can. It rolls for initiative like any other creature, but you determine its actions, decisions, attitudes, and so on. If you are incapacitated or absent, your companion acts on its own.</p>
             <p class="indent">Your animal companion has abilities and game statistics determined in part by your level. Your companion uses your proficiency bonus rather than its own. An animal companion add its proficiency bonus to AC, skills, saving throws, attack bonus, and damage rolls.</p>
@@ -798,20 +800,36 @@
 			</table>
         </description>
         <sheet>
-            <!-- right now i can only implement this feature through description, this will be changed later when appropriate rules are added to the Aurora -->
-            <description>An animal companion adds your proficiency bonus to the following areas: AC, skills, saving throws, attack bonus and damage rolls. Your companion gains proficiency in two skills of your choice, it also becomes proficient with all saving throws. The animal loses its Multiattack action, if it has one. For every level you gain after 3rd your animal companion gains an additional hit die and increases its hit points accordingly. Whenever you gain Ability Score Improvement class feature, your companion can also increase one ability score of your choice by 2, or two ability scores of your choice by 1.</description>
+            <description>An animal companion adds your proficiency bonus to the following areas: AC, skills, saving throws, attack bonus and damage rolls. Your companion gains proficiency in two skills of your choice, it also becomes proficient with all saving throws. The animal loses its Multiattack action, if it has one. For every level you gain after 3rd your animal companion gains an additional hit die and increases its hit points accordingly. Whenever you gain Ability Score Improvement class feature, your companion can also increase one ability score of your choice by 2, or two ability scores of your choice by 1. The builder applies AC, attack, damage, saving throws, skill proficiencies, and companion ability-score improvements. Track level-based Hit Dice and hit points, changes to printed attack text after companion ability increases, and removal of Multiattack manually. Do not increase an ability above 20.</description>
         </sheet>
         <rules>
-            <!-- these are rules for the original Beast Master Archetype, i deleted HP rules, because they don't match this feature
-            to do: companion skills
-            to do: companion saving throws
-            to do: companion ASI
-            to do: cut companion's Multiattack
-            to do: companion HP rules-->
-    	    <select type="Companion" name="Ranger’s Companion" supports="Beast,(Tiny||Small||Medium),(1/4||1/8||0)" />
-    	    <stat name="companion:ac" value="Proficiency" />
-    	    <stat name="companion:attack" value="Proficiency" />
-    	    <stat name="companion:damage" value="Proficiency" />
+            <!-- Hit Dice, hit points, and printed actions still require the sheet adjustments noted above. -->
+            <select type="Companion" name="Ranger's Companion" supports="ID_WOTC_PHB_COMPANION_APE|ID_WOTC_PHB_COMPANION_BLACK_BEAR|ID_WOTC_PHB_COMPANION_BOAR|ID_WOTC_PHB_COMPANION_GIANT_BADGER|ID_WOTC_PHB_COMPANION_GIANT_WEASEL|ID_WOTC_PHB_COMPANION_MULE|ID_WOTC_PHB_COMPANION_PANTHER|ID_WOTC_PHB_COMPANION_WOLF" />
+            <stat name="companion:ac" value="proficiency" />
+            <stat name="companion:attack" value="proficiency" />
+            <stat name="companion:damage" value="proficiency" />
+            <stat name="companion:strength:save:proficiency" value="proficiency" bonus="base" />
+            <stat name="companion:dexterity:save:proficiency" value="proficiency" bonus="base" />
+            <stat name="companion:constitution:save:proficiency" value="proficiency" bonus="base" />
+            <stat name="companion:intelligence:save:proficiency" value="proficiency" bonus="base" />
+            <stat name="companion:wisdom:save:proficiency" value="proficiency" bonus="base" />
+            <stat name="companion:charisma:save:proficiency" value="proficiency" bonus="base" />
+
+            <select type="Archetype Feature" name="Companion Skill Proficiencies" supports="TBOX Beast Companion Skill" number="2" />
+            <select type="Ability Score Improvement" name="Companion Ability Score Improvement (Level 4)" supports="TBOX Beast Companion Ability Score Increase" number="2" level="4" />
+            <select type="Ability Score Improvement" name="Companion Ability Score Improvement (Level 8)" supports="TBOX Beast Companion Ability Score Increase" number="2" level="8" />
+            <select type="Ability Score Improvement" name="Companion Ability Score Improvement (Level 12)" supports="TBOX Beast Companion Ability Score Increase" number="2" level="12" />
+            <select type="Ability Score Improvement" name="Companion Ability Score Improvement (Level 16)" supports="TBOX Beast Companion Ability Score Increase" number="2" level="16" />
+            <select type="Ability Score Improvement" name="Companion Ability Score Improvement (Level 19)" supports="TBOX Beast Companion Ability Score Increase" number="2" level="19" />
+            <stat name="companion:athletics:proficiency" value="proficiency" bonus="base" requirements="ID_WOTC_PHB_COMPANION_APE" />
+            <stat name="companion:perception:proficiency" value="proficiency" bonus="base" requirements="ID_WOTC_PHB_COMPANION_APE" />
+            <stat name="companion:perception:proficiency" value="proficiency" bonus="base" requirements="ID_WOTC_PHB_COMPANION_GIANT_WEASEL" />
+            <stat name="companion:stealth:proficiency" value="proficiency" bonus="base" requirements="ID_WOTC_PHB_COMPANION_GIANT_WEASEL" />
+            <stat name="companion:perception:proficiency" value="proficiency" bonus="base" requirements="ID_WOTC_PHB_COMPANION_PANTHER" />
+            <stat name="companion:stealth:proficiency" value="proficiency" bonus="base" requirements="ID_WOTC_PHB_COMPANION_PANTHER" />
+            <stat name="companion:stealth:proficiency" value="proficiency" bonus="double" requirements="ID_WOTC_PHB_COMPANION_PANTHER" />
+            <stat name="companion:perception:proficiency" value="proficiency" bonus="base" requirements="ID_WOTC_PHB_COMPANION_WOLF" />
+            <stat name="companion:stealth:proficiency" value="proficiency" bonus="base" requirements="ID_WOTC_PHB_COMPANION_WOLF" />
         </rules>
     </element>
     <element name="Coordinated Attack" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_RANGER_REVISED_BEAST_COORDINATED_ATTACK">
@@ -912,9 +930,8 @@
 			<stat name="companion:hp:max" value="level:ranger revised" />
 			<stat name="companion:hp:max" value="level:ranger revised" />
 			<stat name="companion:speed" value="40" bonus="base" />	
-			<stat name="companion:dexterity:save:proficiency" value="companion:proficiency" bonus="proficiency" />
-			<stat name="companion:constitution:save:proficiency" value="companion:proficiency" bonus="proficiency" />
-			<stat name="companion:proficiency" value="proficiency" bonus="proficiency"/>
+			<stat name="companion:dexterity:save:proficiency" value="proficiency" bonus="proficiency" />
+			<stat name="companion:wisdom:save:proficiency" value="proficiency" bonus="proficiency" />
 		</rules>
 	</element>
 	<element name="Drake Companion Revised" type="Companion" source="The Book of Xellarant" id="ID_TBOX_COMPANION_DRAKEWARDEN_DRAKE_COMPANION_MEDIUM">
@@ -955,9 +972,8 @@
 			<stat name="companion:hp:max" value="level:ranger revised" />
 			<stat name="companion:speed" value="40" bonus="base" />	
 			<stat name="companion:speed:fly" value="companion:speed" bonus="base" />	
-			<stat name="companion:dexterity:save:proficiency" value="companion:proficiency" bonus="proficiency" />
-			<stat name="companion:constitution:save:proficiency" value="companion:proficiency" bonus="proficiency" />
-			<stat name="companion:proficiency" value="proficiency" bonus="proficiency"/>
+			<stat name="companion:dexterity:save:proficiency" value="proficiency" bonus="proficiency" />
+			<stat name="companion:wisdom:save:proficiency" value="proficiency" bonus="proficiency" />
 		</rules>
 	</element>
 	<element name="Drake Companion Revised" type="Companion" source="The Book of Xellarant" id="ID_TBOX_COMPANION_DRAKEWARDEN_DRAKE_COMPANION_LARGE">
@@ -998,10 +1014,184 @@
 			<stat name="companion:hp:max" value="level:ranger revised" />
 			<stat name="companion:speed" value="40" bonus="base" />	
 			<stat name="companion:speed:fly" value="companion:speed" bonus="base" />	
-			<stat name="companion:dexterity:save:proficiency" value="companion:proficiency" bonus="proficiency" />
-			<stat name="companion:constitution:save:proficiency" value="companion:proficiency" bonus="proficiency" />
-			<stat name="companion:proficiency" value="proficiency" bonus="proficiency"/>
+			<stat name="companion:dexterity:save:proficiency" value="proficiency" bonus="proficiency" />
+			<stat name="companion:wisdom:save:proficiency" value="proficiency" bonus="proficiency" />
 		</rules>
 	</element>
 
+
+    <element name="Companion Skill: Acrobatics" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_SKILL_ACROBATICS">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Skill</supports>
+        <description><p>Your animal companion gains proficiency in Acrobatics, using your proficiency bonus.</p></description>
+        <sheet display="false" />
+        <rules><stat name="companion:acrobatics:proficiency" value="proficiency" bonus="base" /></rules>
+    </element>
+    <element name="Companion Skill: Animal Handling" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_SKILL_ANIMAL_HANDLING">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Skill</supports>
+        <description><p>Your animal companion gains proficiency in Animal Handling, using your proficiency bonus.</p></description>
+        <sheet display="false" />
+        <rules><stat name="companion:animal handling:proficiency" value="proficiency" bonus="base" /></rules>
+    </element>
+    <element name="Companion Skill: Arcana" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_SKILL_ARCANA">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Skill</supports>
+        <description><p>Your animal companion gains proficiency in Arcana, using your proficiency bonus.</p></description>
+        <sheet display="false" />
+        <rules><stat name="companion:arcana:proficiency" value="proficiency" bonus="base" /></rules>
+    </element>
+    <element name="Companion Skill: Athletics" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_SKILL_ATHLETICS">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Skill</supports>
+        <description><p>Your animal companion gains proficiency in Athletics, using your proficiency bonus.</p></description>
+        <sheet display="false" />
+        <rules><stat name="companion:athletics:proficiency" value="proficiency" bonus="base" /></rules>
+    </element>
+    <element name="Companion Skill: Deception" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_SKILL_DECEPTION">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Skill</supports>
+        <description><p>Your animal companion gains proficiency in Deception, using your proficiency bonus.</p></description>
+        <sheet display="false" />
+        <rules><stat name="companion:deception:proficiency" value="proficiency" bonus="base" /></rules>
+    </element>
+    <element name="Companion Skill: History" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_SKILL_HISTORY">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Skill</supports>
+        <description><p>Your animal companion gains proficiency in History, using your proficiency bonus.</p></description>
+        <sheet display="false" />
+        <rules><stat name="companion:history:proficiency" value="proficiency" bonus="base" /></rules>
+    </element>
+    <element name="Companion Skill: Insight" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_SKILL_INSIGHT">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Skill</supports>
+        <description><p>Your animal companion gains proficiency in Insight, using your proficiency bonus.</p></description>
+        <sheet display="false" />
+        <rules><stat name="companion:insight:proficiency" value="proficiency" bonus="base" /></rules>
+    </element>
+    <element name="Companion Skill: Intimidation" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_SKILL_INTIMIDATION">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Skill</supports>
+        <description><p>Your animal companion gains proficiency in Intimidation, using your proficiency bonus.</p></description>
+        <sheet display="false" />
+        <rules><stat name="companion:intimidation:proficiency" value="proficiency" bonus="base" /></rules>
+    </element>
+    <element name="Companion Skill: Investigation" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_SKILL_INVESTIGATION">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Skill</supports>
+        <description><p>Your animal companion gains proficiency in Investigation, using your proficiency bonus.</p></description>
+        <sheet display="false" />
+        <rules><stat name="companion:investigation:proficiency" value="proficiency" bonus="base" /></rules>
+    </element>
+    <element name="Companion Skill: Medicine" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_SKILL_MEDICINE">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Skill</supports>
+        <description><p>Your animal companion gains proficiency in Medicine, using your proficiency bonus.</p></description>
+        <sheet display="false" />
+        <rules><stat name="companion:medicine:proficiency" value="proficiency" bonus="base" /></rules>
+    </element>
+    <element name="Companion Skill: Nature" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_SKILL_NATURE">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Skill</supports>
+        <description><p>Your animal companion gains proficiency in Nature, using your proficiency bonus.</p></description>
+        <sheet display="false" />
+        <rules><stat name="companion:nature:proficiency" value="proficiency" bonus="base" /></rules>
+    </element>
+    <element name="Companion Skill: Perception" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_SKILL_PERCEPTION">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Skill</supports>
+        <description><p>Your animal companion gains proficiency in Perception, using your proficiency bonus.</p></description>
+        <sheet display="false" />
+        <rules><stat name="companion:perception:proficiency" value="proficiency" bonus="base" /></rules>
+    </element>
+    <element name="Companion Skill: Performance" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_SKILL_PERFORMANCE">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Skill</supports>
+        <description><p>Your animal companion gains proficiency in Performance, using your proficiency bonus.</p></description>
+        <sheet display="false" />
+        <rules><stat name="companion:performance:proficiency" value="proficiency" bonus="base" /></rules>
+    </element>
+    <element name="Companion Skill: Persuasion" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_SKILL_PERSUASION">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Skill</supports>
+        <description><p>Your animal companion gains proficiency in Persuasion, using your proficiency bonus.</p></description>
+        <sheet display="false" />
+        <rules><stat name="companion:persuasion:proficiency" value="proficiency" bonus="base" /></rules>
+    </element>
+    <element name="Companion Skill: Religion" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_SKILL_RELIGION">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Skill</supports>
+        <description><p>Your animal companion gains proficiency in Religion, using your proficiency bonus.</p></description>
+        <sheet display="false" />
+        <rules><stat name="companion:religion:proficiency" value="proficiency" bonus="base" /></rules>
+    </element>
+    <element name="Companion Skill: Sleight of Hand" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_SKILL_SLEIGHT_OF_HAND">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Skill</supports>
+        <description><p>Your animal companion gains proficiency in Sleight of Hand, using your proficiency bonus.</p></description>
+        <sheet display="false" />
+        <rules><stat name="companion:sleight of hand:proficiency" value="proficiency" bonus="base" /></rules>
+    </element>
+    <element name="Companion Skill: Stealth" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_SKILL_STEALTH">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Skill</supports>
+        <description><p>Your animal companion gains proficiency in Stealth, using your proficiency bonus.</p></description>
+        <sheet display="false" />
+        <rules><stat name="companion:stealth:proficiency" value="proficiency" bonus="base" /></rules>
+    </element>
+    <element name="Companion Skill: Survival" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_SKILL_SURVIVAL">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Skill</supports>
+        <description><p>Your animal companion gains proficiency in Survival, using your proficiency bonus.</p></description>
+        <sheet display="false" />
+        <rules><stat name="companion:survival:proficiency" value="proficiency" bonus="base" /></rules>
+    </element>
+    <element name="Companion Strength +1" type="Ability Score Improvement" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_ASI_STRENGTH">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Ability Score Increase</supports>
+        <description><p>Increase your animal companion's Strength score by 1, to a maximum of 20. You can select this improvement twice to increase the same ability by 2.</p></description>
+        <setters><set name="allow duplicate">true</set></setters>
+        <sheet display="false" />
+        <rules><stat name="companion:strength" value="1" /></rules>
+    </element>
+    <element name="Companion Dexterity +1" type="Ability Score Improvement" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_ASI_DEXTERITY">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Ability Score Increase</supports>
+        <description><p>Increase your animal companion's Dexterity score by 1, to a maximum of 20. You can select this improvement twice to increase the same ability by 2.</p></description>
+        <setters><set name="allow duplicate">true</set></setters>
+        <sheet display="false" />
+        <rules><stat name="companion:dexterity" value="1" /></rules>
+    </element>
+    <element name="Companion Constitution +1" type="Ability Score Improvement" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_ASI_CONSTITUTION">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Ability Score Increase</supports>
+        <description><p>Increase your animal companion's Constitution score by 1, to a maximum of 20. You can select this improvement twice to increase the same ability by 2.</p></description>
+        <setters><set name="allow duplicate">true</set></setters>
+        <sheet display="false" />
+        <rules><stat name="companion:constitution" value="1" /></rules>
+    </element>
+    <element name="Companion Intelligence +1" type="Ability Score Improvement" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_ASI_INTELLIGENCE">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Ability Score Increase</supports>
+        <description><p>Increase your animal companion's Intelligence score by 1, to a maximum of 20. You can select this improvement twice to increase the same ability by 2.</p></description>
+        <setters><set name="allow duplicate">true</set></setters>
+        <sheet display="false" />
+        <rules><stat name="companion:intelligence" value="1" /></rules>
+    </element>
+    <element name="Companion Wisdom +1" type="Ability Score Improvement" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_ASI_WISDOM">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Ability Score Increase</supports>
+        <description><p>Increase your animal companion's Wisdom score by 1, to a maximum of 20. You can select this improvement twice to increase the same ability by 2.</p></description>
+        <setters><set name="allow duplicate">true</set></setters>
+        <sheet display="false" />
+        <rules><stat name="companion:wisdom" value="1" /></rules>
+    </element>
+    <element name="Companion Charisma +1" type="Ability Score Improvement" source="The Book of Xellarant" id="ID_TBOX_BEAST_COMPANION_ASI_CHARISMA">
+        <compendium display="false" />
+        <supports>TBOX Beast Companion Ability Score Increase</supports>
+        <description><p>Increase your animal companion's Charisma score by 1, to a maximum of 20. You can select this improvement twice to increase the same ability by 2.</p></description>
+        <setters><set name="allow duplicate">true</set></setters>
+        <sheet display="false" />
+        <rules><stat name="companion:charisma" value="1" /></rules>
+    </element>
 </elements>

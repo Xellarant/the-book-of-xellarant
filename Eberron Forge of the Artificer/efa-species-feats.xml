@@ -2,7 +2,7 @@
 <elements>
   <info>
     <name>Eberron: Forge of the Artificer - Species and Feats</name>
-    <update version="0.1.3">
+    <update version="0.1.4">
       <file name="efa-species-feats.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/Eberron%20Forge%20of%20the%20Artificer/efa-species-feats.xml" />
     </update>
   </info>
@@ -43,7 +43,7 @@
     </description>
     <sheet display="false" />
     <rules>
-      <select type="Proficiency" name="Changeling Instincts" number="2" supports="Skill,(Deception||Insight||Intimidation||Performance||Persuasion)" />
+      <select type="Proficiency" name="Changeling Instincts" number="2" supports="ID_PROFICIENCY_SKILL_DECEPTION|ID_PROFICIENCY_SKILL_INSIGHT|ID_PROFICIENCY_SKILL_INTIMIDATION|ID_PROFICIENCY_SKILL_PERFORMANCE|ID_PROFICIENCY_SKILL_PERSUASION" />
     </rules>
   </element>
   <element name="Shape-Shifter" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_CHANGELING_SHAPE_SHIFTER">
@@ -112,9 +112,20 @@
       <p><b>Mind Link.</b> You have telepathy with a range in feet equal to 10 times your level. When you're using this trait to speak telepathically to a creature, you can take a Magic action to give that creature the ability to speak telepathically with you for 1 hour or until you take another Magic action to end this effect.</p>
     </description>
     <sheet>
-      <description>You have telepathy with a range of {{level:10}} feet. As a Magic action, grant a creature you're telepathically speaking with the ability to telepathically reply to you for 1 hour (or until you use another Magic action to end it).</description>
+      <description>You have telepathy with a range of {{efa kalashtar:telepathy range}} feet. As a Magic action, grant a creature you're telepathically speaking with the ability to telepathically reply to you for 1 hour (or until you use another Magic action to end it).</description>
     </sheet>
-    <rules></rules>
+    <rules>
+      <stat name="efa kalashtar:telepathy range" value="level" />
+      <stat name="efa kalashtar:telepathy range" value="level" />
+      <stat name="efa kalashtar:telepathy range" value="level" />
+      <stat name="efa kalashtar:telepathy range" value="level" />
+      <stat name="efa kalashtar:telepathy range" value="level" />
+      <stat name="efa kalashtar:telepathy range" value="level" />
+      <stat name="efa kalashtar:telepathy range" value="level" />
+      <stat name="efa kalashtar:telepathy range" value="level" />
+      <stat name="efa kalashtar:telepathy range" value="level" />
+      <stat name="efa kalashtar:telepathy range" value="level" />
+    </rules>
   </element>
   <element name="Severed from Dreams" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_KALASHTAR_SEVERED_FROM_DREAMS">
     <compendium display="false" />
@@ -184,7 +195,11 @@
       <description>You know the Friends cantrip (or a Cleric/Druid/Wizard cantrip, replaceable each Long Rest). Spellcasting ability: {{khoravar:spellcasting ability}}.</description>
     </sheet>
     <rules>
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_FRIENDS" />
+      <select type="Spell" name="Fey Gift Cantrip (Khoravar)" supports="(Cleric||Druid||Wizard),0" default="ID_WOTC_PHB24_SPELL_FRIENDS" spellcasting="EFA Khoravar" prepared="true">
+        <set name="spell-access">known</set>
+        <set name="spell-slots">none</set>
+        <set name="spell-counts-known">false</set>
+      </select>
       <select type="Racial Trait" name="Spellcasting Ability (Khoravar)" supports="Khoravar Spellcasting Ability" />
     </rules>
   </element>
@@ -193,6 +208,7 @@
     <compendium display="false" />
     <description><p>Your spellcasting ability for Khoravar spells is Intelligence.</p></description>
     <sheet display="false" />
+    <spellcasting name="EFA Khoravar" ability="Intelligence"><list /></spellcasting>
     <rules><stat name="khoravar:spellcasting ability" value="Intelligence" inline="true" /></rules>
   </element>
   <element name="Wisdom (Khoravar)" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_KHORAVAR_WISDOM">
@@ -200,6 +216,7 @@
     <compendium display="false" />
     <description><p>Your spellcasting ability for Khoravar spells is Wisdom.</p></description>
     <sheet display="false" />
+    <spellcasting name="EFA Khoravar" ability="Wisdom"><list /></spellcasting>
     <rules><stat name="khoravar:spellcasting ability" value="Wisdom" inline="true" /></rules>
   </element>
   <element name="Charisma (Khoravar)" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_KHORAVAR_CHARISMA">
@@ -207,6 +224,7 @@
     <compendium display="false" />
     <description><p>Your spellcasting ability for Khoravar spells is Charisma.</p></description>
     <sheet display="false" />
+    <spellcasting name="EFA Khoravar" ability="Charisma"><list /></spellcasting>
     <rules><stat name="khoravar:spellcasting ability" value="Charisma" inline="true" /></rules>
   </element>
   <element name="Lethargy Resilience" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_KHORAVAR_LETHARGY_RESILIENCE">
@@ -272,7 +290,7 @@
     </description>
     <sheet display="false" />
     <rules>
-      <select type="Proficiency" name="Bestial Instincts (Shifter)" supports="Skill,(Acrobatics||Athletics||Intimidation||Survival)" />
+      <select type="Proficiency" name="Bestial Instincts (Shifter)" supports="ID_PROFICIENCY_SKILL_ACROBATICS|ID_PROFICIENCY_SKILL_ATHLETICS|ID_PROFICIENCY_SKILL_INTIMIDATION|ID_PROFICIENCY_SKILL_SURVIVAL" />
     </rules>
   </element>
   <element name="Darkvision (Shifter)" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_SHIFTER_DARKVISION">
@@ -300,7 +318,8 @@
       <description>Shift for 1 minute (revert as Bonus Action). Gain {{shifting:temp hp}} Temporary HP. Choose your shifting type: Beasthide (+1d6 Temp HP, +1 AC), Longtooth (Unarmed Strike 1d6+Str Piercing as Bonus Action), Swiftstride (+10 ft Speed, move 10 ft Reaction when creature ends turn adjacent), Wildhunt (Adv on Wis checks; no creature within 30 ft can Adv attack rolls against you).</description>
     </sheet>
     <rules>
-      <stat name="shifting:temp hp" value="proficiency:2" />
+      <stat name="shifting:temp hp" value="proficiency" />
+      <stat name="shifting:temp hp" value="proficiency" />
       <select type="Racial Trait" name="Shifting Form (Shifter)" supports="EFA Shifter Form" />
     </rules>
   </element>
@@ -425,7 +444,7 @@
   <element name="Aberrant Dragonmark" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_ABERRANT_DRAGONMARK">
     <supports>Dragonmark</supports>
     <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
-    <requirements>!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING</requirements>
+    <requirements>!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING,!ID_TBOX_FEAT_ABERRANT_DRAGONMARK_BETA,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
     <description>
       <p><em>Dragonmark Feat (Prerequisite: Eberron Campaign; can't already have a Dragonmark feat)</em></p>
       <p>You gain the following benefits.</p>
@@ -436,16 +455,27 @@
     <sheet>
       <description>Aberrant Fortitude: Reaction to roll 1d4 + add to failed Con save (1/Long Rest). Aberrant Magic: know one Sorcerer cantrip + one level 1 Sorcerer spell (always prepared, free cast 1/Short or Long Rest; Con spellcasting ability). Aberrant Surge: when casting that spell, expend a Hit Die — even result = that many Temp HP; odd result = Force damage to creature within 30 ft.</description>
     </sheet>
+    <spellcasting name="EFA Aberrant Dragonmark" ability="Constitution"><list /></spellcasting>
     <rules>
-      <select type="Spell" name="Cantrip (Aberrant Dragonmark)" supports="Sorcerer, 0" />
-      <select type="Spell" name="Level 1 Spell (Aberrant Dragonmark)" supports="Sorcerer, 1" />
+      <select type="Spell" name="Cantrip (Aberrant Dragonmark)" supports="Sorcerer, 0" spellcasting="EFA Aberrant Dragonmark" prepared="true">
+        <set name="spell-access">known</set>
+        <set name="spell-slots">none</set>
+        <set name="spell-counts-known">false</set>
+      </select>
+      <select type="Spell" name="Level 1 Spell (Aberrant Dragonmark)" supports="Sorcerer, 1" spellcasting="EFA Aberrant Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Short or Long Rest</set>
+      </select>
     </rules>
   </element>
 
   <element name="Mark of Detection" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_DETECTION">
     <supports>Dragonmark</supports>
     <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
-    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING</requirements>
+    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING,!ID_TBOX_FEAT_ABERRANT_DRAGONMARK_BETA,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
     <description>
       <p><em>Dragonmark Feat (Prerequisite: Eberron Campaign; can't already have a Dragonmark feat)</em></p>
       <p>You gain the following benefits.</p>
@@ -467,9 +497,27 @@
     </description>
     <sheet><description>Deductive Intuition: +1d4 to Intelligence (Investigation) or Wisdom (Insight) checks. Always have Detect Magic and Detect Poison and Disease prepared (free once/Long Rest). At level 3+: also have See Invisibility.</description></sheet>
     <rules>
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_DETECT_MAGIC" prepared="true" />
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_DETECT_POISON_AND_DISEASE" prepared="true" />
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SEE_INVISIBILITY" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_DETECT_MAGIC" prepared="true" spellcasting="EFA Dragonmark">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_DETECT_POISON_AND_DISEASE" prepared="true" spellcasting="EFA Dragonmark">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SEE_INVISIBILITY" prepared="true" level="3" spellcasting="EFA Dragonmark">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+      </grant>
       <select type="Feat Feature" name="Spellcasting Ability (Mark of Detection)" supports="ID_EFA_FEAT_FEATURE_DRAGONMARK_INTELLIGENCE|ID_EFA_FEAT_FEATURE_DRAGONMARK_WISDOM|ID_EFA_FEAT_FEATURE_DRAGONMARK_CHARISMA" />
       <grant type="Feat Feature" id="ID_EFA_FEAT_FEATURE_MARK_OF_DETECTION_SPELLS_OF_THE_MARK" />
     </rules>
@@ -478,7 +526,7 @@
   <element name="Mark of Finding" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_FINDING">
     <supports>Dragonmark</supports>
     <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
-    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING</requirements>
+    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING,!ID_TBOX_FEAT_ABERRANT_DRAGONMARK_BETA,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
     <description>
       <p><em>Dragonmark Feat (Prerequisite: Eberron Campaign; can't already have a Dragonmark feat)</em></p>
       <p>You gain the following benefits.</p>
@@ -500,8 +548,20 @@
     </description>
     <sheet><description>Hunter's Intuition: +1d4 to Wisdom (Perception or Survival) checks. Always have Hunter's Mark prepared (free once/Long Rest). At level 3+: also have Locate Object.</description></sheet>
     <rules>
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_HUNTERS_MARK" prepared="true" />
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_LOCATE_OBJECT" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_HUNTERS_MARK" prepared="true" spellcasting="EFA Dragonmark">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_LOCATE_OBJECT" prepared="true" level="3" spellcasting="EFA Dragonmark">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+      </grant>
       <select type="Feat Feature" name="Spellcasting Ability (Mark of Finding)" supports="ID_EFA_FEAT_FEATURE_DRAGONMARK_INTELLIGENCE|ID_EFA_FEAT_FEATURE_DRAGONMARK_WISDOM|ID_EFA_FEAT_FEATURE_DRAGONMARK_CHARISMA" />
       <grant type="Feat Feature" id="ID_EFA_FEAT_FEATURE_MARK_OF_FINDING_SPELLS_OF_THE_MARK" />
     </rules>
@@ -510,7 +570,7 @@
   <element name="Mark of Handling" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_HANDLING">
     <supports>Dragonmark</supports>
     <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
-    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING</requirements>
+    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING,!ID_TBOX_FEAT_ABERRANT_DRAGONMARK_BETA,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
     <description>
       <p><em>Dragonmark Feat (Prerequisite: Eberron Campaign; can't already have a Dragonmark feat)</em></p>
       <p>You gain the following benefits.</p>
@@ -531,8 +591,20 @@
     </description>
     <sheet><description>Wild Intuition: +1d4 to Intelligence (Nature) or Wisdom (Animal Handling) checks. Always have Animal Friendship and Speak with Animals (free once/Long Rest each). At level 3+: can target Monstrosities (Int 3 or lower) with these spells.</description></sheet>
     <rules>
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_ANIMAL_FRIENDSHIP" prepared="true" />
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SPEAK_WITH_ANIMALS" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_ANIMAL_FRIENDSHIP" prepared="true" spellcasting="EFA Dragonmark">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SPEAK_WITH_ANIMALS" prepared="true" spellcasting="EFA Dragonmark">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+      </grant>
       <select type="Feat Feature" name="Spellcasting Ability (Mark of Handling)" supports="ID_EFA_FEAT_FEATURE_DRAGONMARK_INTELLIGENCE|ID_EFA_FEAT_FEATURE_DRAGONMARK_WISDOM|ID_EFA_FEAT_FEATURE_DRAGONMARK_CHARISMA" />
       <grant type="Feat Feature" id="ID_EFA_FEAT_FEATURE_MARK_OF_HANDLING_SPELLS_OF_THE_MARK" />
     </rules>
@@ -541,7 +613,7 @@
   <element name="Mark of Healing" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_HEALING">
     <supports>Dragonmark</supports>
     <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
-    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING</requirements>
+    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING,!ID_TBOX_FEAT_ABERRANT_DRAGONMARK_BETA,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
     <description>
       <p><em>Dragonmark Feat (Prerequisite: Eberron Campaign; can't already have a Dragonmark feat)</em></p>
       <p>You gain the following benefits.</p>
@@ -563,8 +635,20 @@
     </description>
     <sheet><description>Medical Intuition: +1d4 to Wisdom (Medicine) or Herbalism Kit checks. Always have Cure Wounds (free once/Long Rest). At level 3+: also have Lesser Restoration.</description></sheet>
     <rules>
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CURE_WOUNDS" prepared="true" />
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_LESSER_RESTORATION" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CURE_WOUNDS" prepared="true" spellcasting="EFA Dragonmark">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_LESSER_RESTORATION" prepared="true" level="3" spellcasting="EFA Dragonmark">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+      </grant>
       <select type="Feat Feature" name="Spellcasting Ability (Mark of Healing)" supports="ID_EFA_FEAT_FEATURE_DRAGONMARK_INTELLIGENCE|ID_EFA_FEAT_FEATURE_DRAGONMARK_WISDOM|ID_EFA_FEAT_FEATURE_DRAGONMARK_CHARISMA" />
       <grant type="Feat Feature" id="ID_EFA_FEAT_FEATURE_MARK_OF_HEALING_SPELLS_OF_THE_MARK" />
     </rules>
@@ -573,7 +657,7 @@
   <element name="Mark of Hospitality" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_HOSPITALITY">
     <supports>Dragonmark</supports>
     <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
-    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING</requirements>
+    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING,!ID_TBOX_FEAT_ABERRANT_DRAGONMARK_BETA,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
     <description>
       <p><em>Dragonmark Feat (Prerequisite: Eberron Campaign; can't already have a Dragonmark feat)</em></p>
       <p>You gain the following benefits.</p>
@@ -595,9 +679,27 @@
     </description>
     <sheet><description>Ever Hospitable: +1d4 to Charisma (Persuasion), Brewer's Supplies, or Cook's Utensils checks. Always have Purify Food and Drink and Unseen Servant (free once each/Long Rest). At level 3+: also have Calm Emotions.</description></sheet>
     <rules>
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_PURIFY_FOOD_AND_DRINK" prepared="true" />
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_UNSEEN_SERVANT" prepared="true" />
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CALM_EMOTIONS" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_PURIFY_FOOD_AND_DRINK" prepared="true" spellcasting="EFA Dragonmark">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_UNSEEN_SERVANT" prepared="true" spellcasting="EFA Dragonmark">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CALM_EMOTIONS" prepared="true" level="3" spellcasting="EFA Dragonmark">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+      </grant>
       <select type="Feat Feature" name="Spellcasting Ability (Mark of Hospitality)" supports="ID_EFA_FEAT_FEATURE_DRAGONMARK_INTELLIGENCE|ID_EFA_FEAT_FEATURE_DRAGONMARK_WISDOM|ID_EFA_FEAT_FEATURE_DRAGONMARK_CHARISMA" />
       <grant type="Feat Feature" id="ID_EFA_FEAT_FEATURE_MARK_OF_HOSPITALITY_SPELLS_OF_THE_MARK" />
     </rules>
@@ -606,7 +708,7 @@
   <element name="Mark of Making" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_MAKING">
     <supports>Dragonmark</supports>
     <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
-    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING</requirements>
+    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING,!ID_TBOX_FEAT_ABERRANT_DRAGONMARK_BETA,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
     <description>
       <p><em>Dragonmark Feat (Prerequisite: Eberron Campaign; can't already have a Dragonmark feat)</em></p>
       <p>You gain the following benefits.</p>
@@ -626,8 +728,18 @@
     </description>
     <sheet><description>Artisan's Intuition: +1d4 to Intelligence (Arcana) or Artisan's Tools checks. Know Mending cantrip. Always have Magic Weapon (free once/Long Rest).</description></sheet>
     <rules>
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MENDING" prepared="true" />
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MAGIC_WEAPON" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MENDING" prepared="true" spellcasting="EFA Dragonmark">
+        <set name="spell-access">known</set>
+        <set name="spell-slots">none</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MAGIC_WEAPON" prepared="true" spellcasting="EFA Dragonmark">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+      </grant>
       <select type="Feat Feature" name="Spellcasting Ability (Mark of Making)" supports="ID_EFA_FEAT_FEATURE_DRAGONMARK_INTELLIGENCE|ID_EFA_FEAT_FEATURE_DRAGONMARK_WISDOM|ID_EFA_FEAT_FEATURE_DRAGONMARK_CHARISMA" />
       <grant type="Feat Feature" id="ID_EFA_FEAT_FEATURE_MARK_OF_MAKING_SPELLS_OF_THE_MARK" />
     </rules>
@@ -636,7 +748,7 @@
   <element name="Mark of Passage" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_PASSAGE">
     <supports>Dragonmark</supports>
     <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
-    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING</requirements>
+    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING,!ID_TBOX_FEAT_ABERRANT_DRAGONMARK_BETA,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
     <description>
       <p><em>Dragonmark Feat (Prerequisite: Eberron Campaign; can't already have a Dragonmark feat)</em></p>
       <p>You gain the following benefits.</p>
@@ -658,7 +770,13 @@
     <sheet><description>Courier's Speed: +5 feet to Speed. Intuitive Motion: +1d4 to Strength (Athletics) or Dexterity (Acrobatics) checks. Always have Misty Step (free once/Long Rest).</description></sheet>
     <rules>
       <stat name="innate speed:misc" value="5" />
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MISTY_STEP" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MISTY_STEP" prepared="true" spellcasting="EFA Dragonmark">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+      </grant>
       <select type="Feat Feature" name="Spellcasting Ability (Mark of Passage)" supports="ID_EFA_FEAT_FEATURE_DRAGONMARK_INTELLIGENCE|ID_EFA_FEAT_FEATURE_DRAGONMARK_WISDOM|ID_EFA_FEAT_FEATURE_DRAGONMARK_CHARISMA" />
       <grant type="Feat Feature" id="ID_EFA_FEAT_FEATURE_MARK_OF_PASSAGE_SPELLS_OF_THE_MARK" />
     </rules>
@@ -667,7 +785,7 @@
   <element name="Mark of Scribing" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_SCRIBING">
     <supports>Dragonmark</supports>
     <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
-    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING</requirements>
+    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING,!ID_TBOX_FEAT_ABERRANT_DRAGONMARK_BETA,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
     <description>
       <p><em>Dragonmark Feat (Prerequisite: Eberron Campaign; can't already have a Dragonmark feat)</em></p>
       <p>You gain the following benefits.</p>
@@ -689,9 +807,25 @@
     </description>
     <sheet><description>Gifted Scribe: +1d4 to Intelligence (History) or Calligrapher's Supplies checks. Know Message cantrip. Always have Comprehend Languages (free once/Long Rest). At level 3+: also have Magic Mouth.</description></sheet>
     <rules>
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MESSAGE" prepared="true" />
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_COMPREHEND_LANGUAGES" prepared="true" />
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MAGIC_MOUTH" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MESSAGE" prepared="true" spellcasting="EFA Dragonmark">
+        <set name="spell-access">known</set>
+        <set name="spell-slots">none</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_COMPREHEND_LANGUAGES" prepared="true" spellcasting="EFA Dragonmark">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MAGIC_MOUTH" prepared="true" level="3" spellcasting="EFA Dragonmark">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+      </grant>
       <select type="Feat Feature" name="Spellcasting Ability (Mark of Scribing)" supports="ID_EFA_FEAT_FEATURE_DRAGONMARK_INTELLIGENCE|ID_EFA_FEAT_FEATURE_DRAGONMARK_WISDOM|ID_EFA_FEAT_FEATURE_DRAGONMARK_CHARISMA" />
       <grant type="Feat Feature" id="ID_EFA_FEAT_FEATURE_MARK_OF_SCRIBING_SPELLS_OF_THE_MARK" />
     </rules>
@@ -700,7 +834,7 @@
   <element name="Mark of Sentinel" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_SENTINEL">
     <supports>Dragonmark</supports>
     <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
-    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING</requirements>
+    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING,!ID_TBOX_FEAT_ABERRANT_DRAGONMARK_BETA,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
     <description>
       <p><em>Dragonmark Feat (Prerequisite: Eberron Campaign; can't already have a Dragonmark feat)</em></p>
       <p>You gain the following benefits.</p>
@@ -723,7 +857,13 @@
       <description>Sentinel's Intuition: +1d4 to Wisdom (Insight or Perception) checks. Always have Shield (free once/Long Rest). Vigilant Guardian: Reaction to swap places with an adjacent creature hit by an attack — you are hit instead.</description>
     </sheet>
     <rules>
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SHIELD" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SHIELD" prepared="true" spellcasting="EFA Dragonmark">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+      </grant>
       <select type="Feat Feature" name="Spellcasting Ability (Mark of Sentinel)" supports="ID_EFA_FEAT_FEATURE_DRAGONMARK_INTELLIGENCE|ID_EFA_FEAT_FEATURE_DRAGONMARK_WISDOM|ID_EFA_FEAT_FEATURE_DRAGONMARK_CHARISMA" />
       <grant type="Feat Feature" id="ID_EFA_FEAT_FEATURE_MARK_OF_SENTINEL_SPELLS_OF_THE_MARK" />
     </rules>
@@ -732,7 +872,7 @@
   <element name="Mark of Shadow" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_SHADOW">
     <supports>Dragonmark</supports>
     <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
-    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING</requirements>
+    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_STORM,!ID_EFA_FEAT_MARK_OF_WARDING,!ID_TBOX_FEAT_ABERRANT_DRAGONMARK_BETA,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
     <description>
       <p><em>Dragonmark Feat (Prerequisite: Eberron Campaign; can't already have a Dragonmark feat)</em></p>
       <p>You gain the following benefits.</p>
@@ -752,8 +892,18 @@
     </description>
     <sheet><description>Cunning Intuition: +1d4 to Dexterity (Stealth) or Charisma (Performance) checks. Know Minor Illusion cantrip. Always have Invisibility (free once/Long Rest).</description></sheet>
     <rules>
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MINOR_ILLUSION" prepared="true" />
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_INVISIBILITY" prepared="true" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MINOR_ILLUSION" prepared="true" spellcasting="EFA Dragonmark">
+        <set name="spell-access">known</set>
+        <set name="spell-slots">none</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_INVISIBILITY" prepared="true" spellcasting="EFA Dragonmark">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+      </grant>
       <select type="Feat Feature" name="Spellcasting Ability (Mark of Shadow)" supports="ID_EFA_FEAT_FEATURE_DRAGONMARK_INTELLIGENCE|ID_EFA_FEAT_FEATURE_DRAGONMARK_WISDOM|ID_EFA_FEAT_FEATURE_DRAGONMARK_CHARISMA" />
       <grant type="Feat Feature" id="ID_EFA_FEAT_FEATURE_MARK_OF_SHADOW_SPELLS_OF_THE_MARK" />
     </rules>
@@ -762,7 +912,7 @@
   <element name="Mark of Storm" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_STORM">
     <supports>Dragonmark</supports>
     <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
-    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_WARDING</requirements>
+    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_WARDING,!ID_TBOX_FEAT_ABERRANT_DRAGONMARK_BETA,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
     <description>
       <p><em>Dragonmark Feat (Prerequisite: Eberron Campaign; can't already have a Dragonmark feat)</em></p>
       <p>You gain the following benefits.</p>
@@ -784,8 +934,18 @@
     <sheet><description>Windwright's Intuition: +1d4 to Dexterity (Acrobatics) or Navigator's Tools checks. Storm's Boon: Resistance to Lightning damage. Know Thunderclap cantrip. At level 3+: always have Gust of Wind (free once/Long Rest).</description></sheet>
     <rules>
       <grant type="Condition" id="ID_INTERNAL_CONDITION_DAMAGE_RESISTANCE_LIGHTNING" />
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_THUNDERCLAP" prepared="true" />
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_GUST_OF_WIND" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_THUNDERCLAP" prepared="true" spellcasting="EFA Dragonmark">
+        <set name="spell-access">known</set>
+        <set name="spell-slots">none</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_GUST_OF_WIND" prepared="true" level="3" spellcasting="EFA Dragonmark">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+      </grant>
       <select type="Feat Feature" name="Spellcasting Ability (Mark of Storm)" supports="ID_EFA_FEAT_FEATURE_DRAGONMARK_INTELLIGENCE|ID_EFA_FEAT_FEATURE_DRAGONMARK_WISDOM|ID_EFA_FEAT_FEATURE_DRAGONMARK_CHARISMA" />
       <grant type="Feat Feature" id="ID_EFA_FEAT_FEATURE_MARK_OF_STORM_SPELLS_OF_THE_MARK" />
     </rules>
@@ -794,7 +954,7 @@
   <element name="Mark of Warding" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_MARK_OF_WARDING">
     <supports>Dragonmark</supports>
     <prerequisite>Eberron Campaign; Can't Have Another Dragonmark Feat</prerequisite>
-    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM</requirements>
+    <requirements>!ID_EFA_FEAT_ABERRANT_DRAGONMARK,!ID_EFA_FEAT_MARK_OF_DETECTION,!ID_EFA_FEAT_MARK_OF_FINDING,!ID_EFA_FEAT_MARK_OF_HANDLING,!ID_EFA_FEAT_MARK_OF_HEALING,!ID_EFA_FEAT_MARK_OF_HOSPITALITY,!ID_EFA_FEAT_MARK_OF_MAKING,!ID_EFA_FEAT_MARK_OF_PASSAGE,!ID_EFA_FEAT_MARK_OF_SCRIBING,!ID_EFA_FEAT_MARK_OF_SENTINEL,!ID_EFA_FEAT_MARK_OF_SHADOW,!ID_EFA_FEAT_MARK_OF_STORM,!ID_TBOX_FEAT_ABERRANT_DRAGONMARK_BETA,!ID_WOTC_ERLW_FEAT_ABERRANT_DRAGONMARK</requirements>
     <description>
       <p><em>Dragonmark Feat (Prerequisite: Eberron Campaign; can't already have a Dragonmark feat)</em></p>
       <p>You gain the following benefits.</p>
@@ -817,9 +977,27 @@
     </description>
     <sheet><description>Warder's Intuition: +1d4 to Intelligence (Investigation) or Thieves' Tools checks. Always have Alarm and Mage Armor (free once each/Long Rest). At level 3+: also have Arcane Lock.</description></sheet>
     <rules>
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_ALARM" prepared="true" />
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MAGE_ARMOR" prepared="true" />
-      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_ARCANE_LOCK" prepared="true" level="3" />
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_ALARM" prepared="true" spellcasting="EFA Dragonmark">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MAGE_ARMOR" prepared="true" spellcasting="EFA Dragonmark">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_ARCANE_LOCK" prepared="true" level="3" spellcasting="EFA Dragonmark">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Long Rest</set>
+      </grant>
       <select type="Feat Feature" name="Spellcasting Ability (Mark of Warding)" supports="ID_EFA_FEAT_FEATURE_DRAGONMARK_INTELLIGENCE|ID_EFA_FEAT_FEATURE_DRAGONMARK_WISDOM|ID_EFA_FEAT_FEATURE_DRAGONMARK_CHARISMA" />
       <grant type="Feat Feature" id="ID_EFA_FEAT_FEATURE_MARK_OF_WARDING_SPELLS_OF_THE_MARK" />
     </rules>
@@ -829,16 +1007,19 @@
     <compendium display="false" />
     <description><p>Your spellcasting ability for this Dragonmark feat's spells is Intelligence.</p></description>
     <sheet alt="Dragonmark"><description>Your spellcasting ability for this Dragonmark feat's spells is Intelligence.</description></sheet>
+    <spellcasting name="EFA Dragonmark" ability="Intelligence"><list /></spellcasting>
   </element>
   <element name="Wisdom" type="Feat Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_FEATURE_DRAGONMARK_WISDOM">
     <compendium display="false" />
     <description><p>Your spellcasting ability for this Dragonmark feat's spells is Wisdom.</p></description>
     <sheet alt="Dragonmark"><description>Your spellcasting ability for this Dragonmark feat's spells is Wisdom.</description></sheet>
+    <spellcasting name="EFA Dragonmark" ability="Wisdom"><list /></spellcasting>
   </element>
   <element name="Charisma" type="Feat Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_FEATURE_DRAGONMARK_CHARISMA">
     <compendium display="false" />
     <description><p>Your spellcasting ability for this Dragonmark feat's spells is Charisma.</p></description>
     <sheet alt="Dragonmark"><description>Your spellcasting ability for this Dragonmark feat's spells is Charisma.</description></sheet>
+    <spellcasting name="EFA Dragonmark" ability="Charisma"><list /></spellcasting>
   </element>
 
   <element name="Spells of the Mark" type="Feat Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_FEATURE_MARK_OF_DETECTION_SPELLS_OF_THE_MARK">
@@ -846,72 +1027,636 @@
     <description><p>If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Detection Spells table are added to that feature's spell list.</p><h5>Mark of Detection Spells</h5><table><thead><tr><td>Spell Level</td><td>Spells</td></tr></thead><tr><td>1</td><td><em>Detect Evil and Good, Identify</em></td></tr><tr><td>2</td><td><em>Detect Thoughts, Find Traps</em></td></tr><tr><td>3</td><td><em>Clairvoyance, Nondetection</em></td></tr><tr><td>4</td><td><em>Arcane Eye, Divination</em></td></tr><tr><td>5</td><td><em>Legend Lore</em></td></tr></table></description>
     <sheet display="false"><description>The Mark of Detection spells are added to the spell list of your spellcasting class.</description></sheet>
     <spellcasting all="true" extend="true"><extend>ID_WOTC_PHB24_SPELL_DETECT_EVIL_AND_GOOD</extend><extend>ID_WOTC_PHB24_SPELL_IDENTIFY</extend><extend>ID_WOTC_PHB24_SPELL_DETECT_THOUGHTS</extend><extend>ID_WOTC_PHB24_SPELL_FIND_TRAPS</extend><extend>ID_WOTC_PHB24_SPELL_CLAIRVOYANCE</extend><extend>ID_WOTC_PHB24_SPELL_NONDETECTION</extend><extend>ID_WOTC_PHB24_SPELL_ARCANE_EYE</extend><extend>ID_WOTC_PHB24_SPELL_DIVINATION</extend><extend>ID_WOTC_PHB24_SPELL_LEGEND_LORE</extend></spellcasting>
+    <rules>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_DETECT_EVIL_AND_GOOD" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_IDENTIFY" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_DETECT_THOUGHTS" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_FIND_TRAPS" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CLAIRVOYANCE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_NONDETECTION" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_ARCANE_EYE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_DIVINATION" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_LEGEND_LORE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+    </rules>
   </element>
   <element name="Spells of the Mark" type="Feat Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_FEATURE_MARK_OF_FINDING_SPELLS_OF_THE_MARK">
     <compendium display="false" />
     <description><p>If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Finding Spells table are added to that feature's spell list.</p><h5>Mark of Finding Spells</h5><table><thead><tr><td>Spell Level</td><td>Spells</td></tr></thead><tr><td>1</td><td><em>Faerie Fire, Longstrider</em></td></tr><tr><td>2</td><td><em>Locate Animals or Plants, Mind Spike</em></td></tr><tr><td>3</td><td><em>Clairvoyance, Speak with Plants</em></td></tr><tr><td>4</td><td><em>Divination, Locate Creature</em></td></tr><tr><td>5</td><td><em>Commune with Nature</em></td></tr></table></description>
     <sheet display="false"><description>The Mark of Finding spells are added to the spell list of your spellcasting class.</description></sheet>
     <spellcasting all="true" extend="true"><extend>ID_WOTC_PHB24_SPELL_FAERIE_FIRE</extend><extend>ID_WOTC_PHB24_SPELL_LONGSTRIDER</extend><extend>ID_WOTC_PHB24_SPELL_LOCATE_ANIMALS_OR_PLANTS</extend><extend>ID_WOTC_PHB24_SPELL_MIND_SPIKE</extend><extend>ID_WOTC_PHB24_SPELL_CLAIRVOYANCE</extend><extend>ID_WOTC_PHB24_SPELL_SPEAK_WITH_PLANTS</extend><extend>ID_WOTC_PHB24_SPELL_DIVINATION</extend><extend>ID_WOTC_PHB24_SPELL_LOCATE_CREATURE</extend><extend>ID_WOTC_PHB24_SPELL_COMMUNE_WITH_NATURE</extend></spellcasting>
+    <rules>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_FAERIE_FIRE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_LONGSTRIDER" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_LOCATE_ANIMALS_OR_PLANTS" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MIND_SPIKE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CLAIRVOYANCE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SPEAK_WITH_PLANTS" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_DIVINATION" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_LOCATE_CREATURE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_COMMUNE_WITH_NATURE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+    </rules>
   </element>
   <element name="Spells of the Mark" type="Feat Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_FEATURE_MARK_OF_HANDLING_SPELLS_OF_THE_MARK">
     <compendium display="false" />
     <description><p>If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Handling Spells table are added to that feature's spell list.</p><h5>Mark of Handling Spells</h5><table><thead><tr><td>Spell Level</td><td>Spells</td></tr></thead><tr><td>1</td><td><em>Command, Find Familiar</em></td></tr><tr><td>2</td><td><em>Beast Sense, Calm Emotions</em></td></tr><tr><td>3</td><td><em>Beacon of Hope, Conjure Animals</em></td></tr><tr><td>4</td><td><em>Aura of Life, Dominate Beast</em></td></tr><tr><td>5</td><td><em>Awaken</em></td></tr></table></description>
     <sheet display="false"><description>The Mark of Handling spells are added to the spell list of your spellcasting class.</description></sheet>
     <spellcasting all="true" extend="true"><extend>ID_WOTC_PHB24_SPELL_COMMAND</extend><extend>ID_WOTC_PHB24_SPELL_FIND_FAMILIAR</extend><extend>ID_WOTC_PHB24_SPELL_BEAST_SENSE</extend><extend>ID_WOTC_PHB24_SPELL_CALM_EMOTIONS</extend><extend>ID_WOTC_PHB24_SPELL_BEACON_OF_HOPE</extend><extend>ID_WOTC_PHB24_SPELL_CONJURE_ANIMALS</extend><extend>ID_WOTC_PHB24_SPELL_AURA_OF_LIFE</extend><extend>ID_WOTC_PHB24_SPELL_DOMINATE_BEAST</extend><extend>ID_WOTC_PHB24_SPELL_AWAKEN</extend></spellcasting>
+    <rules>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_COMMAND" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_FIND_FAMILIAR" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_BEAST_SENSE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CALM_EMOTIONS" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_BEACON_OF_HOPE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CONJURE_ANIMALS" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_AURA_OF_LIFE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_DOMINATE_BEAST" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_AWAKEN" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+    </rules>
   </element>
   <element name="Spells of the Mark" type="Feat Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_FEATURE_MARK_OF_HEALING_SPELLS_OF_THE_MARK">
     <compendium display="false" />
     <description><p>If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Healing Spells table are added to that feature's spell list.</p><h5>Mark of Healing Spells</h5><table><thead><tr><td>Spell Level</td><td>Spells</td></tr></thead><tr><td>1</td><td><em>False Life, Healing Word</em></td></tr><tr><td>2</td><td><em>Arcane Vigor, Prayer of Healing</em></td></tr><tr><td>3</td><td><em>Aura of Vitality, Mass Healing Word</em></td></tr><tr><td>4</td><td><em>Aura of Life, Aura of Purity</em></td></tr><tr><td>5</td><td><em>Greater Restoration</em></td></tr></table></description>
     <sheet display="false"><description>The Mark of Healing spells are added to the spell list of your spellcasting class.</description></sheet>
     <spellcasting all="true" extend="true"><extend>ID_WOTC_PHB24_SPELL_FALSE_LIFE</extend><extend>ID_WOTC_PHB24_SPELL_HEALING_WORD</extend><extend>ID_WOTC_PHB24_SPELL_ARCANE_VIGOR</extend><extend>ID_WOTC_PHB24_SPELL_PRAYER_OF_HEALING</extend><extend>ID_WOTC_PHB24_SPELL_AURA_OF_VITALITY</extend><extend>ID_WOTC_PHB24_SPELL_MASS_HEALING_WORD</extend><extend>ID_WOTC_PHB24_SPELL_AURA_OF_LIFE</extend><extend>ID_WOTC_PHB24_SPELL_AURA_OF_PURITY</extend><extend>ID_WOTC_PHB24_SPELL_GREATER_RESTORATION</extend></spellcasting>
+    <rules>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_FALSE_LIFE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_HEALING_WORD" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_ARCANE_VIGOR" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_PRAYER_OF_HEALING" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_AURA_OF_VITALITY" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MASS_HEALING_WORD" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_AURA_OF_LIFE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_AURA_OF_PURITY" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_GREATER_RESTORATION" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+    </rules>
   </element>
   <element name="Spells of the Mark" type="Feat Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_FEATURE_MARK_OF_HOSPITALITY_SPELLS_OF_THE_MARK">
     <compendium display="false" />
     <description><p>If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Hospitality Spells table are added to that feature's spell list.</p><h5>Mark of Hospitality Spells</h5><table><thead><tr><td>Spell Level</td><td>Spells</td></tr></thead><tr><td>1</td><td><em>Goodberry, Sleep</em></td></tr><tr><td>2</td><td><em>Aid, Enhance Ability</em></td></tr><tr><td>3</td><td><em>Create Food and Water, Leomund's Tiny Hut</em></td></tr><tr><td>4</td><td><em>Aura of Purity, Mordenkainen's Private Sanctum</em></td></tr><tr><td>5</td><td><em>Hallow</em></td></tr></table></description>
     <sheet display="false"><description>The Mark of Hospitality spells are added to the spell list of your spellcasting class.</description></sheet>
     <spellcasting all="true" extend="true"><extend>ID_WOTC_PHB24_SPELL_GOODBERRY</extend><extend>ID_WOTC_PHB24_SPELL_SLEEP</extend><extend>ID_WOTC_PHB24_SPELL_AID</extend><extend>ID_WOTC_PHB24_SPELL_ENHANCE_ABILITY</extend><extend>ID_WOTC_PHB24_SPELL_CREATE_FOOD_AND_WATER</extend><extend>ID_WOTC_PHB24_SPELL_LEOMUNDS_TINY_HUT</extend><extend>ID_WOTC_PHB24_SPELL_AURA_OF_PURITY</extend><extend>ID_WOTC_PHB24_SPELL_MORDENKAINENS_PRIVATE_SANCTUM</extend><extend>ID_WOTC_PHB24_SPELL_HALLOW</extend></spellcasting>
+    <rules>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_GOODBERRY" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SLEEP" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_AID" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_ENHANCE_ABILITY" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CREATE_FOOD_AND_WATER" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_LEOMUNDS_TINY_HUT" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_AURA_OF_PURITY" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MORDENKAINENS_PRIVATE_SANCTUM" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_HALLOW" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+    </rules>
   </element>
   <element name="Spells of the Mark" type="Feat Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_FEATURE_MARK_OF_MAKING_SPELLS_OF_THE_MARK">
     <compendium display="false" />
     <description><p>If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Making Spells table are added to that feature's spell list.</p><h5>Mark of Making Spells</h5><table><thead><tr><td>Spell Level</td><td>Spells</td></tr></thead><tr><td>1</td><td><em>Identify, Tenser's Floating Disk</em></td></tr><tr><td>2</td><td><em>Continual Flame, Spiritual Weapon</em></td></tr><tr><td>3</td><td><em>Conjure Barrage, Elemental Weapon</em></td></tr><tr><td>4</td><td><em>Fabricate, Stone Shape</em></td></tr><tr><td>5</td><td><em>Creation</em></td></tr></table></description>
     <sheet display="false"><description>The Mark of Making spells are added to the spell list of your spellcasting class.</description></sheet>
     <spellcasting all="true" extend="true"><extend>ID_WOTC_PHB24_SPELL_IDENTIFY</extend><extend>ID_WOTC_PHB24_SPELL_TENSERS_FLOATING_DISK</extend><extend>ID_WOTC_PHB24_SPELL_CONTINUAL_FLAME</extend><extend>ID_WOTC_PHB24_SPELL_SPIRITUAL_WEAPON</extend><extend>ID_WOTC_PHB24_SPELL_CONJURE_BARRAGE</extend><extend>ID_WOTC_PHB24_SPELL_ELEMENTAL_WEAPON</extend><extend>ID_WOTC_PHB24_SPELL_FABRICATE</extend><extend>ID_WOTC_PHB24_SPELL_STONE_SHAPE</extend><extend>ID_WOTC_PHB24_SPELL_CREATION</extend></spellcasting>
+    <rules>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_IDENTIFY" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_TENSERS_FLOATING_DISK" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CONTINUAL_FLAME" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SPIRITUAL_WEAPON" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CONJURE_BARRAGE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_ELEMENTAL_WEAPON" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_FABRICATE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_STONE_SHAPE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CREATION" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+    </rules>
   </element>
   <element name="Spells of the Mark" type="Feat Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_FEATURE_MARK_OF_PASSAGE_SPELLS_OF_THE_MARK">
     <compendium display="false" />
     <description><p>If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Passage Spells table are added to that feature's spell list.</p><h5>Mark of Passage Spells</h5><table><thead><tr><td>Spell Level</td><td>Spells</td></tr></thead><tr><td>1</td><td><em>Expeditious Retreat, Jump</em></td></tr><tr><td>2</td><td><em>Find Steed, Pass without Trace</em></td></tr><tr><td>3</td><td><em>Blink, Phantom Steed</em></td></tr><tr><td>4</td><td><em>Dimension Door, Freedom of Movement</em></td></tr><tr><td>5</td><td><em>Teleportation Circle</em></td></tr></table></description>
     <sheet display="false"><description>The Mark of Passage spells are added to the spell list of your spellcasting class.</description></sheet>
     <spellcasting all="true" extend="true"><extend>ID_WOTC_PHB24_SPELL_EXPEDITIOUS_RETREAT</extend><extend>ID_WOTC_PHB24_SPELL_JUMP</extend><extend>ID_WOTC_PHB24_SPELL_FIND_STEED</extend><extend>ID_WOTC_PHB24_SPELL_PASS_WITHOUT_TRACE</extend><extend>ID_WOTC_PHB24_SPELL_BLINK</extend><extend>ID_WOTC_PHB24_SPELL_PHANTOM_STEED</extend><extend>ID_WOTC_PHB24_SPELL_DIMENSION_DOOR</extend><extend>ID_WOTC_PHB24_SPELL_FREEDOM_OF_MOVEMENT</extend><extend>ID_WOTC_PHB24_SPELL_TELEPORTATION_CIRCLE</extend></spellcasting>
+    <rules>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_EXPEDITIOUS_RETREAT" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_JUMP" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_FIND_STEED" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_PASS_WITHOUT_TRACE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_BLINK" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_PHANTOM_STEED" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_DIMENSION_DOOR" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_FREEDOM_OF_MOVEMENT" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_TELEPORTATION_CIRCLE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+    </rules>
   </element>
   <element name="Spells of the Mark" type="Feat Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_FEATURE_MARK_OF_SCRIBING_SPELLS_OF_THE_MARK">
     <compendium display="false" />
     <description><p>If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Scribing Spells table are added to that feature's spell list.</p><h5>Mark of Scribing Spells</h5><table><thead><tr><td>Spell Level</td><td>Spells</td></tr></thead><tr><td>1</td><td><em>Command, Illusory Script</em></td></tr><tr><td>2</td><td><em>Animal Messenger, Silence</em></td></tr><tr><td>3</td><td><em>Sending, Tongues</em></td></tr><tr><td>4</td><td><em>Arcane Eye, Confusion</em></td></tr><tr><td>5</td><td><em>Dream</em></td></tr></table></description>
     <sheet display="false"><description>The Mark of Scribing spells are added to the spell list of your spellcasting class.</description></sheet>
     <spellcasting all="true" extend="true"><extend>ID_WOTC_PHB24_SPELL_COMMAND</extend><extend>ID_WOTC_PHB24_SPELL_ILLUSORY_SCRIPT</extend><extend>ID_WOTC_PHB24_SPELL_ANIMAL_MESSENGER</extend><extend>ID_WOTC_PHB24_SPELL_SILENCE</extend><extend>ID_WOTC_PHB24_SPELL_SENDING</extend><extend>ID_WOTC_PHB24_SPELL_TONGUES</extend><extend>ID_WOTC_PHB24_SPELL_ARCANE_EYE</extend><extend>ID_WOTC_PHB24_SPELL_CONFUSION</extend><extend>ID_WOTC_PHB24_SPELL_DREAM</extend></spellcasting>
+    <rules>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_COMMAND" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_ILLUSORY_SCRIPT" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_ANIMAL_MESSENGER" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SILENCE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SENDING" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_TONGUES" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_ARCANE_EYE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CONFUSION" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_DREAM" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+    </rules>
   </element>
   <element name="Spells of the Mark" type="Feat Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_FEATURE_MARK_OF_SENTINEL_SPELLS_OF_THE_MARK">
     <compendium display="false" />
     <description><p>If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Sentinel Spells table are added to that feature's spell list.</p><h5>Mark of Sentinel Spells</h5><table><thead><tr><td>Spell Level</td><td>Spells</td></tr></thead><tr><td>1</td><td><em>Compelled Duel, Shield of Faith</em></td></tr><tr><td>2</td><td><em>Warding Bond, Zone of Truth</em></td></tr><tr><td>3</td><td><em>Counterspell, Protection from Energy</em></td></tr><tr><td>4</td><td><em>Death Ward, Guardian of Faith</em></td></tr><tr><td>5</td><td><em>Bigby's Hand</em></td></tr></table></description>
     <sheet display="false"><description>The Mark of Sentinel spells are added to the spell list of your spellcasting class.</description></sheet>
     <spellcasting all="true" extend="true"><extend>ID_WOTC_PHB24_SPELL_COMPELLED_DUEL</extend><extend>ID_WOTC_PHB24_SPELL_SHIELD_OF_FAITH</extend><extend>ID_WOTC_PHB24_SPELL_WARDING_BOND</extend><extend>ID_WOTC_PHB24_SPELL_ZONE_OF_TRUTH</extend><extend>ID_WOTC_PHB24_SPELL_COUNTERSPELL</extend><extend>ID_WOTC_PHB24_SPELL_PROTECTION_FROM_ENERGY</extend><extend>ID_WOTC_PHB24_SPELL_DEATH_WARD</extend><extend>ID_WOTC_PHB24_SPELL_GUARDIAN_OF_FAITH</extend><extend>ID_WOTC_PHB24_SPELL_BIGBYS_HAND</extend></spellcasting>
+    <rules>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_COMPELLED_DUEL" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SHIELD_OF_FAITH" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_WARDING_BOND" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_ZONE_OF_TRUTH" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_COUNTERSPELL" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_PROTECTION_FROM_ENERGY" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_DEATH_WARD" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_GUARDIAN_OF_FAITH" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_BIGBYS_HAND" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+    </rules>
   </element>
   <element name="Spells of the Mark" type="Feat Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_FEATURE_MARK_OF_SHADOW_SPELLS_OF_THE_MARK">
     <compendium display="false" />
     <description><p>If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Shadow Spells table are added to that feature's spell list.</p><h5>Mark of Shadow Spells</h5><table><thead><tr><td>Spell Level</td><td>Spells</td></tr></thead><tr><td>1</td><td><em>Disguise Self, Silent Image</em></td></tr><tr><td>2</td><td><em>Darkness, Pass without Trace</em></td></tr><tr><td>3</td><td><em>Clairvoyance, Major Image</em></td></tr><tr><td>4</td><td><em>Greater Invisibility, Hallucinatory Terrain</em></td></tr><tr><td>5</td><td><em>Mislead</em></td></tr></table></description>
     <sheet display="false"><description>The Mark of Shadow spells are added to the spell list of your spellcasting class.</description></sheet>
     <spellcasting all="true" extend="true"><extend>ID_WOTC_PHB24_SPELL_DISGUISE_SELF</extend><extend>ID_WOTC_PHB24_SPELL_SILENT_IMAGE</extend><extend>ID_WOTC_PHB24_SPELL_DARKNESS</extend><extend>ID_WOTC_PHB24_SPELL_PASS_WITHOUT_TRACE</extend><extend>ID_WOTC_PHB24_SPELL_CLAIRVOYANCE</extend><extend>ID_WOTC_PHB24_SPELL_MAJOR_IMAGE</extend><extend>ID_WOTC_PHB24_SPELL_GREATER_INVISIBILITY</extend><extend>ID_WOTC_PHB24_SPELL_HALLUCINATORY_TERRAIN</extend><extend>ID_WOTC_PHB24_SPELL_MISLEAD</extend></spellcasting>
+    <rules>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_DISGUISE_SELF" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SILENT_IMAGE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_DARKNESS" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_PASS_WITHOUT_TRACE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CLAIRVOYANCE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MAJOR_IMAGE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_GREATER_INVISIBILITY" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_HALLUCINATORY_TERRAIN" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MISLEAD" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+    </rules>
   </element>
   <element name="Spells of the Mark" type="Feat Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_FEATURE_MARK_OF_STORM_SPELLS_OF_THE_MARK">
     <compendium display="false" />
     <description><p>If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Storm Spells table are added to that feature's spell list.</p><h5>Mark of Storm Spells</h5><table><thead><tr><td>Spell Level</td><td>Spells</td></tr></thead><tr><td>1</td><td><em>Feather Fall, Fog Cloud</em></td></tr><tr><td>2</td><td><em>Levitate, Shatter</em></td></tr><tr><td>3</td><td><em>Sleet Storm, Wind Wall</em></td></tr><tr><td>4</td><td><em>Conjure Minor Elementals, Control Water</em></td></tr><tr><td>5</td><td><em>Conjure Elemental</em></td></tr></table></description>
     <sheet display="false"><description>The Mark of Storm spells are added to the spell list of your spellcasting class.</description></sheet>
     <spellcasting all="true" extend="true"><extend>ID_WOTC_PHB24_SPELL_FEATHER_FALL</extend><extend>ID_WOTC_PHB24_SPELL_FOG_CLOUD</extend><extend>ID_WOTC_PHB24_SPELL_LEVITATE</extend><extend>ID_WOTC_PHB24_SPELL_SHATTER</extend><extend>ID_WOTC_PHB24_SPELL_SLEET_STORM</extend><extend>ID_WOTC_PHB24_SPELL_WIND_WALL</extend><extend>ID_WOTC_PHB24_SPELL_CONJURE_MINOR_ELEMENTALS</extend><extend>ID_WOTC_PHB24_SPELL_CONTROL_WATER</extend><extend>ID_WOTC_PHB24_SPELL_CONJURE_ELEMENTAL</extend></spellcasting>
+    <rules>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_FEATHER_FALL" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_FOG_CLOUD" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_LEVITATE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SHATTER" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SLEET_STORM" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_WIND_WALL" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CONJURE_MINOR_ELEMENTALS" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CONTROL_WATER" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_CONJURE_ELEMENTAL" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+    </rules>
   </element>
   <element name="Spells of the Mark" type="Feat Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_FEATURE_MARK_OF_WARDING_SPELLS_OF_THE_MARK">
     <compendium display="false" />
     <description><p>If you have the Spellcasting or Pact Magic class feature, the spells on the Mark of Warding Spells table are added to that feature's spell list.</p><h5>Mark of Warding Spells</h5><table><thead><tr><td>Spell Level</td><td>Spells</td></tr></thead><tr><td>1</td><td><em>Armor of Agathys, Sanctuary</em></td></tr><tr><td>2</td><td><em>Knock, Nystul's Magic Aura</em></td></tr><tr><td>3</td><td><em>Glyph of Warding, Magic Circle</em></td></tr><tr><td>4</td><td><em>Leomund's Secret Chest, Mordenkainen's Faithful Hound</em></td></tr><tr><td>5</td><td><em>Antilife Shell</em></td></tr></table></description>
     <sheet display="false"><description>The Mark of Warding spells are added to the spell list of your spellcasting class.</description></sheet>
     <spellcasting all="true" extend="true"><extend>ID_WOTC_PHB24_SPELL_ARMOR_OF_AGATHYS</extend><extend>ID_WOTC_PHB24_SPELL_SANCTUARY</extend><extend>ID_WOTC_PHB24_SPELL_KNOCK</extend><extend>ID_WOTC_PHB24_SPELL_NYSTULS_MAGIC_AURA</extend><extend>ID_WOTC_PHB24_SPELL_GLYPH_OF_WARDING</extend><extend>ID_WOTC_PHB24_SPELL_MAGIC_CIRCLE</extend><extend>ID_WOTC_PHB24_SPELL_LEOMUNDS_SECRET_CHEST</extend><extend>ID_WOTC_PHB24_SPELL_MORDENKAINENS_FAITHFUL_HOUND</extend><extend>ID_WOTC_PHB24_SPELL_ANTILIFE_SHELL</extend></spellcasting>
+    <rules>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_ARMOR_OF_AGATHYS" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_SANCTUARY" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_KNOCK" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_NYSTULS_MAGIC_AURA" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_GLYPH_OF_WARDING" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MAGIC_CIRCLE" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_LEOMUNDS_SECRET_CHEST" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_MORDENKAINENS_FAITHFUL_HOUND" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+      <grant type="Spell" id="ID_WOTC_PHB24_SPELL_ANTILIFE_SHELL" requirements="ID_EFA_FEAT_POTENT_DRAGONMARK" spellcasting="EFA Dragonmark" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+      </grant>
+    </rules>
   </element>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
@@ -920,7 +1665,7 @@
 
   <element name="Greater Aberrant Mark" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_ABERRANT_MARK">
     <prerequisite>Level 4+; Aberrant Dragonmark Feat</prerequisite>
-    <requirements>ID_EFA_FEAT_ABERRANT_DRAGONMARK</requirements>
+    <requirements>[character:4],(ID_EFA_FEAT_ABERRANT_DRAGONMARK)</requirements>
     <description>
       <p><em>General Feat (Prerequisite: Level 4+; Aberrant Dragonmark)</em></p>
       <p><b>Ability Score Increase.</b> Increase your Constitution by 1, to a maximum of 20.</p>
@@ -931,12 +1676,12 @@
       <p>You can use this benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
     </description>
     <sheet usage="{{proficiency}}/Long Rest"><description>+1 Con. Improved Fortitude: roll 1d6 (not 1d4) for Aberrant Fortitude; regain use on Short or Long Rest. Mark of Inspiration: when you cast a cantrip, roll 1-2 Hit Dice - gain that many Temp HP + Con mod, and a creature within 30 ft takes that much Force damage.</description></sheet>
-    <rules><stat name="constitution" value="1" requirements="constitution:max20" /></rules>
+    <rules><grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_FEAT_CONSTITUTION" /></rules>
   </element>
 
   <element name="Greater Mark of Detection" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_DETECTION">
     <prerequisite>Level 4+; Mark of Detection Feat</prerequisite>
-    <requirements>ID_EFA_FEAT_MARK_OF_DETECTION</requirements>
+    <requirements>[character:4],(ID_EFA_FEAT_MARK_OF_DETECTION)</requirements>
     <description>
       <p><em>General Feat (Prerequisite: Level 4+; Mark Of Detection)</em></p>
       <p><b>Ability Score Increase.</b> Increase one ability score of your choice by 1, to a maximum of 20.</p>
@@ -945,12 +1690,12 @@
       <p><b>Shared Detection.</b> When you use the Magical Detection benefit of your Mark of Detection feat to cast See Invisibility without a spell slot, you can choose one creature you can see within 30 feet of yourself. That creature also gains the benefits of the spell for its duration.</p>
     </description>
     <sheet><description>+1 to one ability score. Improved Intuition: roll 1d6 for Deductive Intuition. Shared Detection: when casting See Invisibility via Magical Detection, one creature you can see within 30 ft also benefits.</description></sheet>
-    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Detection)" supports="Ability Score Increase" /></rules>
+    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Detection)" supports="Feat Ability Score Increase" /></rules>
   </element>
 
   <element name="Greater Mark of Finding" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_FINDING">
     <prerequisite>Level 4+; Mark of Finding Feat</prerequisite>
-    <requirements>ID_EFA_FEAT_MARK_OF_FINDING</requirements>
+    <requirements>[character:4],(ID_EFA_FEAT_MARK_OF_FINDING)</requirements>
     <description>
       <p><em>General Feat (Prerequisite: Level 4+; Mark Of Finding)</em></p>
       <p><b>Ability Score Increase.</b> Increase one ability score of your choice by 1, to a maximum of 20.</p>
@@ -959,12 +1704,12 @@
       <p><b>Improved Finding.</b> When you use the Finder's Magic benefit of your Mark of Finding to cast Hunter's Mark without a spell slot, the range of the spell is doubled, and you can modify the spell so that the target can't benefit from the Invisible condition for the duration.</p>
     </description>
     <sheet><description>+1 to one ability score. Improved Intuition: roll 1d6 for Hunter's Intuition. Improved Finding: free Hunter's Mark has doubled range; target can't benefit from Invisible condition.</description></sheet>
-    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Finding)" supports="Ability Score Increase" /></rules>
+    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Finding)" supports="Feat Ability Score Increase" /></rules>
   </element>
 
   <element name="Greater Mark of Handling" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_HANDLING">
     <prerequisite>Level 4+; Mark of Handling Feat</prerequisite>
-    <requirements>ID_EFA_FEAT_MARK_OF_HANDLING</requirements>
+    <requirements>[character:4],(ID_EFA_FEAT_MARK_OF_HANDLING)</requirements>
     <description>
       <p><em>General Feat (Prerequisite: Level 4+; Mark Of Handling)</em></p>
       <p><b>Ability Score Increase.</b> Increase one ability score of your choice by 1, to a maximum of 20.</p>
@@ -975,7 +1720,7 @@
     </description>
     <sheet usage="{{proficiency}}/Long Rest"><description>+1 to one ability score. Improved Intuition: 1d6 for Wild Intuition. Improved Handling: after hitting while mounted, mount can Reaction to move its Speed or make one attack. Subdue Animal (Magic Action): Beast/Monstrosity within 30 ft must make Wis save (DC {{subdue animal:dc}}) or become Frightened until your next turn.</description></sheet>
     <rules>
-      <select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Handling)" supports="Ability Score Increase" />
+      <select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Handling)" supports="Feat Ability Score Increase" />
       <stat name="subdue animal:dc" value="8" />
       <stat name="subdue animal:dc" value="wisdom:modifier" />
       <stat name="subdue animal:dc" value="proficiency" />
@@ -984,7 +1729,7 @@
 
   <element name="Greater Mark of Healing" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_HEALING">
     <prerequisite>Level 4+; Mark of Healing Feat</prerequisite>
-    <requirements>ID_EFA_FEAT_MARK_OF_HEALING</requirements>
+    <requirements>[character:4],(ID_EFA_FEAT_MARK_OF_HEALING)</requirements>
     <description>
       <p><em>General Feat (Prerequisite: Level 4+; Mark Of Healing)</em></p>
       <p><b>Ability Score Increase.</b> Increase one ability score of your choice by 1, to a maximum of 20.</p>
@@ -993,12 +1738,12 @@
       <p><b>Improved Healing.</b> You can now use the Healing Touch benefit of your Mark of Healing feat to cast Cure Wounds without using a spell slot a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest. Additionally, when you cast Cure Wounds and roll dice to determine the number of Hit Points restored, you can treat any 1 or 2 on a roll as a 3.</p>
     </description>
     <sheet usage="{{proficiency}}/Long Rest (Improved Healing)"><description>+1 to one ability score. Improved Intuition: 1d6 for Medical Intuition. Improved Healing: cast Cure Wounds free up to PB times/Long Rest; treat 1s and 2s on healing dice as 3s.</description></sheet>
-    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Healing)" supports="Ability Score Increase" /></rules>
+    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Healing)" supports="Feat Ability Score Increase" /></rules>
   </element>
 
   <element name="Greater Mark of Hospitality" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_HOSPITALITY">
     <prerequisite>Level 4+; Mark of Hospitality Feat</prerequisite>
-    <requirements>ID_EFA_FEAT_MARK_OF_HOSPITALITY</requirements>
+    <requirements>[character:4],(ID_EFA_FEAT_MARK_OF_HOSPITALITY)</requirements>
     <description>
       <p><em>General Feat (Prerequisite: Level 4+; Mark Of Hospitality)</em></p>
       <p><b>Ability Score Increase.</b> Increase one ability score of your choice by 1, to a maximum of 20.</p>
@@ -1008,7 +1753,7 @@
     </description>
     <sheet usage="1/Long Rest (Improved Hospitality)"><description>+1 to one ability score. Improved Intuition: 1d6 for Ever Hospitable. Improved Hospitality: when casting Purify Food and Drink, instead refresh creatures within 30 ft - reduce Exhaustion by 1 and grant {{hospitality:temp hp}} Temp HP each.</description></sheet>
     <rules>
-      <select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Hospitality)" supports="Ability Score Increase" />
+      <select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Hospitality)" supports="Feat Ability Score Increase" />
       <select type="Feat Feature" name="Hospitality Ability (Greater Mark of Hospitality)" supports="ID_EFA_FEAT_FEATURE_GREATER_MARK_OF_HOSPITALITY_INTELLIGENCE|ID_EFA_FEAT_FEATURE_GREATER_MARK_OF_HOSPITALITY_WISDOM|ID_EFA_FEAT_FEATURE_GREATER_MARK_OF_HOSPITALITY_CHARISMA" />
       <stat name="hospitality:temp hp" value="proficiency" />
     </rules>
@@ -1035,7 +1780,7 @@
 
   <element name="Greater Mark of Making" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_MAKING">
     <prerequisite>Level 4+; Mark of Making Feat</prerequisite>
-    <requirements>ID_EFA_FEAT_MARK_OF_MAKING</requirements>
+    <requirements>[character:4],(ID_EFA_FEAT_MARK_OF_MAKING)</requirements>
     <description>
       <p><em>General Feat (Prerequisite: Level 4+; Mark Of Making)</em></p>
       <p><b>Ability Score Increase.</b> Increase one ability score of your choice by 1, to a maximum of 20.</p>
@@ -1044,12 +1789,12 @@
       <p><b>Improved Making.</b> When you use the Spellsmith benefit of your Mark of Making feat to cast Magic Weapon without a spell slot, you cast the spell as its level 3 version.</p>
     </description>
     <sheet><description>+1 to one ability score. Improved Intuition: 1d6 for Artisan's Intuition. Improved Making: free Magic Weapon cast becomes level 3 version.</description></sheet>
-    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Making)" supports="Ability Score Increase" /></rules>
+    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Making)" supports="Feat Ability Score Increase" /></rules>
   </element>
 
   <element name="Greater Mark of Passage" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_PASSAGE">
     <prerequisite>Level 4+; Mark of Passage Feat</prerequisite>
-    <requirements>ID_EFA_FEAT_MARK_OF_PASSAGE</requirements>
+    <requirements>[character:4],(ID_EFA_FEAT_MARK_OF_PASSAGE)</requirements>
     <description>
       <p><em>General Feat (Prerequisite: Level 4+; Mark Of Passage)</em></p>
       <p><b>Ability Score Increase.</b> Increase one ability score of your choice by 1, to a maximum of 20.</p>
@@ -1058,12 +1803,12 @@
       <p><b>Improved Passage.</b> When you use the Magical Passage benefit of your Mark of Passage feat to cast Misty Step without a spell slot, you can also choose up to two willing creatures you can see within 30 feet of yourself before you teleport. Each target can then take a Reaction to also teleport up to 30 feet to an unoccupied space it can see.</p>
     </description>
     <sheet><description>+1 to one ability score. Improved Intuition: 1d6 for Intuitive Motion. Improved Passage: when casting free Misty Step, up to two willing creatures within 30 ft can Reaction to also teleport up to 30 ft.</description></sheet>
-    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Passage)" supports="Ability Score Increase" /></rules>
+    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Passage)" supports="Feat Ability Score Increase" /></rules>
   </element>
 
   <element name="Greater Mark of Scribing" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_SCRIBING">
     <prerequisite>Level 4+; Mark of Scribing Feat</prerequisite>
-    <requirements>ID_EFA_FEAT_MARK_OF_SCRIBING</requirements>
+    <requirements>[character:4],(ID_EFA_FEAT_MARK_OF_SCRIBING)</requirements>
     <description>
       <p><em>General Feat (Prerequisite: Level 4+; Mark Of Scribing)</em></p>
       <p><b>Ability Score Increase.</b> Increase one ability score of your choice by 1, to a maximum of 20.</p>
@@ -1072,12 +1817,12 @@
       <p><b>Inspired Scribing.</b> When you cast Comprehend Languages, you can modify the spell to encompass up to three willing creatures you can see within 30 feet of yourself. Each chosen creature also gains the benefits of the spell for the duration. In addition, for the duration of the spell, you and the chosen creatures can communicate telepathically with each other while within 1 mile of each other. Once you modify the spell with this benefit, you can't do so again until you finish a Long Rest.</p>
     </description>
     <sheet usage="1/Long Rest (Inspired Scribing)"><description>+1 to one ability score. Improved Intuition: 1d6 for Gifted Scribe. Inspired Scribing: when casting Comprehend Languages, extend to three willing creatures you can see within 30 ft; all gain the benefit and can telepathically communicate within 1 mile for the duration.</description></sheet>
-    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Scribing)" supports="Ability Score Increase" /></rules>
+    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Scribing)" supports="Feat Ability Score Increase" /></rules>
   </element>
 
   <element name="Greater Mark of Sentinel" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_SENTINEL">
     <prerequisite>Level 4+; Mark of Sentinel Feat</prerequisite>
-    <requirements>ID_EFA_FEAT_MARK_OF_SENTINEL</requirements>
+    <requirements>[character:4],(ID_EFA_FEAT_MARK_OF_SENTINEL)</requirements>
     <description>
       <p><em>General Feat (Prerequisite: Level 4+; Mark Of Sentinel)</em></p>
       <p><b>Ability Score Increase.</b> Increase one ability score of your choice by 1, to a maximum of 20.</p>
@@ -1086,12 +1831,12 @@
       <p><b>Improved Sentinel.</b> When you use the Vigilant Guardian benefit of your Mark of Sentinel feat, you can also make one attack with a weapon or an Unarmed Strike as part of that same Reaction.</p>
     </description>
     <sheet><description>+1 to one ability score. Improved Intuition: 1d6 for Sentinel's Intuition. Improved Sentinel: when using Vigilant Guardian, also make one weapon or Unarmed Strike attack as part of that Reaction.</description></sheet>
-    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Sentinel)" supports="Ability Score Increase" /></rules>
+    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Sentinel)" supports="Feat Ability Score Increase" /></rules>
   </element>
 
   <element name="Greater Mark of Shadow" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_SHADOW">
     <prerequisite>Level 4+; Mark of Shadow Feat</prerequisite>
-    <requirements>ID_EFA_FEAT_MARK_OF_SHADOW</requirements>
+    <requirements>[character:4],(ID_EFA_FEAT_MARK_OF_SHADOW)</requirements>
     <description>
       <p><em>General Feat (Prerequisite: Level 4+; Mark Of Shadow)</em></p>
       <p><b>Ability Score Increase.</b> Increase one ability score of your choice by 1, to a maximum of 20.</p>
@@ -1100,12 +1845,12 @@
       <p><b>Improved Shadow.</b> When you use the Shape Shadows benefit of your Mark of Shadow feat to cast Invisibility without a spell slot, you cast the spell as its level 3 version.</p>
     </description>
     <sheet><description>+1 to one ability score. Improved Intuition: 1d6 for Cunning Intuition. Improved Shadow: free Invisibility becomes level 3 version.</description></sheet>
-    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Shadow)" supports="Ability Score Increase" /></rules>
+    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Shadow)" supports="Feat Ability Score Increase" /></rules>
   </element>
 
   <element name="Greater Mark of Storm" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_STORM">
     <prerequisite>Level 4+; Mark of Storm Feat</prerequisite>
-    <requirements>ID_EFA_FEAT_MARK_OF_STORM</requirements>
+    <requirements>[character:4],(ID_EFA_FEAT_MARK_OF_STORM)</requirements>
     <description>
       <p><em>General Feat (Prerequisite: Level 4+; Mark Of Storm)</em></p>
       <p><b>Ability Score Increase.</b> Increase one ability score of your choice by 1, to a maximum of 20.</p>
@@ -1114,12 +1859,12 @@
       <p><b>Improved Storm.</b> When you use the Storm Magic benefit of your Mark of Storm feat to cast Gust of Wind without a spell slot, you also gain a Fly Speed of 60 feet for the duration of the spell.</p>
     </description>
     <sheet><description>+1 to one ability score. Improved Intuition: roll 1d6 for Windwright's Intuition. Improved Storm: free Gust of Wind also grants Fly Speed of 60 feet for its duration.</description></sheet>
-    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Storm)" supports="Ability Score Increase" /></rules>
+    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Storm)" supports="Feat Ability Score Increase" /></rules>
   </element>
 
   <element name="Greater Mark of Warding" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_GREATER_MARK_OF_WARDING">
     <prerequisite>Level 4+; Mark of Warding Feat</prerequisite>
-    <requirements>ID_EFA_FEAT_MARK_OF_WARDING</requirements>
+    <requirements>[character:4],(ID_EFA_FEAT_MARK_OF_WARDING)</requirements>
     <description>
       <p><em>General Feat (Prerequisite: Level 4+; Mark Of Warding)</em></p>
       <p><b>Ability Score Increase.</b> Increase one ability score of your choice by 1, to a maximum of 20.</p>
@@ -1128,12 +1873,12 @@
       <p><b>Improved Warding.</b> When a creature makes an attack roll against you or a creature you can see within 30 feet of yourself, you can take a Reaction to impose Disadvantage on that roll. You can use this benefit a number of times equal to your Proficiency Bonus, and you regain all expended uses when you finish a Long Rest.</p>
     </description>
     <sheet usage="{{proficiency}}/Long Rest"><description>+1 to one ability score. Improved Intuition: 1d6 for Warder's Intuition. Improved Warding: Reaction to impose Disadvantage on an attack roll against you or a creature within 30 ft.</description></sheet>
-    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Warding)" supports="Ability Score Increase" /></rules>
+    <rules><select type="Ability Score Improvement" name="Ability Score Increase (Greater Mark of Warding)" supports="Feat Ability Score Increase" /></rules>
   </element>
 
   <element name="Potent Dragonmark" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_POTENT_DRAGONMARK">
     <prerequisite>Level 4+; Any Dragonmark Feat</prerequisite>
-    <requirements>ID_EFA_FEAT_ABERRANT_DRAGONMARK||ID_EFA_FEAT_MARK_OF_DETECTION||ID_EFA_FEAT_MARK_OF_FINDING||ID_EFA_FEAT_MARK_OF_HANDLING||ID_EFA_FEAT_MARK_OF_HEALING||ID_EFA_FEAT_MARK_OF_HOSPITALITY||ID_EFA_FEAT_MARK_OF_MAKING||ID_EFA_FEAT_MARK_OF_PASSAGE||ID_EFA_FEAT_MARK_OF_SCRIBING||ID_EFA_FEAT_MARK_OF_SENTINEL||ID_EFA_FEAT_MARK_OF_SHADOW||ID_EFA_FEAT_MARK_OF_STORM||ID_EFA_FEAT_MARK_OF_WARDING</requirements>
+    <requirements>[character:4],(ID_EFA_FEAT_ABERRANT_DRAGONMARK||ID_EFA_FEAT_MARK_OF_DETECTION||ID_EFA_FEAT_MARK_OF_FINDING||ID_EFA_FEAT_MARK_OF_HANDLING||ID_EFA_FEAT_MARK_OF_HEALING||ID_EFA_FEAT_MARK_OF_HOSPITALITY||ID_EFA_FEAT_MARK_OF_MAKING||ID_EFA_FEAT_MARK_OF_PASSAGE||ID_EFA_FEAT_MARK_OF_SCRIBING||ID_EFA_FEAT_MARK_OF_SENTINEL||ID_EFA_FEAT_MARK_OF_SHADOW||ID_EFA_FEAT_MARK_OF_STORM||ID_EFA_FEAT_MARK_OF_WARDING)</requirements>
     <description>
       <p><em>General Feat (Prerequisite: Level 4+)</em></p>
       <p><b>Ability Score Increase.</b> Increase the spellcasting ability score used by your Dragonmark feat by 1, to a maximum of 20.</p>
@@ -1141,9 +1886,12 @@
       <p><b>Dragonmark Preparation.</b> You always have the spells on your Spells of the Mark list (if any) prepared.</p>
       <p><b>Dragonmark Spellcasting.</b> You have one extra spell slot to cast the spells granted by your Dragonmark feat. The spell slot's level is half your level (round up), to a maximum of level 5. You regain the expended slot when you finish a Short or Long Rest. You can use this spell slot to cast only a spell you have prepared because of your Dragonmark feat or the Dragonmark Preparation benefit of this feat.</p>
     </description>
-    <sheet><description>+1 to your Dragonmark spellcasting ability score. Always have your Spells of the Mark prepared. Gain one extra spell slot at level {{potent dragonmark:slot level}} (max 5) that recharges on Short or Long Rest; usable only for spells prepared by your Dragonmark feat or Dragonmark Preparation.</description></sheet>
+    <sheet usage="1/Short or Long Rest"><description>+1 to your Dragonmark spellcasting ability score. Always have your Spells of the Mark prepared. Gain one extra spell slot at level {{potent dragonmark:slot level}} (max 5) that recharges on Short or Long Rest; usable only for spells prepared by your Dragonmark feat or Dragonmark Preparation. Track this restricted slot separately from your normal class spell slots.</description></sheet>
     <rules>
-      <select type="Ability Score Improvement" name="Ability Score Increase (Potent Dragonmark)" supports="Ability Score Increase" />
+      <grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_FEAT_CONSTITUTION" requirements="ID_EFA_FEAT_ABERRANT_DRAGONMARK" />
+      <grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_FEAT_INTELLIGENCE" requirements="ID_EFA_FEAT_FEATURE_DRAGONMARK_INTELLIGENCE" />
+      <grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_FEAT_WISDOM" requirements="ID_EFA_FEAT_FEATURE_DRAGONMARK_WISDOM" />
+      <grant type="Ability Score Improvement" id="ID_INTERNAL_ABILITY_SCORE_IMPROVEMENT_FEAT_CHARISMA" requirements="ID_EFA_FEAT_FEATURE_DRAGONMARK_CHARISMA" />
       <stat name="potent dragonmark:slot level" value="level:half:up" maximum="5" />
     </rules>
   </element>
@@ -1154,6 +1902,7 @@
   <element name="Boon of Siberys" type="Feat" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_BOON_OF_SIBERYS">
     <supports>Epic Boon</supports>
     <prerequisite>Level 19+; Eberron Campaign</prerequisite>
+    <requirements>[character:19]</requirements>
     <description>
       <p><em>Epic Boon Feat (Prerequisite: Level 19+; Eberron Campaign)</em></p>
       <p><b>Ability Score Increase.</b> Increase one ability score of your choice by 1, to a maximum of 30.</p>
@@ -1181,9 +1930,48 @@
       <description>+1 to one ability score (max 30). Choose a Sorcerer spell of level 8 or lower (or from Siberys Dragonmark Spells table) — always have it prepared; cast it free once per Short or Long Rest (no components). Can also cast using spell slots.</description>
     </sheet>
     <rules>
-      <select type="Ability Score Improvement" name="Ability Score Increase (Boon of Siberys)" supports="Ability Score Increase, 30" />
-      <select type="Spell" name="Siberys Spell (Boon of Siberys)" supports="Sorcerer,(1||2||3||4||5||6||7||8)" />
+      <select type="Ability Score Improvement" name="Ability Score Increase (Boon of Siberys)" supports="Boon Ability Score Increase" />
+      <select type="Spell" name="Siberys Spell (Boon of Siberys)" supports="(Sorcerer,(0||1||2||3||4||5||6||7||8))||EFA Siberys Spell" spellcasting="EFA Boon of Siberys" prepared="true">
+        <set name="spell-access">always-prepared</set>
+        <set name="spell-slots">any</set>
+        <set name="spell-counts-known">false</set>
+        <set name="spell-uses">1</set>
+        <set name="spell-recharge">Short or Long Rest</set>
+      </select>
+      <select type="Feat Feature" name="Spellcasting Ability (Boon of Siberys)" supports="ID_EFA_FEAT_FEATURE_BOON_OF_SIBERYS_INTELLIGENCE|ID_EFA_FEAT_FEATURE_BOON_OF_SIBERYS_WISDOM|ID_EFA_FEAT_FEATURE_BOON_OF_SIBERYS_CHARISMA" />
     </rules>
   </element>
+
+  <element name="Intelligence (Boon of Siberys)" type="Feat Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_FEATURE_BOON_OF_SIBERYS_INTELLIGENCE">
+    <compendium display="false" />
+    <description><p>Your spellcasting ability for Boon of Siberys is Intelligence.</p></description>
+    <sheet alt="Boon of Siberys"><description>Your spellcasting ability for this boon is Intelligence.</description></sheet>
+    <spellcasting name="EFA Boon of Siberys" ability="Intelligence"><list /></spellcasting>
+  </element>
+  <element name="Wisdom (Boon of Siberys)" type="Feat Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_FEATURE_BOON_OF_SIBERYS_WISDOM">
+    <compendium display="false" />
+    <description><p>Your spellcasting ability for Boon of Siberys is Wisdom.</p></description>
+    <sheet alt="Boon of Siberys"><description>Your spellcasting ability for this boon is Wisdom.</description></sheet>
+    <spellcasting name="EFA Boon of Siberys" ability="Wisdom"><list /></spellcasting>
+  </element>
+  <element name="Charisma (Boon of Siberys)" type="Feat Feature" source="Eberron: Forge of the Artificer" id="ID_EFA_FEAT_FEATURE_BOON_OF_SIBERYS_CHARISMA">
+    <compendium display="false" />
+    <description><p>Your spellcasting ability for Boon of Siberys is Charisma.</p></description>
+    <sheet alt="Boon of Siberys"><description>Your spellcasting ability for this boon is Charisma.</description></sheet>
+    <spellcasting name="EFA Boon of Siberys" ability="Charisma"><list /></spellcasting>
+  </element>
+  <!-- The named table alternatives also qualify when absent from the Sorcerer list. -->
+  <append id="ID_WOTC_PHB24_SPELL_ANIMAL_SHAPES"><supports>EFA Siberys Spell</supports></append>
+  <append id="ID_WOTC_PHB24_SPELL_CONTROL_WEATHER"><supports>EFA Siberys Spell</supports></append>
+  <append id="ID_WOTC_PHB24_SPELL_DEMIPLANE"><supports>EFA Siberys Spell</supports></append>
+  <append id="ID_WOTC_PHB24_SPELL_HEROES_FEAST"><supports>EFA Siberys Spell</supports></append>
+  <append id="ID_WOTC_PHB24_SPELL_MAZE"><supports>EFA Siberys Spell</supports></append>
+  <append id="ID_WOTC_PHB24_SPELL_MIND_BLANK"><supports>EFA Siberys Spell</supports></append>
+  <append id="ID_WOTC_PHB24_SPELL_PLANE_SHIFT"><supports>EFA Siberys Spell</supports></append>
+  <append id="ID_WOTC_PHB24_SPELL_PROJECT_IMAGE"><supports>EFA Siberys Spell</supports></append>
+  <append id="ID_WOTC_PHB24_SPELL_REGENERATE"><supports>EFA Siberys Spell</supports></append>
+  <append id="ID_WOTC_PHB24_SPELL_SYMBOL"><supports>EFA Siberys Spell</supports></append>
+  <append id="ID_WOTC_PHB24_SPELL_TELEPORT"><supports>EFA Siberys Spell</supports></append>
+  <append id="ID_WOTC_PHB24_SPELL_TRUE_SEEING"><supports>EFA Siberys Spell</supports></append>
 
 </elements>

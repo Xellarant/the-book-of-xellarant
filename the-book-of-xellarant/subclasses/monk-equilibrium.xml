@@ -3,7 +3,7 @@
 	<info>
 		<name>Way of the Equilibrium</name>
 		<description>The Way of the Equilibrium from Arcane Artillery</description>
-		<update version="0.0.4">
+		<update version="0.0.5">
 			<file name="monk-equilibrium.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/subclasses/monk-equilibrium.xml" />
 		</update>
 	</info>
@@ -43,7 +43,7 @@
 		</sheet>
 		<rules>
 			<grant type="Proficiency" id="ID_RDDT_AA_PROFICIENCY_WEAPON_PROFICIENCY_SIDEARMS" />
-			<grant type="Proficiency" id="ID_WOTC_PHB_WEAPON_CROSSBOW_HAND" />
+			<grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_CROSSBOW_HAND" />
 		</rules>
 	</element>
 	<element name="One with the Projectile" type="Archetype Feature" source="The Book of Xellarant" id="ID_TBOX_ARCHETYPE_FEATURE_WAY_OF_EQUILIBRIUM_ONE_WITH_THE_PROJECTILE">

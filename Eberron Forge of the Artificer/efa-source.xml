@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <elements>
   <info>
-    <update version="0.1.2">
+    <update version="0.1.3">
       <file name="efa-source.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/Eberron%20Forge%20of%20the%20Artificer/efa-source.xml" />
       <file name="efa-species-feats.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/Eberron%20Forge%20of%20the%20Artificer/efa-species-feats.xml" />
       <file name="efa-class.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/Eberron%20Forge%20of%20the%20Artificer/efa-class.xml" />
@@ -11,14 +11,15 @@
 
   <element name="Eberron: Forge of the Artificer" type="Source" source="Eberron: Forge of the Artificer" id="ID_EFA_SOURCE_EBERRON_FORGE_OF_THE_ARTIFICER">
     <description>
-      <p>An extensive supplement to <em>Eberron: Rising from the Last War</em>, adding new character options for the world of Eberron. Includes the complete Artificer class with five subclasses (Alchemist, Armorer, Artillerist, Battle Smith, and Cartographer), seventeen backgrounds tied to the dragonmarked houses, five species (Changeling, Kalashtar, Khoravar, Shifter, and Warforged), twenty-eight feats including all twelve dragonmark feats and their greater variants, and the Homunculus Servant spell.</p>
+      <p>An extensive supplement to <em>Eberron: Rising from the Last War</em>, adding new character options for the world of Eberron. Includes the Artificer class with five subclasses (Alchemist, Armorer, Artillerist, Battle Smith, and Cartographer), seventeen backgrounds tied to the dragonmarked houses, five species (Changeling, Kalashtar, Khoravar, Shifter, and Warforged), twenty-eight feats including all twelve dragonmark feats and their greater variants, and the Homunculus Servant spell.</p>
       <p><b>Requires:</b> the 2024 Player's Handbook. Spells and origin feats granted by this content reference PHB (2024) elements.</p>
     </description>
     <setters>
       <set name="abbreviation">EFA</set>
-      <set name="url"></set>
-      <set name="image"></set>
-      <set name="author" abbreviation="EFA" url="">Wizards of the Coast</set>
+      <set name="url">https://www.dndbeyond.com/sources/dnd/efota</set>
+      <set name="author" abbreviation="EFA" url="https://www.dndbeyond.com/sources/dnd/efota">Wizards of the Coast</set>
+      <set name="official">true</set>
+      <set name="supplement">true</set>
       <set name="homebrew">false</set>
       <set name="release">20251125</set>
     </setters>
