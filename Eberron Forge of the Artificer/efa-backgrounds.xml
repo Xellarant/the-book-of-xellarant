@@ -2,7 +2,7 @@
 <elements>
   <info>
     <name>Eberron: Forge of the Artificer - Backgrounds</name>
-    <update version="0.1.0">
+    <update version="0.1.1">
       <file name="efa-backgrounds.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/Eberron%20Forge%20of%20the%20Artificer/efa-backgrounds.xml" />
     </update>
   </info>
@@ -71,7 +71,7 @@
       <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_HISTORY" />
       <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_SURVIVAL" />
       <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_CARTOGRAPHERS_TOOLS" />
-      <grant type="Feat" id="ID_WOTC_PHB24_FEAT_SKILLED" />
+      <select type="Feat" name="Origin Feat (Archaeologist)" supports="ID_WOTC_PHB24_FEAT_SKILLED|ID_WOTC_PHB24_FEAT_SKILLED_2" default="ID_WOTC_PHB24_FEAT_SKILLED" />
     </rules>
   </element>
 

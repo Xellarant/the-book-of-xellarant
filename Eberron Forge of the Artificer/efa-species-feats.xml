@@ -2,7 +2,7 @@
 <elements>
   <info>
     <name>Eberron: Forge of the Artificer - Species and Feats</name>
-    <update version="0.1.4">
+    <update version="0.1.5">
       <file name="efa-species-feats.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/Eberron%20Forge%20of%20the%20Artificer/efa-species-feats.xml" />
     </update>
   </info>
@@ -27,13 +27,15 @@
     </description>
     <sheet display="false" />
     <rules>
+      <select type="Ability Score Improvement" name="Ability Score Improvement Option (Changeling)" supports="Custom Ability Score Improvement Option" requirements="!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
       <select type="Racial Trait" name="Size (Changeling)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL|ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
       <stat name="innate speed" value="30" bonus="base" />
       <grant type="Grants" id="ID_INTERNAL_GRANT_RACE_CHANGELING" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_CHANGELING_INSTINCTS" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_CHANGELING_SHAPE_SHIFTER" />
-      <grant type="Language" id="ID_LANGUAGE_COMMON" />
-      <select type="Language" name="Language (Changeling)" supports="Standard||Exotic" />
+      <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+      <select type="Language" name="Language (Changeling)" supports="Standard" number="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+      <select type="Language" name="Customized Language (Changeling)" supports="Custom Race Language" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
     </rules>
   </element>
   <element name="Changeling Instincts" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_CHANGELING_INSTINCTS">
@@ -77,6 +79,7 @@
     </description>
     <sheet display="false" />
     <rules>
+      <select type="Ability Score Improvement" name="Ability Score Improvement Option (Kalashtar)" supports="Custom Ability Score Improvement Option" requirements="!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
       <grant type="Size" id="ID_SIZE_MEDIUM" />
       <stat name="innate speed" value="30" bonus="base" />
       <grant type="Grants" id="ID_INTERNAL_GRANT_RACE_KALASHTAR" />
@@ -84,8 +87,9 @@
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_KALASHTAR_MENTAL_DISCIPLINE" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_KALASHTAR_MIND_LINK" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_KALASHTAR_SEVERED_FROM_DREAMS" />
-      <grant type="Language" id="ID_LANGUAGE_COMMON" />
-      <select type="Language" name="Language (Kalashtar)" supports="Standard||Exotic" />
+      <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+      <select type="Language" name="Language (Kalashtar)" supports="Standard" number="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+      <select type="Language" name="Customized Language (Kalashtar)" supports="Custom Race Language" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
     </rules>
   </element>
   <element name="Dual Mind" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_KALASHTAR_DUAL_MIND">
@@ -135,7 +139,9 @@
     <sheet>
       <description>You can't be targeted by the Dream spell. After each Long Rest, gain proficiency in one skill of your choice until your next Long Rest.</description>
     </sheet>
-    <rules></rules>
+    <rules>
+      <select type="Proficiency" name="Skill Proficiency (Severed from Dreams)" supports="Skill" />
+    </rules>
   </element>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
@@ -156,6 +162,7 @@
     </description>
     <sheet display="false" />
     <rules>
+      <select type="Ability Score Improvement" name="Ability Score Improvement Option (Khoravar)" supports="Custom Ability Score Improvement Option" requirements="!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
       <select type="Racial Trait" name="Size (Khoravar)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL|ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
       <stat name="innate speed" value="30" bonus="base" />
       <grant type="Grants" id="ID_INTERNAL_GRANT_RACE_HALF_ELF" />
@@ -164,8 +171,9 @@
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_KHORAVAR_FEY_GIFT" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_KHORAVAR_LETHARGY_RESILIENCE" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_KHORAVAR_SKILL_VERSATILITY" />
-      <grant type="Language" id="ID_LANGUAGE_COMMON" />
-      <grant type="Language" id="ID_LANGUAGE_ELVISH" />
+      <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+      <select type="Language" name="Language (Khoravar)" supports="Standard" number="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+      <select type="Language" name="Customized Language (Khoravar)" supports="Custom Race Language" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
     </rules>
   </element>
   <element name="Darkvision (Khoravar)" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_KHORAVAR_DARKVISION">
@@ -274,13 +282,16 @@
     </description>
     <sheet display="false" />
     <rules>
+      <select type="Ability Score Improvement" name="Ability Score Improvement Option (Shifter)" supports="Custom Ability Score Improvement Option" requirements="!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
       <select type="Racial Trait" name="Size (Shifter)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL|ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
       <stat name="innate speed" value="30" bonus="base" />
       <grant type="Grants" id="ID_INTERNAL_GRANT_RACE_SHIFTER" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_SHIFTER_BESTIAL_INSTINCTS" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_SHIFTER_DARKVISION" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_SHIFTER_SHIFTING" />
-      <grant type="Language" id="ID_LANGUAGE_COMMON" />
+      <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+      <select type="Language" name="Language (Shifter)" supports="Standard" number="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+      <select type="Language" name="Customized Language (Shifter)" supports="Custom Race Language" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
     </rules>
   </element>
   <element name="Bestial Instincts" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_SHIFTER_BESTIAL_INSTINCTS">
@@ -378,6 +389,7 @@
     </description>
     <sheet display="false" />
     <rules>
+      <select type="Ability Score Improvement" name="Ability Score Improvement Option (Warforged)" supports="Custom Ability Score Improvement Option" requirements="!ID_INTERNAL_GRANTS_BACKGROUND_ASI" />
       <select type="Racial Trait" name="Size (Warforged)" supports="ID_INTERNAL_RACIAL_TRAIT_SMALL|ID_INTERNAL_RACIAL_TRAIT_MEDIUM" />
       <stat name="innate speed" value="30" bonus="base" />
       <grant type="Grants" id="ID_INTERNAL_GRANT_RACE_WARFORGED" />
@@ -386,7 +398,9 @@
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_WARFORGED_SENTRYS_REST" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_WARFORGED_SPECIALIZED_DESIGN" />
       <grant type="Racial Trait" id="ID_EFA_RACIAL_TRAIT_WARFORGED_TIRELESS" />
-      <grant type="Language" id="ID_LANGUAGE_COMMON" />
+      <grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+      <select type="Language" name="Language (Warforged)" supports="Standard" number="2" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+      <select type="Language" name="Customized Language (Warforged)" supports="Custom Race Language" number="3" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
     </rules>
   </element>
   <element name="Construct Resilience" type="Racial Trait" source="Eberron: Forge of the Artificer" id="ID_EFA_RACIAL_TRAIT_WARFORGED_CONSTRUCT_RESILIENCE">

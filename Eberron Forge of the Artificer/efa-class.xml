@@ -2,7 +2,7 @@
 <elements>
   <info>
     <name>Eberron: Forge of the Artificer - Class</name>
-    <update version="0.1.6">
+    <update version="0.1.7">
       <file name="efa-class.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/Eberron%20Forge%20of%20the%20Artificer/efa-class.xml" />
     </update>
   </info>
@@ -208,6 +208,7 @@
       <p>You gain an Artificer subclass of your choice. The Alchemist, Armorer, Artillerist, Battle Smith, and Cartographer subclasses are detailed after this class's description. A subclass is a specialization that grants you features at certain Artificer levels. For the rest of your career, you gain each of your subclass's features that are of your Artificer level or lower.</p>
       <h5>Ability Score Improvement</h5>
       <p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Artificer levels 8, 12, and 16.</p>
+      <p class="indent"><b>Builder:</b> Select Ability Score Improvement from the feat list to increase your ability scores. Its choices let you increase one score by 2 or two scores by 1.</p>
       <h5>Magic Item Tinker</h5>
       <p>Your Replicate Magic Item feature gains the following options.</p>
       <p><b>Charge Magic Item.</b> As a Bonus Action, you can touch a magic item within 5 feet of yourself that you created with Replicate Magic Item and that uses charges. You expend a level 1+ spell slot and recharge the item. The number of charges the item regains is equal to the level of spell slot expended.</p>
@@ -535,9 +536,11 @@
     <description>
       <p><em>4th-level Artificer feature</em></p>
       <p>You gain the Ability Score Improvement feat or another feat of your choice for which you qualify. You gain this feature again at Artificer levels 8, 12, and 16.</p>
+      <p class="indent"><b>Builder:</b> Select Ability Score Improvement from the feat list to increase your ability scores. Its choices let you increase one score by 2 or two scores by 1.</p>
     </description>
     <sheet display="false" />
     <rules>
+      <!-- Preserve these names: saved characters identify their feat selections by rule name. -->
       <select type="Feat" name="Feat (Artificer)" level="4" />
       <select type="Feat" name="Feat (Artificer 8)" level="8" />
       <select type="Feat" name="Feat (Artificer 12)" level="12" />
@@ -723,8 +726,8 @@
       <description>You gain proficiency with Alchemist's Supplies and Herbalism Kit. When brewing potions (DMG rules), crafting time is halved.</description>
     </sheet>
     <rules>
-      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_ALCHEMISTS_SUPPLIES" />
-      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
+      <select type="Proficiency" name="Alchemist's Supplies or Replacement (Alchemist)" supports="Artisan tools" default="ID_PROFICIENCY_TOOL_PROFICIENCY_ALCHEMISTS_SUPPLIES" />
+      <select type="Proficiency" name="Herbalism Kit or Replacement (Alchemist)" supports="Artisan tools||EFA Herbalism Kit" default="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT" />
     </rules>
   </element>
 
@@ -918,7 +921,7 @@
     <sheet><description>Gain Heavy armor proficiency and Smith's Tools proficiency. Crafting armor (magical or nonmagical) takes half the normal time.</description></sheet>
     <rules>
       <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_HEAVY_ARMOR" />
-      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_SMITHS_TOOLS" />
+      <select type="Proficiency" name="Tool Proficiency (Armorer)" supports="Artisan tools" default="ID_PROFICIENCY_TOOL_PROFICIENCY_SMITHS_TOOLS" />
     </rules>
   </element>
 
@@ -1117,7 +1120,7 @@
     <sheet><description>Gain proficiency with Martial Ranged weapons and Woodcarver's Tools. Crafting magic Wands takes half the normal time.</description></sheet>
     <rules>
       <grant type="Proficiency" id="ID_PROFICIENCY_WEAPON_PROFICIENCY_MARTIAL_RANGED_WEAPONS" />
-      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_WOODCARVERS_TOOLS" />
+      <select type="Proficiency" name="Tool Proficiency (Artillerist)" supports="Artisan tools" default="ID_PROFICIENCY_TOOL_PROFICIENCY_WOODCARVERS_TOOLS" />
     </rules>
   </element>
 
@@ -1298,7 +1301,7 @@
     </description>
     <sheet><description>Gain proficiency with Smith's Tools. Crafting weapons (magical or nonmagical) takes half the normal time.</description></sheet>
     <rules>
-      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_SMITHS_TOOLS" />
+      <select type="Proficiency" name="Tool Proficiency (Battle Smith)" supports="Artisan tools" default="ID_PROFICIENCY_TOOL_PROFICIENCY_SMITHS_TOOLS" />
     </rules>
   </element>
 
@@ -1564,8 +1567,8 @@
     </description>
     <sheet><description>Gain proficiency with Calligrapher's Supplies and Cartographer's Tools. Scribing Spell Scrolls (PHB rules) takes half the normal time.</description></sheet>
     <rules>
-      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_CALLIGRAPHERS_SUPPLIES" />
-      <grant type="Proficiency" id="ID_PROFICIENCY_TOOL_PROFICIENCY_CARTOGRAPHERS_TOOLS" />
+      <select type="Proficiency" name="Calligrapher's Supplies or Replacement (Cartographer)" supports="Artisan tools" default="ID_PROFICIENCY_TOOL_PROFICIENCY_CALLIGRAPHERS_SUPPLIES" />
+      <select type="Proficiency" name="Cartographer's Tools or Replacement (Cartographer)" supports="Artisan tools" default="ID_PROFICIENCY_TOOL_PROFICIENCY_CARTOGRAPHERS_TOOLS" />
     </rules>
   </element>
 
@@ -2414,4 +2417,8 @@
     <sheet><description>You are immune to the Poisoned condition.</description></sheet>
   </element>
 
+  <!-- Keep Herbalism in its default tool pool without excluding additional Artisan tools. -->
+  <append id="ID_PROFICIENCY_TOOL_PROFICIENCY_HERBALISM_KIT">
+    <supports>EFA Herbalism Kit</supports>
+  </append>
 </elements>
