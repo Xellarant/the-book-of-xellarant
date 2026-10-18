@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+	<info>
+		<name>Wonderwrap Staff</name>
+		<description>A soulbound magic quarterstaff from The Book of Xellarant.</description>
+		<author url="https://github.com/Xellarant">Xellarant</author>
+		<update version="1.0.0">
+			<file name="wonderwrap-staff.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/items/wonderwrap-staff.xml" />
+		</update>
+	</info>
+	<element name="Wonderwrap Staff" type="Magic Item" source="The Book of Xellarant" id="ID_TBOX_MAGIC_ITEM_WONDERWRAP_STAFF">
+		<description>
+			<p><em>Staff, rare (requires attunement; soulbound)</em></p>
+			<p>This magic quarterstaff is wound with an enchanted wrap that binds its magic to a single soul. While you are attuned to the staff and holding it, you gain a +1 bonus to Armor Class and to all ability checks that use a skill, whether or not you are proficient in that skill.</p>
+			<p class="indent"><strong><em>Soulbound.</em></strong> The first creature to attune to this staff becomes its sole bound owner. Once bound, only that creature can attune to it, wield it, or benefit from its magic. The soulbond is permanent and cannot be transferred, even if attunement ends. When the bound creature dies, the staff's magic permanently fades, leaving an ordinary, nonmagical quarterstaff. Returning the creature to life does not restore the staff's magic.</p>
+		</description>
+		<setters>
+			<set name="keywords">wonderwrap, soulbound, quarterstaff, armor class, skills</set>
+			<set name="category">Staffs</set>
+			<set name="cost" currency="gp">0</set>
+			<set name="weight" lb="4">4 lb.</set>
+			<set name="slot">onehand</set>
+			<set name="weapon">Quarterstaff</set>
+			<set name="type">Staff</set>
+			<set name="attunement" addition="soulbound to the first creature to attune">true</set>
+			<set name="rarity">Rare</set>
+		</setters>
+		<rules>
+			<stat name="ac:misc" value="1" />
+			<stat name="acrobatics:misc" value="1" />
+			<stat name="animal handling:misc" value="1" />
+			<stat name="arcana:misc" value="1" />
+			<stat name="athletics:misc" value="1" />
+			<stat name="deception:misc" value="1" />
+			<stat name="history:misc" value="1" />
+			<stat name="insight:misc" value="1" />
+			<stat name="intimidation:misc" value="1" />
+			<stat name="investigation:misc" value="1" />
+			<stat name="medicine:misc" value="1" />
+			<stat name="nature:misc" value="1" />
+			<stat name="perception:misc" value="1" />
+			<stat name="performance:misc" value="1" />
+			<stat name="persuasion:misc" value="1" />
+			<stat name="religion:misc" value="1" />
+			<stat name="sleight of hand:misc" value="1" />
+			<stat name="stealth:misc" value="1" />
+			<stat name="survival:misc" value="1" />
+		</rules>
+	</element>
+</elements>

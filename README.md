@@ -23,6 +23,7 @@ A 2026-10-07 check of Reflections commit `25e9476` found that the installed PHB 
 
 The XML contains both rules and sheet reminders. Some features still require manual tracking:
 
+- **Wonderwrap Staff:** add the staff from The Book of Xellarant, equip it, and mark it attuned to apply +1 AC and +1 to all 18 skills. Record its first attuned owner in the item's notes; the permanent soulbond and loss of magic on that owner's death must be tracked manually. After the owner dies, replace it with an ordinary Quarterstaff. The bonuses apply while held, and the soulbond cannot be transferred by ending attunement.
 - **Replicate Magic Item:** choose plans in the builder, record the specific item for a category plan, and add/remove created items in inventory. Armor models provide sheet calculations; create the corresponding inventory attacks yourself.
 - **Potent Dragonmark:** prepared spells and its ability increase are represented. Track its restricted extra spell slot separately; it is not an unrestricted class slot.
 - **Revised Beast Conclave:** companion choices, additional skills, saving throws, and ability increases are represented. Track added Hit Dice/hit points, remove Multiattack in play, and adjust printed attack text after companion ability changes. Keep companion ability scores at or below 20.

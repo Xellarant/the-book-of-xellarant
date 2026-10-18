@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <index>
   <info>
-    <update version="2.5">
+    <update version="2.6">
       <file name="the-book-of-xellarant.index" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant.index" />
     </update>
   </info>
@@ -14,6 +14,7 @@
     <file name="custom-background.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/backgrounds/custom-background.xml" />
     <file name="spells.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/experimental-magic/spells.xml" />
     <file name="feats.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/feats.xml" />
+    <file name="wonderwrap-staff.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/the-book-of-xellarant/items/wonderwrap-staff.xml" />
     <!-- Eberron: Forge of the Artificer -->
     <file name="efa-source.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/Eberron%20Forge%20of%20the%20Artificer/efa-source.xml" />
     <file name="efa-species-feats.xml" url="https://raw.githubusercontent.com/Xellarant/the-book-of-xellarant/master/Eberron%20Forge%20of%20the%20Artificer/efa-species-feats.xml" />
